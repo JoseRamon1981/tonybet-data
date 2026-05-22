@@ -8,9 +8,10 @@ from datetime import date, timedelta
 import requests
 import streamlit as st
 
-GITHUB_RAW = "https://raw.githubusercontent.com/JoseRamon1981/tonybet-data/main"
-RECS_URL   = f"{GITHUB_RAW}/recommendations_latest.json"
-LOG_URL    = f"{GITHUB_RAW}/bets_log.json"
+GITHUB_RAW    = "https://raw.githubusercontent.com/JoseRamon1981/tonybet-data/main"
+RECS_URL      = f"{GITHUB_RAW}/recommendations_latest.json"
+LOG_URL       = f"{GITHUB_RAW}/bets_log.json"
+PREVIEW_URL   = f"{GITHUB_RAW}/preview_latest.json"
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -95,7 +96,7 @@ st.markdown("""
 st.title("🎯 Tonybet Advisor")
 st.caption("Recomendaciones de apuestas con valor esperado positivo")
 
-tab1, tab2 = st.tabs(["📋 Recomendaciones", "📊 Estadísticas"])
+tab1, tab2, tab3 = st.tabs(["📋 Hoy", "🔭 Mañana", "📊 Estadísticas"])
 
 
 # ── TAB 1: Recomendaciones ────────────────────────────────────────────────────
@@ -137,9 +138,29 @@ with tab1:
             st.markdown(f"**Stake total:** {total:.2f}€")
 
 
-# ── TAB 2: Estadísticas ───────────────────────────────────────────────────────
+# ── TAB 2: Mañana (preview) ───────────────────────────────────────────────────
 
 with tab2:
+    prev = fetch_json(PREVIEW_URL)
+
+    if not prev:
+        st.info("Aún no hay vista previa de mañana. Ejecuta `python -m tonybet_advisor preview` en tu PC para generarla.")
+    else:
+        for_date  = prev.get("for_date", "—")
+        updated   = prev.get("updated_at", "—")
+        total_ev  = prev.get("total_events", 0)
+        analyzed  = prev.get("analyzed_count", 0)
+        analysis  = prev.get("analysis", "")
+
+        st.markdown(f"### 🔭 Vista previa — {for_date}")
+        st.caption(f"Generado el {updated} · {analyzed} eventos analizados de {total_ev} disponibles")
+        st.markdown("---")
+        st.markdown(analysis)
+
+
+# ── TAB 3: Estadísticas ───────────────────────────────────────────────────────
+
+with tab3:
     log = fetch_json(LOG_URL)
 
     if not log:
