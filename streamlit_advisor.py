@@ -44,25 +44,47 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+  /* Mobile-first typography */
+  html, body, [class*="css"] { font-size: 17px !important; }
+
   .bet-card {
-    background: #1e1e2e;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 12px;
-    border-left: 4px solid #7c3aed;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 14px;
+    border-left: 5px solid #7c3aed;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    color: #111111 !important;
+  }
+  .bet-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 4px;
+  }
+  .bet-sub {
+    font-size: 0.9em;
+    color: #555555;
+    margin-bottom: 10px;
+  }
+  .bet-row {
+    font-size: 1em;
+    color: #222222;
+    margin: 3px 0;
   }
   .ev-badge {
     display: inline-block;
-    padding: 2px 10px;
+    padding: 3px 12px;
     border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9em;
+    font-weight: 800;
+    font-size: 1em;
+    margin-left: 6px;
   }
-  .stat-box {
-    background: #1e1e2e;
-    border-radius: 10px;
-    padding: 14px;
-    text-align: center;
+  .stake-line {
+    margin-top: 10px;
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #7c3aed;
   }
 </style>
 """, unsafe_allow_html=True)
@@ -99,15 +121,15 @@ with tab1:
                 col = ev_color(ev)
                 st.markdown(f"""
                 <div class="bet-card">
-                  <b style="font-size:1.1em">{b.get('event','')}</b><br>
-                  <span style="color:#aaa">{b.get('sport','')} · {b.get('market','')}</span>
-                  <hr style="border-color:#333; margin:8px 0">
-                  <b>Selección:</b> {b.get('selection','')}<br>
-                  <b>Cuota:</b> {b.get('odds', 0):.2f} &nbsp;
-                  <span class="ev-badge" style="background:{col}20; color:{col}">
-                    EV {ev*100:+.1f}%
-                  </span><br>
-                  <b>Stake recomendado:</b> {b.get('recommended_stake', 0):.2f}€
+                  <div class="bet-title">{b.get('event','')}</div>
+                  <div class="bet-sub">{b.get('sport','')} &nbsp;·&nbsp; {b.get('market','')}</div>
+                  <div class="bet-row">✅ <b>Selección:</b> {b.get('selection','')}</div>
+                  <div class="bet-row">📊 <b>Cuota:</b> {b.get('odds', 0):.2f}
+                    <span class="ev-badge" style="background:{col}22; color:{col}; border:1px solid {col}">
+                      EV {ev*100:+.1f}%
+                    </span>
+                  </div>
+                  <div class="stake-line">💶 Stake: {b.get('recommended_stake', 0):.2f}€</div>
                 </div>
                 """, unsafe_allow_html=True)
 
