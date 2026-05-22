@@ -1,15 +1,4 @@
 {
-  "updated_at": "2026-05-22 13:50",
-  "bets": [
-    {
-      "event": "Alemania vs Hungría",
-      "sport": "Hockey hielo",
-      "market": "Doble oportunidad",
-      "selection": "1X (Alemania no pierde)",
-      "odds": 1.36,
-      "expected_value": 0.1424,
-      "recommended_stake": 8.0,
-      "estimated_probability": 0.84
-    }
-  ]
+  "updated_at": "2026-05-22 14:14",
+  "bets": []
 }
