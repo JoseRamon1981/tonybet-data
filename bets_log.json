@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "date": "2026-05-22",
+    "event": "Crystal Palace FC vs Arsenal FC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Visitante (Arsenal)",
+    "odds": 1.77,
+    "stake": 5.69,
+    "estimated_ev": 0.0974,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Lazio Roma vs Pisa SC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Local (Lazio)",
+    "odds": 1.54,
+    "stake": 3.93,
+    "estimated_ev": 0.0472,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Liverpool FC vs Brentford FC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Local (Liverpool)",
+    "odds": 1.8,
+    "stake": 4.5,
+    "estimated_ev": 0.08,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Sunderland AFC vs Chelsea FC",
+    "sport": "Futbol",
+    "market": "Mercado 589 (Doble Oportunidad X2 - Chelsea no pierde)",
+    "selection": "76 (Chelsea gana o empata - X2)",
+    "odds": 2.16,
+    "stake": 7.29,
+    "estimated_ev": 0.188,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "ACF Fiorentina vs Atalanta BC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Visitante (Atalanta)",
+    "odds": 2.55,
+    "stake": 2.06,
+    "estimated_ev": 0.071,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Bolonia FC vs Inter Milán",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Visitante (Inter Milán)",
+    "odds": 2.21,
+    "stake": 3.9,
+    "estimated_ev": 0.105,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Tottenham Hotspur FC vs Everton FC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Local (Tottenham)",
+    "odds": 1.87,
+    "stake": 4.38,
+    "estimated_ev": 0.0846,
+    "result": "pending",
+    "profit": 0.0
+  }
+]
