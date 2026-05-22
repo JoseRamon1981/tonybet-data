@@ -12,6 +12,7 @@ GITHUB_RAW    = "https://raw.githubusercontent.com/JoseRamon1981/tonybet-data/ma
 RECS_URL      = f"{GITHUB_RAW}/recommendations_latest.json"
 LOG_URL       = f"{GITHUB_RAW}/bets_log.json"
 PREVIEW_URL   = f"{GITHUB_RAW}/preview_latest.json"
+EVENTS_URL    = f"{GITHUB_RAW}/events_latest.json"
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -96,7 +97,7 @@ st.markdown("""
 st.title("🎯 Tonybet Advisor")
 st.caption("Recomendaciones de apuestas con valor esperado positivo")
 
-tab1, tab2, tab3 = st.tabs(["📋 Hoy", "🔭 Mañana", "📊 Estadísticas"])
+tab1, tab2, tab3, tab4 = st.tabs(["📋 Hoy", "🔭 Mañana", "💬 Consultar", "📊 Estadísticas"])
 
 
 # ── TAB 1: Recomendaciones ────────────────────────────────────────────────────
@@ -158,9 +159,83 @@ with tab2:
         st.markdown(analysis)
 
 
-# ── TAB 3: Estadísticas ───────────────────────────────────────────────────────
+# ── TAB 3: Consultar ─────────────────────────────────────────────────────────
 
 with tab3:
+    st.markdown("### 💬 Pregunta sobre los partidos de hoy")
+    st.caption("Los datos se actualizan cada vez que se ejecuta el advisor en el PC.")
+
+    ev_snap = fetch_json(EVENTS_URL)
+
+    if not ev_snap:
+        st.warning("Datos de eventos no disponibles todavía. Ejecuta el advisor en tu PC primero.")
+    else:
+        updated_ev = ev_snap.get("updated_at", "—")
+        total_ev   = ev_snap.get("total", 0)
+        st.caption(f"Datos del {updated_ev} · {total_ev} eventos cargados")
+
+        # Chat history stored in session state
+        if "chat_history" not in st.session_state:
+            st.session_state.chat_history = []
+
+        # Show previous messages
+        for msg in st.session_state.chat_history:
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
+
+        # Input
+        question = st.chat_input("¿Qué quieres saber? Ej: qué hay en La Liga hoy, cuotas del Real Madrid...")
+
+        if question:
+            # Show user message
+            st.session_state.chat_history.append({"role": "user", "content": question})
+            with st.chat_message("user"):
+                st.markdown(question)
+
+            # Call Claude
+            import json as _json
+            try:
+                import anthropic
+                api_key = st.secrets.get("ANTHROPIC_API_KEY", "")
+                if not api_key:
+                    st.error("Falta la clave ANTHROPIC_API_KEY en los secretos de Streamlit.")
+                else:
+                    client = anthropic.Anthropic(api_key=api_key)
+                    events_json = _json.dumps(ev_snap.get("events", []), ensure_ascii=False)
+
+                    prompt = (
+                        f"Eres un asistente experto en apuestas deportivas. "
+                        f"El usuario pregunta: \"{question}\"\n\n"
+                        f"Responde usando únicamente los datos de Tonybet que tienes a continuación. "
+                        f"Sé concreto, claro y organizado. Incluye cuotas cuando las haya. "
+                        f"Si no hay eventos que coincidan, dilo.\n\n"
+                        f"DATOS TONYBET ({total_ev} eventos):\n{events_json}"
+                    )
+
+                    with st.chat_message("assistant"):
+                        with st.spinner("Consultando..."):
+                            response = client.messages.create(
+                                model="claude-sonnet-4-6",
+                                max_tokens=1500,
+                                messages=[{"role": "user", "content": prompt}],
+                            )
+                            answer = response.content[0].text
+                            st.markdown(answer)
+
+                    st.session_state.chat_history.append({"role": "assistant", "content": answer})
+
+            except Exception as e:
+                st.error(f"Error al consultar Claude: {e}")
+
+        if st.session_state.chat_history:
+            if st.button("🗑️ Limpiar conversación"):
+                st.session_state.chat_history = []
+                st.rerun()
+
+
+# ── TAB 4: Estadísticas ───────────────────────────────────────────────────────
+
+with tab4:
     log = fetch_json(LOG_URL)
 
     if not log:
