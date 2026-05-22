@@ -82,5 +82,77 @@
     "estimated_ev": 0.0846,
     "result": "pending",
     "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Crystal Palace FC vs Arsenal FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Visitante (Arsenal)",
+    "odds": 1.77,
+    "stake": 5.69,
+    "estimated_ev": 0.0974,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Liverpool FC vs Brentford FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Local (Liverpool)",
+    "odds": 1.8,
+    "stake": 4.5,
+    "estimated_ev": 0.08,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Bolonia FC vs Inter Milán",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Visitante (Inter)",
+    "odds": 2.21,
+    "stake": 3.9,
+    "estimated_ev": 0.105,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "FC Fulham vs Newcastle United FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Visitante (Newcastle)",
+    "odds": 2.25,
+    "stake": 2.07,
+    "estimated_ev": 0.0575,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Brighton & Hove Albion FC vs Manchester United FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Local (Brighton)",
+    "odds": 1.86,
+    "stake": 2.18,
+    "estimated_ev": 0.0416,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "SSC Nápoles vs Udinese Calcio",
+    "sport": "Futbol",
+    "market": "Ambos marcan (Mercado 589)",
+    "selection": "No",
+    "odds": 1.73,
+    "stake": 4.48,
+    "estimated_ev": 0.0726,
+    "result": "pending",
+    "profit": 0.0
   }
 ]
