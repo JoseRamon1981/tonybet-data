@@ -406,5 +406,17 @@
     "estimated_ev": 0.2136,
     "result": "pending",
     "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Alemania vs Hungría",
+    "sport": "Hockey hielo",
+    "market": "Doble oportunidad",
+    "selection": "1X (Alemania no pierde)",
+    "odds": 1.36,
+    "stake": 8.0,
+    "estimated_ev": 0.1424,
+    "result": "pending",
+    "profit": 0.0
   }
 ]
