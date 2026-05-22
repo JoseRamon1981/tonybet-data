@@ -1,75 +1,75 @@
 {
-  "updated_at": "2026-05-22 13:24",
+  "updated_at": "2026-05-22 13:27",
   "bets": [
-    {
-      "event": "Crystal Palace FC vs Arsenal FC",
-      "sport": "Futbol",
-      "market": "1X2 (Mercado 621)",
-      "selection": "Visitante (Arsenal)",
-      "odds": 1.77,
-      "expected_value": 0.062,
-      "recommended_stake": 3.62,
-      "estimated_probability": 0.6
-    },
     {
       "event": "Liverpool FC vs Brentford FC",
       "sport": "Futbol",
-      "market": "1X2 (Mercado 621)",
-      "selection": "Local (Liverpool)",
+      "market": "1X2",
+      "selection": "Local",
       "odds": 1.8,
-      "expected_value": 0.044,
-      "recommended_stake": 2.47,
-      "estimated_probability": 0.58
+      "expected_value": 0.08,
+      "recommended_stake": 4.5,
+      "estimated_probability": 0.6
     },
     {
-      "event": "FC Fulham vs Newcastle United FC",
+      "event": "Crystal Palace FC vs Arsenal FC",
       "sport": "Futbol",
-      "market": "1X2 (Mercado 621)",
-      "selection": "Visitante (Newcastle)",
-      "odds": 2.25,
-      "expected_value": 0.0575,
-      "recommended_stake": 2.07,
-      "estimated_probability": 0.47
+      "market": "1X2",
+      "selection": "Visitante",
+      "odds": 1.77,
+      "expected_value": 0.0974,
+      "recommended_stake": 5.69,
+      "estimated_probability": 0.62
     },
     {
       "event": "Tottenham Hotspur FC vs Everton FC",
       "sport": "Futbol",
-      "market": "1X2 (Mercado 621)",
-      "selection": "Local (Tottenham)",
+      "market": "1X2",
+      "selection": "Local",
       "odds": 1.87,
       "expected_value": 0.0472,
       "recommended_stake": 2.44,
       "estimated_probability": 0.56
     },
     {
-      "event": "Parma Calcio vs Sassuolo",
+      "event": "ACF Fiorentina vs Atalanta BC",
       "sport": "Futbol",
-      "market": "Ambos Marcan (Mercado 589)",
-      "selection": "Si",
-      "odds": 1.7,
+      "market": "1X2",
+      "selection": "Visitante",
+      "odds": 2.55,
       "expected_value": 0.071,
-      "recommended_stake": 4.56,
-      "estimated_probability": 0.63
+      "recommended_stake": 2.06,
+      "estimated_probability": 0.42
     },
     {
-      "event": "SSC Nápoles vs Udinese Calcio",
+      "event": "Liverpool FC vs Brentford FC",
       "sport": "Futbol",
-      "market": "Ambos Marcan (Mercado 589)",
+      "market": "Ambos Marcan",
       "selection": "No",
-      "odds": 1.72,
-      "expected_value": 0.0664,
-      "recommended_stake": 4.15,
-      "estimated_probability": 0.62
+      "odds": 2.49,
+      "expected_value": 0.0458,
+      "recommended_stake": 1.38,
+      "estimated_probability": 0.42
     },
     {
-      "event": "Bolonia FC vs Inter Milán",
+      "event": "Sunderland AFC vs Chelsea FC",
       "sport": "Futbol",
-      "market": "1X2 (Mercado 621)",
-      "selection": "Visitante (Inter Milán)",
-      "odds": 2.21,
-      "expected_value": 0.0608,
-      "recommended_stake": 2.26,
-      "estimated_probability": 0.48
+      "market": "Over/Under 2.5 Goles",
+      "selection": "Over 2.5",
+      "odds": 1.94,
+      "expected_value": 0.0864,
+      "recommended_stake": 4.14,
+      "estimated_probability": 0.56
+    },
+    {
+      "event": "Lazio Roma vs Pisa SC",
+      "sport": "Futbol",
+      "market": "Over/Under 2.5 Goles",
+      "selection": "Over 2.5",
+      "odds": 1.92,
+      "expected_value": 0.0944,
+      "recommended_stake": 4.62,
+      "estimated_probability": 0.57
     }
   ]
 }

@@ -238,5 +238,89 @@
     "estimated_ev": 0.0608,
     "result": "pending",
     "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Liverpool FC vs Brentford FC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Local",
+    "odds": 1.8,
+    "stake": 4.5,
+    "estimated_ev": 0.08,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Crystal Palace FC vs Arsenal FC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Visitante",
+    "odds": 1.77,
+    "stake": 5.69,
+    "estimated_ev": 0.0974,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Tottenham Hotspur FC vs Everton FC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Local",
+    "odds": 1.87,
+    "stake": 2.44,
+    "estimated_ev": 0.0472,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "ACF Fiorentina vs Atalanta BC",
+    "sport": "Futbol",
+    "market": "1X2",
+    "selection": "Visitante",
+    "odds": 2.55,
+    "stake": 2.06,
+    "estimated_ev": 0.071,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Liverpool FC vs Brentford FC",
+    "sport": "Futbol",
+    "market": "Ambos Marcan",
+    "selection": "No",
+    "odds": 2.49,
+    "stake": 1.38,
+    "estimated_ev": 0.0458,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Sunderland AFC vs Chelsea FC",
+    "sport": "Futbol",
+    "market": "Over/Under 2.5 Goles",
+    "selection": "Over 2.5",
+    "odds": 1.94,
+    "stake": 4.14,
+    "estimated_ev": 0.0864,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Lazio Roma vs Pisa SC",
+    "sport": "Futbol",
+    "market": "Over/Under 2.5 Goles",
+    "selection": "Over 2.5",
+    "odds": 1.92,
+    "stake": 4.62,
+    "estimated_ev": 0.0944,
+    "result": "pending",
+    "profit": 0.0
   }
 ]
