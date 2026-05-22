@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22 13:15",
+  "updated_at": "2026-05-22 13:24",
   "bets": [
     {
       "event": "Crystal Palace FC vs Arsenal FC",
@@ -7,9 +7,9 @@
       "market": "1X2 (Mercado 621)",
       "selection": "Visitante (Arsenal)",
       "odds": 1.77,
-      "expected_value": 0.0974,
-      "recommended_stake": 5.69,
-      "estimated_probability": 0.62
+      "expected_value": 0.062,
+      "recommended_stake": 3.62,
+      "estimated_probability": 0.6
     },
     {
       "event": "Liverpool FC vs Brentford FC",
@@ -17,19 +17,9 @@
       "market": "1X2 (Mercado 621)",
       "selection": "Local (Liverpool)",
       "odds": 1.8,
-      "expected_value": 0.08,
-      "recommended_stake": 4.5,
-      "estimated_probability": 0.6
-    },
-    {
-      "event": "Bolonia FC vs Inter Milán",
-      "sport": "Futbol",
-      "market": "1X2 (Mercado 621)",
-      "selection": "Visitante (Inter)",
-      "odds": 2.21,
-      "expected_value": 0.105,
-      "recommended_stake": 3.9,
-      "estimated_probability": 0.5
+      "expected_value": 0.044,
+      "recommended_stake": 2.47,
+      "estimated_probability": 0.58
     },
     {
       "event": "FC Fulham vs Newcastle United FC",
@@ -42,24 +32,44 @@
       "estimated_probability": 0.47
     },
     {
-      "event": "Brighton & Hove Albion FC vs Manchester United FC",
+      "event": "Tottenham Hotspur FC vs Everton FC",
       "sport": "Futbol",
       "market": "1X2 (Mercado 621)",
-      "selection": "Local (Brighton)",
-      "odds": 1.86,
-      "expected_value": 0.0416,
-      "recommended_stake": 2.18,
+      "selection": "Local (Tottenham)",
+      "odds": 1.87,
+      "expected_value": 0.0472,
+      "recommended_stake": 2.44,
       "estimated_probability": 0.56
+    },
+    {
+      "event": "Parma Calcio vs Sassuolo",
+      "sport": "Futbol",
+      "market": "Ambos Marcan (Mercado 589)",
+      "selection": "Si",
+      "odds": 1.7,
+      "expected_value": 0.071,
+      "recommended_stake": 4.56,
+      "estimated_probability": 0.63
     },
     {
       "event": "SSC Nápoles vs Udinese Calcio",
       "sport": "Futbol",
-      "market": "Ambos marcan (Mercado 589)",
+      "market": "Ambos Marcan (Mercado 589)",
       "selection": "No",
-      "odds": 1.73,
-      "expected_value": 0.0726,
-      "recommended_stake": 4.48,
+      "odds": 1.72,
+      "expected_value": 0.0664,
+      "recommended_stake": 4.15,
       "estimated_probability": 0.62
+    },
+    {
+      "event": "Bolonia FC vs Inter Milán",
+      "sport": "Futbol",
+      "market": "1X2 (Mercado 621)",
+      "selection": "Visitante (Inter Milán)",
+      "odds": 2.21,
+      "expected_value": 0.0608,
+      "recommended_stake": 2.26,
+      "estimated_probability": 0.48
     }
   ]
 }

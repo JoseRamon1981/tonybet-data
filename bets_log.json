@@ -154,5 +154,89 @@
     "estimated_ev": 0.0726,
     "result": "pending",
     "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Crystal Palace FC vs Arsenal FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Visitante (Arsenal)",
+    "odds": 1.77,
+    "stake": 3.62,
+    "estimated_ev": 0.062,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Liverpool FC vs Brentford FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Local (Liverpool)",
+    "odds": 1.8,
+    "stake": 2.47,
+    "estimated_ev": 0.044,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "FC Fulham vs Newcastle United FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Visitante (Newcastle)",
+    "odds": 2.25,
+    "stake": 2.07,
+    "estimated_ev": 0.0575,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Tottenham Hotspur FC vs Everton FC",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Local (Tottenham)",
+    "odds": 1.87,
+    "stake": 2.44,
+    "estimated_ev": 0.0472,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Parma Calcio vs Sassuolo",
+    "sport": "Futbol",
+    "market": "Ambos Marcan (Mercado 589)",
+    "selection": "Si",
+    "odds": 1.7,
+    "stake": 4.56,
+    "estimated_ev": 0.071,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "SSC Nápoles vs Udinese Calcio",
+    "sport": "Futbol",
+    "market": "Ambos Marcan (Mercado 589)",
+    "selection": "No",
+    "odds": 1.72,
+    "stake": 4.15,
+    "estimated_ev": 0.0664,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-22",
+    "event": "Bolonia FC vs Inter Milán",
+    "sport": "Futbol",
+    "market": "1X2 (Mercado 621)",
+    "selection": "Visitante (Inter Milán)",
+    "odds": 2.21,
+    "stake": 2.26,
+    "estimated_ev": 0.0608,
+    "result": "pending",
+    "profit": 0.0
   }
 ]
