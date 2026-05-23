@@ -174,6 +174,24 @@ with tab3:
         total_ev   = ev_snap.get("total", 0)
         st.caption(f"Datos del {updated_ev} · {total_ev} eventos cargados")
 
+        # API key input (only shown if not already stored)
+        if not st.session_state.get("api_key"):
+            with st.expander("🔑 Configurar clave API (solo la primera vez)", expanded=True):
+                st.caption("Tu clave de Anthropic. Se guarda solo en esta sesión, nunca en el servidor.")
+                key_input = st.text_input("Clave Anthropic API", type="password", placeholder="sk-ant-api03-...")
+                if st.button("Guardar clave"):
+                    if key_input.startswith("sk-ant"):
+                        st.session_state["api_key"] = key_input
+                        st.success("Clave guardada. Ya puedes hacer preguntas.")
+                        st.rerun()
+                    else:
+                        st.error("La clave debe empezar por sk-ant...")
+        else:
+            st.success("🔑 Clave API configurada", icon="✅")
+            if st.button("Cambiar clave"):
+                st.session_state["api_key"] = ""
+                st.rerun()
+
         # Chat history stored in session state
         if "chat_history" not in st.session_state:
             st.session_state.chat_history = []
@@ -192,14 +210,21 @@ with tab3:
             with st.chat_message("user"):
                 st.markdown(question)
 
-            # Call Claude
+            # Get API key: secrets → session state → error
             import json as _json
+            api_key = ""
             try:
-                import anthropic
                 api_key = st.secrets.get("ANTHROPIC_API_KEY", "")
-                if not api_key:
-                    st.error("Falta la clave ANTHROPIC_API_KEY en los secretos de Streamlit.")
-                else:
+            except Exception:
+                pass
+            if not api_key:
+                api_key = st.session_state.get("api_key", "")
+
+            if not api_key:
+                st.error("Introduce tu clave de Anthropic arriba para usar el chat.")
+            else:
+                try:
+                    import anthropic
                     client = anthropic.Anthropic(api_key=api_key)
                     events_json = _json.dumps(ev_snap.get("events", []), ensure_ascii=False)
 
@@ -224,8 +249,8 @@ with tab3:
 
                     st.session_state.chat_history.append({"role": "assistant", "content": answer})
 
-            except Exception as e:
-                st.error(f"Error al consultar Claude: {e}")
+                except Exception as e:
+                    st.error(f"Error al consultar Claude: {e}")
 
         if st.session_state.chat_history:
             if st.button("🗑️ Limpiar conversación"):
