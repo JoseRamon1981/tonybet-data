@@ -111,10 +111,16 @@ with tab1:
         updated = data.get("updated_at", "—")
         bets    = data.get("bets", [])
 
-        st.markdown(f"**Última actualización:** {updated}")
+        from datetime import datetime as _dt
+        today_str = _dt.now().strftime("%Y-%m-%d")
+        updated_date = updated[:10] if updated else ""
+        if updated_date == today_str:
+            st.success(f"✅ Análisis de hoy — {updated}")
+        else:
+            st.warning(f"⚠️ Última actualización: {updated}  · Datos desactualizados, ejecuta el advisor en el PC.")
 
         if not bets:
-            st.warning("El agente analizó el mercado y no encontró value bets hoy. Vuelve mañana.")
+            st.info("🔍 El agente analizó el mercado y no encontró apuestas con 80%+ de confianza hoy. Vuelve mañana.")
         else:
             st.success(f"**{len(bets)} value bet(s) encontradas**")
 
@@ -145,16 +151,35 @@ with tab2:
     prev = fetch_json(PREVIEW_URL)
 
     if not prev:
-        st.info("Aún no hay vista previa de mañana. Ejecuta `python -m tonybet_advisor preview` en tu PC para generarla.")
+        st.warning("⏳ Sin datos de mañana todavía. Se generan automáticamente al ejecutar el advisor en el PC.")
     else:
-        for_date  = prev.get("for_date", "—")
-        updated   = prev.get("updated_at", "—")
+        from datetime import datetime, timedelta
+        for_date  = prev.get("for_date", "")          # "2026-05-24"
+        updated   = prev.get("updated_at", "—")        # "23/05/2026 20:15"
         total_ev  = prev.get("total_events", 0)
         analyzed  = prev.get("analyzed_count", 0)
         analysis  = prev.get("analysis", "")
 
-        st.markdown(f"### 🔭 Vista previa — {for_date}")
-        st.caption(f"Generado el {updated} · {analyzed} eventos analizados de {total_ev} disponibles")
+        # Work out if the preview is for tomorrow or stale
+        tomorrow_str = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+        today_str    = datetime.now().strftime("%Y-%m-%d")
+        is_fresh     = for_date == tomorrow_str
+        is_today     = for_date == today_str   # preview generated for today (outdated)
+
+        # Human-readable date
+        try:
+            display_date = datetime.strptime(for_date, "%Y-%m-%d").strftime("%d/%m/%Y")
+        except Exception:
+            display_date = for_date
+
+        if is_fresh:
+            st.success(f"✅ Vista previa actualizada para **mañana {display_date}**")
+        elif is_today:
+            st.warning(f"⚠️ Esta vista previa es de **hoy {display_date}** — se actualizará esta tarde/noche al ejecutar el advisor.")
+        else:
+            st.error(f"🔴 Datos desactualizados ({display_date}). Ejecuta el advisor en el PC para renovarlos.")
+
+        st.caption(f"Generado el {updated} · {analyzed} de {total_ev} eventos analizados")
         st.markdown("---")
         st.markdown(analysis)
 
