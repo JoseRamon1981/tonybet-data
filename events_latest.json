@@ -1,6 +1,6 @@
 {
-  "updated_at": "23/05/2026 09:41",
-  "total": 346,
+  "updated_at": "23/05/2026 09:54",
+  "total": 347,
   "events": [
     {
       "nombre": "Nottingham Forest vs AFC Bournemouth",
@@ -799,7 +799,7 @@
             },
             {
               "nombre": "420",
-              "cuota": 19.0
+              "cuota": 20.0
             },
             {
               "nombre": "426",
@@ -967,7 +967,7 @@
             },
             {
               "nombre": "434",
-              "cuota": 7.0
+              "cuota": 6.8
             },
             {
               "nombre": "418",
@@ -1017,7 +1017,7 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 1.49
+              "cuota": 1.47
             },
             {
               "nombre": "Empate",
@@ -1025,7 +1025,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 6.0
+              "cuota": 6.2
             }
           ]
         },
@@ -1034,11 +1034,11 @@
           "selecciones": [
             {
               "nombre": "Si",
-              "cuota": 1.66
+              "cuota": 1.67
             },
             {
               "nombre": "No",
-              "cuota": 2.23
+              "cuota": 2.21
             }
           ]
         },
@@ -1059,11 +1059,11 @@
             },
             {
               "nombre": "434",
-              "cuota": 9.4
+              "cuota": 9.8
             },
             {
               "nombre": "418",
-              "cuota": 1.96
+              "cuota": 1.94
             },
             {
               "nombre": "424",
@@ -1088,7 +1088,7 @@
           "selecciones": [
             {
               "nombre": "70",
-              "cuota": 1.9
+              "cuota": 1.91
             },
             {
               "nombre": "72",
@@ -1385,15 +1385,15 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 2.31
+              "cuota": 2.3
             },
             {
               "nombre": "Empate",
-              "cuota": 3.3
+              "cuota": 3.35
             },
             {
               "nombre": "Visitante",
-              "cuota": 3.2
+              "cuota": 3.15
             }
           ]
         },
@@ -1402,11 +1402,11 @@
           "selecciones": [
             {
               "nombre": "Si",
-              "cuota": 1.59
+              "cuota": 1.58
             },
             {
               "nombre": "No",
-              "cuota": 2.38
+              "cuota": 2.39
             }
           ]
         },
@@ -1415,7 +1415,7 @@
           "selecciones": [
             {
               "nombre": "432",
-              "cuota": 12.0
+              "cuota": 13.0
             },
             {
               "nombre": "422",
@@ -1439,7 +1439,7 @@
             },
             {
               "nombre": "430",
-              "cuota": 26.0
+              "cuota": 25.0
             },
             {
               "nombre": "420",
@@ -1447,7 +1447,7 @@
             },
             {
               "nombre": "426",
-              "cuota": 5.0
+              "cuota": 5.2
             }
           ]
         },
@@ -1456,11 +1456,11 @@
           "selecciones": [
             {
               "nombre": "70",
-              "cuota": 2.01
+              "cuota": 1.99
             },
             {
               "nombre": "72",
-              "cuota": 1.78
+              "cuota": 1.79
             }
           ]
         }
@@ -1515,7 +1515,7 @@
             },
             {
               "nombre": "428",
-              "cuota": 14.0
+              "cuota": 13.0
             },
             {
               "nombre": "434",
@@ -1523,7 +1523,7 @@
             },
             {
               "nombre": "418",
-              "cuota": 1.94
+              "cuota": 1.95
             },
             {
               "nombre": "424",
@@ -1853,7 +1853,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 1.94
+              "cuota": 1.95
             }
           ]
         },
@@ -2414,11 +2414,11 @@
           "selecciones": [
             {
               "nombre": "Si",
-              "cuota": 1.92
+              "cuota": 1.91
             },
             {
               "nombre": "No",
-              "cuota": 1.82
+              "cuota": 1.83
             }
           ]
         },
@@ -2439,7 +2439,7 @@
             },
             {
               "nombre": "434",
-              "cuota": 1.95
+              "cuota": 1.96
             },
             {
               "nombre": "418",
@@ -2589,7 +2589,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 1.57
+              "cuota": 1.56
             }
           ]
         },
@@ -2602,7 +2602,7 @@
             },
             {
               "nombre": "No",
-              "cuota": 2.02
+              "cuota": 2.01
             }
           ]
         },
@@ -2611,7 +2611,7 @@
           "selecciones": [
             {
               "nombre": "432",
-              "cuota": 15.0
+              "cuota": 16.0
             },
             {
               "nombre": "422",
@@ -2623,11 +2623,11 @@
             },
             {
               "nombre": "434",
-              "cuota": 2.15
+              "cuota": 2.14
             },
             {
               "nombre": "418",
-              "cuota": 8.6
+              "cuota": 8.8
             },
             {
               "nombre": "424",
@@ -2773,7 +2773,7 @@
             },
             {
               "nombre": "18",
-              "cuota": 27.0
+              "cuota": 28.0
             },
             {
               "nombre": "15",
@@ -2785,7 +2785,7 @@
             },
             {
               "nombre": "19",
-              "cuota": 27.0
+              "cuota": 28.0
             }
           ]
         },
@@ -2811,11 +2811,11 @@
           "selecciones": [
             {
               "nombre": "Si",
-              "cuota": 1.42
+              "cuota": 1.41
             },
             {
               "nombre": "No",
-              "cuota": 2.9
+              "cuota": 2.95
             }
           ]
         },
@@ -3341,6 +3341,23 @@
       "hora": "2026-05-23 18:45:00",
       "mercados": [
         {
+          "mercado": "Mercado 621",
+          "selecciones": [
+            {
+              "nombre": "Local",
+              "cuota": 2.12
+            },
+            {
+              "nombre": "Empate",
+              "cuota": 3.8
+            },
+            {
+              "nombre": "Visitante",
+              "cuota": 3.05
+            }
+          ]
+        },
+        {
           "mercado": "Mercado 589",
           "selecciones": [
             {
@@ -3358,7 +3375,7 @@
           "selecciones": [
             {
               "nombre": "418",
-              "cuota": 2.95
+              "cuota": 3.05
             },
             {
               "nombre": "424",
@@ -3382,15 +3399,15 @@
             },
             {
               "nombre": "422",
-              "cuota": 29.0
+              "cuota": 28.0
             },
             {
               "nombre": "428",
-              "cuota": 7.6
+              "cuota": 7.4
             },
             {
               "nombre": "434",
-              "cuota": 4.8
+              "cuota": 4.7
             }
           ]
         },
@@ -3404,19 +3421,6 @@
             {
               "nombre": "72",
               "cuota": 1.82
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 557",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 2.85
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.41
             }
           ]
         }
@@ -4865,19 +4869,19 @@
           "selecciones": [
             {
               "nombre": "975",
-              "cuota": 4.0
+              "cuota": 3.95
             },
             {
               "nombre": "976",
-              "cuota": 3.25
+              "cuota": 3.3
             },
             {
               "nombre": "973",
-              "cuota": 4.0
+              "cuota": 3.95
             },
             {
               "nombre": "974",
-              "cuota": 3.25
+              "cuota": 3.3
             }
           ]
         },
@@ -4886,11 +4890,11 @@
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 2.08
+              "cuota": 2.05
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 1.69
+              "cuota": 1.72
             }
           ]
         },
@@ -4899,7 +4903,7 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 2.25
+              "cuota": 2.21
             },
             {
               "nombre": "Empate",
@@ -4907,7 +4911,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 1.81
+              "cuota": 1.84
             }
           ]
         },
@@ -4916,7 +4920,7 @@
           "selecciones": [
             {
               "nombre": "418",
-              "cuota": 3.25
+              "cuota": 3.2
             },
             {
               "nombre": "424",
@@ -4936,7 +4940,7 @@
             },
             {
               "nombre": "432",
-              "cuota": 30.0
+              "cuota": 29.0
             },
             {
               "nombre": "422",
@@ -4948,7 +4952,7 @@
             },
             {
               "nombre": "434",
-              "cuota": 2.5
+              "cuota": 2.55
             }
           ]
         }
@@ -5137,7 +5141,7 @@
             },
             {
               "nombre": "974",
-              "cuota": 7.6
+              "cuota": 7.4
             }
           ]
         },
@@ -5163,7 +5167,7 @@
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 3.75
+              "cuota": 3.7
             }
           ]
         },
@@ -6513,40 +6517,6 @@
       "hora": "2026-05-23 12:30:00",
       "mercados": [
         {
-          "mercado": "Mercado 976",
-          "selecciones": [
-            {
-              "nombre": "975",
-              "cuota": 16.0
-            },
-            {
-              "nombre": "976",
-              "cuota": 2.03
-            },
-            {
-              "nombre": "973",
-              "cuota": 18.0
-            },
-            {
-              "nombre": "974",
-              "cuota": 2.0
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 262",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 7.2
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 1.07
-            }
-          ]
-        },
-        {
           "mercado": "Mercado 621",
           "selecciones": [
             {
@@ -6555,11 +6525,32 @@
             },
             {
               "nombre": "Empate",
-              "cuota": 27.0
+              "cuota": 26.0
             },
             {
               "nombre": "Visitante",
               "cuota": 1.1
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 976",
+          "selecciones": [
+            {
+              "nombre": "975",
+              "cuota": 17.0
+            },
+            {
+              "nombre": "976",
+              "cuota": 2.04
+            },
+            {
+              "nombre": "973",
+              "cuota": 17.0
+            },
+            {
+              "nombre": "974",
+              "cuota": 1.99
             }
           ]
         },
@@ -6603,6 +6594,19 @@
               "cuota": 1.3
             }
           ]
+        },
+        {
+          "mercado": "Mercado 1084",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 2.19
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.63
+            }
+          ]
         }
       ]
     },
@@ -6617,19 +6621,19 @@
           "selecciones": [
             {
               "nombre": "975",
-              "cuota": 3.2
+              "cuota": 3.35
             },
             {
               "nombre": "976",
-              "cuota": 4.1
+              "cuota": 3.85
             },
             {
               "nombre": "973",
-              "cuota": 3.25
+              "cuota": 3.4
             },
             {
               "nombre": "974",
-              "cuota": 4.2
+              "cuota": 3.9
             }
           ]
         },
@@ -6638,11 +6642,11 @@
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 1.67
+              "cuota": 1.75
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 2.12
+              "cuota": 2.01
             }
           ]
         },
@@ -6651,7 +6655,7 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 1.78
+              "cuota": 1.87
             },
             {
               "nombre": "Empate",
@@ -6659,7 +6663,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 2.3
+              "cuota": 2.17
             }
           ]
         },
@@ -6668,15 +6672,15 @@
           "selecciones": [
             {
               "nombre": "418",
-              "cuota": 2.46
+              "cuota": 2.6
             },
             {
               "nombre": "424",
-              "cuota": 40.0
+              "cuota": 45.0
             },
             {
               "nombre": "430",
-              "cuota": 7.2
+              "cuota": 7.4
             },
             {
               "nombre": "420",
@@ -6692,7 +6696,7 @@
             },
             {
               "nombre": "422",
-              "cuota": 8.4
+              "cuota": 8.2
             },
             {
               "nombre": "428",
@@ -6700,7 +6704,7 @@
             },
             {
               "nombre": "434",
-              "cuota": 3.3
+              "cuota": 3.1
             }
           ]
         }
@@ -8693,7 +8697,7 @@
             },
             {
               "nombre": "430",
-              "cuota": 6.8
+              "cuota": 6.6
             },
             {
               "nombre": "420",
@@ -8705,7 +8709,7 @@
             },
             {
               "nombre": "432",
-              "cuota": 26.0
+              "cuota": 27.0
             },
             {
               "nombre": "422",
@@ -8717,7 +8721,7 @@
             },
             {
               "nombre": "434",
-              "cuota": 3.2
+              "cuota": 3.25
             }
           ]
         },
@@ -8730,7 +8734,7 @@
             },
             {
               "nombre": "1715",
-              "cuota": 1.83
+              "cuota": 1.84
             }
           ]
         },
@@ -8752,7 +8756,7 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 1.7
+              "cuota": 1.69
             },
             {
               "nombre": "Empate",
@@ -8760,7 +8764,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 2.28
+              "cuota": 2.29
             }
           ]
         }
@@ -9016,7 +9020,7 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 3.9
+              "cuota": 3.95
             },
             {
               "nombre": "1715",
@@ -9045,7 +9049,7 @@
             },
             {
               "nombre": "sr:correct_score:bestof:3:7",
-              "cuota": 2.43
+              "cuota": 2.44
             },
             {
               "nombre": "sr:correct_score:bestof:3:6",
@@ -9071,7 +9075,7 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 2.27
+              "cuota": 2.26
             },
             {
               "nombre": "1715",
@@ -9084,7 +9088,7 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 2.1
+              "cuota": 2.09
             },
             {
               "nombre": "1715",
@@ -10777,7 +10781,7 @@
             },
             {
               "nombre": "X2",
-              "cuota": 2.21
+              "cuota": 2.2
             }
           ]
         },
@@ -10786,11 +10790,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 3.6
+              "cuota": 3.65
             },
             {
               "nombre": "X2",
-              "cuota": 1.28
+              "cuota": 1.27
             }
           ]
         },
@@ -10811,15 +10815,15 @@
             },
             {
               "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 9.0
+              "cuota": 9.2
             },
             {
               "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 2.49
+              "cuota": 2.46
             },
             {
               "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 3.65
+              "cuota": 3.6
             }
           ]
         },
@@ -10828,11 +10832,11 @@
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 3.7
+              "cuota": 3.8
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 1.27
+              "cuota": 1.26
             }
           ]
         }
@@ -11926,7 +11930,7 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 7.0
+              "cuota": 6.8
             },
             {
               "nombre": "X2",
@@ -11947,7 +11951,7 @@
             },
             {
               "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 29.0
+              "cuota": 28.0
             },
             {
               "nombre": "sr:correct_score:bestof:5:13",
@@ -11959,7 +11963,7 @@
             },
             {
               "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 10.0
+              "cuota": 9.8
             }
           ]
         },
@@ -11968,7 +11972,7 @@
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 11.0
+              "cuota": 10.0
             },
             {
               "nombre": "Menos 2.5",
@@ -12809,6 +12813,23 @@
       "hora": "2026-05-23 10:20:00",
       "mercados": [
         {
+          "mercado": "Mercado 621",
+          "selecciones": [
+            {
+              "nombre": "Local",
+              "cuota": 1.62
+            },
+            {
+              "nombre": "Empate",
+              "cuota": 4.7
+            },
+            {
+              "nombre": "Visitante",
+              "cuota": 4.2
+            }
+          ]
+        },
+        {
           "mercado": "Mercado 289",
           "selecciones": [
             {
@@ -12844,19 +12865,6 @@
             {
               "nombre": "X2",
               "cuota": 2.31
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 289",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 2.13
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.67
             }
           ]
         }
@@ -12987,6 +12995,70 @@
       ]
     },
     {
+      "nombre": "Noruega vs Suecia",
+      "deporte": "Hockey hielo",
+      "competicion": "Campeonato Mundial",
+      "hora": "2026-05-23 18:20:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 621",
+          "selecciones": [
+            {
+              "nombre": "Local",
+              "cuota": 13.0
+            },
+            {
+              "nombre": "Empate",
+              "cuota": 7.6
+            },
+            {
+              "nombre": "Visitante",
+              "cuota": 1.17
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 289",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.57
+            },
+            {
+              "nombre": "X2",
+              "cuota": 2.3
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 289",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 2.26
+            },
+            {
+              "nombre": "X2",
+              "cuota": 1.59
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 289",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.43
+            },
+            {
+              "nombre": "X2",
+              "cuota": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
       "nombre": "Austria vs Alemania",
       "deporte": "Hockey hielo",
       "competicion": "Campeonato Mundial",
@@ -13051,134 +13123,6 @@
       ]
     },
     {
-      "nombre": "Noruega vs Suecia",
-      "deporte": "Hockey hielo",
-      "competicion": "Campeonato Mundial",
-      "hora": "2026-05-23 18:20:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 621",
-          "selecciones": [
-            {
-              "nombre": "Local",
-              "cuota": 14.0
-            },
-            {
-              "nombre": "Empate",
-              "cuota": 7.8
-            },
-            {
-              "nombre": "Visitante",
-              "cuota": 1.15
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 289",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.57
-            },
-            {
-              "nombre": "X2",
-              "cuota": 2.32
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 289",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 2.25
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.6
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 289",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.42
-            },
-            {
-              "nombre": "X2",
-              "cuota": 2.75
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Dinamarca vs Italia",
-      "deporte": "Hockey hielo",
-      "competicion": "Campeonato Mundial",
-      "hora": "2026-05-24 14:20:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 289",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.72
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.96
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 911",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.78
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.9
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 435",
-          "selecciones": [
-            {
-              "nombre": "Menos 3.5",
-              "cuota": 101.0
-            },
-            {
-              "nombre": "Mas 3.5",
-              "cuota": 1.45
-            },
-            {
-              "nombre": "Mas 1.5",
-              "cuota": 2.55
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 131",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 2.04
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.67
-            }
-          ]
-        }
-      ]
-    },
-    {
       "nombre": "Reino Unido vs Letonia",
       "deporte": "Hockey hielo",
       "competicion": "Campeonato Mundial",
@@ -13237,6 +13181,70 @@
             {
               "nombre": "X2",
               "cuota": 1.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Dinamarca vs Italia",
+      "deporte": "Hockey hielo",
+      "competicion": "Campeonato Mundial",
+      "hora": "2026-05-24 14:20:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 911",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.78
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.9
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 435",
+          "selecciones": [
+            {
+              "nombre": "Menos 3.5",
+              "cuota": 101.0
+            },
+            {
+              "nombre": "Mas 3.5",
+              "cuota": 1.45
+            },
+            {
+              "nombre": "Mas 1.5",
+              "cuota": 2.55
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 131",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 2.05
+            },
+            {
+              "nombre": "X2",
+              "cuota": 1.66
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 557",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.78
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.9
             }
           ]
         }
@@ -13375,36 +13383,6 @@
       ]
     },
     {
-      "nombre": "Estados Unidos vs Hungría",
-      "deporte": "Hockey hielo",
-      "competicion": "Campeonato Mundial",
-      "hora": "2026-05-25 14:20:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 732",
-          "selecciones": [
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 11.0
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 621",
-          "selecciones": [
-            {
-              "nombre": "Empate",
-              "cuota": 12.0
-            },
-            {
-              "nombre": "Visitante",
-              "cuota": 60.0
-            }
-          ]
-        }
-      ]
-    },
-    {
       "nombre": "República Checa vs Noruega",
       "deporte": "Hockey hielo",
       "competicion": "Campeonato Mundial",
@@ -13445,11 +13423,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.98
+              "cuota": 1.99
             },
             {
               "nombre": "1715",
-              "cuota": 1.71
+              "cuota": 1.7
             }
           ]
         },
@@ -13467,6 +13445,36 @@
             {
               "nombre": "Mas 1.5",
               "cuota": 2.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Estados Unidos vs Hungría",
+      "deporte": "Hockey hielo",
+      "competicion": "Campeonato Mundial",
+      "hora": "2026-05-25 14:20:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 732",
+          "selecciones": [
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 11.0
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 621",
+          "selecciones": [
+            {
+              "nombre": "Empate",
+              "cuota": 12.0
+            },
+            {
+              "nombre": "Visitante",
+              "cuota": 60.0
             }
           ]
         }
@@ -14059,6 +14067,74 @@
             {
               "nombre": "1715",
               "cuota": 2.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Canterbury Red Devils vs Botany Swarm",
+      "deporte": "Hockey hielo",
+      "competicion": "NZIHL",
+      "hora": "2026-05-24 05:10:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 732",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 3.4
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 1.22
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 545",
+          "selecciones": [
+            {
+              "nombre": "Menos 1.5",
+              "cuota": 2.35
+            },
+            {
+              "nombre": "Mas 4.5",
+              "cuota": 1.13
+            },
+            {
+              "nombre": "Menos 4.5",
+              "cuota": 1.12
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 868",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 4.0
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 1.16
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 621",
+          "selecciones": [
+            {
+              "nombre": "Local",
+              "cuota": 5.2
+            },
+            {
+              "nombre": "Empate",
+              "cuota": 5.0
+            },
+            {
+              "nombre": "Visitante",
+              "cuota": 1.39
             }
           ]
         }
@@ -14844,7 +14920,7 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.9
+              "cuota": 1.91
             },
             {
               "nombre": "X2",
@@ -15938,15 +16014,15 @@
           "selecciones": [
             {
               "nombre": "418",
-              "cuota": 2.23
+              "cuota": 2.33
             },
             {
               "nombre": "424",
-              "cuota": 14.0
+              "cuota": 15.0
             },
             {
               "nombre": "430",
-              "cuota": 7.8
+              "cuota": 7.6
             },
             {
               "nombre": "420",
@@ -15954,15 +16030,15 @@
             },
             {
               "nombre": "426",
-              "cuota": 45.0
+              "cuota": 50.0
             },
             {
               "nombre": "432",
-              "cuota": 17.0
+              "cuota": 16.0
             },
             {
               "nombre": "422",
-              "cuota": 9.2
+              "cuota": 8.6
             },
             {
               "nombre": "428",
@@ -15970,7 +16046,7 @@
             },
             {
               "nombre": "434",
-              "cuota": 3.25
+              "cuota": 3.15
             }
           ]
         },
@@ -15979,7 +16055,7 @@
           "selecciones": [
             {
               "nombre": "Menos 1.5",
-              "cuota": 1.45
+              "cuota": 1.48
             },
             {
               "nombre": "Mas 4.5",
@@ -15987,7 +16063,7 @@
             },
             {
               "nombre": "Menos 4.5",
-              "cuota": 1.84
+              "cuota": 1.79
             }
           ]
         },
@@ -15996,11 +16072,11 @@
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 1.58
+              "cuota": 1.62
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 2.15
+              "cuota": 2.08
             }
           ]
         },
@@ -16009,7 +16085,7 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 1.77
+              "cuota": 1.82
             },
             {
               "nombre": "Empate",
@@ -16017,7 +16093,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 2.44
+              "cuota": 2.35
             }
           ]
         }
@@ -18180,63 +18256,34 @@
       ]
     },
     {
-      "nombre": "Precek, Erik vs Konvicka, Vojtech",
+      "nombre": "Kulveit, Jonas vs Zahradka, Zdenek",
       "deporte": "Tenis mesa",
       "competicion": "TT Cup",
-      "hora": "2026-05-23 07:45:00",
+      "hora": "2026-05-23 07:55:00",
       "mercados": [
-        {
-          "mercado": "Mercado 598",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.75
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.85
-            }
-          ]
-        },
         {
           "mercado": "Mercado 910",
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 1.52
+              "cuota": 1.41
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 2.25
+              "cuota": 2.5
             }
           ]
         },
         {
-          "mercado": "Mercado 197",
+          "mercado": "Mercado 598",
           "selecciones": [
             {
-              "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 4.35
+              "nombre": "1714",
+              "cuota": 1.84
             },
             {
-              "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 3.7
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 4.45
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 5.4
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 5.6
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 9.0
+              "nombre": "1715",
+              "cuota": 1.77
             }
           ]
         },
@@ -18245,32 +18292,61 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.8
+              "cuota": 1.77
             },
             {
               "nombre": "X2",
-              "cuota": 1.85
+              "cuota": 1.84
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 197",
+          "selecciones": [
+            {
+              "nombre": "sr:correct_score:bestof:5:8",
+              "cuota": 4.1
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:9",
+              "cuota": 3.55
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:10",
+              "cuota": 4.3
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:13",
+              "cuota": 12.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:12",
+              "cuota": 6.8
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:11",
+              "cuota": 5.8
             }
           ]
         }
       ]
     },
     {
-      "nombre": "Wrobel, Dariusz vs Strus, Piotr",
+      "nombre": "Kedzierski, Piotr vs Stojek, Karol",
       "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 07:45:00",
+      "competicion": "TT Cup",
+      "hora": "2026-05-23 08:05:00",
       "mercados": [
         {
           "mercado": "Mercado 910",
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 1.72
+              "cuota": 2.03
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 1.93
+              "cuota": 1.62
             }
           ]
         },
@@ -18279,11 +18355,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.81
+              "cuota": 1.77
             },
             {
               "nombre": "1715",
-              "cuota": 1.8
+              "cuota": 1.83
             }
           ]
         },
@@ -18305,23 +18381,99 @@
           "selecciones": [
             {
               "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 5.2
+              "cuota": 9.6
             },
             {
               "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 4.4
+              "cuota": 5.6
             },
             {
               "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 4.4
+              "cuota": 4.5
             },
             {
               "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 6.8
+              "cuota": 6.0
             },
             {
               "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 5.2
+              "cuota": 4.2
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:11",
+              "cuota": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Polasek, Radovan vs Revay, Radomir",
+      "deporte": "Tenis mesa",
+      "competicion": "Czech Liga Pro",
+      "hora": "2026-05-23 08:00:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 910",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 1.6
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 2.06
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 598",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.77
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 761",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.82
+            },
+            {
+              "nombre": "X2",
+              "cuota": 1.78
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 197",
+          "selecciones": [
+            {
+              "nombre": "sr:correct_score:bestof:5:8",
+              "cuota": 6.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:9",
+              "cuota": 4.1
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:10",
+              "cuota": 4.1
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:13",
+              "cuota": 9.6
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:12",
+              "cuota": 5.4
             },
             {
               "nombre": "sr:correct_score:bestof:5:11",
@@ -18332,21 +18484,110 @@
       ]
     },
     {
-      "nombre": "Prokopcov, Dimitrij vs Michna, Dawid",
+      "nombre": "Syroha, Michal vs Barta, Miroslav",
       "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 07:45:00",
+      "competicion": "Czech Liga Pro",
+      "hora": "2026-05-23 08:00:00",
       "mercados": [
+        {
+          "mercado": "Mercado 910",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 1.76
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 1.85
+            }
+          ]
+        },
         {
           "mercado": "Mercado 598",
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.8
+              "cuota": 1.81
             },
             {
               "nombre": "1715",
+              "cuota": 1.8
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 761",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.79
+            },
+            {
+              "nombre": "X2",
               "cuota": 1.81
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 197",
+          "selecciones": [
+            {
+              "nombre": "sr:correct_score:bestof:5:8",
+              "cuota": 5.8
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:9",
+              "cuota": 4.5
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:10",
+              "cuota": 5.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:13",
+              "cuota": 6.2
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:12",
+              "cuota": 4.6
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:11",
+              "cuota": 5.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Dolezal, Vaclav vs Stefek, Martin",
+      "deporte": "Tenis mesa",
+      "competicion": "Czech Liga Pro",
+      "hora": "2026-05-23 08:00:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 910",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 1.34
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 2.75
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 598",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.76
             }
           ]
         },
@@ -18368,57 +18609,44 @@
           "selecciones": [
             {
               "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 4.9
+              "cuota": 3.7
             },
             {
               "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 4.1
+              "cuota": 3.35
             },
             {
               "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 9.2
+              "cuota": 4.5
             },
             {
               "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 4.0
+              "cuota": 14.0
             },
             {
               "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 3.55
+              "cuota": 7.6
             },
             {
               "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 8.8
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 910",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 1.96
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 1.7
+              "cuota": 6.2
             }
           ]
         }
       ]
     },
     {
-      "nombre": "Eliasz, Adrian vs Dabrowski, Igor",
+      "nombre": "Paril, Ondrej vs Opanasiuk, Dmytro",
       "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 07:55:00",
+      "competicion": "Czech Liga Pro",
+      "hora": "2026-05-23 08:00:00",
       "mercados": [
         {
           "mercado": "Mercado 910",
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 2.23
+              "cuota": 2.18
             },
             {
               "nombre": "Menos 2.5",
@@ -18431,11 +18659,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.84
+              "cuota": 1.81
             },
             {
               "nombre": "1715",
-              "cuota": 1.76
+              "cuota": 1.79
             }
           ]
         },
@@ -18444,11 +18672,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.78
+              "cuota": 1.79
             },
             {
               "nombre": "X2",
-              "cuota": 1.82
+              "cuota": 1.81
             }
           ]
         },
@@ -18461,23 +18689,99 @@
             },
             {
               "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 6.0
+              "cuota": 5.8
             },
             {
               "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 5.2
+              "cuota": 5.6
             },
             {
               "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 4.2
+              "cuota": 4.6
             },
             {
               "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 3.9
+              "cuota": 3.85
             },
             {
               "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 4.4
+              "cuota": 4.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Martinek, Jaroslav vs Hubka, Miloslav",
+      "deporte": "Tenis mesa",
+      "competicion": "Czech Liga Pro",
+      "hora": "2026-05-23 08:00:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 910",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 1.68
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 1.94
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 598",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.79
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.82
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 761",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.79
+            },
+            {
+              "nombre": "X2",
+              "cuota": 1.82
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 197",
+          "selecciones": [
+            {
+              "nombre": "sr:correct_score:bestof:5:8",
+              "cuota": 5.8
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:9",
+              "cuota": 4.2
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:10",
+              "cuota": 4.5
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:13",
+              "cuota": 7.6
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:12",
+              "cuota": 5.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:11",
+              "cuota": 4.9
             }
           ]
         }
@@ -18554,6 +18858,82 @@
             {
               "nombre": "Menos 2.5",
               "cuota": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Eliasz, Adrian vs Dabrowski, Igor",
+      "deporte": "Tenis mesa",
+      "competicion": "TT Elite Series",
+      "hora": "2026-05-23 07:55:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 910",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 2.23
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 1.54
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 598",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.84
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.76
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 761",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.78
+            },
+            {
+              "nombre": "X2",
+              "cuota": 1.82
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 197",
+          "selecciones": [
+            {
+              "nombre": "sr:correct_score:bestof:5:8",
+              "cuota": 8.6
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:9",
+              "cuota": 6.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:10",
+              "cuota": 5.2
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:13",
+              "cuota": 4.2
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:12",
+              "cuota": 3.9
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:11",
+              "cuota": 4.4
             }
           ]
         }
@@ -19168,82 +19548,6 @@
       ]
     },
     {
-      "nombre": "Sokolowski, Oliwier vs Adamus, Kacper",
-      "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 08:45:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 910",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 7.8
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 1.03
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 598",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.82
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.78
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 761",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.79
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.82
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 197",
-          "selecciones": [
-            {
-              "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 90.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 80.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 17.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 2.6
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 5.0
-            }
-          ]
-        }
-      ]
-    },
-    {
       "nombre": "Pisarczyk, Tomasz vs Wasilewski, Damian",
       "deporte": "Tenis mesa",
       "competicion": "TT Elite Series",
@@ -19390,6 +19694,82 @@
             {
               "nombre": "Menos 2.5",
               "cuota": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Sokolowski, Oliwier vs Adamus, Kacper",
+      "deporte": "Tenis mesa",
+      "competicion": "TT Elite Series",
+      "hora": "2026-05-23 08:45:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 910",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 7.8
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 1.03
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 598",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.82
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.78
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 761",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.79
+            },
+            {
+              "nombre": "X2",
+              "cuota": 1.82
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 197",
+          "selecciones": [
+            {
+              "nombre": "sr:correct_score:bestof:5:8",
+              "cuota": 90.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:9",
+              "cuota": 80.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:10",
+              "cuota": 17.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:13",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:12",
+              "cuota": 2.6
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:11",
+              "cuota": 5.0
             }
           ]
         }
@@ -20764,82 +21144,6 @@
       ]
     },
     {
-      "nombre": "Dabrowski, Igor vs Wasilewski, Damian",
-      "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 10:20:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 910",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 2.55
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 1.42
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 598",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.81
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.79
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 761",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.77
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.84
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 197",
-          "selecciones": [
-            {
-              "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 11.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 7.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 5.6
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 3.7
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 3.5
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 4.4
-            }
-          ]
-        }
-      ]
-    },
-    {
       "nombre": "Witczak, Filip vs Jesiek, Jakub",
       "deporte": "Tenis mesa",
       "competicion": "TT Elite Series",
@@ -20910,6 +21214,82 @@
             {
               "nombre": "sr:correct_score:bestof:5:11",
               "cuota": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Dabrowski, Igor vs Wasilewski, Damian",
+      "deporte": "Tenis mesa",
+      "competicion": "TT Elite Series",
+      "hora": "2026-05-23 10:20:00",
+      "mercados": [
+        {
+          "mercado": "Mercado 910",
+          "selecciones": [
+            {
+              "nombre": "Mas 2.5",
+              "cuota": 2.55
+            },
+            {
+              "nombre": "Menos 2.5",
+              "cuota": 1.42
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 598",
+          "selecciones": [
+            {
+              "nombre": "1714",
+              "cuota": 1.81
+            },
+            {
+              "nombre": "1715",
+              "cuota": 1.79
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 761",
+          "selecciones": [
+            {
+              "nombre": "1X",
+              "cuota": 1.77
+            },
+            {
+              "nombre": "X2",
+              "cuota": 1.84
+            }
+          ]
+        },
+        {
+          "mercado": "Mercado 197",
+          "selecciones": [
+            {
+              "nombre": "sr:correct_score:bestof:5:8",
+              "cuota": 11.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:9",
+              "cuota": 7.0
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:10",
+              "cuota": 5.6
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:13",
+              "cuota": 3.7
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:12",
+              "cuota": 3.5
+            },
+            {
+              "nombre": "sr:correct_score:bestof:5:11",
+              "cuota": 4.4
             }
           ]
         }
@@ -21078,11 +21458,11 @@
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 2.5
+              "cuota": 2.6
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 1.37
+              "cuota": 1.39
             }
           ]
         },
@@ -21091,11 +21471,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.82
+              "cuota": 1.85
             },
             {
               "nombre": "1715",
-              "cuota": 1.73
+              "cuota": 1.76
             }
           ]
         },
@@ -21104,11 +21484,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.76
+              "cuota": 1.79
             },
             {
               "nombre": "X2",
-              "cuota": 1.78
+              "cuota": 1.81
             }
           ]
         },
@@ -21154,11 +21534,11 @@
           "selecciones": [
             {
               "nombre": "Mas 2.5",
-              "cuota": 2.7
+              "cuota": 2.85
             },
             {
               "nombre": "Menos 2.5",
-              "cuota": 1.31
+              "cuota": 1.34
             }
           ]
         },
@@ -21167,11 +21547,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.82
+              "cuota": 1.86
             },
             {
               "nombre": "1715",
-              "cuota": 1.72
+              "cuota": 1.75
             }
           ]
         },
@@ -21180,11 +21560,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.8
+              "cuota": 1.84
             },
             {
               "nombre": "X2",
-              "cuota": 1.74
+              "cuota": 1.77
             }
           ]
         },
@@ -21618,297 +21998,6 @@
             {
               "nombre": "sr:correct_score:bestof:5:11",
               "cuota": 4.9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Pisarczyk, Tomasz vs Mleczko, Bartlomiej",
-      "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 12:20:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 910",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 2.55
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 1.36
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 598",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.72
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.83
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 761",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.75
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.8
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 197",
-          "selecciones": [
-            {
-              "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 11.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 6.8
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 6.2
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 3.4
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 3.4
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 4.8
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Wederlich, Damian vs Michna, Dawid",
-      "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 12:25:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 910",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 1.52
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 2.13
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 598",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.8
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.74
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 197",
-          "selecciones": [
-            {
-              "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 3.9
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 3.6
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 5.6
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 7.4
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 5.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 6.6
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Wasilewski, Damian vs Makowski, Kacper",
-      "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 12:45:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 910",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 1.28
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 2.9
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 598",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.81
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.73
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 761",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.79
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.75
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 197",
-          "selecciones": [
-            {
-              "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 3.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 3.2
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 4.6
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 13.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 8.4
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 6.8
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Spanik, Tibor vs Gawlas, Michal",
-      "deporte": "Tenis mesa",
-      "competicion": "TT Elite Series",
-      "hora": "2026-05-23 12:50:00",
-      "mercados": [
-        {
-          "mercado": "Mercado 910",
-          "selecciones": [
-            {
-              "nombre": "Mas 2.5",
-              "cuota": 1.35
-            },
-            {
-              "nombre": "Menos 2.5",
-              "cuota": 2.55
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 598",
-          "selecciones": [
-            {
-              "nombre": "1714",
-              "cuota": 1.8
-            },
-            {
-              "nombre": "1715",
-              "cuota": 1.74
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 761",
-          "selecciones": [
-            {
-              "nombre": "1X",
-              "cuota": 1.75
-            },
-            {
-              "nombre": "X2",
-              "cuota": 1.79
-            }
-          ]
-        },
-        {
-          "mercado": "Mercado 197",
-          "selecciones": [
-            {
-              "nombre": "sr:correct_score:bestof:5:8",
-              "cuota": 3.35
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:9",
-              "cuota": 3.35
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:10",
-              "cuota": 4.8
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:13",
-              "cuota": 11.0
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:12",
-              "cuota": 6.8
-            },
-            {
-              "nombre": "sr:correct_score:bestof:5:11",
-              "cuota": 6.4
             }
           ]
         }
@@ -25085,7 +25174,7 @@
           "selecciones": [
             {
               "nombre": "634",
-              "cuota": 3.25
+              "cuota": 3.2
             },
             {
               "nombre": "632",
@@ -25101,7 +25190,7 @@
             },
             {
               "nombre": "638",
-              "cuota": 11.0
+              "cuota": 10.0
             },
             {
               "nombre": "640",
@@ -25122,7 +25211,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 2.47
+              "cuota": 2.48
             }
           ]
         },
@@ -25135,7 +25224,7 @@
             },
             {
               "nombre": "1715",
-              "cuota": 2.65
+              "cuota": 2.7
             }
           ]
         },
@@ -25417,7 +25506,7 @@
             },
             {
               "nombre": "636",
-              "cuota": 7.6
+              "cuota": 7.4
             },
             {
               "nombre": "638",
@@ -25425,7 +25514,7 @@
             },
             {
               "nombre": "640",
-              "cuota": 3.45
+              "cuota": 3.5
             }
           ]
         },
@@ -25434,15 +25523,15 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 2.01
+              "cuota": 2.0
             },
             {
               "nombre": "Empate",
-              "cuota": 9.2
+              "cuota": 9.0
             },
             {
               "nombre": "Visitante",
-              "cuota": 2.16
+              "cuota": 2.18
             }
           ]
         },
@@ -25451,11 +25540,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.62
+              "cuota": 1.61
             },
             {
               "nombre": "1715",
-              "cuota": 2.26
+              "cuota": 2.28
             }
           ]
         },
@@ -25464,11 +25553,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.37
+              "cuota": 1.36
             },
             {
               "nombre": "1715",
-              "cuota": 3.05
+              "cuota": 3.1
             }
           ]
         }
@@ -25725,7 +25814,7 @@
           "selecciones": [
             {
               "nombre": "634",
-              "cuota": 4.5
+              "cuota": 4.4
             },
             {
               "nombre": "632",
@@ -25741,11 +25830,11 @@
             },
             {
               "nombre": "638",
-              "cuota": 9.4
+              "cuota": 9.6
             },
             {
               "nombre": "640",
-              "cuota": 2.75
+              "cuota": 2.8
             }
           ]
         },
@@ -25754,7 +25843,7 @@
           "selecciones": [
             {
               "nombre": "Local",
-              "cuota": 2.35
+              "cuota": 2.33
             },
             {
               "nombre": "Empate",
@@ -25762,7 +25851,7 @@
             },
             {
               "nombre": "Visitante",
-              "cuota": 1.85
+              "cuota": 1.87
             }
           ]
         },
@@ -25771,11 +25860,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.88
+              "cuota": 1.86
             },
             {
               "nombre": "1715",
-              "cuota": 1.9
+              "cuota": 1.92
             }
           ]
         },
@@ -25784,11 +25873,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.53
+              "cuota": 1.52
             },
             {
               "nombre": "1715",
-              "cuota": 2.46
+              "cuota": 2.49
             }
           ]
         }
@@ -26209,7 +26298,7 @@
             },
             {
               "nombre": "1715",
-              "cuota": 2.12
+              "cuota": 2.11
             }
           ]
         },
@@ -26218,7 +26307,7 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.37
+              "cuota": 1.38
             },
             {
               "nombre": "1715",
@@ -26235,7 +26324,7 @@
             },
             {
               "nombre": "1715",
-              "cuota": 3.6
+              "cuota": 3.55
             }
           ]
         },
@@ -26244,11 +26333,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.66
+              "cuota": 1.64
             },
             {
               "nombre": "X2",
-              "cuota": 2.05
+              "cuota": 2.08
             }
           ]
         }
@@ -26265,11 +26354,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.62
+              "cuota": 1.6
             },
             {
               "nombre": "1715",
-              "cuota": 2.12
+              "cuota": 2.14
             }
           ]
         },
@@ -26278,11 +26367,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.42
+              "cuota": 1.41
             },
             {
               "nombre": "1715",
-              "cuota": 2.6
+              "cuota": 2.65
             }
           ]
         },
@@ -26291,11 +26380,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.28
+              "cuota": 1.27
             },
             {
               "nombre": "1715",
-              "cuota": 3.2
+              "cuota": 3.3
             }
           ]
         },
@@ -26304,11 +26393,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.9
+              "cuota": 1.96
             },
             {
               "nombre": "X2",
-              "cuota": 1.77
+              "cuota": 1.72
             }
           ]
         }
@@ -26325,11 +26414,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.76
+              "cuota": 1.75
             },
             {
               "nombre": "1715",
-              "cuota": 1.92
+              "cuota": 1.93
             }
           ]
         },
@@ -26342,7 +26431,7 @@
             },
             {
               "nombre": "1715",
-              "cuota": 2.28
+              "cuota": 2.29
             }
           ]
         },
@@ -26364,11 +26453,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.9
+              "cuota": 1.96
             },
             {
               "nombre": "X2",
-              "cuota": 1.78
+              "cuota": 1.73
             }
           ]
         }
@@ -26385,11 +26474,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 3.45
+              "cuota": 3.4
             },
             {
               "nombre": "1715",
-              "cuota": 1.25
+              "cuota": 1.26
             }
           ]
         },
@@ -26402,7 +26491,7 @@
             },
             {
               "nombre": "1715",
-              "cuota": 1.37
+              "cuota": 1.38
             }
           ]
         },
@@ -26411,11 +26500,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 2.23
+              "cuota": 2.21
             },
             {
               "nombre": "1715",
-              "cuota": 1.56
+              "cuota": 1.57
             }
           ]
         },
@@ -26424,11 +26513,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.8
+              "cuota": 1.78
             },
             {
               "nombre": "X2",
-              "cuota": 1.87
+              "cuota": 1.89
             }
           ]
         }
@@ -26445,11 +26534,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.57
+              "cuota": 1.6
             },
             {
               "nombre": "1715",
-              "cuota": 2.21
+              "cuota": 2.15
             }
           ]
         },
@@ -26458,11 +26547,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.38
+              "cuota": 1.39
             },
             {
               "nombre": "1715",
-              "cuota": 2.75
+              "cuota": 2.7
             }
           ]
         },
@@ -26471,11 +26560,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.25
+              "cuota": 1.26
             },
             {
               "nombre": "1715",
-              "cuota": 3.45
+              "cuota": 3.35
             }
           ]
         },
@@ -26484,11 +26573,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 2.07
+              "cuota": 2.08
             },
             {
               "nombre": "X2",
-              "cuota": 1.65
+              "cuota": 1.64
             }
           ]
         }
@@ -26505,11 +26594,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.5
+              "cuota": 1.49
             },
             {
               "nombre": "1715",
-              "cuota": 2.37
+              "cuota": 2.39
             }
           ]
         },
@@ -26522,7 +26611,7 @@
             },
             {
               "nombre": "1715",
-              "cuota": 3.1
+              "cuota": 3.15
             }
           ]
         },
@@ -26531,7 +26620,7 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.19
+              "cuota": 1.18
             },
             {
               "nombre": "1715",
@@ -26548,7 +26637,7 @@
             },
             {
               "nombre": "X2",
-              "cuota": 2.31
+              "cuota": 2.32
             }
           ]
         }
@@ -26625,11 +26714,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.54
+              "cuota": 1.52
             },
             {
               "nombre": "1715",
-              "cuota": 2.27
+              "cuota": 2.31
             }
           ]
         },
@@ -26638,11 +26727,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.33
+              "cuota": 1.31
             },
             {
               "nombre": "1715",
-              "cuota": 2.95
+              "cuota": 3.05
             }
           ]
         },
@@ -26651,11 +26740,11 @@
           "selecciones": [
             {
               "nombre": "1714",
-              "cuota": 1.2
+              "cuota": 1.19
             },
             {
               "nombre": "1715",
-              "cuota": 3.9
+              "cuota": 4.0
             }
           ]
         },
@@ -26664,11 +26753,11 @@
           "selecciones": [
             {
               "nombre": "1X",
-              "cuota": 1.59
+              "cuota": 1.6
             },
             {
               "nombre": "X2",
-              "cuota": 2.17
+              "cuota": 2.16
             }
           ]
         }
