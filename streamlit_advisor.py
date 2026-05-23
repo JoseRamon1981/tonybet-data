@@ -174,21 +174,34 @@ with tab3:
         total_ev   = ev_snap.get("total", 0)
         st.caption(f"Datos del {updated_ev} · {total_ev} eventos cargados")
 
-        # API key input (only shown if not already stored)
+        # Persistent API key cache (survives tab changes and refreshes)
+        @st.cache_resource
+        def _key_store():
+            return {"key": ""}
+
+        key_store = _key_store()
+
+        # Sync cache → session state
+        if key_store["key"] and not st.session_state.get("api_key"):
+            st.session_state["api_key"] = key_store["key"]
+
         if not st.session_state.get("api_key"):
-            with st.expander("🔑 Configurar clave API (solo la primera vez)", expanded=True):
-                st.caption("Tu clave de Anthropic. Se guarda solo en esta sesión, nunca en el servidor.")
+            with st.expander("🔑 Introduce tu clave Anthropic (solo la primera vez)", expanded=True):
+                st.caption("Se guarda en el servidor mientras la app esté activa. No se comparte con nadie.")
                 key_input = st.text_input("Clave Anthropic API", type="password", placeholder="sk-ant-api03-...")
                 if st.button("Guardar clave"):
                     if key_input.startswith("sk-ant"):
+                        key_store["key"] = key_input
                         st.session_state["api_key"] = key_input
-                        st.success("Clave guardada. Ya puedes hacer preguntas.")
+                        st.success("¡Clave guardada! No tendrás que introducirla de nuevo.")
                         st.rerun()
                     else:
                         st.error("La clave debe empezar por sk-ant...")
         else:
-            st.success("🔑 Clave API configurada", icon="✅")
-            if st.button("Cambiar clave"):
+            col_k1, col_k2 = st.columns([3, 1])
+            col_k1.success("🔑 Clave API configurada — ya puedes preguntar")
+            if col_k2.button("Borrar"):
+                key_store["key"] = ""
                 st.session_state["api_key"] = ""
                 st.rerun()
 
