@@ -105,8 +105,11 @@ tab1, tab2, tab3, tab4 = st.tabs(["📋 Hoy", "🔭 Mañana", "💬 Consultar", 
 with tab1:
     data = fetch_json(RECS_URL)
 
+    ACTIONS_URL = "https://github.com/JoseRamon1981/tonybet-data/actions/workflows/advisor.yml"
+
     if not data:
-        st.info("No hay recomendaciones publicadas todavía. Ejecuta `python -m tonybet_advisor advisor` en tu PC.")
+        st.info("No hay recomendaciones publicadas todavía.")
+        st.link_button("🚀 Ejecutar advisor ahora", ACTIONS_URL, use_container_width=True)
     else:
         updated = data.get("updated_at", "—")
         bets    = data.get("bets", [])
@@ -117,7 +120,8 @@ with tab1:
         if updated_date == today_str:
             st.success(f"✅ Análisis de hoy — {updated}")
         else:
-            st.warning(f"⚠️ Última actualización: {updated}  · Datos desactualizados, ejecuta el advisor en el PC.")
+            st.warning(f"⚠️ Última actualización: {updated}  ·  Datos desactualizados")
+            st.link_button("🚀 Actualizar ahora (GitHub Actions)", ACTIONS_URL, use_container_width=True)
 
         if not bets:
             st.info("🔍 El agente analizó el mercado y no encontró apuestas con 80%+ de confianza hoy. Vuelve mañana.")
@@ -150,8 +154,11 @@ with tab1:
 with tab2:
     prev = fetch_json(PREVIEW_URL)
 
+    ACTIONS_URL = "https://github.com/JoseRamon1981/tonybet-data/actions/workflows/advisor.yml"
+
     if not prev:
-        st.warning("⏳ Sin datos de mañana todavía. Se generan automáticamente al ejecutar el advisor en el PC.")
+        st.warning("⏳ Sin datos de mañana todavía.")
+        st.link_button("🚀 Ejecutar advisor ahora", ACTIONS_URL, use_container_width=True)
     else:
         from datetime import datetime, timedelta
         for_date  = prev.get("for_date", "")          # "2026-05-24"
@@ -175,9 +182,10 @@ with tab2:
         if is_fresh:
             st.success(f"✅ Vista previa actualizada para **mañana {display_date}**")
         elif is_today:
-            st.warning(f"⚠️ Esta vista previa es de **hoy {display_date}** — se actualizará esta tarde/noche al ejecutar el advisor.")
+            st.warning(f"⚠️ Esta vista previa es de **hoy {display_date}** — se actualizará esta tarde/noche.")
         else:
-            st.error(f"🔴 Datos desactualizados ({display_date}). Ejecuta el advisor en el PC para renovarlos.")
+            st.error(f"🔴 Datos desactualizados ({display_date}).")
+            st.link_button("🚀 Actualizar ahora (GitHub Actions)", ACTIONS_URL, use_container_width=True)
 
         st.caption(f"Generado el {updated} · {analyzed} de {total_ev} eventos analizados")
         st.markdown("---")
@@ -188,12 +196,13 @@ with tab2:
 
 with tab3:
     st.markdown("### 💬 Pregunta sobre los partidos de hoy")
-    st.caption("Los datos se actualizan cada vez que se ejecuta el advisor en el PC.")
+    st.caption("Los datos se actualizan cada vez que se ejecuta el advisor (automático cada día a las 10h).")
 
     ev_snap = fetch_json(EVENTS_URL)
 
     if not ev_snap:
-        st.warning("Datos de eventos no disponibles todavía. Ejecuta el advisor en tu PC primero.")
+        st.warning("Datos de eventos no disponibles todavía.")
+        st.link_button("🚀 Ejecutar advisor ahora", "https://github.com/JoseRamon1981/tonybet-data/actions/workflows/advisor.yml", use_container_width=True)
     else:
         updated_ev = ev_snap.get("updated_at", "—")
         total_ev   = ev_snap.get("total", 0)

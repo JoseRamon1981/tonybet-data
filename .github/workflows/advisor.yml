@@ -1,0 +1,58 @@
+name: Tonybet Advisor
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # Todos los días a las 8:00 UTC (10h España en verano)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Modo de ejecución'
+        required: false
+        default: 'advisor'
+        type: choice
+        options:
+          - advisor
+          - preview
+          - demo
+
+jobs:
+  advisor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout tonybet-data
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Configurar git para el push automático
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "Tonybet Advisor Bot"
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements_advisor.txt
+
+      - name: Instalar dependencias Python
+        run: pip install -r requirements_advisor.txt
+
+      - name: Instalar navegador Playwright
+        run: playwright install chromium --with-deps
+
+      - name: Ejecutar advisor
+        env:
+          TONYBET_USERNAME: ${{ secrets.TONYBET_USERNAME }}
+          TONYBET_PASSWORD: ${{ secrets.TONYBET_PASSWORD }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BANKROLL: ${{ vars.BANKROLL || '200' }}
+          MAX_DAILY_STAKE: ${{ vars.MAX_DAILY_STAKE || '30' }}
+          MAX_SINGLE_BET: ${{ vars.MAX_SINGLE_BET || '8' }}
+          MIN_EV_THRESHOLD: ${{ vars.MIN_EV_THRESHOLD || '0.04' }}
+          KELLY_FRACTION: ${{ vars.KELLY_FRACTION || '0.15' }}
+          HEADLESS: 'true'
+        run: python -m tonybet_advisor ${{ github.event.inputs.mode || 'advisor' }}
