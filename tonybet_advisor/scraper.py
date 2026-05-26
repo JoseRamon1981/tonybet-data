@@ -2,15 +2,56 @@
 Playwright scraper: logs into Tonybet and captures betting events by
 intercepting the internal JSON API responses the browser loads.
 Falls back to DOM extraction if no JSON is captured.
+Uses playwright-stealth to bypass bot detection.
 """
 import asyncio
 import json
 import re
 from typing import Any
 
+import requests
 from playwright.async_api import async_playwright, Page, Response
 
 from .config import config
+
+
+# ── direct REST API attempt ───────────────────────────────────────────────────
+
+_TONYBET_API_CANDIDATES = [
+    "{base}/api/v1/prematch/sports",
+    "{base}/api/v1/events?sport=all&limit=200",
+    "{base}/api/sportsbook/prematch/events",
+    "{base}/api/sports/prematch/events",
+    "{base}/en/api/prematch/events",
+]
+
+_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://tonybet.com/en/prematch",
+}
+
+
+def _try_direct_api(base_url: str) -> list[dict]:
+    """Try known TonyBet REST API endpoints directly (no browser needed)."""
+    for tpl in _TONYBET_API_CANDIDATES:
+        url = tpl.format(base=base_url)
+        try:
+            resp = requests.get(url, headers=_HEADERS, timeout=10)
+            if resp.status_code == 200 and "json" in resp.headers.get("content-type", ""):
+                data = resp.json()
+                events = _parse_generic_event(data)
+                if events:
+                    print(f"  ✓ API directa funcionó: {url}")
+                    return events
+        except Exception:
+            continue
+    return []
 
 
 # ── helpers ──────────────────────────────────────────────────────────────────
@@ -416,12 +457,24 @@ class TonybetScraper:
 
     async def scrape(self) -> list[dict]:
         print("Iniciando scraper de Tonybet…")
-        page_ref: list[Page] = []  # keep page alive for DOM fallback
+
+        # Strategy 0: try direct REST API first (fastest, no bot detection)
+        print("  → Probando API directa de TonyBet…")
+        direct = _try_direct_api(config.tonybet_url)
+        if direct:
+            print(f"  ✓ {len(direct)} eventos via API directa")
+            return direct
+        print("  → API directa no disponible — usando navegador…")
 
         async with async_playwright() as pw:
             browser = await pw.chromium.launch(
                 headless=config.headless,
-                args=["--no-sandbox", "--disable-blink-features=AutomationControlled"],
+                args=[
+                    "--no-sandbox",
+                    "--disable-blink-features=AutomationControlled",
+                    "--disable-dev-shm-usage",
+                    "--disable-web-security",
+                ],
             )
             context = await browser.new_context(
                 user_agent=(
@@ -430,8 +483,19 @@ class TonybetScraper:
                     "Chrome/124.0.0.0 Safari/537.36"
                 ),
                 locale="es-ES",
+                viewport={"width": 1280, "height": 900},
+                java_script_enabled=True,
             )
             page = await context.new_page()
+
+            # Apply stealth patches to avoid bot detection
+            try:
+                from playwright_stealth import stealth_async
+                await stealth_async(page)
+                print("  ✓ Stealth mode activado")
+            except ImportError:
+                print("  ⚠ playwright-stealth no instalado — continuando sin stealth")
+
             page.on("response", lambda r: asyncio.ensure_future(self._capture_response(r)))
 
             # Open Tonybet home first, dismiss cookie banner, then optionally login
