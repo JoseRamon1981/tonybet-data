@@ -52,7 +52,7 @@ jobs:
           BANKROLL: ${{ vars.BANKROLL || '200' }}
           MAX_DAILY_STAKE: ${{ vars.MAX_DAILY_STAKE || '30' }}
           MAX_SINGLE_BET: ${{ vars.MAX_SINGLE_BET || '8' }}
-          MIN_EV_THRESHOLD: ${{ vars.MIN_EV_THRESHOLD || '0.04' }}
+          MIN_EV_THRESHOLD: ${{ vars.MIN_EV_THRESHOLD || '0.01' }}
           KELLY_FRACTION: ${{ vars.KELLY_FRACTION || '0.15' }}
           HEADLESS: 'true'
         run: python -m tonybet_advisor ${{ github.event.inputs.mode || 'advisor' }}

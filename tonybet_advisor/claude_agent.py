@@ -66,7 +66,7 @@ class BettingAdvisor:
     def _build_prompt(self, events: list[dict]) -> str:
         print("  Obteniendo datos reales de equipos desde ESPN…")
         sample = []
-        for e in events[:20]:
+        for e in events[:30]:
             name  = e.get("name", "")
             sport = e.get("sport", "")
             ctx   = fetch_event_context(name, sport)
@@ -140,36 +140,61 @@ class BettingAdvisor:
             "- Si equipo A tiene GC < 0.7/pj (defensa solida): BTTS riesgo alto, descarta\n"
             "- Si ambos tienen GF > 1.5/pj Y GC > 0.8/pj: BTTS 'Si' con buena probabilidad\n\n"
 
+            "=== TENIS (GRAND SLAMS Y TORNEOS ATP/WTA) ===\n"
+            "Para tenis, los datos ESPN son de ranking. Complementa con tu conocimiento de entrenamiento:\n\n"
+
+            "UMBRAL PARA TENIS: >= 78% (ligeramente menor que futbol por ser 1-vs-1 sin factor local)\n\n"
+
+            "TIERRA BATIDA (Roland Garros, Madrid, Roma, Montecarlo):\n"
+            "- Especialistas en tierra: argentinos, españoles, italianos suelen rendir mejor en arcilla\n"
+            "- Jugadores de pista rápida (muchos americanos, australianos) rinden PEOR en tierra\n"
+            "- Ranking ATP/WTA es la referencia principal; complementa con historial en tierra\n\n"
+
+            "CUÁNDO LLAMAR AL TOOL EN TENIS:\n"
+            "- Top-15 ATP/WTA especialista en tierra vs jugador fuera del top-80: prob >= 85%\n"
+            "- Diferencia de ranking > 40 puestos Y el favorito es especialista de la superficie: prob >= 78%\n"
+            "- Cuota entre 1.20-1.80 con alta convicción: EV puede ser claramente positivo\n"
+            "- Ejemplo: Cerúndolo 1.24 (clay specialist) vs Fearnley (grass player) → prob real ~87% → EV +9%\n"
+            "- Ejemplo: Tsitsipas 1.16 (finalista RG) vs qualifier → prob real ~92% → EV +7%\n\n"
+
+            "CUÁNDO NO LLAMAR AL TOOL EN TENIS:\n"
+            "- Cuota < 1.10: el EV matemático casi nunca es positivo con estas cuotas tan bajas\n"
+            "- Partido entre jugadores de ranking similar (ambas cuotas entre 1.50-2.50)\n"
+            "- No tienes información clara sobre el ranking o historial en la superficie\n\n"
+
             "=== UMBRAL MINIMO — OBLIGATORIO ===\n"
-            "- Solo llamas al tool para selecciones con probabilidad estimada >= 80%\n"
-            "- La estimacion DEBE basarse en los datos ESPN mostrados, no en suposiciones\n"
+            "- Futbol: Solo llamas al tool para selecciones con probabilidad estimada >= 80%\n"
+            "- Tenis: Umbral bajado a >= 78% (partido de 2 jugadores, sin empate posible)\n"
+            "- La estimacion DEBE basarse en los datos ESPN mostrados o tu conocimiento de rankings/forma\n"
             "- Si la forma contradice lo que esperarias de la tabla: usa la FORMA (mas reciente)\n"
-            "- Si no hay datos ESPN: se conservador, descarta si no hay desequilibrio EVIDENTE\n"
-            "- 70-79%: descarta. <70%: descarta definitivamente\n\n"
+            "- 70-77% en futbol: descarta. <70%: descarta definitivamente\n\n"
 
             "=== SENALES CLARAS DE 80%+ ===\n"
             "- Top-3 de tabla (en casa, buen record local) vs bottom-3 (fuera, mal record visitante)\n"
             "- Equipo con 4-5 victorias en los ultimos 5 vs equipo con 4-5 derrotas\n"
             "- Over 2.5 cuando suma GF+GC de ambos > 4.0 goles esperados Y el H2H lo confirma\n"
             "- BTTS 'Si' cuando ambos marcan 1.5+/pj y encajan 1.0+/pj\n"
-            "- Doble oportunidad 1X para favorito local con record en casa > 70% puntos posibles\n\n"
+            "- Doble oportunidad 1X para favorito local con record en casa > 70% puntos posibles\n"
+            "- Tenis: top-15 especialista en tierra vs no-especialista con diferencia de ranking > 40 puestos\n\n"
 
             "=== SENALES DE DESCARTE ===\n"
             "- Forma contradice la tabla (favorito en crisis: 3+ derrotas recientes)\n"
             "- Partido equilibrado en tabla Y en forma\n"
             "- Partido con implicaciones tacticas (ya campeones, ya descendidos, ya sin nada)\n"
-            "- No hay datos ESPN Y las cuotas no muestran desequilibrio claro (< 60% implicita)\n"
-            "- H2H muestra que el supuesto favorito pierde historicamente contra este rival\n\n"
+            "- Futbol sin datos ESPN Y cuotas no muestran desequilibrio claro (< 60% implicita) — TENIS ES EXCEPCION\n"
+            "- H2H muestra que el supuesto favorito pierde historicamente contra este rival\n"
+            "- Tenis: cuota favorito < 1.10 (EV matematicamente casi imposible con esas cuotas)\n\n"
 
             "=== CRITERIOS FINALES ===\n"
-            "- EV minimo: +4% sobre el valor justo\n"
-            "- Cuotas objetivo: 1.20-1.70 (alta probabilidad = cuota baja, es normal)\n"
-            "- Maximo 5 apuestas por sesion. 0 si nada cumple el 80%\n"
-            "- Mercados: 1X2, Doble oportunidad, Over/Under, Ambos marcan, Handicap claro\n\n"
+            "- EV minimo: +1% (reducido para capturar value bets en tenis y cuotas medias)\n"
+            "- Cuotas validas: 1.10-5.00 (no incluir cuotas < 1.10 donde el EV es matematicamente casi imposible)\n"
+            "- Maximo 6 apuestas por sesion. 0 si nada cumple los criterios\n"
+            "- Mercados validos en tenis: Ganador del partido\n"
+            "- Mercados validos en futbol: 1X2, Doble oportunidad, Over/Under, Ambos marcan, Handicap claro\n\n"
 
             f"Bankroll: {self.bankroll}€\n\n"
 
-            "IMPORTANTE: Se honesto y riguroso. Si revisas todos los partidos y ninguno cumple el 80% "
+            "IMPORTANTE: Se honesto y riguroso. Si revisas todos los partidos y ninguno cumple los criterios "
             "con los datos disponibles, no llames al tool y explica brevemente por que no hay oportunidades.\n\n"
 
             "EVENTOS (con datos reales ESPN donde disponibles):\n"

@@ -19,11 +19,11 @@ class Config:
     # Responsible gambling limits
     max_daily_stake: float = float(os.getenv("MAX_DAILY_STAKE", "50"))
     max_single_bet: float = float(os.getenv("MAX_SINGLE_BET", "10"))
-    min_odds: float = float(os.getenv("MIN_ODDS", "1.5"))
+    min_odds: float = float(os.getenv("MIN_ODDS", "1.01"))
     max_odds: float = float(os.getenv("MAX_ODDS", "10.0"))
 
     # Value betting thresholds
-    min_ev_threshold: float = float(os.getenv("MIN_EV_THRESHOLD", "0.03"))   # 3% min EV
+    min_ev_threshold: float = float(os.getenv("MIN_EV_THRESHOLD", "0.01"))   # 1% min EV
     kelly_fraction: float = float(os.getenv("KELLY_FRACTION", "0.25"))        # Quarter-Kelly (safer)
 
     # Playwright settings

@@ -2,6 +2,7 @@
 Comprehensive team context fetcher using ESPN's unofficial API.
 Provides: season record + position, recent results, goals avg,
           home/away splits (season + last 5), H2H, injuries.
+For tennis: ATP/WTA player ranking lookup.
 No API key required.
 """
 import re
@@ -49,6 +50,11 @@ _record_cache: dict[tuple, dict] = {}
 
 # (sport_slug, league_slug, team_id) -> list of events
 _schedule_cache: dict[tuple, list] = {}
+
+# ── Tennis player caches ──────────────────────────────────────────────────────
+
+_tennis_players: dict[str, dict] = {}   # name_key -> {id, tour, ranking, country}
+_tennis_tours_built: set[str] = set()
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -270,19 +276,106 @@ def _h2h(events: list[dict], team1_id: str, team2_id: str, n: int = 5) -> list[s
     return meetings
 
 
+# ── Tennis (ATP/WTA via ESPN) ─────────────────────────────────────────────────
+
+def _build_tennis_index(tour: str) -> None:
+    """Build ATP or WTA player name index from ESPN athletes list."""
+    if tour in _tennis_tours_built:
+        return
+    _tennis_tours_built.add(tour)
+    data = _get(
+        f"https://site.api.espn.com/apis/site/v2/sports/tennis/{tour}/athletes",
+        params={"limit": 500, "active": True},
+    )
+    for a in data.get("athletes", []):
+        pid = str(a.get("id", ""))
+        if not pid:
+            continue
+        display = (a.get("displayName") or "").lower()
+        rank_raw = a.get("rank") or a.get("ranking") or {}
+        rank = rank_raw.get("current") if isinstance(rank_raw, dict) else rank_raw
+        country_raw = a.get("citizenship") or a.get("country") or {}
+        country = (
+            country_raw.get("displayName") or country_raw.get("name") or ""
+            if isinstance(country_raw, dict) else str(country_raw)
+        )
+        entry = {"id": pid, "tour": tour, "ranking": rank, "country": country}
+        # Index by full display name and by last name
+        for key in [display]:
+            if key:
+                _tennis_players.setdefault(key, entry)
+        last = display.split()[-1] if display else ""
+        if last:
+            _tennis_players.setdefault(last, entry)
+
+
+def _find_tennis_player(name: str) -> dict | None:
+    """Match a TonyBet player name (Lastname, Firstname) to ESPN."""
+    for tour in ("atp", "wta"):
+        _build_tennis_index(tour)
+
+    name_l = name.lower().strip()
+
+    # Direct match
+    if name_l in _tennis_players:
+        return _tennis_players[name_l]
+
+    # TonyBet format: "Lastname, Firstname" → try both orderings
+    if "," in name_l:
+        last, rest = name_l.split(",", 1)
+        first = rest.strip()
+        last  = last.strip()
+        for key in [f"{first} {last}", last, f"{last} {first}"]:
+            if key and key in _tennis_players:
+                return _tennis_players[key]
+
+    # Fuzzy fallback
+    best, best_r = None, 0.0
+    for key, val in _tennis_players.items():
+        r = SequenceMatcher(None, name_l, key).ratio()
+        if r > best_r:
+            best_r, best = r, val
+    return best if best_r >= 0.70 else None
+
+
+def fetch_tennis_event_context(event_name: str) -> str:
+    """Return ATP/WTA ranking context for both players in a tennis match."""
+    parts = re.split(r"\s+vs\.?\s+|\s+v\.?\s+", event_name, flags=re.I)
+    if len(parts) != 2:
+        return ""
+
+    lines = []
+    for name in parts:
+        name = name.strip()
+        player = _find_tennis_player(name)
+        if player:
+            tour    = player["tour"].upper()
+            rank    = player.get("ranking")
+            country = player.get("country", "")
+            rank_s  = f"#{rank}" if rank else "ranking no disponible"
+            country_s = f" ({country})" if country else ""
+            lines.append(f"  {name}{country_s} — {tour} Ranking {rank_s}")
+        else:
+            lines.append(f"  {name}: sin datos ESPN (usa tu conocimiento de training)")
+
+    return "\n".join(lines) if lines else ""
+
+
 # ── main public function ──────────────────────────────────────────────────────
 
 def fetch_event_context(event_name: str, sport: str) -> str:
     """
-    Return a comprehensive context block for Claude with:
-    - Season table position and full record (W/D/L, GF/GA, points)
-    - Season home vs away record from official stats
-    - Last 5 results with goals scored/conceded
-    - Goals scored/conceded average (last 5)
-    - Home/away form in the last 5 games
-    - Last 5 H2H meetings
-    - Injuries (where available)
+    Return a comprehensive context block for Claude.
+    For tennis: ATP/WTA ranking lookup.
+    For team sports: season record, recent results, H2H, injuries.
     """
+    sport_l = sport.lower()
+
+    # Tennis: use dedicated player ranking lookup
+    if any(k in sport_l for k in ("tenis", "tennis")):
+        return fetch_tennis_event_context(event_name)
+
+    # Team sports: use existing ESPN team data
     parts = re.split(r"\s+vs\.?\s+|\s+v\.?\s+", event_name, flags=re.I)
     if len(parts) != 2:
         return ""

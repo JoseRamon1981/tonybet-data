@@ -299,7 +299,8 @@ async def _run_preview():
         "premier league", "la liga", "bundesliga", "serie a", "ligue 1",
         "champions league", "europa league", "eredivisie", "primera division",
     ]
-    OTHER_SPORTS = ["baloncesto", "tenis", "hockey", "balonmano", "voleibol",
+    TENNIS_KEYWORDS = ["tenis", "tennis", "atp", "wta", "roland garros", "wimbledon", "us open", "australian open"]
+    OTHER_SPORTS = ["baloncesto", "hockey", "balonmano", "voleibol",
                     "beisbol", "futbol americano", "tenis mesa"]
 
     def _is_top(e):
@@ -307,6 +308,8 @@ async def _run_preview():
         sport = (e.get("sport") or "").lower()
         if sport == "futbol":
             return any(t in comp for t in FOOTBALL_TOP)
+        if any(k in sport for k in TENNIS_KEYWORDS) or any(k in comp for k in TENNIS_KEYWORDS):
+            return True
         return any(s in sport for s in OTHER_SPORTS)
 
     top = [e for e in tomorrow_events if _is_top(e)]
@@ -318,15 +321,17 @@ async def _run_preview():
     sample += by_sport.get("Futbol", [])[:8]
     for sp, evts in by_sport.items():
         if sp != "Futbol":
-            sample += evts[:2]
+            sport_l = sp.lower()
+            limit = 8 if any(k in sport_l for k in TENNIS_KEYWORDS) else 4
+            sample += evts[:limit]
     if not sample:
-        sample = tomorrow_events[:15]
+        sample = tomorrow_events[:25]
 
     # Build enriched event list with ESPN data
     import json
     print("  Obteniendo datos reales de equipos desde ESPN...")
     enriched = []
-    for e in sample[:20]:
+    for e in sample[:25]:
         ctx = fetch_event_context(e.get("name", ""), e.get("sport", ""))
         entry = {
             "name": e.get("name"),
@@ -353,6 +358,8 @@ async def _run_preview():
         "2. Señala qué selección/mercado podría tener valor (no hace falta calcular EV exacto)\n"
         "3. Explica en 1-2 líneas por qué — usando la forma reciente si está disponible\n"
         "4. Señala si hay algo que NO sabes (lesiones recientes, contexto de temporada) que podría cambiar el análisis\n\n"
+        "TENIS: Para partidos de Grand Slam (Roland Garros, Wimbledon, US Open, AO) usa tu conocimiento\n"
+        "de rankings ATP/WTA y especialización en superficie. No necesitas datos ESPN para esto.\n\n"
         "Al final, haz un RANKING de los 3 partidos más prometedores para el análisis completo de mañana.\n\n"
         "Sé directo y breve. No uses tablas largas. Formato simple.\n\n"
         f"EVENTOS DE MAÑANA ({tomorrow}):\n{events_json}"
@@ -428,7 +435,7 @@ async def run(mode: str = "advisor"):
         print("No se obtuvieron eventos. Comprueba tus credenciales y conexión.")
         sys.exit(1)
 
-    # 2. Pre-filter: prioritize top leagues to reduce tokens
+    # 2. Pre-filter: prioritize top leagues + all tennis Grand Slams
     TOP_LEAGUES = [
         # Futbol
         "premier league", "la liga", "bundesliga", "serie a", "ligue 1",
@@ -452,7 +459,8 @@ async def run(mode: str = "advisor"):
         "premier league", "la liga", "bundesliga", "serie a", "ligue 1",
         "champions league", "europa league", "eredivisie", "primera division",
     ]
-    OTHER_SPORTS = ["baloncesto", "tenis", "hockey", "balonmano", "voleibol",
+    TENNIS_KEYWORDS = ["tenis", "tennis", "atp", "wta", "roland garros", "wimbledon", "us open", "australian open"]
+    OTHER_SPORTS = ["baloncesto", "hockey", "balonmano", "voleibol",
                     "beisbol", "futbol americano", "tenis mesa"]
 
     def _is_top_league(e: dict) -> bool:
@@ -461,12 +469,15 @@ async def run(mode: str = "advisor"):
         # For football: only top leagues
         if sport == "futbol":
             return any(t in comp for t in FOOTBALL_TOP)
-        # For other sports: include all (fewer events per sport)
+        # For tennis: always include (Grand Slams are priority)
+        if any(k in sport for k in TENNIS_KEYWORDS) or any(k in comp for k in TENNIS_KEYWORDS):
+            return True
+        # For other sports: include all
         return any(s in sport for s in OTHER_SPORTS)
 
     top_events = [e for e in events if _is_top_league(e)]
 
-    # Sample across sports to guarantee diversity: up to 8 football + 2 per other sport
+    # Sample across sports: up to 8 football + 10 tennis + 3 per other sport
     from collections import defaultdict
     by_sport: dict[str, list] = defaultdict(list)
     for e in top_events:
@@ -476,18 +487,21 @@ async def run(mode: str = "advisor"):
     filtered += by_sport.get("Futbol", [])[:8]
     for sport, evts in by_sport.items():
         if sport != "Futbol":
-            filtered += evts[:2]
+            sport_l = sport.lower()
+            limit = 10 if any(k in sport_l for k in TENNIS_KEYWORDS) else 3
+            filtered += evts[:limit]
+
     # Fill remaining slots with more football if needed
-    if len(filtered) < 20:
+    if len(filtered) < 30:
         already = {id(e) for e in filtered}
         for e in by_sport.get("Futbol", [])[8:]:
-            if len(filtered) >= 20:
+            if len(filtered) >= 30:
                 break
             if id(e) not in already:
                 filtered.append(e)
 
     if not filtered:
-        filtered = events[:15]
+        filtered = events[:20]
     print(f"  Eventos seleccionados: {len(filtered)}/{len(events)} ({len(by_sport)} deportes)")
 
     # 3. Analyse with Claude
