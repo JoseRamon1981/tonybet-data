@@ -2,7 +2,8 @@ name: Tonybet Advisor
 
 on:
   schedule:
-    - cron: '0 8 * * *'   # Todos los días a las 8:00 UTC (10h España en verano)
+    - cron: '0 7 * * *'   # 07:00 UTC → 09:00 España (hora de verano) — análisis matutino
+    - cron: '0 15 * * *'  # 15:00 UTC → 17:00 España — actualización para partidos nocturnos
   workflow_dispatch:
     inputs:
       mode:
@@ -41,14 +42,22 @@ jobs:
       - name: Instalar dependencias Python
         run: pip install -r requirements_advisor.txt
 
-      - name: Instalar navegador Playwright
+      - name: Instalar navegador Playwright (fallback)
         run: playwright install chromium --with-deps
 
       - name: Ejecutar advisor
         env:
+          # ── Fuente de datos principal ──────────────────────────────
+          # Registro gratuito en https://the-odds-api.com/
+          # Tier gratuito: 500 req/mes (suficiente para 2 ejecuciones/día)
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_MAX_REQUESTS: ${{ vars.ODDS_API_MAX_REQUESTS || '40' }}
+          # ── Tonybet (credenciales para scraper fallback) ───────────
           TONYBET_USERNAME: ${{ secrets.TONYBET_USERNAME }}
           TONYBET_PASSWORD: ${{ secrets.TONYBET_PASSWORD }}
+          # ── Claude AI ─────────────────────────────────────────────
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # ── Parámetros de gestión de bankroll ─────────────────────
           BANKROLL: ${{ vars.BANKROLL || '200' }}
           MAX_DAILY_STAKE: ${{ vars.MAX_DAILY_STAKE || '30' }}
           MAX_SINGLE_BET: ${{ vars.MAX_SINGLE_BET || '8' }}

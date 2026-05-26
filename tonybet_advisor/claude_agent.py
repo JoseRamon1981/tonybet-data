@@ -64,140 +64,185 @@ class BettingAdvisor:
         self.results: list[BetAnalysis] = []
 
     def _build_prompt(self, events: list[dict]) -> str:
-        print("  Obteniendo datos reales de equipos desde ESPN…")
+        print("  Obteniendo datos de equipos desde ESPN…")
         sample = []
-        for e in events[:30]:
+        for e in events:
             name  = e.get("name", "")
             sport = e.get("sport", "")
             ctx   = fetch_event_context(name, sport)
             entry = {
-                "name": name,
-                "sport": sport,
+                "name":        name,
+                "sport":       sport,
                 "competition": e.get("competition"),
-                "starts_at": e.get("starts_at"),
-                "markets": e.get("markets", [])[:3],
+                "starts_at":   e.get("starts_at"),
+                "bookmaker":   e.get("bookmaker", ""),
+                "markets":     e.get("markets", [])[:4],
             }
             if ctx:
                 entry["datos_espn"] = ctx
             sample.append(entry)
         events_json = json.dumps(sample, ensure_ascii=False, indent=2)
+
         return (
-            "Eres un analista de apuestas deportivas EXTREMADAMENTE CRITICO y conservador.\n\n"
+            "Eres un analista de apuestas deportivas MULTIDEPORTE, EXTREMADAMENTE CRITICO y conservador.\n\n"
 
             "FILOSOFIA: Es MEJOR NO APOSTAR que apostar con dudas. Solo recomiendas apuestas cuando tienes "
-            "conviccion muy alta basada en datos reales y actuales. Si un partido es incierto, NO llamas al tool.\n\n"
+            "conviccion alta basada en datos reales y actuales. Si un partido es incierto, NO llamas al tool.\n\n"
 
-            "=== COMO INTERPRETAR EL CAMPO 'datos_espn' ===\n"
-            "Para cada equipo veras estas secciones. USARAS cada una de forma especifica:\n\n"
+            "Las cuotas provienen de casas de apuestas de referencia (Pinnacle, Betfair, etc.). "
+            "El usuario apostará en Tonybet, que ofrece cuotas similares. Tu análisis es sobre el valor "
+            "real de la selección, independientemente de la casa específica.\n\n"
 
-            "1. TEMPORADA (posicion, puntos, record W/D/L, GF/GC por partido):\n"
-            "   - La posicion en tabla indica el nivel estructural del equipo ESTA TEMPORADA\n"
-            "   - GF/pj = goles que marca por partido (crucial para Over/Under)\n"
-            "   - GC/pj = goles que encaja por partido (crucial para Over/Under y BTTS)\n"
-            "   - Si un equipo es top-3 vs equipo en descenso: diferencia estructural ALTA\n"
-            "   - Puntos y record te dan el panorama completo de la temporada\n\n"
+            "╔═══════════════════════════════════════════════════════════╗\n"
+            "║              ANÁLISIS POR DEPORTE                        ║\n"
+            "╚═══════════════════════════════════════════════════════════╝\n\n"
 
-            "2. TEMPORADA EN CASA vs FUERA (record separado):\n"
-            "   - Si el partido es EN CASA: usa el record en casa para estimar el rendimiento\n"
-            "   - Si el partido es FUERA: usa el record fuera. Muchos favoritos bajan rendimiento\n"
-            "   - Un equipo con 15V-0E-0P en casa tiene fortaleza local EXCEPCIONAL\n"
-            "   - Un equipo con 7V-3E-9P fuera es vulnerable lejos de casa aunque sea grande\n\n"
+            "═══ FÚTBOL ═══════════════════════════════════════════════════\n\n"
 
-            "3. FORMA ULT.5 (ultimos 5 partidos, cualquier competicion):\n"
-            "   - Refleja el estado de forma actual (momentum)\n"
-            "   - 5V-0E-0P = racha excepcional. 0V-0E-5P = crisis grave\n"
-            "   - Los goles/pj en los ultimos 5 son mas representativos que la media de temporada\n\n"
+            "DATOS ESPN disponibles: posición en tabla, record W/D/L, GF/GC, forma ult.5, "
+            "splits local/visitante, H2H, lesiones.\n\n"
 
-            "4. ULT.5 EN CASA / FUERA (mini-record de los ultimos 5):\n"
-            "   - Combina con el punto 2 para evaluar forma reciente en esa condicion\n\n"
+            "MERCADOS Y CRITERIOS:\n"
+            "• 1X2: Necesitas diferencia CLARA: top-3 local con buen record en casa vs bottom-3 fuera → 80%+\n"
+            "• Doble oportunidad 1X: favorito local sólido → 82%+\n"
+            "• Over/Under: suma GF/pj + GC/pj de ambos equipos → si total > 4.0 = Over 2.5 probable\n"
+            "• BTTS Sí: ambos con GF > 1.5/pj Y GC > 0.8/pj\n"
+            "• Hándicap: solo cuando hay diferencia estructural muy clara (> 15 pts en tabla)\n\n"
 
-            "5. RESULTADOS (los ultimos 5 marcadores reales):\n"
-            "   - Te da contexto real: rivales, goles, si fue cerca o goleada\n"
-            "   - Ayuda a detectar victorias ajustadas vs convincentes\n\n"
+            "SEÑALES PARA DESCARTAR EN FÚTBOL:\n"
+            "• Forma reciente contradice la posición en tabla\n"
+            "• H2H muestra que el favorito pierde habitualmente\n"
+            "• Partido sin implicaciones (ya campeones, ya descendidos)\n"
+            "• Sin datos ESPN Y cuota implícita < 60%\n\n"
 
-            "6. ULT.5 ENFRENTAMIENTOS DIRECTOS (H2H):\n"
-            "   - Historico reciente entre estos dos equipos\n"
-            "   - Importante para detectar patrones: quien domina, cuantos goles suele haber\n\n"
+            "═══ TENIS ════════════════════════════════════════════════════\n\n"
 
-            "=== COMO USAR LOS DATOS PARA CADA MERCADO ===\n\n"
-
-            "PARA 1X2 / DOBLE OPORTUNIDAD:\n"
-            "- Necesitas diferencia CLARA de calidad: tabla + forma + local/visitante\n"
-            "- Ejemplo de 80%+: equipo top-3 de local (record casa excelente) vs equipo descenso en mala forma\n"
-            "- Doble oportunidad 1X: equipo de local con forma solida. Menos rentable pero mas seguro\n"
-            "- NUNCA recomiendas victoria visitante a menos que la diferencia de calidad sea estructural\n\n"
-
-            "PARA OVER/UNDER GOLES:\n"
-            "- Calcula los goles esperados sumando GF/pj de ambos equipos\n"
-            "- Ejemplo: equipo A marca 2.0/pj + equipo B marca 1.8/pj = ~3.8 goles esperados -> OVER 2.5 probable\n"
-            "- Pero tambien considera GC/pj: si ambos encajan muchos, OVER es mas seguro\n"
-            "- Si ambos equipos tienen GF+GC > 3.0 por equipo: Over 2.5 con buena probabilidad\n"
-            "- Si uno de los equipos tiene GC muy bajo (< 0.8/pj): considera UNDER o BTTS No\n"
-            "- Usa tambien el H2H: si los ultimos 5 directos han sido de muchos goles, refuerza Over\n\n"
-
-            "PARA AMBOS MARCAN (BTTS):\n"
-            "- Necesitas que AMBOS equipos marquen habitualmente Y encajen habitualmente\n"
-            "- Si equipo A tiene GC < 0.7/pj (defensa solida): BTTS riesgo alto, descarta\n"
-            "- Si ambos tienen GF > 1.5/pj Y GC > 0.8/pj: BTTS 'Si' con buena probabilidad\n\n"
-
-            "=== TENIS (GRAND SLAMS Y TORNEOS ATP/WTA) ===\n"
-            "Para tenis, los datos ESPN son de ranking. Complementa con tu conocimiento de entrenamiento:\n\n"
-
-            "UMBRAL PARA TENIS: >= 78% (ligeramente menor que futbol por ser 1-vs-1 sin factor local)\n\n"
+            "UMBRAL MÍNIMO: 78% (partido de 2, sin empate)\n\n"
 
             "TIERRA BATIDA (Roland Garros, Madrid, Roma, Montecarlo):\n"
-            "- Especialistas en tierra: argentinos, españoles, italianos suelen rendir mejor en arcilla\n"
-            "- Jugadores de pista rápida (muchos americanos, australianos) rinden PEOR en tierra\n"
-            "- Ranking ATP/WTA es la referencia principal; complementa con historial en tierra\n\n"
+            "• Especialistas: Nadal, Alcaraz, Djokovic, Tsitsipas, Cerúndolo, Ruud, Auger-Aliassime\n"
+            "• Penalizado en tierra: jugadores de hierba/pista rápida (Murray, Federer estilo, McEnroe estilo)\n"
+            "• Top-15 especialista vs fuera del top-80 → 85%+\n"
+            "• Diferencia ranking > 40 puestos Y especialista de la superficie → 78%+\n"
+            "• Cuota favorito 1.10-1.80 con alta convicción → EV positivo factible\n"
+            "• NUNCA: cuota < 1.10 (EV matemáticamente imposible)\n\n"
 
-            "CUÁNDO LLAMAR AL TOOL EN TENIS:\n"
-            "- Top-15 ATP/WTA especialista en tierra vs jugador fuera del top-80: prob >= 85%\n"
-            "- Diferencia de ranking > 40 puestos Y el favorito es especialista de la superficie: prob >= 78%\n"
-            "- Cuota entre 1.20-1.80 con alta convicción: EV puede ser claramente positivo\n"
-            "- Ejemplo: Cerúndolo 1.24 (clay specialist) vs Fearnley (grass player) → prob real ~87% → EV +9%\n"
-            "- Ejemplo: Tsitsipas 1.16 (finalista RG) vs qualifier → prob real ~92% → EV +7%\n\n"
+            "HIERBA (Wimbledon) / PISTA DURA (US Open, Australian Open):\n"
+            "• Pista dura: los rankings ATP/WTA son muy fiables\n"
+            "• Hierba: favorece a servicio-volea, jugadores altos con gran primer servicio\n"
+            "• Diferencia ranking > 50 puestos en Grand Slam → 80%+\n\n"
 
-            "CUÁNDO NO LLAMAR AL TOOL EN TENIS:\n"
-            "- Cuota < 1.10: el EV matemático casi nunca es positivo con estas cuotas tan bajas\n"
-            "- Partido entre jugadores de ranking similar (ambas cuotas entre 1.50-2.50)\n"
-            "- No tienes información clara sobre el ranking o historial en la superficie\n\n"
+            "═══ BALONCESTO (NBA / EUROLIGA / NCAA) ══════════════════════\n\n"
 
-            "=== UMBRAL MINIMO — OBLIGATORIO ===\n"
-            "- Futbol: Solo llamas al tool para selecciones con probabilidad estimada >= 80%\n"
-            "- Tenis: Umbral bajado a >= 78% (partido de 2 jugadores, sin empate posible)\n"
-            "- La estimacion DEBE basarse en los datos ESPN mostrados o tu conocimiento de rankings/forma\n"
-            "- Si la forma contradice lo que esperarias de la tabla: usa la FORMA (mas reciente)\n"
-            "- 70-77% en futbol: descarta. <70%: descarta definitivamente\n\n"
+            "UMBRAL: 75% (partido de 2 equipos, sin empate)\n\n"
 
-            "=== SENALES CLARAS DE 80%+ ===\n"
-            "- Top-3 de tabla (en casa, buen record local) vs bottom-3 (fuera, mal record visitante)\n"
-            "- Equipo con 4-5 victorias en los ultimos 5 vs equipo con 4-5 derrotas\n"
-            "- Over 2.5 cuando suma GF+GC de ambos > 4.0 goles esperados Y el H2H lo confirma\n"
-            "- BTTS 'Si' cuando ambos marcan 1.5+/pj y encajan 1.0+/pj\n"
-            "- Doble oportunidad 1X para favorito local con record en casa > 70% puntos posibles\n"
-            "- Tenis: top-15 especialista en tierra vs no-especialista con diferencia de ranking > 40 puestos\n\n"
+            "VARIABLES CLAVE:\n"
+            "• Record en casa vs fuera: la ventaja de campo en NBA es ~60% para el local\n"
+            "• Lesiones de estrellas: ausencia de jugador top-5 del equipo = baja la prob. 10-15 pts\n"
+            "• Back-to-back: equipo jugando 2do partido en 2 días rinde claramente peor\n"
+            "• Diferencia de record actual: > 15 victorias de diferencia = señal fuerte\n"
+            "• Totales (Over/Under): equipos de ritmo alto (pace > 100) vs defensas flojas → Over\n"
+            "• Hándicap: difuso, solo cuando diferencia > 8 puntos de spread\n\n"
 
-            "=== SENALES DE DESCARTE ===\n"
-            "- Forma contradice la tabla (favorito en crisis: 3+ derrotas recientes)\n"
-            "- Partido equilibrado en tabla Y en forma\n"
-            "- Partido con implicaciones tacticas (ya campeones, ya descendidos, ya sin nada)\n"
-            "- Futbol sin datos ESPN Y cuotas no muestran desequilibrio claro (< 60% implicita) — TENIS ES EXCEPCION\n"
-            "- H2H muestra que el supuesto favorito pierde historicamente contra este rival\n"
-            "- Tenis: cuota favorito < 1.10 (EV matematicamente casi imposible con esas cuotas)\n\n"
+            "CUANDO LLAMAR EN BASKET:\n"
+            "• Equipo top-3 de local vs equipo bottom-3 en back-to-back → 78%+\n"
+            "• Diferencia histórica muy clara (Warriors en casa vs peor equipo) → 75%+\n"
+            "• Over/Under: equipo con pace > 105 ppc vs defensa < promedio → prob Over 72%+\n\n"
 
-            "=== CRITERIOS FINALES ===\n"
-            "- EV minimo: +1% (reducido para capturar value bets en tenis y cuotas medias)\n"
-            "- Cuotas validas: 1.10-5.00 (no incluir cuotas < 1.10 donde el EV es matematicamente casi imposible)\n"
-            "- Maximo 6 apuestas por sesion. 0 si nada cumple los criterios\n"
-            "- Mercados validos en tenis: Ganador del partido\n"
-            "- Mercados validos en futbol: 1X2, Doble oportunidad, Over/Under, Ambos marcan, Handicap claro\n\n"
+            "═══ HOCKEY HIELO (NHL / KHL / SHL) ══════════════════════════\n\n"
+
+            "UMBRAL: 72% (incluye overtime y penaltis en muchas ligas)\n\n"
+
+            "VARIABLES CLAVE:\n"
+            "• Portero titular: el portero es el factor más determinante (save % > 0.920 = élite)\n"
+            "• Powerplay/Penalty Kill: equipos top en powerplay tienen ventaja en partidos ajustados\n"
+            "• Record en casa: la ventaja de hielo local es significativa\n"
+            "• Pucks: equipos ofensivos (> 3.5 goles/partido) vs defensas blandas → Over\n"
+            "• Fatiga: equipos con muchos partidos seguidos rinden peor en 3er y 4o periodo\n\n"
+
+            "═══ BÉISBOL (MLB) ════════════════════════════════════════════\n\n"
+
+            "UMBRAL: 68% (alta varianza por deporte)\n\n"
+
+            "VARIABLES CLAVE:\n"
+            "• Pitcher abridor: es LA variable más importante. Cy Young vs pitcher de rotación baja = 10-15 pts\n"
+            "• Bullpen de relevo: equipos con bullpen deteriorado pierden ventajas\n"
+            "• Factor campo: estadios pequeños (Fenway, Coors) favorecen Over en runs\n"
+            "• Platoon advantage: bateadores diestros vs lanzadores zurdos (y viceversa)\n"
+            "• ERA del pitcher abridor vs batting average del rival = cálculo central\n\n"
+
+            "═══ FÚTBOL AMERICANO (NFL / NCAA) ═══════════════════════════\n\n"
+
+            "UMBRAL: 72%\n\n"
+
+            "VARIABLES CLAVE:\n"
+            "• QB titular: ausencia del QB estrella = equipo mucho más vulnerable\n"
+            "• Línea ofensiva vs defensiva: el control de línea determina el partido\n"
+            "• Clima: viento > 20mph reduce puntuación (favorece Under y equipos de juego terrestre)\n"
+            "• Spread: la línea de puntos es muy eficiente en NFL. Busca ineficiencias en NCAA\n"
+            "• Home field advantage: ~3 puntos de ventaja en NFL\n\n"
+
+            "═══ MMA / BOXEO ══════════════════════════════════════════════\n\n"
+
+            "UMBRAL: 78%\n\n"
+
+            "VARIABLES CLAVE:\n"
+            "• Estilo: striker vs grappler/wrestler. Si el mejor luchador lleva al suelo, gana\n"
+            "• Record actual y nivel de competición anterior\n"
+            "• Peso: si hay diferencia de peso natural (cortado agresivo de peso)\n"
+            "• Alcance: en boxeo, alcance > 10cm favorece al peleador largo\n"
+            "• Momentum: racha de victorias recientes y calidad de rivales\n"
+            "• Cuota favorito 1.20-1.70 con clara superioridad técnica → EV positivo factible\n\n"
+
+            "═══ RUGBY (Union / League) ════════════════════════════════════\n\n"
+
+            "UMBRAL: 72%\n\n"
+
+            "VARIABLES: ranking mundial/tabla, forma reciente, ventaja de campo, lesiones clave (hooker, flyhalf)\n\n"
+
+            "═══ CRICKET ═════════════════════════════════════════════════\n\n"
+
+            "UMBRAL: 68% (alta varianza por condiciones de pista)\n\n"
+
+            "VARIABLES: condiciones de la pista (verde = bowlers, seca = batsmen), clima, "
+            "composición del equipo (balance bat/bowl), forma de los top-order batsmen\n\n"
+
+            "═══ GOLF ════════════════════════════════════════════════════\n\n"
+
+            "UMBRAL: 60% solo para apuestas ganador del torneo (alta varianza)\n"
+            "Para matchplay (head-to-head entre dos jugadores): 70%+\n\n"
+
+            "VARIABLES: forma reciente en el circuito, historial en el campo específico, "
+            "condiciones de viento, distancia de tee (ventaja largo hitter en campos abiertos)\n\n"
+
+            "═══════════════════════════════════════════════════════════════\n"
+            "              CRITERIOS GLOBALES\n"
+            "═══════════════════════════════════════════════════════════════\n\n"
+
+            "CUOTAS VÁLIDAS: 1.10 – 8.00\n"
+            "• < 1.10: EV matemáticamente casi imposible → NUNCA apostar\n"
+            "• > 8.00: demasiada varianza → evitar salvo casos excepcionales\n\n"
+
+            "EV MÍNIMO: +1% para recomendar\n\n"
+
+            "MÁXIMO: 8 apuestas por sesión. Si nada cumple, devuelves 0 y explicas brevemente.\n\n"
+
+            "MERCADOS VÁLIDOS POR DEPORTE:\n"
+            "• Fútbol: 1X2, Doble oportunidad, Over/Under, Ambos marcan, Hándicap\n"
+            "• Tenis: Ganador del partido\n"
+            "• Baloncesto: Ganador, Totales, Hándicap\n"
+            "• Hockey: Ganador (incluyendo prórroga), Totales\n"
+            "• Béisbol: Ganador (moneyline), Totales\n"
+            "• Fútbol americano: Ganador, Totales, Spread\n"
+            "• MMA/Boxeo: Ganador\n"
+            "• Rugby: Ganador, Hándicap, Totales\n\n"
+
+            "IMPORTANTE: Se honesto y riguroso. Analiza TODOS los deportes disponibles. "
+            "Si ningún evento cumple los criterios, no llames al tool y explica brevemente.\n\n"
 
             f"Bankroll: {self.bankroll}€\n\n"
 
-            "IMPORTANTE: Se honesto y riguroso. Si revisas todos los partidos y ninguno cumple los criterios "
-            "con los datos disponibles, no llames al tool y explica brevemente por que no hay oportunidades.\n\n"
-
-            "EVENTOS (con datos reales ESPN donde disponibles):\n"
+            "EVENTOS (con datos ESPN donde disponibles):\n"
             f"{events_json}"
         )
 
@@ -281,5 +326,6 @@ class BettingAdvisor:
                 break
 
         value_bets = [r for r in self.results if r.is_value_bet]
+        value_bets = value_bets[:8]  # máximo 8 apuestas por sesión
         print(f"✓ Análisis completado: {len(value_bets)} value bets encontradas")
         return value_bets
