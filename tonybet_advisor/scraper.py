@@ -125,24 +125,48 @@ class TonybetScraper:
         except Exception:
             pass
 
-    async def _login(self, page: Page) -> None:
-        print("  → Abriendo Tonybet…")
-        await page.goto(f"{config.tonybet_url}/en", wait_until="domcontentloaded")
-        await page.wait_for_timeout(2000)
+    async def _try_login(self, page: Page) -> bool:
+        """Attempt login — returns True if successful, False if skipped/failed."""
+        if not config.tonybet_username or not config.tonybet_password:
+            print("  ⚠ Sin credenciales — accediendo sin sesión (cuotas públicas disponibles)")
+            return False
 
-        # Look for login button (text-based, resilient to class changes)
-        login_btn = page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|iniciar", re.I))
-        if await login_btn.count() == 0:
-            login_btn = page.locator("a", has_text=re.compile(r"log.?in|sign.?in", re.I))
-        await login_btn.first.click()
-        await page.wait_for_timeout(1000)
+        try:
+            print("  → Intentando login…")
+            # Try multiple login button patterns
+            patterns = [
+                page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|iniciar|entrar|acceder", re.I)),
+                page.get_by_role("link",   name=re.compile(r"log.?in|sign.?in|iniciar|entrar|acceder", re.I)),
+                page.locator("a, button, span").filter(has_text=re.compile(r"^(log.?in|sign.?in|iniciar|entrar)$", re.I)),
+                page.locator("[class*='login' i], [class*='signin' i]"),
+                page.locator("[data-test*='login' i], [data-testid*='login' i]"),
+            ]
+            login_btn = None
+            for pat in patterns:
+                try:
+                    if await pat.count() > 0:
+                        login_btn = pat.first
+                        break
+                except Exception:
+                    continue
 
-        # Fill credentials
-        await page.get_by_placeholder(re.compile(r"email|user|usuario", re.I)).fill(config.tonybet_username)
-        await page.get_by_placeholder(re.compile(r"password|contraseña", re.I)).fill(config.tonybet_password)
-        await page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|entrar|acceder", re.I)).click()
-        await page.wait_for_timeout(3000)
-        print("  ✓ Sesión iniciada")
+            if not login_btn:
+                print("  ⚠ Botón de login no encontrado — accediendo sin sesión")
+                return False
+
+            await login_btn.click(timeout=10_000)
+            await page.wait_for_timeout(1500)
+
+            await page.get_by_placeholder(re.compile(r"email|user|usuario", re.I)).fill(config.tonybet_username, timeout=10_000)
+            await page.get_by_placeholder(re.compile(r"password|contraseña", re.I)).fill(config.tonybet_password, timeout=10_000)
+            await page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|entrar|acceder", re.I)).click(timeout=10_000)
+            await page.wait_for_timeout(3000)
+            print("  ✓ Sesión iniciada")
+            return True
+
+        except Exception as e:
+            print(f"  ⚠ Login omitido ({e.__class__.__name__}) — accediendo sin sesión")
+            return False
 
     async def scrape(self) -> list[dict]:
         print("Iniciando scraper de Tonybet…")
@@ -162,7 +186,11 @@ class TonybetScraper:
             page = await context.new_page()
             page.on("response", lambda r: asyncio.ensure_future(self._capture_response(r)))
 
-            await self._login(page)
+            # Open Tonybet home first, then optionally login
+            print("  → Abriendo Tonybet…")
+            await page.goto(f"{config.tonybet_url}/en", wait_until="domcontentloaded")
+            await page.wait_for_timeout(2000)
+            await self._try_login(page)
 
             # Navigate to prematch section and wait for data to load
             print("  → Cargando apuestas disponibles…")
