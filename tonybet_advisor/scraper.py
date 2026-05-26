@@ -193,9 +193,14 @@ class TonybetScraper:
             await self._try_login(page)
 
             # Navigate to prematch section and wait for data to load
+            # "networkidle" times out on TonyBet (persistent background requests)
             print("  → Cargando apuestas disponibles…")
-            await page.goto(f"{config.tonybet_url}/en/prematch", wait_until="networkidle")
-            await page.wait_for_timeout(4000)
+            await page.goto(
+                f"{config.tonybet_url}/en/prematch",
+                wait_until="domcontentloaded",
+                timeout=60_000,
+            )
+            await page.wait_for_timeout(6000)  # extra wait for JS to load odds
 
             # Scroll to trigger lazy-loaded content
             for _ in range(3):
