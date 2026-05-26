@@ -15,16 +15,17 @@ from .config import config
 # ── helpers ──────────────────────────────────────────────────────────────────
 
 def _is_odds_response(url: str) -> bool:
-    patterns = [
-        r"/api/",
-        r"/sports",
-        r"/prematch",
-        r"/odds",
-        r"/events",
-        r"/markets",
-        r"/lines",
+    # Skip obvious non-data URLs (analytics, tracking, fonts, images, auth tokens)
+    skip_patterns = [
+        r"google-analytics", r"googletagmanager", r"facebook\.com",
+        r"hotjar", r"zendesk", r"intercom", r"sentry",
+        r"\.woff", r"\.ttf", r"\.png", r"\.jpg", r"\.svg",
+        r"/token", r"/auth/", r"/oauth",
     ]
-    return any(re.search(p, url, re.IGNORECASE) for p in patterns)
+    if any(re.search(p, url, re.IGNORECASE) for p in skip_patterns):
+        return False
+    # Accept everything else — let content-type + parser do the real filtering
+    return True
 
 
 def _parse_generic_event(raw: Any) -> list[dict]:
@@ -110,6 +111,7 @@ def _extract_markets(raw: dict) -> list[dict]:
 class TonybetScraper:
     def __init__(self):
         self._raw_payloads: list[Any] = []
+        self._captured_urls: list[str] = []
 
     async def _capture_response(self, response: Response) -> None:
         if not _is_odds_response(response.url):
@@ -120,29 +122,101 @@ class TonybetScraper:
         if "json" not in content_type:
             return
         try:
+            body = await response.body()
+            if len(body) < 200:  # skip tiny JSON (pings, acks)
+                return
             data = await response.json()
             self._raw_payloads.append(data)
+            self._captured_urls.append(response.url)
         except Exception:
             pass
 
-    async def _login(self, page: Page) -> None:
-        print("  → Abriendo Tonybet…")
-        await page.goto(f"{config.tonybet_url}/en", wait_until="domcontentloaded")
-        await page.wait_for_timeout(2000)
+    async def _try_login(self, page: Page) -> bool:
+        """Attempt login — returns True if successful, False if skipped/failed."""
+        if not config.tonybet_username or not config.tonybet_password:
+            print("  ⚠ Sin credenciales — accediendo sin sesión (cuotas públicas disponibles)")
+            return False
 
-        # Look for login button (text-based, resilient to class changes)
-        login_btn = page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|iniciar", re.I))
-        if await login_btn.count() == 0:
-            login_btn = page.locator("a", has_text=re.compile(r"log.?in|sign.?in", re.I))
-        await login_btn.first.click()
-        await page.wait_for_timeout(1000)
+        try:
+            print("  → Intentando login…")
 
-        # Fill credentials
-        await page.get_by_placeholder(re.compile(r"email|user|usuario", re.I)).fill(config.tonybet_username)
-        await page.get_by_placeholder(re.compile(r"password|contraseña", re.I)).fill(config.tonybet_password)
-        await page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|entrar|acceder", re.I)).click()
-        await page.wait_for_timeout(3000)
-        print("  ✓ Sesión iniciada")
+            # Strategy 1: standard locator patterns
+            patterns = [
+                page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|iniciar|entrar|acceder", re.I)),
+                page.get_by_role("link",   name=re.compile(r"log.?in|sign.?in|iniciar|entrar|acceder", re.I)),
+                page.locator("a, button, span").filter(has_text=re.compile(r"^(log.?in|sign.?in|iniciar|entrar)$", re.I)),
+                page.locator("[class*='login' i], [class*='signin' i]").first,
+                page.locator("[data-test*='login' i], [data-testid*='login' i]").first,
+                page.locator("header a, header button").filter(has_text=re.compile(r"log|sign|entra", re.I)),
+            ]
+            login_btn = None
+            for pat in patterns:
+                try:
+                    if await pat.count() > 0:
+                        login_btn = pat.first
+                        break
+                except Exception:
+                    continue
+
+            if not login_btn:
+                # Strategy 2: JavaScript fallback — click any element with login-related text
+                clicked = await page.evaluate("""() => {
+                    const keywords = ['login', 'log in', 'sign in', 'iniciar', 'entrar', 'acceder'];
+                    const els = [...document.querySelectorAll('a, button, span[role], div[role=button]')];
+                    for (const el of els) {
+                        const txt = (el.textContent || '').trim().toLowerCase();
+                        if (keywords.some(k => txt.includes(k)) && txt.length < 30) {
+                            el.click();
+                            return el.textContent.trim();
+                        }
+                    }
+                    return null;
+                }""")
+                if clicked:
+                    print(f"  → Botón encontrado via JS: '{clicked}'")
+                    await page.wait_for_timeout(1500)
+                else:
+                    print("  ⚠ Botón de login no encontrado — accediendo sin sesión")
+                    return False
+            else:
+                await login_btn.click(timeout=10_000)
+                await page.wait_for_timeout(1500)
+
+            # Fill credentials
+            try:
+                await page.get_by_placeholder(re.compile(r"email|user|usuario|login", re.I)).first.fill(config.tonybet_username, timeout=8_000)
+                await page.get_by_placeholder(re.compile(r"password|contraseña|pass", re.I)).first.fill(config.tonybet_password, timeout=8_000)
+            except Exception:
+                # Fallback: fill by input type via JavaScript
+                await page.evaluate(f"""() => {{
+                    const inputs = document.querySelectorAll('input');
+                    for (const inp of inputs) {{
+                        const t = inp.type.toLowerCase();
+                        if (t === 'email' || t === 'text') {{
+                            inp.value = '{config.tonybet_username}';
+                            inp.dispatchEvent(new Event('input', {{bubbles:true}}));
+                        }}
+                        if (t === 'password') {{
+                            inp.value = '{config.tonybet_password}';
+                            inp.dispatchEvent(new Event('input', {{bubbles:true}}));
+                        }}
+                    }}
+                }}""")
+                await page.wait_for_timeout(500)
+
+            # Submit
+            try:
+                await page.get_by_role("button", name=re.compile(r"log.?in|sign.?in|entrar|acceder|submit", re.I)).click(timeout=8_000)
+            except Exception:
+                await page.keyboard.press("Enter")
+
+            await page.wait_for_timeout(3500)
+            print("  ✓ Sesión iniciada")
+            return True
+
+        except Exception as e:
+            print(f"  ⚠ Login omitido ({e.__class__.__name__}) — accediendo sin sesión")
+            return False
 
     async def scrape(self) -> list[dict]:
         print("Iniciando scraper de Tonybet…")
@@ -162,19 +236,51 @@ class TonybetScraper:
             page = await context.new_page()
             page.on("response", lambda r: asyncio.ensure_future(self._capture_response(r)))
 
-            await self._login(page)
+            # Open Tonybet home first, then optionally login
+            print("  → Abriendo Tonybet…")
+            await page.goto(f"{config.tonybet_url}/en", wait_until="domcontentloaded")
+            await page.wait_for_timeout(2000)
+            await self._try_login(page)
 
             # Navigate to prematch section and wait for data to load
+            # "networkidle" times out on TonyBet (persistent background requests)
             print("  → Cargando apuestas disponibles…")
-            await page.goto(f"{config.tonybet_url}/en/prematch", wait_until="networkidle")
-            await page.wait_for_timeout(4000)
+            await page.goto(
+                f"{config.tonybet_url}/en/prematch",
+                wait_until="domcontentloaded",
+                timeout=60_000,
+            )
+            await page.wait_for_timeout(8000)  # extra wait for JS to load odds
 
             # Scroll to trigger lazy-loaded content
-            for _ in range(3):
-                await page.mouse.wheel(0, 1500)
+            for _ in range(5):
+                await page.mouse.wheel(0, 2000)
                 await page.wait_for_timeout(1500)
 
+            # Also navigate to specific sport sections to trigger API calls
+            for sport_path in ["/en/prematch/tennis", "/en/prematch/football"]:
+                try:
+                    await page.goto(
+                        f"{config.tonybet_url}{sport_path}",
+                        wait_until="domcontentloaded",
+                        timeout=30_000,
+                    )
+                    await page.wait_for_timeout(4000)
+                    for _ in range(3):
+                        await page.mouse.wheel(0, 1500)
+                        await page.wait_for_timeout(1000)
+                except Exception:
+                    pass
+
             await browser.close()
+
+        # Debug: show what JSON URLs were captured
+        if self._captured_urls:
+            print(f"  → {len(self._captured_urls)} respuestas JSON capturadas")
+            for url in self._captured_urls[:8]:
+                print(f"     {url[:120]}")
+        else:
+            print("  ⚠ Ninguna respuesta JSON capturada — TonyBet puede requerir login para servir datos")
 
         # Parse collected payloads
         events: list[dict] = []
