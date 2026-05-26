@@ -1,6 +1,7 @@
 """
 Playwright scraper: logs into Tonybet and captures betting events by
 intercepting the internal JSON API responses the browser loads.
+Falls back to DOM extraction if no JSON is captured.
 """
 import asyncio
 import json
@@ -106,6 +107,45 @@ def _extract_markets(raw: dict) -> list[dict]:
     return markets
 
 
+def _parse_dom_events(dom_data: dict) -> list[dict]:
+    """
+    Convert raw DOM extraction result into our event format.
+    Used as fallback when no JSON API responses are captured.
+    """
+    events = []
+    raw_events = dom_data.get("events", [])
+    print(f"  → DOM fallback: {len(raw_events)} bloques candidatos encontrados")
+
+    for i, block in enumerate(raw_events):
+        text = block.get("text", "")
+        odds_list = block.get("odds", [])
+        name = block.get("name", "")
+        sport = block.get("sport", "Unknown")
+        competition = block.get("competition", "")
+
+        if not name or len(odds_list) < 1:
+            continue
+
+        # Build a simple 1X2 or Match Winner market from extracted odds
+        selections = []
+        labels = block.get("labels", [])
+        for j, odd in enumerate(odds_list[:3]):
+            label = labels[j] if j < len(labels) else ["1", "X", "2"][j] if j < 3 else f"Sel{j+1}"
+            selections.append({"name": label, "odds": odd})
+
+        if selections:
+            events.append({
+                "id": f"dom_{i}",
+                "name": name,
+                "sport": sport,
+                "competition": competition,
+                "starts_at": block.get("starts_at", ""),
+                "markets": [{"name": "Match Winner", "selections": selections}],
+            })
+
+    return events
+
+
 # ── main scraper ──────────────────────────────────────────────────────────────
 
 class TonybetScraper:
@@ -128,6 +168,54 @@ class TonybetScraper:
             data = await response.json()
             self._raw_payloads.append(data)
             self._captured_urls.append(response.url)
+        except Exception:
+            pass
+
+    async def _dismiss_cookie_banner(self, page: Page) -> None:
+        """Dismiss GDPR/cookie consent banners — mandatory on EU betting sites."""
+        selectors = [
+            "button:has-text('Accept all')",
+            "button:has-text('Accept All')",
+            "button:has-text('Aceptar todo')",
+            "button:has-text('Aceptar')",
+            "button:has-text('I agree')",
+            "button:has-text('Agree')",
+            "button:has-text('OK')",
+            "[class*='cookie'] button[class*='accept' i]",
+            "[class*='consent'] button[class*='accept' i]",
+            "[id*='cookie'] button",
+            "[id*='consent'] button",
+            "#onetrust-accept-btn-handler",
+            ".cc-btn.cc-allow",
+        ]
+        for sel in selectors:
+            try:
+                btn = page.locator(sel).first
+                if await btn.count() > 0:
+                    await btn.click(timeout=3000)
+                    print("  ✓ Banner de cookies cerrado")
+                    await page.wait_for_timeout(1000)
+                    return
+            except Exception:
+                continue
+
+        # JavaScript fallback
+        try:
+            clicked = await page.evaluate("""() => {
+                const accept_words = ['accept all', 'aceptar', 'i agree', 'agree', 'allow all', 'ok', 'got it'];
+                const btns = [...document.querySelectorAll('button, a[role=button]')];
+                for (const b of btns) {
+                    const t = (b.textContent || '').trim().toLowerCase();
+                    if (accept_words.some(w => t.includes(w)) && t.length < 25) {
+                        b.click();
+                        return t;
+                    }
+                }
+                return null;
+            }""")
+            if clicked:
+                print(f"  ✓ Banner cerrado via JS: '{clicked}'")
+                await page.wait_for_timeout(1000)
         except Exception:
             pass
 
@@ -218,8 +306,118 @@ class TonybetScraper:
             print(f"  ⚠ Login omitido ({e.__class__.__name__}) — accediendo sin sesión")
             return False
 
+    async def _scrape_dom(self, page: Page) -> list[dict]:
+        """
+        DOM fallback: extract events directly from rendered HTML when no JSON is captured.
+        Uses JavaScript to find event blocks with odds patterns.
+        """
+        print("  → Fallback: extrayendo datos del DOM…")
+        try:
+            await page.goto(
+                f"{config.tonybet_url}/en/prematch",
+                wait_until="domcontentloaded",
+                timeout=60_000,
+            )
+            await page.wait_for_timeout(5000)
+            await self._dismiss_cookie_banner(page)
+            await page.wait_for_timeout(2000)
+
+            # Scroll to load content
+            for _ in range(8):
+                await page.mouse.wheel(0, 1500)
+                await page.wait_for_timeout(600)
+
+            dom_data = await page.evaluate("""() => {
+                const oddsRe = /^\\d{1,2}\\.\\d{2}$/;
+                const results = [];
+
+                // Common TonyBet / generic betting site selectors
+                const rowSelectors = [
+                    '[class*="event-row"]', '[class*="EventRow"]',
+                    '[class*="match-row"]', '[class*="MatchRow"]',
+                    '[class*="game-row"]', '[class*="sport-event"]',
+                    '[class*="prematch-event"]', '[class*="event-item"]',
+                    'li[class*="event"]', 'tr[class*="event"]',
+                    '[data-event-id]', '[data-match-id]',
+                ];
+
+                let rows = [];
+                for (const sel of rowSelectors) {
+                    const found = [...document.querySelectorAll(sel)];
+                    if (found.length > 2) { rows = found; break; }
+                }
+
+                // Fallback: look for elements containing VS or vs with odds nearby
+                if (rows.length === 0) {
+                    const allEls = [...document.querySelectorAll('*')];
+                    rows = allEls.filter(el => {
+                        const t = el.innerText || '';
+                        return (t.includes(' vs ') || t.includes(' - ')) &&
+                               t.length > 10 && t.length < 300 &&
+                               el.querySelectorAll('*').length < 40;
+                    });
+                }
+
+                for (const row of rows.slice(0, 80)) {
+                    const text = (row.innerText || '').trim();
+                    if (!text || text.length > 400) continue;
+
+                    // Find all numeric odds-like values in child elements
+                    const spans = [...row.querySelectorAll('span, button, div')];
+                    const oddsEls = spans.filter(s => oddsRe.test((s.innerText || '').trim()));
+                    const oddsVals = oddsEls.map(s => parseFloat(s.innerText.trim()))
+                                           .filter(v => v >= 1.01 && v <= 50);
+
+                    if (oddsVals.length < 1) continue;
+
+                    // Try to find event name: look for "Team A vs Team B" or "Player, A vs Player, B"
+                    const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
+                    let name = '';
+                    for (const line of lines) {
+                        if ((line.includes(' vs ') || line.includes(' - ')) && line.length > 5 && line.length < 100) {
+                            name = line;
+                            break;
+                        }
+                    }
+                    if (!name && lines.length > 0) name = lines[0];
+                    if (!name) continue;
+
+                    // Extract odds labels (1, X, 2 or team names)
+                    const labels = oddsEls.map(el => {
+                        const prev = el.previousElementSibling;
+                        return prev ? (prev.innerText || '').trim() : '';
+                    });
+
+                    // Guess sport from surrounding context
+                    let sport = 'Unknown';
+                    const ctx = (row.closest('[class*="sport"]') || row.closest('[class*="category"]') || {});
+                    const ctxText = ((ctx.innerText || ctx.className || '') + '').toLowerCase();
+                    if (ctxText.includes('tennis') || ctxText.includes('tenis')) sport = 'Tenis';
+                    else if (ctxText.includes('football') || ctxText.includes('soccer') || ctxText.includes('futbol')) sport = 'Futbol';
+                    else if (ctxText.includes('basketball') || ctxText.includes('baloncesto')) sport = 'Baloncesto';
+                    else if (ctxText.includes('hockey')) sport = 'Hockey';
+
+                    results.push({ name, sport, labels, odds: oddsVals, starts_at: '', competition: '' });
+                }
+
+                return {
+                    title: document.title,
+                    url: window.location.href,
+                    events: results,
+                };
+            }""")
+
+            print(f"  → DOM: título='{dom_data.get('title', '')}' url='{dom_data.get('url', '')}'")
+            return _parse_dom_events(dom_data)
+
+        except Exception as e:
+            print(f"  ⚠ Fallback DOM falló: {e}")
+            return []
+
     async def scrape(self) -> list[dict]:
         print("Iniciando scraper de Tonybet…")
+        page_ref: list[Page] = []  # keep page alive for DOM fallback
+
         async with async_playwright() as pw:
             browser = await pw.chromium.launch(
                 headless=config.headless,
@@ -236,14 +434,15 @@ class TonybetScraper:
             page = await context.new_page()
             page.on("response", lambda r: asyncio.ensure_future(self._capture_response(r)))
 
-            # Open Tonybet home first, then optionally login
+            # Open Tonybet home first, dismiss cookie banner, then optionally login
             print("  → Abriendo Tonybet…")
             await page.goto(f"{config.tonybet_url}/en", wait_until="domcontentloaded")
             await page.wait_for_timeout(2000)
+            await self._dismiss_cookie_banner(page)
+            await page.wait_for_timeout(1000)
             await self._try_login(page)
 
-            # Navigate to prematch section and wait for data to load
-            # "networkidle" times out on TonyBet (persistent background requests)
+            # Navigate to prematch section
             print("  → Cargando apuestas disponibles…")
             await page.goto(
                 f"{config.tonybet_url}/en/prematch",
@@ -272,6 +471,11 @@ class TonybetScraper:
                 except Exception:
                     pass
 
+            # If no JSON captured, try DOM extraction before closing browser
+            dom_events: list[dict] = []
+            if not self._raw_payloads:
+                dom_events = await self._scrape_dom(page)
+
             await browser.close()
 
         # Debug: show what JSON URLs were captured
@@ -280,14 +484,19 @@ class TonybetScraper:
             for url in self._captured_urls[:8]:
                 print(f"     {url[:120]}")
         else:
-            print("  ⚠ Ninguna respuesta JSON capturada — TonyBet puede requerir login para servir datos")
+            print("  ⚠ Ninguna respuesta JSON capturada")
 
-        # Parse collected payloads
+        # Parse collected JSON payloads
         events: list[dict] = []
         for payload in self._raw_payloads:
             events.extend(_parse_generic_event(payload))
 
-        # Deduplicate by event id
+        # Use DOM events as fallback if JSON gave nothing
+        if not events and dom_events:
+            print(f"  → Usando {len(dom_events)} eventos extraídos del DOM")
+            events = dom_events
+
+        # Deduplicate by event id / name
         seen: set[str] = set()
         unique: list[dict] = []
         for e in events:
