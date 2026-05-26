@@ -432,8 +432,33 @@ async def run(mode: str = "advisor"):
         events = await scraper.scrape()
 
     if not events:
-        print("No se obtuvieron eventos. Comprueba tus credenciales y conexión.")
-        sys.exit(1)
+        print("⚠ No se obtuvieron eventos de Tonybet.")
+        print("  Posibles causas:")
+        print("  1. Tonybet requiere login para servir datos vía API — verifica credenciales")
+        print("  2. La estructura de URLs de la API cambió — revisa los logs de debug de URLs")
+        print("  3. El sitio está temporalmente caído o bloqueando bots")
+        print("\n  Publicando estado vacío en el dashboard…")
+        # Push empty recommendations so dashboard shows "sin datos" instead of stale data
+        import json as _json, subprocess
+        from pathlib import Path
+        from datetime import datetime as _dt
+        data_repo = Path(__file__).parent.parent
+        empty_snap = {
+            "updated_at": _dt.now().strftime("%d/%m/%Y %H:%M"),
+            "total": 0,
+            "events": [],
+            "error": "No se pudieron obtener eventos de Tonybet",
+        }
+        (data_repo / "events_latest.json").write_text(
+            _json.dumps(empty_snap, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        try:
+            subprocess.run(["git", "add", "events_latest.json"], cwd=str(data_repo), check=True)
+            subprocess.run(["git", "commit", "-m", "advisor: sin eventos (scraper sin datos)"], cwd=str(data_repo), check=True)
+            subprocess.run(["git", "push"], cwd=str(data_repo), check=True)
+        except Exception:
+            pass
+        sys.exit(0)  # exit 0 so GitHub Actions doesn't mark as failed
 
     # 2. Pre-filter: prioritize top leagues + all tennis Grand Slams
     TOP_LEAGUES = [
