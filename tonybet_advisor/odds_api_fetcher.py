@@ -173,6 +173,28 @@ _BOOKMAKER_PREF: list[str] = [
 _SESSION = requests.Session()
 _SESSION.headers["User-Agent"] = "TonybetAdvisor/2.0"
 
+# Mercados a solicitar por deporte
+# btts = ambos equipos marcan (solo fútbol)
+# totals = over/under goles/puntos/juegos
+# spreads = hándicap
+_SPORT_MARKETS: dict[str, str] = {
+    "soccer":           "h2h,totals,spreads,btts",
+    "tennis":           "h2h,totals",          # totals = juegos totales del partido
+    "basketball":       "h2h,totals,spreads",
+    "icehockey":        "h2h,totals,spreads",
+    "baseball":         "h2h,totals,spreads",
+    "americanfootball": "h2h,totals,spreads",
+    "mma":              "h2h",
+    "boxing":           "h2h",
+    "rugbyleague":      "h2h,totals,spreads",
+    "rugbyunion":       "h2h,totals,spreads",
+    "cricket":          "h2h",
+    "golf":             "h2h",
+    "darts":            "h2h,totals",
+    "volleyball":       "h2h,totals,spreads",
+    "handball":         "h2h,totals,spreads",
+}
+
 
 def _sport_name(key: str) -> str:
     prefix = key.split("_")[0]
@@ -187,8 +209,8 @@ def _best_bookmaker(bookmakers: list[dict]) -> dict | None:
     return bookmakers[0] if bookmakers else None
 
 
-def _parse_market(market: dict) -> Optional[dict]:
-    key = market.get("key", "")
+def _parse_market(market: dict, sport_prefix: str = "") -> Optional[dict]:
+    key      = market.get("key", "")
     outcomes = market.get("outcomes", [])
 
     selections = []
@@ -201,9 +223,12 @@ def _parse_market(market: dict) -> Optional[dict]:
             continue
 
         if key == "totals":
-            label = f"{'Over' if name == 'Over' else 'Under'} {point}" if point is not None else name
-        elif key == "spreads":
+            direction = "Over" if name == "Over" else "Under"
+            label = f"{direction} {point}" if point is not None else name
+        elif key in ("spreads", "alternate_spreads"):
             label = f"{name} {point:+.1f}" if point is not None else name
+        elif key == "btts":
+            label = "Sí ambos marcan" if name.lower() in ("yes", "sí", "si") else "No ambos marcan"
         else:
             label = name
 
@@ -212,12 +237,35 @@ def _parse_market(market: dict) -> Optional[dict]:
     if not selections:
         return None
 
+    # Nombre legible del mercado, con contexto por deporte
     if key == "h2h":
         market_name = "1X2" if len(selections) == 3 else "Ganador"
     elif key == "totals":
-        market_name = "Totales"
-    elif key == "spreads":
-        market_name = "Hándicap"
+        if sport_prefix == "soccer":
+            market_name = "Over/Under goles"
+        elif sport_prefix == "tennis":
+            market_name = "Total juegos"
+        elif sport_prefix == "basketball":
+            market_name = "Total puntos"
+        elif sport_prefix in ("icehockey",):
+            market_name = "Total goles"
+        elif sport_prefix == "baseball":
+            market_name = "Total carreras"
+        elif sport_prefix == "americanfootball":
+            market_name = "Total puntos"
+        else:
+            market_name = "Totales"
+    elif key in ("spreads", "alternate_spreads"):
+        if sport_prefix == "soccer":
+            market_name = "Hándicap goles"
+        elif sport_prefix == "basketball":
+            market_name = "Hándicap puntos"
+        elif sport_prefix == "americanfootball":
+            market_name = "Spread"
+        else:
+            market_name = "Hándicap"
+    elif key == "btts":
+        market_name = "Ambos marcan"
     else:
         market_name = key.replace("_", " ").title()
 
@@ -235,9 +283,10 @@ def _parse_event(raw: dict, sport_key: str) -> Optional[dict]:
     if not bm:
         return None
 
+    sport_prefix = sport_key.split("_")[0]
     markets = []
     for m in bm.get("markets", []):
-        parsed = _parse_market(m)
+        parsed = _parse_market(m, sport_prefix)
         if parsed:
             markets.append(parsed)
 
@@ -294,12 +343,14 @@ def fetch_events(api_key: str, max_requests: int = 40) -> list[dict]:
             break
 
         try:
+            sport_prefix  = sport_key.split("_")[0]
+            markets_param = _SPORT_MARKETS.get(sport_prefix, "h2h,totals,spreads")
             r = _SESSION.get(
                 f"{BASE}/sports/{sport_key}/odds",
                 params={
                     "apiKey":      api_key,
                     "regions":     "eu,uk",
-                    "markets":     "h2h,totals,spreads",
+                    "markets":     markets_param,
                     "oddsFormat":  "decimal",
                     "dateFormat":  "iso",
                 },

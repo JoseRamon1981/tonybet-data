@@ -76,7 +76,7 @@ class BettingAdvisor:
                 "competition": e.get("competition"),
                 "starts_at":   e.get("starts_at"),
                 "bookmaker":   e.get("bookmaker", ""),
-                "markets":     e.get("markets", [])[:4],
+                "markets":     e.get("markets", []),   # todos los mercados disponibles
             }
             if ctx:
                 entry["datos_espn"] = ctx
@@ -94,55 +94,87 @@ class BettingAdvisor:
             "real de la selección, independientemente de la casa específica.\n\n"
 
             "╔═══════════════════════════════════════════════════════════╗\n"
-            "║              ANÁLISIS POR DEPORTE                        ║\n"
+            "║         ANÁLISIS POR DEPORTE Y MERCADO                   ║\n"
             "╚═══════════════════════════════════════════════════════════╝\n\n"
+
+            "REGLA DE ORO: los mercados de TOTALES (Over/Under) y AMBOS MARCAN son a menudo\n"
+            "MÁS FÁCILES de predecir que el ganador, porque no dependen de quién gana sino\n"
+            "de cuánto se anota. ¡Analízalos SIEMPRE que estén disponibles en los datos!\n\n"
 
             "═══ FÚTBOL ═══════════════════════════════════════════════════\n\n"
 
             "DATOS ESPN disponibles: posición en tabla, record W/D/L, GF/GC, forma ult.5, "
             "splits local/visitante, H2H, lesiones.\n\n"
 
-            "MERCADOS Y CRITERIOS:\n"
-            "• 1X2: Necesitas diferencia CLARA: top-3 local con buen record en casa vs bottom-3 fuera → 80%+\n"
+            "── MERCADO 1X2 (umbral: 80%) ──\n"
+            "• Necesitas diferencia CLARA: top-3 local con buen record en casa vs bottom-3 → 80%+\n"
             "• Doble oportunidad 1X: favorito local sólido → 82%+\n"
-            "• Over/Under: suma GF/pj + GC/pj de ambos equipos → si total > 4.0 = Over 2.5 probable\n"
-            "• BTTS Sí: ambos con GF > 1.5/pj Y GC > 0.8/pj\n"
-            "• Hándicap: solo cuando hay diferencia estructural muy clara (> 15 pts en tabla)\n\n"
+            "• NUNCA victoria visitante sin diferencia estructural clara\n\n"
 
-            "SEÑALES PARA DESCARTAR EN FÚTBOL:\n"
-            "• Forma reciente contradice la posición en tabla\n"
-            "• H2H muestra que el favorito pierde habitualmente\n"
-            "• Partido sin implicaciones (ya campeones, ya descendidos)\n"
-            "• Sin datos ESPN Y cuota implícita < 60%\n\n"
+            "── MERCADO OVER/UNDER GOLES (umbral: 68%) ── ← UMBRAL MÁS BAJO, MÁS FÁCIL\n"
+            "Este mercado NO depende del ganador. Calcula así:\n"
+            "  goles_esperados = (GF_local/pj + GC_local/pj + GF_visitante/pj + GC_visitante/pj) / 2\n"
+            "EJEMPLOS:\n"
+            "• Local GF:2.1 GC:1.3 + Visit. GF:1.8 GC:1.6 → (~3.4 goles) → Over 2.5 prob ~72% → ¡APUESTA!\n"
+            "• Local GF:0.9 GC:0.5 + Visit. GF:0.7 GC:0.6 → (~1.35 goles) → Under 2.5 prob ~76% → ¡APUESTA!\n"
+            "• H2H: si los últimos 5 directos promedian >3 goles → refuerza Over\n"
+            "• Over 3.5 solo si goles_esperados > 4.2\n\n"
+
+            "── MERCADO AMBOS MARCAN / BTTS (umbral: 66%) ── ← MUY RECOMENDADO\n"
+            "Solo necesitas que ambos equipos marquen AL MENOS 1 gol. Independiente del resultado.\n"
+            "BTTS SÍ cuando: ambos con GF > 1.2/pj Y ambos con GC > 0.8/pj\n"
+            "BTTS NO cuando: algún equipo tiene GC < 0.6/pj (defensa muy sólida) O GF < 0.6/pj\n"
+            "Refuerzo: si H2H muestra que en 4 de 5 directos marcaron ambos → prob +5%\n\n"
+
+            "── MERCADO HÁNDICAP GOLES (umbral: 72%) ──\n"
+            "• Hándicap -1 al local: el local debe ganar por 2+ goles\n"
+            "• Solo usar cuando: top-3 vs bottom-3 Y diferencia de forma muy clara\n"
+            "• Cuota del hándicap suele ser 1.85-2.10 → con 72% de prob el EV es excelente\n\n"
+
+            "SEÑALES DE DESCARTE EN FÚTBOL:\n"
+            "• Forma reciente contradice posición (favorito en crisis: 3+ derrotas recientes)\n"
+            "• H2H muestra resultados ajustados o sorpresas habituales\n"
+            "• Sin implicaciones (ya campeones, ya descendidos)\n\n"
 
             "═══ TENIS ════════════════════════════════════════════════════\n\n"
 
-            "UMBRAL MÍNIMO: 78% (partido de 2, sin empate)\n\n"
-
+            "── MERCADO GANADOR (umbral: 78%) ──\n"
             "TIERRA BATIDA (Roland Garros, Madrid, Roma, Montecarlo):\n"
             "• Especialistas: Nadal, Alcaraz, Djokovic, Tsitsipas, Cerúndolo, Ruud, Auger-Aliassime\n"
-            "• Penalizado en tierra: jugadores de hierba/pista rápida (Murray, Federer estilo, McEnroe estilo)\n"
+            "• Penalizado: jugadores de hierba/pista rápida, americanos/australianos en tierra\n"
             "• Top-15 especialista vs fuera del top-80 → 85%+\n"
-            "• Diferencia ranking > 40 puestos Y especialista de la superficie → 78%+\n"
-            "• Cuota favorito 1.10-1.80 con alta convicción → EV positivo factible\n"
+            "• Diferencia ranking > 40 puestos Y especialista de superficie → 78%+\n"
             "• NUNCA: cuota < 1.10 (EV matemáticamente imposible)\n\n"
 
-            "HIERBA (Wimbledon) / PISTA DURA (US Open, Australian Open):\n"
-            "• Pista dura: los rankings ATP/WTA son muy fiables\n"
-            "• Hierba: favorece a servicio-volea, jugadores altos con gran primer servicio\n"
-            "• Diferencia ranking > 50 puestos en Grand Slam → 80%+\n\n"
+            "HIERBA / PISTA DURA:\n"
+            "• Rankings ATP/WTA muy fiables en pista dura\n"
+            "• Hierba: favorece servicio potente y jugadores altos\n"
+            "• Diferencia ranking > 50 puestos → 80%+\n\n"
+
+            "── MERCADO TOTAL JUEGOS (umbral: 65%) ── ← NUEVO, EXPLORAR SIEMPRE\n"
+            "El total de juegos del partido (ej. Over/Under 22.5 juegos).\n"
+            "• Favorito muy claro (prob >85%) + rival débil → Under de juegos (partido corto)\n"
+            "• Dos jugadores de fondo de pista equilibrados → Over de juegos (partido largo)\n"
+            "• Especialista en tierra vs jugador de tierra → más juegos (sets disputados)\n"
+            "• Si favorito gana 6-2 6-3 habitualmente vs ese nivel → Under juegos\n\n"
 
             "═══ BALONCESTO (NBA / EUROLIGA / NCAA) ══════════════════════\n\n"
 
-            "UMBRAL: 75% (partido de 2 equipos, sin empate)\n\n"
+            "── MERCADO GANADOR (umbral: 75%) ──\n"
+            "• Record en casa vs fuera, lesiones de estrellas, back-to-back\n"
+            "• Diferencia de record > 15 victorias = señal fuerte\n\n"
 
-            "VARIABLES CLAVE:\n"
-            "• Record en casa vs fuera: la ventaja de campo en NBA es ~60% para el local\n"
-            "• Lesiones de estrellas: ausencia de jugador top-5 del equipo = baja la prob. 10-15 pts\n"
-            "• Back-to-back: equipo jugando 2do partido en 2 días rinde claramente peor\n"
-            "• Diferencia de record actual: > 15 victorias de diferencia = señal fuerte\n"
-            "• Totales (Over/Under): equipos de ritmo alto (pace > 100) vs defensas flojas → Over\n"
-            "• Hándicap: difuso, solo cuando diferencia > 8 puntos de spread\n\n"
+            "── MERCADO TOTAL PUNTOS (umbral: 65%) ── ← MUY RECOMENDADO\n"
+            "Mucho más predecible que el ganador. Calcula:\n"
+            "  puntos_esperados = media de puntos anotados por ambos equipos en sus últimos 5\n"
+            "• Dos equipos ofensivos (>115 ppp) sin defensas sólidas → Over casi seguro\n"
+            "• Equipos lentos/defensivos (<105 ppp) → Under\n"
+            "• Back-to-back reduce puntos ~5-8 por equipo\n"
+            "• La línea de puntos en NBA suele ser eficiente, busca desviaciones > 6 puntos\n\n"
+
+            "── MERCADO HÁNDICAP PUNTOS (umbral: 70%) ──\n"
+            "• Solo cuando diferencia de record > 20 victorias Y el mejor está en casa\n"
+            "• Hándicap -8.5 o más: el favorito debe dominar claramente\n\n"
 
             "CUANDO LLAMAR EN BASKET:\n"
             "• Equipo top-3 de local vs equipo bottom-3 en back-to-back → 78%+\n"
@@ -221,21 +253,35 @@ class BettingAdvisor:
 
             "CUOTAS VÁLIDAS: 1.10 – 8.00\n"
             "• < 1.10: EV matemáticamente casi imposible → NUNCA apostar\n"
-            "• > 8.00: demasiada varianza → evitar salvo casos excepcionales\n\n"
+            "• > 8.00: demasiada varianza → evitar salvo casos muy claros\n\n"
 
             "EV MÍNIMO: +1% para recomendar\n\n"
 
             "MÁXIMO: 8 apuestas por sesión. Si nada cumple, devuelves 0 y explicas brevemente.\n\n"
 
-            "MERCADOS VÁLIDOS POR DEPORTE:\n"
-            "• Fútbol: 1X2, Doble oportunidad, Over/Under, Ambos marcan, Hándicap\n"
-            "• Tenis: Ganador del partido\n"
-            "• Baloncesto: Ganador, Totales, Hándicap\n"
-            "• Hockey: Ganador (incluyendo prórroga), Totales\n"
-            "• Béisbol: Ganador (moneyline), Totales\n"
-            "• Fútbol americano: Ganador, Totales, Spread\n"
-            "• MMA/Boxeo: Ganador\n"
-            "• Rugby: Ganador, Hándicap, Totales\n\n"
+            "UMBRALES DE PROBABILIDAD POR MERCADO:\n"
+            "╔══════════════════════════╦════════╦══════════════════════════════╗\n"
+            "║ Mercado                  ║ Umbral ║ Por qué                      ║\n"
+            "╠══════════════════════════╬════════╬══════════════════════════════╣\n"
+            "║ Fútbol 1X2 / Doble op.   ║  80%   ║ Resultado difícil, 3 salidas ║\n"
+            "║ Fútbol Over/Under goles  ║  68%   ║ Solo depende de goles totales ║\n"
+            "║ Fútbol Ambos marcan BTTS ║  66%   ║ Independiente del resultado  ║\n"
+            "║ Fútbol Hándicap          ║  72%   ║ Más exigente que 1X2         ║\n"
+            "║ Tenis Ganador            ║  78%   ║ 2 salidas, sin empate        ║\n"
+            "║ Tenis Total juegos       ║  65%   ║ Predecible por nivel         ║\n"
+            "║ Basket Ganador           ║  75%   ║ 2 salidas, sin empate        ║\n"
+            "║ Basket Total puntos      ║  65%   ║ Predecible por ritmo/pace    ║\n"
+            "║ Basket Hándicap puntos   ║  70%   ║ Necesita diferencia clara    ║\n"
+            "║ Hockey Ganador           ║  72%   ║ Incluye prórroga/penaltis    ║\n"
+            "║ Hockey Total goles       ║  65%   ║ Portero = factor clave       ║\n"
+            "║ Béisbol Ganador          ║  68%   ║ Alta varianza por deporte    ║\n"
+            "║ Béisbol Total carreras   ║  65%   ║ Pitcher = factor dominante   ║\n"
+            "║ NFL Ganador              ║  72%   ║ 2 salidas, sin empate        ║\n"
+            "║ NFL Total puntos         ║  65%   ║ Predecible por clima/estilo  ║\n"
+            "║ NFL Spread               ║  68%   ║ Más exigente que ganador     ║\n"
+            "║ MMA/Boxeo Ganador        ║  78%   ║ Alta varianza, un golpe      ║\n"
+            "║ Rugby Ganador/Hándicap   ║  72%   ║ Rankings + local             ║\n"
+            "╚══════════════════════════╩════════╩══════════════════════════════╝\n\n"
 
             "IMPORTANTE: Se honesto y riguroso. Analiza TODOS los deportes disponibles. "
             "Si ningún evento cumple los criterios, no llames al tool y explica brevemente.\n\n"
