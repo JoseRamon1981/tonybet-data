@@ -454,5 +454,29 @@
     "estimated_ev": 0.0688,
     "result": "pending",
     "profit": 0.0
+  },
+  {
+    "date": "2026-05-27",
+    "event": "Montréal Canadiens vs Carolina Hurricanes",
+    "sport": "Hockey hielo",
+    "market": "Total goles",
+    "selection": "Over 5.5",
+    "odds": 1.91,
+    "stake": 8.0,
+    "estimated_ev": 0.4325,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-27",
+    "event": "San Antonio Spurs vs Oklahoma City Thunder",
+    "sport": "Baloncesto",
+    "market": "Total puntos",
+    "selection": "Over 218.5",
+    "odds": 1.93,
+    "stake": 8.0,
+    "estimated_ev": 0.3896,
+    "result": "pending",
+    "profit": 0.0
   }
 ]
