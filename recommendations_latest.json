@@ -1,4 +1,35 @@
 {
-  "updated_at": "2026-05-23 21:37",
-  "bets": []
+  "updated_at": "2026-05-27 07:42",
+  "bets": [
+    {
+      "event": "Camilo Ugo Carabelli vs Andrey Rublev",
+      "sport": "Tenis",
+      "market": "Ganador",
+      "selection": "Andrey Rublev",
+      "odds": 1.27,
+      "expected_value": 0.0414,
+      "recommended_stake": 4.6,
+      "estimated_probability": 0.82
+    },
+    {
+      "event": "San Antonio Spurs vs Oklahoma City Thunder",
+      "sport": "Baloncesto",
+      "market": "Ganador",
+      "selection": "Oklahoma City Thunder",
+      "odds": 2.36,
+      "expected_value": 0.0856,
+      "recommended_stake": 1.89,
+      "estimated_probability": 0.46
+    },
+    {
+      "event": "Federico Cinà vs Jesper De Jong",
+      "sport": "Tenis",
+      "market": "Ganador",
+      "selection": "Jesper De Jong",
+      "odds": 1.67,
+      "expected_value": 0.0688,
+      "recommended_stake": 3.08,
+      "estimated_probability": 0.64
+    }
+  ]
 }

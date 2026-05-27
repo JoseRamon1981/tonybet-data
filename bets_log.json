@@ -418,5 +418,41 @@
     "estimated_ev": 0.1424,
     "result": "pending",
     "profit": 0.0
+  },
+  {
+    "date": "2026-05-27",
+    "event": "Camilo Ugo Carabelli vs Andrey Rublev",
+    "sport": "Tenis",
+    "market": "Ganador",
+    "selection": "Andrey Rublev",
+    "odds": 1.27,
+    "stake": 4.6,
+    "estimated_ev": 0.0414,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-27",
+    "event": "San Antonio Spurs vs Oklahoma City Thunder",
+    "sport": "Baloncesto",
+    "market": "Ganador",
+    "selection": "Oklahoma City Thunder",
+    "odds": 2.36,
+    "stake": 1.89,
+    "estimated_ev": 0.0856,
+    "result": "pending",
+    "profit": 0.0
+  },
+  {
+    "date": "2026-05-27",
+    "event": "Federico Cinà vs Jesper De Jong",
+    "sport": "Tenis",
+    "market": "Ganador",
+    "selection": "Jesper De Jong",
+    "odds": 1.67,
+    "stake": 3.08,
+    "estimated_ev": 0.0688,
+    "result": "pending",
+    "profit": 0.0
   }
 ]
