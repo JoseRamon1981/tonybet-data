@@ -80,6 +80,14 @@ def ev_color(ev: float) -> str:
     return "#dc2626"
 
 
+def prob_color(prob: float) -> str:
+    if prob >= 0.80:
+        return "#16a34a"   # verde
+    if prob >= 0.70:
+        return "#ca8a04"   # naranja
+    return "#2563eb"       # azul
+
+
 def _prob_bar(prob: float) -> str:
     filled = round(prob * 20)
     empty  = 20 - filled
@@ -164,6 +172,14 @@ st.markdown("""
     font-weight: 700;
     color: #1d4ed8;
   }
+  .prob-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 1.1em;
+    margin-left: 6px;
+  }
   .nav-hint {
     margin-top: 8px;
     font-size: 0.82em;
@@ -229,8 +245,9 @@ with tab1:
             ev_c  = ev_color(ev)
             icon  = _sport_icon(sport)
 
-            nav = _market_nav(b.get("market", ""), b.get("selection", ""))
-            bar = _prob_bar(prob)
+            nav    = _market_nav(b.get("market", ""), b.get("selection", ""))
+            bar    = _prob_bar(prob)
+            prob_c = prob_color(prob)
 
             st.markdown(f"""
             <div class="bet-card" style="border-left-color:{color}">
@@ -244,7 +261,13 @@ with tab1:
                 {sport} &nbsp;·&nbsp; {b.get('market','')} &nbsp;·&nbsp; {updated}
               </div>
               <div class="bet-row">✅ <b>Apuesta:</b> {b.get('selection','')} &nbsp;@&nbsp; <b>{b.get('odds',0):.2f}</b></div>
-              <div class="bet-row prob-bar">📊 Probabilidad real: {prob*100:.0f}%  {bar}</div>
+              <div class="bet-row" style="margin-top:8px;">
+                🎯 <b>Probabilidad de éxito:</b>
+                <span class="prob-badge" style="background:{prob_c}18;color:{prob_c};border:2px solid {prob_c}">
+                  {prob*100:.0f}%
+                </span>
+                <span class="prob-bar" style="margin-left:8px;font-size:0.85em;color:#6b7280">{bar}</span>
+              </div>
               <div class="stake-line">💶 Stake recomendado: {b.get('recommended_stake',0):.2f}€</div>
               <div class="nav-hint">📍 Cómo apostar en Tonybet: {nav}</div>
             </div>
