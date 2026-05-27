@@ -1,19 +1,28 @@
 """
 Tonybet Betting Advisor — CLI entry point.
 
-Modes:
-  advisor   (default) — scrape + analyse + show recommendations
-  autobet             — same as advisor + place bets (asks confirmation)
-  demo                — use sample data, no Tonybet login needed
-  stats               — show P&L history and performance stats
-  result              — mark a bet as won/lost/void
+Modos:
+  advisor   (por defecto) — obtener cuotas + analizar + mostrar recomendaciones
+  autobet                 — igual que advisor + colocar apuestas (pide confirmación)
+  demo                    — usa datos de ejemplo, sin necesidad de credenciales
+  stats                   — muestra historial P&L y estadísticas
+  result                  — marcar una apuesta como ganada/perdida/nula
+  ask                     — consulta en lenguaje natural sobre los partidos de hoy
+  preview                 — avance de los partidos de mañana
 """
 import asyncio
+import json as _json
 import os
+import subprocess
 import sys
+from collections import defaultdict
+from datetime import datetime as _dt
+from pathlib import Path
 
 from .config import config
 from .analyzer import BetAnalysis
+
+_DATA_REPO = Path(__file__).parent.parent
 
 
 # ── display helpers ───────────────────────────────────────────────────────────
@@ -25,46 +34,41 @@ def _print_header():
 
 
 def _format_datetime(raw: str) -> str:
-    """Convert ISO datetime to readable Spanish format."""
     if not raw:
         return "Hora desconocida"
     try:
-        from datetime import datetime
-        dt = datetime.fromisoformat(raw.replace("Z", ""))
+        dt = _dt.fromisoformat(raw.replace("Z", "+00:00").replace("+00:00", ""))
         return dt.strftime("%d/%m/%Y  %H:%M")
     except Exception:
         return raw
 
 
 def _market_navigation(market: str, selection: str) -> str:
-    """Return step-by-step instructions for finding a market on Tonybet."""
     m = market.lower()
-    s = selection.lower()
 
-    if "over/under" in m or "goles" in m or "totales" in m or "puntos" in m:
+    if any(k in m for k in ("total", "over", "under", "goles", "puntos")):
         line = selection.replace("Over ", "Más de ").replace("Under ", "Menos de ")
         return (
-            f"1) Busca el partido en Tonybet\n"
-            f"      2) Entra al partido (click en el nombre)\n"
-            f"      3) Arriba verás pestañas: PRINCIPAL, GOLES, HANDICAP... → pulsa 'GOLES'\n"
-            f"      4) Busca 'Total de goles' y selecciona '{line}'"
+            f"1) Busca el partido → entra al partido\n"
+            f"      2) Pestaña 'GOLES' o 'TOTALES'\n"
+            f"      3) Selecciona '{line}'"
         )
-    if "ambos" in m or "btts" in m or "marcan" in m:
+    if any(k in m for k in ("ambos", "btts", "marcan")):
         return (
             f"1) Busca el partido → entra al partido\n"
             f"      2) Pestaña 'PRINCIPAL' o 'MÁS APUESTAS'\n"
             f"      3) Busca 'Ambos equipos marcan' → selecciona '{selection}'"
         )
-    if "doble oportunidad" in m or "doble op" in m:
+    if any(k in m for k in ("doble", "double")):
         return (
             f"1) Busca el partido → entra al partido\n"
             f"      2) Pestaña 'PRINCIPAL'\n"
             f"      3) Busca 'Doble oportunidad' → selecciona '{selection}'"
         )
-    if "handicap" in m:
+    if "handicap" in m or "hándicap" in m or "spread" in m:
         return (
             f"1) Busca el partido → entra al partido\n"
-            f"      2) Pestaña 'HANDICAP'\n"
+            f"      2) Pestaña 'HÁNDICAP'\n"
             f"      3) Selecciona '{selection}'"
         )
     if "1x2" in m or "resultado" in m:
@@ -73,15 +77,16 @@ def _market_navigation(market: str, selection: str) -> str:
             f"      2) Las cuotas 1-X-2 aparecen directamente\n"
             f"      3) Pulsa la cuota de '{selection}'"
         )
-    if "ganador" in m:
+    if any(k in m for k in ("ganador", "winner", "moneyline")):
         return (
             f"1) Busca el partido → entra al partido\n"
             f"      2) Pestaña 'PRINCIPAL'\n"
-            f"      3) 'Ganador del partido' → selecciona '{selection}'"
+            f"      3) 'Ganador' → selecciona '{selection}'"
         )
     return (
-        f"1) Busca el partido → entra al partido\n"
-        f"      2) Busca el mercado '{market}' → selecciona '{selection}'"
+        f"1) Busca el partido en Tonybet\n"
+        f"      2) Entra al partido → busca el mercado '{market}'\n"
+        f"      3) Selecciona '{selection}'"
     )
 
 
@@ -95,9 +100,9 @@ def _print_recommendations(bets: list[BetAnalysis]):
     print(f"{'='*60}")
 
     for i, b in enumerate(bets, 1):
-        ev_pct = b.expected_value * 100
+        ev_pct   = b.expected_value * 100
         over_pct = b.overround * 100
-        nav = _market_navigation(b.market, b.selection)
+        nav      = _market_navigation(b.market, b.selection)
         print(f"\n  [{i}] {b.event}")
         print(f"      Hora      : {_format_datetime(b.starts_at)}")
         print(f"      Deporte   : {b.sport}")
@@ -118,14 +123,12 @@ def _print_recommendations(bets: list[BetAnalysis]):
 
 
 def _ask_confirmation(bets: list[BetAnalysis]) -> list[BetAnalysis]:
-    print("¿Qué apuestas quieres colocar? (escribe los números separados por coma, 'all' o 'none')")
+    print("¿Qué apuestas quieres colocar? (números separados por coma, 'all' o 'none')")
     answer = input("  > ").strip().lower()
-
     if answer == "none" or answer == "":
         return []
     if answer == "all":
         return bets
-
     selected = []
     for part in answer.split(","):
         try:
@@ -138,122 +141,188 @@ def _ask_confirmation(bets: list[BetAnalysis]) -> list[BetAnalysis]:
 
 
 def _load_demo_events() -> list[dict]:
-    """Sample events for testing without Tonybet login."""
     return [
         {
-            "id": "1",
-            "name": "Real Madrid vs Barcelona",
-            "sport": "Fútbol",
-            "competition": "La Liga",
+            "id": "1", "name": "Real Madrid vs Barcelona",
+            "sport": "Fútbol", "competition": "La Liga",
             "starts_at": "2025-06-01T20:00:00",
             "markets": [
-                {
-                    "name": "1X2",
-                    "selections": [
-                        {"name": "Real Madrid", "odds": 2.10},
-                        {"name": "Empate", "odds": 3.40},
-                        {"name": "Barcelona", "odds": 3.60},
-                    ],
-                },
-                {
-                    "name": "Ambos equipos marcan",
-                    "selections": [
-                        {"name": "Sí", "odds": 1.72},
-                        {"name": "No", "odds": 2.05},
-                    ],
-                },
+                {"name": "1X2", "selections": [
+                    {"name": "Real Madrid", "odds": 2.10},
+                    {"name": "Empate", "odds": 3.40},
+                    {"name": "Barcelona", "odds": 3.60},
+                ]},
+                {"name": "Totales", "selections": [
+                    {"name": "Over 2.5", "odds": 1.80},
+                    {"name": "Under 2.5", "odds": 2.00},
+                ]},
             ],
         },
         {
-            "id": "2",
-            "name": "Manchester City vs Arsenal",
-            "sport": "Fútbol",
-            "competition": "Premier League",
+            "id": "2", "name": "Manchester City vs Arsenal",
+            "sport": "Fútbol", "competition": "Premier League",
             "starts_at": "2025-06-02T17:30:00",
             "markets": [
-                {
-                    "name": "1X2",
-                    "selections": [
-                        {"name": "Man City", "odds": 1.85},
-                        {"name": "Empate", "odds": 3.60},
-                        {"name": "Arsenal", "odds": 4.20},
-                    ],
-                },
+                {"name": "1X2", "selections": [
+                    {"name": "Man City", "odds": 1.85},
+                    {"name": "Empate", "odds": 3.60},
+                    {"name": "Arsenal", "odds": 4.20},
+                ]},
             ],
         },
         {
-            "id": "3",
-            "name": "Novak Djokovic vs Carlos Alcaraz",
-            "sport": "Tenis",
-            "competition": "Roland Garros",
+            "id": "3", "name": "Novak Djokovic vs Carlos Alcaraz",
+            "sport": "Tenis", "competition": "Roland Garros ATP",
             "starts_at": "2025-06-03T14:00:00",
             "markets": [
-                {
-                    "name": "Ganador",
-                    "selections": [
-                        {"name": "Djokovic", "odds": 2.30},
-                        {"name": "Alcaraz", "odds": 1.65},
-                    ],
-                },
+                {"name": "Ganador", "selections": [
+                    {"name": "Djokovic", "odds": 2.30},
+                    {"name": "Alcaraz", "odds": 1.65},
+                ]},
+            ],
+        },
+        {
+            "id": "4", "name": "Golden State Warriors vs Boston Celtics",
+            "sport": "Baloncesto", "competition": "NBA",
+            "starts_at": "2025-06-03T02:00:00",
+            "markets": [
+                {"name": "Ganador", "selections": [
+                    {"name": "Golden State Warriors", "odds": 2.10},
+                    {"name": "Boston Celtics", "odds": 1.75},
+                ]},
+                {"name": "Totales", "selections": [
+                    {"name": "Over 215.5", "odds": 1.90},
+                    {"name": "Under 215.5", "odds": 1.90},
+                ]},
             ],
         },
     ]
 
 
-# ── ask (natural language query) ─────────────────────────────────────────────
+# ── event selection: sample fairly across all sports ──────────────────────────
+
+def _select_events(events: list[dict], max_total: int = 40) -> list[dict]:
+    """
+    Selecciona hasta max_total eventos repartidos equilibradamente entre deportes.
+    Dentro de cada deporte, prioriza las competiciones más importantes.
+    """
+    # Competiciones de alta prioridad por deporte
+    TOP_COMPS: dict[str, list[str]] = {
+        "Fútbol": [
+            "premier league", "la liga", "bundesliga", "serie a", "ligue 1",
+            "champions league", "europa league", "eredivisie", "primera división",
+            "segunda división", "championship", "primeira liga", "süper lig",
+        ],
+        "Tenis": [
+            "roland garros", "wimbledon", "us open", "australian open",
+            "atp", "wta",
+        ],
+        "Baloncesto": ["nba", "euroliga", "ncaa"],
+        "Hockey hielo": ["nhl", "khl", "shl"],
+        "Béisbol": ["mlb"],
+        "Fútbol americano": ["nfl", "ncaa"],
+    }
+
+    def _priority(e: dict) -> int:
+        sport = (e.get("sport") or "").lower()
+        comp  = (e.get("competition") or "").lower()
+        for sp, keywords in TOP_COMPS.items():
+            if sp.lower() in sport:
+                if any(k in comp for k in keywords):
+                    return 0
+                return 1
+        return 2  # otros deportes: siempre incluir
+
+    # Agrupar por deporte
+    by_sport: dict[str, list[dict]] = defaultdict(list)
+    for e in events:
+        by_sport[(e.get("sport") or "Otros")].append(e)
+
+    # Ordenar eventos dentro de cada deporte por prioridad
+    sorted_by_sport: dict[str, list[dict]] = {
+        sp: sorted(evts, key=_priority)
+        for sp, evts in by_sport.items()
+    }
+
+    # Distribución round-robin: cada deporte aporta al menos 1 evento
+    # hasta llegar a max_total, rotando por todos los deportes
+    selected: list[dict] = []
+    sport_iters = {sp: iter(evts) for sp, evts in sorted_by_sport.items()}
+    sport_keys  = sorted(sport_iters.keys())
+
+    while len(selected) < max_total:
+        added = 0
+        for sp in sport_keys:
+            if len(selected) >= max_total:
+                break
+            try:
+                selected.append(next(sport_iters[sp]))
+                added += 1
+            except StopIteration:
+                pass
+        if added == 0:
+            break
+
+    sports_repr = {e.get("sport") for e in selected}
+    print(f"  Eventos seleccionados: {len(selected)}/{len(events)} de {len(by_sport)} deportes")
+    print(f"  Deportes: {', '.join(sorted(sports_repr))}")
+    return selected
+
+
+# ── git push helper ───────────────────────────────────────────────────────────
+
+def _git_push(*files: str, message: str) -> None:
+    try:
+        subprocess.run(["git", "add", *files], cwd=str(_DATA_REPO), check=True)
+        subprocess.run(["git", "commit", "-m", message], cwd=str(_DATA_REPO), check=True)
+        subprocess.run(["git", "push"], cwd=str(_DATA_REPO), check=True)
+        print("  Dashboard actualizado en GitHub.")
+    except Exception as e:
+        print(f"  No se pudo publicar en GitHub: {e}")
+
+
+# ── ask (consulta en lenguaje natural) ───────────────────────────────────────
 
 async def _run_ask(question: str):
-    """Answer any natural language question about today's events on Tonybet."""
-    import json
-    from .scraper import TonybetScraper
-    from .config import config
-    import anthropic
-
     print(f"\n  Pregunta: {question}")
-    print("  Scrapeando Tonybet para obtener datos actuales...\n")
 
-    scraper = TonybetScraper()
-    events  = await scraper.scrape()
+    # Cargar snapshot de eventos si existe
+    ev_file = _DATA_REPO / "events_latest.json"
+    if ev_file.exists():
+        snap = _json.loads(ev_file.read_text(encoding="utf-8"))
+        events = snap.get("events", [])
+        print(f"  Usando snapshot local: {len(events)} eventos")
+    else:
+        print("  Sin snapshot — scrapeando Tonybet…")
+        from .odds_api_fetcher import fetch_events
+        raw_events = fetch_events(config.odds_api_key, config.odds_api_max_requests)
+        events = [
+            {
+                "nombre":      e.get("name"),
+                "deporte":     e.get("sport"),
+                "competicion": e.get("competition"),
+                "hora":        e.get("starts_at"),
+                "mercados":    e.get("markets", [])[:3],
+            }
+            for e in raw_events
+        ]
 
     if not events:
-        print("No se obtuvieron eventos. Comprueba tu conexión.")
+        print("No hay eventos disponibles. Ejecuta el advisor primero.")
         return
 
-    # Build a compact but complete event list for Claude
-    compact = []
-    for e in events:
-        compact.append({
-            "nombre":      e.get("name"),
-            "deporte":     e.get("sport"),
-            "competicion": e.get("competition"),
-            "hora":        e.get("starts_at"),
-            "mercados":    [
-                {
-                    "mercado":    m.get("name"),
-                    "selecciones": [
-                        {"nombre": s.get("name"), "cuota": s.get("odds")}
-                        for s in m.get("selections", [])
-                    ]
-                }
-                for m in e.get("markets", [])[:4]
-            ],
-        })
-
-    events_json = json.dumps(compact, ensure_ascii=False, indent=2)
-
+    import anthropic
+    events_json = _json.dumps(events, ensure_ascii=False, indent=2)
     prompt = (
-        f"Eres un asistente experto en apuestas deportivas. El usuario te hace esta pregunta:\n\n"
+        f"Eres un asistente experto en apuestas deportivas. El usuario pregunta:\n\n"
         f"  \"{question}\"\n\n"
-        f"A continuación tienes TODOS los eventos disponibles ahora mismo en Tonybet ({len(compact)} partidos).\n"
-        f"Responde la pregunta del usuario usando únicamente los datos que aparecen aquí.\n"
-        f"Sé concreto, claro y organizado. Si la pregunta pide cuotas, inclúyelas.\n"
+        f"Responde usando únicamente los datos de los eventos disponibles a continuación. "
+        f"Sé concreto, claro y organizado. Incluye cuotas cuando las haya. "
         f"Si no hay eventos que coincidan, dilo claramente.\n\n"
-        f"DATOS DE TONYBET:\n{events_json}"
+        f"DATOS ({len(events)} eventos):\n{events_json}"
     )
 
     client = anthropic.Anthropic(api_key=config.anthropic_api_key)
-
-    # Stream the response for faster feedback
     print("  Consultando a Claude...\n")
     print("─" * 60)
     with client.messages.stream(
@@ -266,375 +335,247 @@ async def _run_ask(question: str):
     print("\n" + "─" * 60)
 
 
-# ── preview ──────────────────────────────────────────────────────────────────
+# ── preview (avance de mañana) ────────────────────────────────────────────────
 
-async def _run_preview():
-    """Scout tomorrow's events with relaxed threshold — shows candidates 70%+."""
-    from datetime import datetime, timedelta
-    from .scraper import TonybetScraper
+async def _run_preview(events: list[dict] | None = None):
+    from datetime import timedelta
     from .form_fetcher import fetch_event_context
 
-    tomorrow = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
-    print(f"\n  Buscando partidos del {tomorrow}...\n")
+    tomorrow = (_dt.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+    print(f"\n  Buscando partidos del {tomorrow}…\n")
 
-    scraper = TonybetScraper()
-    events = await scraper.scrape()
+    if events is None:
+        from .odds_api_fetcher import fetch_events
+        events = fetch_events(config.odds_api_key, config.odds_api_max_requests)
 
-    # Keep only tomorrow's events
     tomorrow_events = [
         e for e in events
         if str(e.get("starts_at", "")).startswith(tomorrow)
     ]
 
     if not tomorrow_events:
-        print(f"  No hay eventos registrados en Tonybet para el {tomorrow} todavia.")
-        print("  Prueba mas tarde — Tonybet suele publicar las cuotas del dia siguiente por la tarde/noche.")
+        print(f"  No hay eventos para el {tomorrow} todavía.")
         return
 
-    print(f"  {len(tomorrow_events)} eventos encontrados para manana.\n")
+    print(f"  {len(tomorrow_events)} eventos encontrados para mañana.\n")
+    sample = _select_events(tomorrow_events, max_total=30)
 
-    # Group and sample (same logic as advisor)
-    from collections import defaultdict
-    FOOTBALL_TOP = [
-        "premier league", "la liga", "bundesliga", "serie a", "ligue 1",
-        "champions league", "europa league", "eredivisie", "primera division",
-    ]
-    TENNIS_KEYWORDS = ["tenis", "tennis", "atp", "wta", "roland garros", "wimbledon", "us open", "australian open"]
-    OTHER_SPORTS = ["baloncesto", "hockey", "balonmano", "voleibol",
-                    "beisbol", "futbol americano", "tenis mesa"]
-
-    def _is_top(e):
-        comp  = (e.get("competition") or "").lower()
-        sport = (e.get("sport") or "").lower()
-        if sport == "futbol":
-            return any(t in comp for t in FOOTBALL_TOP)
-        if any(k in sport for k in TENNIS_KEYWORDS) or any(k in comp for k in TENNIS_KEYWORDS):
-            return True
-        return any(s in sport for s in OTHER_SPORTS)
-
-    top = [e for e in tomorrow_events if _is_top(e)]
-    by_sport: dict = defaultdict(list)
-    for e in top:
-        by_sport[e.get("sport", "Otros")].append(e)
-
-    sample: list[dict] = []
-    sample += by_sport.get("Futbol", [])[:8]
-    for sp, evts in by_sport.items():
-        if sp != "Futbol":
-            sport_l = sp.lower()
-            limit = 8 if any(k in sport_l for k in TENNIS_KEYWORDS) else 4
-            sample += evts[:limit]
-    if not sample:
-        sample = tomorrow_events[:25]
-
-    # Build enriched event list with ESPN data
-    import json
-    print("  Obteniendo datos reales de equipos desde ESPN...")
+    print("  Obteniendo datos ESPN para equipos…")
     enriched = []
-    for e in sample[:25]:
+    for e in sample:
         ctx = fetch_event_context(e.get("name", ""), e.get("sport", ""))
         entry = {
-            "name": e.get("name"),
-            "sport": e.get("sport"),
+            "name":        e.get("name"),
+            "sport":       e.get("sport"),
             "competition": e.get("competition"),
-            "starts_at": e.get("starts_at"),
-            "markets": e.get("markets", [])[:3],
+            "starts_at":   e.get("starts_at"),
+            "markets":     e.get("markets", [])[:3],
         }
         if ctx:
             entry["datos_espn"] = ctx
         enriched.append(entry)
 
-    events_json = json.dumps(enriched, ensure_ascii=False, indent=2)
+    events_json = _json.dumps(enriched, ensure_ascii=False, indent=2)
 
     import anthropic
-    from .config import config
     client = anthropic.Anthropic(api_key=config.anthropic_api_key)
 
     prompt = (
-        "Eres un scout de apuestas deportivas. Tu tarea es hacer un AVANCE de los partidos de MANANA.\n\n"
-        "NO es un análisis definitivo — es un vistazo previo para saber qué partidos merecen atención.\n\n"
+        "Eres un scout de apuestas deportivas multideporte. Tu tarea es hacer un AVANCE de los partidos de MAÑANA "
+        "en TODOS los deportes disponibles.\n\n"
         "Para cada evento:\n"
-        "1. Indica el nivel de interés: ALTO / MEDIO / BAJO\n"
-        "2. Señala qué selección/mercado podría tener valor (no hace falta calcular EV exacto)\n"
-        "3. Explica en 1-2 líneas por qué — usando la forma reciente si está disponible\n"
-        "4. Señala si hay algo que NO sabes (lesiones recientes, contexto de temporada) que podría cambiar el análisis\n\n"
-        "TENIS: Para partidos de Grand Slam (Roland Garros, Wimbledon, US Open, AO) usa tu conocimiento\n"
-        "de rankings ATP/WTA y especialización en superficie. No necesitas datos ESPN para esto.\n\n"
-        "Al final, haz un RANKING de los 3 partidos más prometedores para el análisis completo de mañana.\n\n"
-        "Sé directo y breve. No uses tablas largas. Formato simple.\n\n"
+        "1. Nivel de interés: ALTO / MEDIO / BAJO\n"
+        "2. Qué selección/mercado podría tener valor\n"
+        "3. Razón en 1-2 líneas (usa datos ESPN si están disponibles; si no, tu conocimiento)\n"
+        "4. Qué información adicional cambiaría el análisis (lesiones, contexto, etc.)\n\n"
+        "Al final, haz un TOP-5 de partidos más prometedores para el análisis completo de mañana.\n\n"
+        "Sé directo y breve. Organiza por deporte. Formato simple.\n\n"
         f"EVENTOS DE MAÑANA ({tomorrow}):\n{events_json}"
     )
 
-    print("  Analizando con Claude...\n")
-    response = client.messages.create(
+    print("  Analizando con Claude…\n")
+    response = anthropic.Anthropic(api_key=config.anthropic_api_key).messages.create(
         model=config.claude_model,
-        max_tokens=2000,
+        max_tokens=2500,
         messages=[{"role": "user", "content": prompt}],
     )
-
     analysis_text = response.content[0].text
     print(analysis_text)
-    print(f"\n  ({len(sample)} eventos analizados de {len(tomorrow_events)} disponibles para manana)")
+    print(f"\n  ({len(sample)} eventos analizados de {len(tomorrow_events)} disponibles para mañana)")
 
-    # Save preview to JSON and push to GitHub
-    from datetime import datetime as _dt
-    from pathlib import Path
-    import subprocess, shutil
-
-    data_repo = Path(__file__).parent.parent
     preview_data = {
-        "updated_at": _dt.now().strftime("%d/%m/%Y %H:%M"),
-        "for_date": tomorrow,
-        "analysis": analysis_text,
-        "total_events": len(tomorrow_events),
+        "updated_at":    _dt.now().strftime("%d/%m/%Y %H:%M"),
+        "for_date":      tomorrow,
+        "analysis":      analysis_text,
+        "total_events":  len(tomorrow_events),
         "analyzed_count": len(sample),
     }
-    (data_repo / "preview_latest.json").write_text(
-        json.dumps(preview_data, ensure_ascii=False, indent=2), encoding="utf-8"
+    (_DATA_REPO / "preview_latest.json").write_text(
+        _json.dumps(preview_data, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     try:
-        subprocess.run(["git", "add", "preview_latest.json"], cwd=str(data_repo), check=True)
-        subprocess.run(["git", "commit", "-m", "advisor: update preview"], cwd=str(data_repo), check=True)
-        subprocess.run(["git", "push"], cwd=str(data_repo), check=True)
-        print("  Preview publicado en el dashboard web.")
-    except Exception as e:
-        print(f"  No se pudo publicar el preview: {e}")
+        _git_push("preview_latest.json", message="advisor: update preview")
+    except Exception:
+        pass
 
 
-# ── main flow ─────────────────────────────────────────────────────────────────
+# ── main advisor flow ─────────────────────────────────────────────────────────
 
 async def run(mode: str = "advisor"):
     _print_header()
 
-    # Validate config
     try:
         if mode != "demo":
             config.validate()
     except ValueError as e:
         print(f"\n  Configuracion incompleta: {e}")
-        print("   Crea un archivo .env con las variables requeridas (ver .env.example)\n")
+        print("   Crea un archivo .env con las variables requeridas\n")
         sys.exit(1)
 
     bankroll = float(os.getenv("BANKROLL", "200"))
 
-    # Preview mode: scout tomorrow's events with relaxed threshold
     if mode == "preview":
         await _run_preview()
         return
 
-    # 1. Get events
+    # ── 1. Obtener eventos ────────────────────────────────────────────────────
     if mode == "demo":
         print("\n[MODO DEMO] Usando eventos de ejemplo…")
         events = _load_demo_events()
     else:
-        from .scraper import TonybetScraper
-        scraper = TonybetScraper()
-        events = await scraper.scrape()
+        # Fuente primaria: The Odds API (fiable, 40+ deportes)
+        events = []
+        if config.odds_api_key:
+            from .odds_api_fetcher import fetch_events
+            events = fetch_events(config.odds_api_key, config.odds_api_max_requests)
+
+        # Fallback: scraper Playwright (si no hay ODDS_API_KEY)
+        if not events:
+            if config.odds_api_key:
+                print("  ⚠ The Odds API no devolvió eventos — probando scraper Playwright…")
+            else:
+                print("  ⚠ ODDS_API_KEY no configurada — usando scraper Playwright…")
+            from .scraper import TonybetScraper
+            scraper = TonybetScraper()
+            events = await scraper.scrape()
 
     if not events:
-        print("⚠ No se obtuvieron eventos de Tonybet.")
-        print("  Posibles causas:")
-        print("  1. Tonybet requiere login para servir datos vía API — verifica credenciales")
-        print("  2. La estructura de URLs de la API cambió — revisa los logs de debug de URLs")
-        print("  3. El sitio está temporalmente caído o bloqueando bots")
-        print("\n  Publicando estado vacío en el dashboard…")
-        # Push empty recommendations so dashboard shows "sin datos" instead of stale data
-        import json as _json, subprocess
-        from pathlib import Path
-        from datetime import datetime as _dt
-        data_repo = Path(__file__).parent.parent
-        empty_snap = {
+        print("⚠ No se obtuvieron eventos.")
+        print("  Soluciones:")
+        print("  1. Configura ODDS_API_KEY (registro gratuito en https://the-odds-api.com/)")
+        print("  2. Verifica las credenciales de Tonybet en TONYBET_USERNAME / TONYBET_PASSWORD")
+        # Publicar estado vacío para que el dashboard muestre "sin datos"
+        empty = {
             "updated_at": _dt.now().strftime("%d/%m/%Y %H:%M"),
             "total": 0,
             "events": [],
-            "error": "No se pudieron obtener eventos de Tonybet",
+            "error": "No se pudieron obtener eventos",
         }
-        (data_repo / "events_latest.json").write_text(
-            _json.dumps(empty_snap, ensure_ascii=False, indent=2), encoding="utf-8"
+        (_DATA_REPO / "events_latest.json").write_text(
+            _json.dumps(empty, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         try:
-            subprocess.run(["git", "add", "events_latest.json"], cwd=str(data_repo), check=True)
-            subprocess.run(["git", "commit", "-m", "advisor: sin eventos (scraper sin datos)"], cwd=str(data_repo), check=True)
-            subprocess.run(["git", "push"], cwd=str(data_repo), check=True)
+            _git_push("events_latest.json", message="advisor: sin eventos")
         except Exception:
             pass
-        sys.exit(0)  # exit 0 so GitHub Actions doesn't mark as failed
+        sys.exit(0)
 
-    # 2. Pre-filter: prioritize top leagues + all tennis Grand Slams
-    TOP_LEAGUES = [
-        # Futbol
-        "premier league", "la liga", "bundesliga", "serie a", "ligue 1",
-        "champions league", "europa league", "eredivisie", "primera",
-        # Baloncesto
-        "nba", "euroleague", "acb", "ncaa",
-        # Tenis
-        "atp", "wta", "roland garros", "wimbledon", "us open", "australian open",
-        # Hockey hielo
-        "nhl", "khl", "shl",
-        # Balonmano
-        "handball bundesliga", "liga asobal", "champions league handball",
-        # Beisbol
-        "mlb",
-        # Futbol americano
-        "nfl",
-        # Voleibol
-        "superliga",
-    ]
-    FOOTBALL_TOP = [
-        "premier league", "la liga", "bundesliga", "serie a", "ligue 1",
-        "champions league", "europa league", "eredivisie", "primera division",
-    ]
-    TENNIS_KEYWORDS = ["tenis", "tennis", "atp", "wta", "roland garros", "wimbledon", "us open", "australian open"]
-    OTHER_SPORTS = ["baloncesto", "hockey", "balonmano", "voleibol",
-                    "beisbol", "futbol americano", "tenis mesa"]
+    # ── 2. Seleccionar muestra equilibrada entre deportes ─────────────────────
+    filtered = _select_events(events, max_total=40)
 
-    def _is_top_league(e: dict) -> bool:
-        comp  = (e.get("competition") or "").lower()
-        sport = (e.get("sport") or "").lower()
-        # For football: only top leagues
-        if sport == "futbol":
-            return any(t in comp for t in FOOTBALL_TOP)
-        # For tennis: always include (Grand Slams are priority)
-        if any(k in sport for k in TENNIS_KEYWORDS) or any(k in comp for k in TENNIS_KEYWORDS):
-            return True
-        # For other sports: include all
-        return any(s in sport for s in OTHER_SPORTS)
-
-    top_events = [e for e in events if _is_top_league(e)]
-
-    # Sample across sports: up to 8 football + 10 tennis + 3 per other sport
-    from collections import defaultdict
-    by_sport: dict[str, list] = defaultdict(list)
-    for e in top_events:
-        by_sport[(e.get("sport") or "Otros")].append(e)
-
-    filtered: list[dict] = []
-    filtered += by_sport.get("Futbol", [])[:8]
-    for sport, evts in by_sport.items():
-        if sport != "Futbol":
-            sport_l = sport.lower()
-            limit = 10 if any(k in sport_l for k in TENNIS_KEYWORDS) else 3
-            filtered += evts[:limit]
-
-    # Fill remaining slots with more football if needed
-    if len(filtered) < 30:
-        already = {id(e) for e in filtered}
-        for e in by_sport.get("Futbol", [])[8:]:
-            if len(filtered) >= 30:
-                break
-            if id(e) not in already:
-                filtered.append(e)
-
-    if not filtered:
-        filtered = events[:20]
-    print(f"  Eventos seleccionados: {len(filtered)}/{len(events)} ({len(by_sport)} deportes)")
-
-    # 3. Analyse with Claude
+    # ── 3. Analizar con Claude ────────────────────────────────────────────────
     from .claude_agent import BettingAdvisor
     advisor = BettingAdvisor(bankroll=bankroll)
     value_bets = advisor.analyse(filtered)
 
-    # 3. Show recommendations
+    # ── 4. Mostrar resultados ─────────────────────────────────────────────────
     _print_recommendations(value_bets)
 
     if mode == "demo":
         return
 
-    # Save and publish results
+    # ── 5. Guardar y publicar ─────────────────────────────────────────────────
     from .tracker import record_bets, save_latest_recommendations
     save_latest_recommendations(value_bets)
     if value_bets:
         record_bets(value_bets)
 
-    # Push data to GitHub so the web dashboard updates
-    import subprocess, json as _json
-    from pathlib import Path
-    from datetime import datetime as _dt
-    data_repo = Path(__file__).parent.parent
-
-    # Save compact events snapshot for the web dashboard query tab
-    compact_events = []
-    for e in events:
-        compact_events.append({
+    # Snapshot de todos los eventos para el tab "Consultar" del dashboard
+    compact_events = [
+        {
             "nombre":      e.get("name"),
             "deporte":     e.get("sport"),
             "competicion": e.get("competition"),
             "hora":        e.get("starts_at"),
+            "bookmaker":   e.get("bookmaker", ""),
             "mercados": [
                 {
                     "mercado": m.get("name"),
                     "selecciones": [
                         {"nombre": s.get("name"), "cuota": s.get("odds")}
                         for s in m.get("selections", [])
-                    ]
+                    ],
                 }
                 for m in e.get("markets", [])[:4]
             ],
-        })
+        }
+        for e in events
+    ]
     events_snap = {
         "updated_at": _dt.now().strftime("%d/%m/%Y %H:%M"),
-        "total": len(compact_events),
-        "events": compact_events,
+        "total":      len(compact_events),
+        "events":     compact_events,
     }
-    (data_repo / "events_latest.json").write_text(
+    (_DATA_REPO / "events_latest.json").write_text(
         _json.dumps(events_snap, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    try:
-        subprocess.run(["git", "add", "recommendations_latest.json", "bets_log.json", "events_latest.json"], cwd=str(data_repo), check=True)
-        subprocess.run(["git", "commit", "-m", "advisor: update recommendations"], cwd=str(data_repo), check=True)
-        subprocess.run(["git", "push"], cwd=str(data_repo), check=True)
-        print("  Dashboard web actualizado en GitHub.")
-    except Exception as e:
-        print(f"  No se pudo publicar en GitHub: {e}")
 
-    # Auto-generate tomorrow's preview after every advisor run
-    print("\n  Generando preview de manana...")
+    files_to_push = ["recommendations_latest.json", "bets_log.json", "events_latest.json"]
+    _git_push(*files_to_push, message="advisor: update recommendations")
+
+    # Generar preview de mañana automáticamente tras cada ejecución
+    print("\n  Generando preview de mañana…")
     try:
-        await _run_preview()
+        await _run_preview(events)
     except Exception as e:
         print(f"  No se pudo generar el preview: {e}")
 
     if not value_bets:
         return
 
-    # 4. Bet execution modes
-    if mode in ("autobet", "dryrun"):
-        selected = _ask_confirmation(value_bets)
-        if not selected:
-            print("Sin apuestas seleccionadas. Saliendo.")
-            return
+    # ── 6. Ejecución de apuestas (solo en modo autobet/dryrun) ────────────────
+    if mode not in ("autobet", "dryrun"):
+        return
 
-        total = sum(b.recommended_stake for b in selected)
-        if total > config.max_daily_stake:
-            print(f"\n  Stake total ({total:.2f}€) supera el límite diario ({config.max_daily_stake:.2f}€).")
-            print("   Ajusta los límites en .env o reduce la selección.\n")
-            return
+    selected = _ask_confirmation(value_bets)
+    if not selected:
+        print("Sin apuestas seleccionadas. Saliendo.")
+        return
 
-        from .bet_executor import BetExecutor
-        executor = BetExecutor()
+    total = sum(b.recommended_stake for b in selected)
+    if total > config.max_daily_stake:
+        print(f"\n  Stake total ({total:.2f}€) supera el límite diario ({config.max_daily_stake:.2f}€).")
+        return
 
-        if mode == "dryrun":
-            print("\n[SIMULACION] Navegando a Tonybet para verificar que encuentra cada apuesta...")
-            print("  El navegador se abrirá. Comprueba que llega al mercado correcto.")
-            print("  NO se confirmará ninguna apuesta.\n")
-            placed = await executor.place_bets(selected, dry_run=True)
-            if placed:
-                print(f"\n  Simulacion OK: {len(placed)}/{len(selected)} apuestas localizadas correctamente.")
-                print("  Cuando quieras apostar de verdad, usa:  python -m tonybet_advisor autobet")
-            else:
-                print("\n  La simulacion no encontró las apuestas. Revisa el navegador e informa del problema.")
-            return
+    from .bet_executor import BetExecutor
+    executor = BetExecutor()
 
-        # autobet: real bets with explicit confirmation
-        print("\n¿Realizar apuestas REALES? Escribe 'CONFIRMAR' para proceder (cualquier otra cosa cancela):")
-        confirm = input("  > ").strip()
-        if confirm != "CONFIRMAR":
-            print("Apuestas canceladas.")
-            return
+    if mode == "dryrun":
+        print("\n[SIMULACION] Verificando en Tonybet… (sin confirmar apuestas)")
+        placed = await executor.place_bets(selected, dry_run=True)
+        print(f"\n  Simulación: {len(placed)}/{len(selected)} apuestas localizadas.")
+        return
 
-        placed = await executor.place_bets(selected, dry_run=False)
-        print(f"\n  {len(placed)}/{len(selected)} apuestas colocadas correctamente.")
+    print("\n¿Realizar apuestas REALES? Escribe 'CONFIRMAR' para proceder:")
+    if input("  > ").strip() != "CONFIRMAR":
+        print("Apuestas canceladas.")
+        return
 
+    placed = await executor.place_bets(selected, dry_run=False)
+    print(f"\n  {len(placed)}/{len(selected)} apuestas colocadas.")
+
+
+# ── entrypoint ────────────────────────────────────────────────────────────────
 
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else "advisor"
@@ -646,7 +587,6 @@ def main():
         return
 
     if mode == "result":
-        # Usage: python -m tonybet_advisor result "Real Madrid vs Barcelona" "Real Madrid" won
         if len(sys.argv) < 5:
             print("Uso: python -m tonybet_advisor result \"<evento>\" \"<selección>\" <won|lost|void>")
             sys.exit(1)
@@ -656,20 +596,16 @@ def main():
 
     if mode == "ask":
         if len(sys.argv) < 3:
-            print("Uso: python -m tonybet_advisor ask \"tu pregunta aqui\"")
-            print("Ejemplos:")
-            print("  python -m tonybet_advisor ask \"que hay en la liga española hoy\"")
-            print("  python -m tonybet_advisor ask \"cuotas del partido de tenis mas interesante\"")
-            print("  python -m tonybet_advisor ask \"hay partidos de la NBA esta noche?\"")
+            print("Uso: python -m tonybet_advisor ask \"tu pregunta\"")
             sys.exit(1)
-        question = " ".join(sys.argv[2:])
-        asyncio.run(_run_ask(question))
+        asyncio.run(_run_ask(" ".join(sys.argv[2:])))
         return
 
     valid_modes = ("advisor", "autobet", "dryrun", "preview", "demo")
     if mode not in valid_modes:
         print(f"Uso: python -m tonybet_advisor [{'|'.join(valid_modes)}|ask|stats|result]")
         sys.exit(1)
+
     asyncio.run(run(mode))
 
 
