@@ -481,7 +481,7 @@ async def run(mode: str = "advisor"):
         sys.exit(0)
 
     # ── 2. Seleccionar muestra equilibrada entre deportes ─────────────────────
-    filtered = _select_events(events, max_total=40)
+    filtered = _select_events(events, max_total=60)
 
     # ── 3. Analizar con Claude ────────────────────────────────────────────────
     from .claude_agent import BettingAdvisor
