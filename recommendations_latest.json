@@ -1,15 +1,4 @@
 {
-  "updated_at": "2026-05-28 05:02",
-  "bets": [
-    {
-      "event": "Carolina Hurricanes vs Montréal Canadiens",
-      "sport": "Hockey hielo",
-      "market": "Total goles",
-      "selection": "Under 5.5",
-      "odds": 1.95,
-      "expected_value": 0.365,
-      "recommended_stake": 8.0,
-      "estimated_probability": 0.7
-    }
-  ]
+  "updated_at": "2026-05-28 18:33",
+  "bets": []
 }
