@@ -179,10 +179,11 @@ with tab1:
         st.link_button("🚀 Ejecutar advisor ahora", ACTIONS_URL, use_container_width=True)
         st.stop()
 
-    updated      = data.get("updated_at", "—")
-    bets         = data.get("bets", [])
-    today_str    = datetime.now(_TZ_ES).strftime("%Y-%m-%d")
-    updated_date = updated[:10] if updated else ""
+    updated       = data.get("updated_at", "—")
+    bets          = data.get("bets", [])
+    fallback_bets = data.get("fallback_bets", [])
+    today_str     = datetime.now(_TZ_ES).strftime("%Y-%m-%d")
+    updated_date  = updated[:10] if updated else ""
 
     if updated_date == today_str:
         st.success(f"✅ Análisis de hoy — actualizado a las {updated[11:]}")
@@ -190,15 +191,19 @@ with tab1:
         st.warning(f"⚠️ Última actualización: {updated}  ·  Datos desactualizados")
         st.link_button("🚀 Actualizar ahora (GitHub Actions)", ACTIONS_URL, use_container_width=True)
 
-    if not bets:
+    if not bets and not fallback_bets:
         st.info("🔍 No se encontraron value bets con EV positivo hoy. Vuelve en la próxima actualización.")
-    else:
-        sports_in_bets = sorted({b.get("sport", "—") for b in bets})
+    elif not bets and fallback_bets:
+        st.warning("⚠️ No hay value bets con los umbrales actuales. Mostrando las mejores opciones disponibles (EV reducido):")
+    if bets or fallback_bets:
+        display_bets  = bets if bets else fallback_bets
+        is_fallback   = not bets
+        sports_in_bets = sorted({b.get("sport", "—") for b in display_bets})
         if len(sports_in_bets) > 1:
             sport_filter  = st.selectbox("Filtrar por deporte", ["Todos"] + sports_in_bets, index=0)
-            filtered_bets = bets if sport_filter == "Todos" else [b for b in bets if b.get("sport") == sport_filter]
+            filtered_bets = display_bets if sport_filter == "Todos" else [b for b in display_bets if b.get("sport") == sport_filter]
         else:
-            filtered_bets = bets
+            filtered_bets = display_bets
 
         max_bets     = limits["max_bets"]
         visible_bets = filtered_bets if max_bets is None else filtered_bets[:max_bets]
@@ -206,10 +211,16 @@ with tab1:
 
         n           = len(filtered_bets)
         total_stake = sum(b.get("recommended_stake", 0) for b in visible_bets)
-        st.success(
-            f"**{n} value bet{'s' if n != 1 else ''} encontrada{'s' if n != 1 else ''}**"
-            f"  ·  Stake visible: **{total_stake:.2f}€**"
-        )
+        if is_fallback:
+            st.info(
+                f"**{n} opción{'es' if n != 1 else ''} cercana{'s' if n != 1 else ''} al umbral**"
+                f"  ·  Stake orientativo: **{total_stake:.2f}€**"
+            )
+        else:
+            st.success(
+                f"**{n} value bet{'s' if n != 1 else ''} encontrada{'s' if n != 1 else ''}**"
+                f"  ·  Stake visible: **{total_stake:.2f}€**"
+            )
 
         if tier in ("pro", "premium") and has_supabase:
             if st.button("📥 Guardar apuestas de hoy en mi historial", key="save_bets"):
@@ -238,7 +249,7 @@ with tab1:
                 </span>
               </div>
               <div class="bet-meta">{sport} &nbsp;·&nbsp; {b.get('market','')} &nbsp;·&nbsp; {updated}</div>
-              <div class="bet-row">✅ <b>Apuesta:</b> {b.get('selection','')} &nbsp;@&nbsp; <b>{b.get('odds',0):.2f}</b></div>
+              <div class="bet-row">{'⚠️' if is_fallback else '✅'} <b>{'Opción' if is_fallback else 'Apuesta'}:</b> {b.get('selection','')} &nbsp;@&nbsp; <b>{b.get('odds',0):.2f}</b></div>
               <div class="bet-row" style="margin-top:8px;">
                 🎯 <b>Probabilidad de éxito:</b>
                 <span class="prob-badge" style="background:{prob_c}18;color:{prob_c};border:2px solid {prob_c}">{prob*100:.0f}%</span>

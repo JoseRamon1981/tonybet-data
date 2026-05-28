@@ -499,12 +499,27 @@ async def run(mode: str = "advisor"):
     # ── 4. Mostrar resultados ─────────────────────────────────────────────────
     _print_recommendations(value_bets)
 
+    # ── 4b. Fallback: si no hay value bets, mostrar las mejores opciones ──────
+    fallback_bets: list = []
+    if not value_bets and hasattr(advisor, "results") and advisor.results:
+        fallback_threshold = config.min_ev_threshold - 0.10
+        near_misses = sorted(
+            [r for r in advisor.results if r.expected_value >= fallback_threshold],
+            key=lambda r: r.expected_value,
+            reverse=True,
+        )[:5]
+        if near_misses:
+            print(f"\n⚠ Sin value bets con umbral normal (EV≥{config.min_ev_threshold*100:.0f}%).")
+            print(f"  Mejores opciones disponibles (umbral reducido -10pp):\n")
+            _print_recommendations(near_misses)
+            fallback_bets = near_misses
+
     if mode == "demo":
         return
 
     # ── 5. Guardar y publicar ─────────────────────────────────────────────────
     from .tracker import record_bets, save_latest_recommendations
-    save_latest_recommendations(value_bets)
+    save_latest_recommendations(value_bets, fallback_bets=fallback_bets or None)
     if value_bets:
         record_bets(value_bets)
 

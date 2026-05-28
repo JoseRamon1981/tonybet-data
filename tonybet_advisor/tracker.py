@@ -6,6 +6,9 @@ import json
 import os
 from dataclasses import dataclass, asdict
 from datetime import date, datetime
+from zoneinfo import ZoneInfo
+
+_TZ_ES = ZoneInfo("Europe/Madrid")
 from pathlib import Path
 
 from .analyzer import BetAnalysis
@@ -40,24 +43,32 @@ def _save(records: list[dict]):
         json.dump(records, f, ensure_ascii=False, indent=2)
 
 
-def save_latest_recommendations(bets: list[BetAnalysis]) -> None:
+def save_latest_recommendations(
+    bets: list[BetAnalysis],
+    fallback_bets: list[BetAnalysis] | None = None,
+) -> None:
     """Save current recommendations to JSON for the web dashboard."""
+
+    def _bet_dict(b: BetAnalysis) -> dict:
+        return {
+            "event": b.event,
+            "sport": b.sport,
+            "market": b.market,
+            "selection": b.selection,
+            "odds": b.odds,
+            "expected_value": b.expected_value,
+            "recommended_stake": b.recommended_stake,
+            "estimated_probability": b.estimated_probability,
+            "starts_at": b.starts_at,
+        }
+
     data = {
-        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "bets": [
-            {
-                "event": b.event,
-                "sport": b.sport,
-                "market": b.market,
-                "selection": b.selection,
-                "odds": b.odds,
-                "expected_value": b.expected_value,
-                "recommended_stake": b.recommended_stake,
-                "estimated_probability": b.estimated_probability,
-            }
-            for b in bets
-        ],
+        "updated_at": datetime.now(_TZ_ES).strftime("%Y-%m-%d %H:%M"),
+        "bets": [_bet_dict(b) for b in bets],
     }
+    if fallback_bets:
+        data["fallback_bets"] = [_bet_dict(b) for b in fallback_bets]
+
     with open(RECS_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
