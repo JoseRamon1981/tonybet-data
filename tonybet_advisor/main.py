@@ -407,7 +407,7 @@ async def _run_preview(events: list[dict] | None = None):
     print(f"\n  ({len(sample)} eventos analizados de {len(tomorrow_events)} disponibles para mañana)")
 
     preview_data = {
-        "updated_at":    _dt.now(_TZ_ES).strftime("%d/%m/%Y %H:%M"),
+        "updated_at":    _dt.now(_TZ_ES).strftime("%Y-%m-%d %H:%M"),
         "for_date":      tomorrow,
         "analysis":      analysis_text,
         "total_events":  len(tomorrow_events),
@@ -469,7 +469,7 @@ async def run(mode: str = "advisor"):
         print("  2. Verifica las credenciales de Tonybet en TONYBET_USERNAME / TONYBET_PASSWORD")
         # Publicar estado vacío para que el dashboard muestre "sin datos"
         empty = {
-            "updated_at": _dt.now(_TZ_ES).strftime("%d/%m/%Y %H:%M"),
+            "updated_at": _dt.now(_TZ_ES).strftime("%Y-%m-%d %H:%M"),
             "total": 0,
             "events": [],
             "error": "No se pudieron obtener eventos",
@@ -530,7 +530,7 @@ async def run(mode: str = "advisor"):
         for e in events
     ]
     events_snap = {
-        "updated_at": _dt.now(_TZ_ES).strftime("%d/%m/%Y %H:%M"),
+        "updated_at": _dt.now(_TZ_ES).strftime("%Y-%m-%d %H:%M"),
         "total":      len(compact_events),
         "events":     compact_events,
     }
