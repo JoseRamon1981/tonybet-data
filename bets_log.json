@@ -478,5 +478,17 @@
     "estimated_ev": 0.3896,
     "result": "pending",
     "profit": 0.0
+  },
+  {
+    "date": "2026-05-28",
+    "event": "Carolina Hurricanes vs Montréal Canadiens",
+    "sport": "Hockey hielo",
+    "market": "Total goles",
+    "selection": "Under 5.5",
+    "odds": 1.95,
+    "stake": 8.0,
+    "estimated_ev": 0.365,
+    "result": "pending",
+    "profit": 0.0
   }
 ]
