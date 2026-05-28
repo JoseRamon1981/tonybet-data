@@ -486,7 +486,12 @@ async def run(mode: str = "advisor"):
     # ── 3. Analizar con Claude ────────────────────────────────────────────────
     from .claude_agent import BettingAdvisor
     advisor = BettingAdvisor(bankroll=bankroll)
-    value_bets = advisor.analyse(filtered)
+    try:
+        value_bets = advisor.analyse(filtered)
+    except Exception as exc:
+        print(f"\n⚠ Error en análisis Claude: {exc.__class__.__name__}: {exc}")
+        print("  Publicando eventos sin recomendaciones (el dashboard mostrará los datos)…")
+        value_bets = []
 
     # ── 4. Mostrar resultados ─────────────────────────────────────────────────
     _print_recommendations(value_bets)
@@ -530,8 +535,14 @@ async def run(mode: str = "advisor"):
         _json.dumps(events_snap, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
-    files_to_push = ["recommendations_latest.json", "bets_log.json", "events_latest.json"]
-    _git_push(*files_to_push, message="advisor: update recommendations")
+    # Intentar push — si hay nothing to commit (sin cambios) no es un error
+    try:
+        _git_push(
+            "recommendations_latest.json", "bets_log.json", "events_latest.json",
+            message="advisor: update recommendations",
+        )
+    except Exception as e:
+        print(f"  Push parcial: {e}")
 
     # Generar preview de mañana automáticamente tras cada ejecución
     print("\n  Generando preview de mañana…")
