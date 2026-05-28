@@ -2,8 +2,8 @@ name: Tonybet Advisor
 
 on:
   schedule:
-    - cron: '0 7 * * *'   # 07:00 UTC → 09:00 España (hora de verano) — análisis matutino
-    - cron: '0 15 * * *'  # 15:00 UTC → 17:00 España — actualización para partidos nocturnos
+    - cron: '0 7 * * *'   # 09:00 España verano (CEST UTC+2) / 08:00 España invierno (CET UTC+1)
+    - cron: '0 16 * * *'  # 18:00 España verano (CEST UTC+2) / 17:00 España invierno (CET UTC+1)
   workflow_dispatch:
     inputs:
       mode:
