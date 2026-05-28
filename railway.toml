@@ -1,9 +1,7 @@
 [build]
-builder = "nixpacks"
+builder = "railpack"
 
 [deploy]
-startCommand = "streamlit run streamlit_advisor.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true"
-healthcheckPath = "/_stcore/health"
-healthcheckTimeout = 300
+startCommand = "bash start.sh"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
