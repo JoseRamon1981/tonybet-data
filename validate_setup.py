@@ -138,8 +138,8 @@ def main():
     header("1. Variables de entorno")
 
     supabase_url      = check_env("SUPABASE_URL",      "https://")
-    supabase_anon     = check_env("SUPABASE_ANON_KEY", "eyJ")
-    supabase_service  = check_env("SUPABASE_SERVICE_KEY", "eyJ", required=False)
+    supabase_anon     = check_env("SUPABASE_ANON_KEY", "sb_publishable_")
+    supabase_service  = check_env("SUPABASE_SERVICE_KEY", "sb_secret_", required=False)
     stripe_key        = check_env("STRIPE_SECRET_KEY", "sk_")
     stripe_price_pro  = check_env("STRIPE_PRICE_PRO",  "price_")
     stripe_price_prem = check_env("STRIPE_PRICE_PREMIUM", "price_")
