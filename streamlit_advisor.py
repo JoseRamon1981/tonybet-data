@@ -5,6 +5,9 @@ Multi-tenant SaaS: Supabase Auth + Stripe Billing.
 import json
 import os
 from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
+
+_TZ_ES = ZoneInfo("Europe/Madrid")
 
 import requests
 import streamlit as st
@@ -178,7 +181,7 @@ with tab1:
 
     updated      = data.get("updated_at", "—")
     bets         = data.get("bets", [])
-    today_str    = datetime.now().strftime("%Y-%m-%d")
+    today_str    = datetime.now(_TZ_ES).strftime("%Y-%m-%d")
     updated_date = updated[:10] if updated else ""
 
     if updated_date == today_str:
@@ -278,8 +281,8 @@ with tab2:
             total_ev     = prev.get("total_events", 0)
             analyzed     = prev.get("analyzed_count", 0)
             analysis     = prev.get("analysis", "")
-            tomorrow_str = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
-            today_str_   = datetime.now().strftime("%Y-%m-%d")
+            tomorrow_str = (datetime.now(_TZ_ES) + timedelta(days=1)).strftime("%Y-%m-%d")
+            today_str_   = datetime.now(_TZ_ES).strftime("%Y-%m-%d")
 
             try:
                 display_date = datetime.strptime(for_date, "%Y-%m-%d").strftime("%d/%m/%Y")

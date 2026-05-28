@@ -18,6 +18,9 @@ import sys
 from collections import defaultdict
 from datetime import datetime as _dt
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+_TZ_ES = ZoneInfo("Europe/Madrid")
 
 from .config import config
 from .analyzer import BetAnalysis
@@ -341,7 +344,7 @@ async def _run_preview(events: list[dict] | None = None):
     from datetime import timedelta
     from .form_fetcher import fetch_event_context
 
-    tomorrow = (_dt.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+    tomorrow = (_dt.now(_TZ_ES) + timedelta(days=1)).strftime("%Y-%m-%d")
     print(f"\n  Buscando partidos del {tomorrow}…\n")
 
     if events is None:
@@ -404,7 +407,7 @@ async def _run_preview(events: list[dict] | None = None):
     print(f"\n  ({len(sample)} eventos analizados de {len(tomorrow_events)} disponibles para mañana)")
 
     preview_data = {
-        "updated_at":    _dt.now().strftime("%d/%m/%Y %H:%M"),
+        "updated_at":    _dt.now(_TZ_ES).strftime("%d/%m/%Y %H:%M"),
         "for_date":      tomorrow,
         "analysis":      analysis_text,
         "total_events":  len(tomorrow_events),
@@ -466,7 +469,7 @@ async def run(mode: str = "advisor"):
         print("  2. Verifica las credenciales de Tonybet en TONYBET_USERNAME / TONYBET_PASSWORD")
         # Publicar estado vacío para que el dashboard muestre "sin datos"
         empty = {
-            "updated_at": _dt.now().strftime("%d/%m/%Y %H:%M"),
+            "updated_at": _dt.now(_TZ_ES).strftime("%d/%m/%Y %H:%M"),
             "total": 0,
             "events": [],
             "error": "No se pudieron obtener eventos",
@@ -527,7 +530,7 @@ async def run(mode: str = "advisor"):
         for e in events
     ]
     events_snap = {
-        "updated_at": _dt.now().strftime("%d/%m/%Y %H:%M"),
+        "updated_at": _dt.now(_TZ_ES).strftime("%d/%m/%Y %H:%M"),
         "total":      len(compact_events),
         "events":     compact_events,
     }
