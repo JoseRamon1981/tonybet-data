@@ -36,12 +36,17 @@ class Config:
     timeout_ms: int = int(os.getenv("TIMEOUT_MS", "30000"))
 
     def validate(self):
-        if not self.tonybet_username:
-            raise ValueError("TONYBET_USERNAME no está configurado")
-        if not self.tonybet_password:
-            raise ValueError("TONYBET_PASSWORD no está configurado")
         if not self.anthropic_api_key:
             raise ValueError("ANTHROPIC_API_KEY no está configurado")
+        # Data source: need either The Odds API key OR Tonybet credentials
+        has_odds_api = bool(self.odds_api_key)
+        has_tonybet  = bool(self.tonybet_username and self.tonybet_password)
+        if not has_odds_api and not has_tonybet:
+            raise ValueError(
+                "No hay fuente de datos configurada. "
+                "Configura ODDS_API_KEY (https://the-odds-api.com) "
+                "o TONYBET_USERNAME + TONYBET_PASSWORD"
+            )
 
 
 config = Config()
