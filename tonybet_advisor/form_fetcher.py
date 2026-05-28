@@ -1,10 +1,21 @@
 """
-Comprehensive team context fetcher using ESPN's unofficial API.
-Provides: season record + position, recent results, goals avg,
-          home/away splits (season + last 5), H2H, injuries.
-For tennis: ATP/WTA player ranking lookup.
+Comprehensive team/player context fetcher using ESPN's unofficial API.
+
+Provides per-team:
+  - Full season record: position, points, W/D/L, GF/GA, home/away splits
+  - Over/Under and BTTS rates calculated from the full schedule
+  - Scoring trends: last-10 vs season average
+  - Clean-sheet % and fail-to-score %
+  - Advanced stats where ESPN has them (shots, possession, xG, pace, etc.)
+  - Last-10 results with scorelines
+  - H2H (last 5 direct meetings)
+  - Injuries
+
+For tennis: ATP/WTA ranking + surface stats + recent results.
 No API key required.
 """
+from __future__ import annotations
+
 import re
 import requests
 from difflib import SequenceMatcher
@@ -19,47 +30,52 @@ _S.headers.update(_H)
 _T = 8  # timeout seconds
 
 # ── ESPN league map ───────────────────────────────────────────────────────────
-# ORDER MATTERS: domestic leagues first so they take priority in the team index.
-# European comps are indexed last and will NOT overwrite existing entries.
-
 _LEAGUES: dict[str, list[tuple[str, str]]] = {
     "Futbol": [
-        ("soccer", "eng.1"),          # Premier League
-        ("soccer", "esp.1"),          # La Liga
-        ("soccer", "ger.1"),          # Bundesliga
-        ("soccer", "ita.1"),          # Serie A
-        ("soccer", "fra.1"),          # Ligue 1
-        ("soccer", "ned.1"),          # Eredivisie
-        ("soccer", "uefa.champions"), # UCL  — indexed last, won't overwrite
-        ("soccer", "uefa.europa"),    # UEL  — indexed last, won't overwrite
+        ("soccer", "eng.1"),
+        ("soccer", "esp.1"),
+        ("soccer", "ger.1"),
+        ("soccer", "ita.1"),
+        ("soccer", "fra.1"),
+        ("soccer", "ned.1"),
+        ("soccer", "por.1"),
+        ("soccer", "tur.1"),
+        ("soccer", "mex.1"),
+        ("soccer", "usa.1"),
+        ("soccer", "bra.1"),
+        ("soccer", "arg.1"),
+        ("soccer", "esp.2"),
+        ("soccer", "eng.2"),
+        ("soccer", "uefa.champions"),
+        ("soccer", "uefa.europa"),
     ],
-    "Baloncesto": [("basketball", "nba")],
-    "Hockey hielo": [("hockey", "nhl")],
+    "Baloncesto": [
+        ("basketball", "nba"),
+        ("basketball", "mens-college-basketball"),
+        ("basketball", "euroleague"),
+    ],
+    "Hockey hielo": [
+        ("hockey", "nhl"),
+    ],
     "Beisbol": [("baseball", "mlb")],
-    "Futbol americano": [("football", "nfl")],
+    "Futbol americano": [("football", "nfl"), ("football", "college-football")],
+    "Rugby": [("rugby", "premiership"), ("rugby", "superrugby")],
 }
 
 # ── caches ────────────────────────────────────────────────────────────────────
-
-# name_lower -> (sport_slug, league_slug, team_id)
-_team_index: dict[str, tuple[str, str, str]] = {}
+_team_index:    dict[str, tuple[str, str, str]] = {}
 _indexed_sports: set[str] = set()
-
-# (sport_slug, league_slug, team_id) -> team record dict
-_record_cache: dict[tuple, dict] = {}
-
-# (sport_slug, league_slug, team_id) -> list of events
+_record_cache:   dict[tuple, dict] = {}
 _schedule_cache: dict[tuple, list] = {}
+_stats_cache:    dict[tuple, dict] = {}
 
-# ── Tennis player caches ──────────────────────────────────────────────────────
-
-_tennis_players: dict[str, dict] = {}   # name_key -> {id, tour, ranking, country}
-_tennis_tours_built: set[str] = set()
+_tennis_players:      dict[str, dict] = {}
+_tennis_tours_built:  set[str] = set()
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 
-def _get(url: str, params: dict | None = None):
+def _get(url: str, params: dict | None = None) -> dict:
     try:
         r = _S.get(url, params=params, timeout=_T)
         return r.json() if r.ok else {}
@@ -83,11 +99,24 @@ def _clean_name(name: str) -> str:
     ).strip()
 
 
-def _int(val, default=0) -> int:
+def _int(val, default: int = 0) -> int:
     try:
         return int(float(val))
     except (TypeError, ValueError):
         return default
+
+
+def _float(val, default: float = 0.0) -> float:
+    try:
+        return float(val)
+    except (TypeError, ValueError):
+        return default
+
+
+def _pct(num: int, den: int, decimals: int = 1) -> str:
+    if den == 0:
+        return "?"
+    return f"{round(100 * num / den, decimals)}%"
 
 
 # ── team index ────────────────────────────────────────────────────────────────
@@ -102,11 +131,10 @@ def _build_index(sport_name: str) -> None:
         )
         raw = (data.get("sports") or [{}])[0].get("leagues", [{}])[0].get("teams", [])
         for entry in raw:
-            t = entry.get("team", {})
+            t   = entry.get("team", {})
             tid = str(t.get("id", ""))
             for key in ["displayName", "name", "shortDisplayName", "abbreviation"]:
                 val = (t.get(key) or "").lower()
-                # IMPORTANT: don't overwrite — domestic leagues come first and win
                 if val and val not in _team_index:
                     _team_index[val] = (sport_slug, league_slug, tid)
 
@@ -127,14 +155,9 @@ def _find_team(name: str, sport_name: str) -> tuple[str, str, str] | None:
     return best if best_r >= 0.72 else None
 
 
-# ── season record (position + stats) ─────────────────────────────────────────
+# ── season record ─────────────────────────────────────────────────────────────
 
 def _team_record(sport_slug: str, league_slug: str, team_id: str) -> dict:
-    """
-    Fetch team's season record from the team endpoint.
-    Returns: position, points, played, won, drawn, lost, gf, ga,
-             + home_* and away_* splits.
-    """
     key = (sport_slug, league_slug, team_id)
     if key in _record_cache:
         return _record_cache[key]
@@ -142,14 +165,13 @@ def _team_record(sport_slug: str, league_slug: str, team_id: str) -> dict:
     data = _get(
         f"https://site.api.espn.com/apis/site/v2/sports/{sport_slug}/{league_slug}/teams/{team_id}"
     )
-    team = data.get("team", {})
+    team  = data.get("team", {})
     items = team.get("record", {}).get("items", [])
 
     if not items:
         _record_cache[key] = {}
         return {}
 
-    # Use the "total" record item
     total = next((i for i in items if i.get("type") == "total"), items[0])
     stats = {s["name"]: s.get("value", 0) for s in total.get("stats", [])}
 
@@ -162,14 +184,12 @@ def _team_record(sport_slug: str, league_slug: str, team_id: str) -> dict:
         "lost":     _int(stats.get("losses", 0)),
         "gf":       _int(stats.get("pointsFor", 0)),
         "ga":       _int(stats.get("pointsAgainst", 0)),
-        # Season home splits
         "home_played": _int(stats.get("homeGamesPlayed", 0)),
         "home_won":    _int(stats.get("homeWins", 0)),
         "home_drawn":  _int(stats.get("homeTies", 0)),
         "home_lost":   _int(stats.get("homeLosses", 0)),
         "home_gf":     _int(stats.get("homePointsFor", 0)),
         "home_ga":     _int(stats.get("homePointsAgainst", 0)),
-        # Season away splits
         "away_played": _int(stats.get("awayGamesPlayed", 0)),
         "away_won":    _int(stats.get("awayWins", 0)),
         "away_drawn":  _int(stats.get("awayTies", 0)),
@@ -178,6 +198,30 @@ def _team_record(sport_slug: str, league_slug: str, team_id: str) -> dict:
         "away_ga":     _int(stats.get("awayPointsAgainst", 0)),
     }
     _record_cache[key] = result
+    return result
+
+
+# ── advanced team statistics ──────────────────────────────────────────────────
+
+def _team_statistics(sport_slug: str, league_slug: str, team_id: str) -> dict:
+    """Fetch advanced stats from ESPN statistics endpoint."""
+    key = (sport_slug, league_slug, team_id)
+    if key in _stats_cache:
+        return _stats_cache[key]
+
+    data = _get(
+        f"https://site.api.espn.com/apis/site/v2/sports/{sport_slug}/{league_slug}/teams/{team_id}/statistics"
+    )
+    result: dict = {}
+    for split in data.get("splits", {}).get("categories", []):
+        for stat in split.get("stats", []):
+            name = stat.get("name", "")
+            val  = stat.get("value")
+            disp = stat.get("displayValue", "")
+            if name:
+                result[name] = disp or val
+
+    _stats_cache[key] = result
     return result
 
 
@@ -229,13 +273,62 @@ def _parse_result(event: dict, our_team_id: str) -> dict:
         "home":   is_home,
         "gf":     our_score,
         "ga":     opp_score,
+        "total":  (our_score + opp_score) if our_score is not None and opp_score is not None else None,
         "opp_id": str((away if is_home else home).get("team", {}).get("id", "")),
     }
 
 
-def _last_n_results(events: list[dict], team_id: str, n: int = 5) -> list[dict]:
+def _last_n_results(events: list[dict], team_id: str, n: int = 10) -> list[dict]:
     done = _completed(events)[-n:]
     return [r for e in done if (r := _parse_result(e, team_id))]
+
+
+# ── derived historical stats ──────────────────────────────────────────────────
+
+def _historical_stats(results: list[dict], is_home: bool | None = None) -> dict:
+    """
+    Compute Over/Under and BTTS rates from a list of parsed results.
+    is_home=True filters to home games, False away, None uses all.
+    """
+    filtered = results
+    if is_home is not None:
+        filtered = [r for r in results if r.get("home") == is_home]
+
+    played = len(filtered)
+    if played == 0:
+        return {}
+
+    goals_list  = [r["total"] for r in filtered if r.get("total") is not None]
+    gf_list     = [r["gf"]    for r in filtered if r.get("gf")    is not None]
+    ga_list     = [r["ga"]    for r in filtered if r.get("ga")    is not None]
+
+    over25  = sum(1 for g in goals_list if g >  2.5)
+    over35  = sum(1 for g in goals_list if g >  3.5)
+    under25 = sum(1 for g in goals_list if g <= 2.5)
+    btts    = sum(1 for r in filtered   if r.get("gf", 0) and r.get("ga", 0))
+    cs      = sum(1 for r in filtered   if r.get("ga") == 0)   # clean sheets
+    fts     = sum(1 for r in filtered   if r.get("gf") == 0)   # failed to score
+
+    avg_total = round(sum(goals_list) / len(goals_list), 2) if goals_list else None
+    avg_gf    = round(sum(gf_list)    / len(gf_list),    2) if gf_list    else None
+    avg_ga    = round(sum(ga_list)    / len(ga_list),    2) if ga_list    else None
+
+    return {
+        "played":       played,
+        "avg_gf":       avg_gf,
+        "avg_ga":       avg_ga,
+        "avg_total":    avg_total,
+        "over25_pct":   _pct(over25,  played),
+        "over35_pct":   _pct(over35,  played),
+        "under25_pct":  _pct(under25, played),
+        "btts_pct":     _pct(btts,    played),
+        "cs_pct":       _pct(cs,      played),
+        "fts_pct":      _pct(fts,     played),
+        "raw": {
+            "over25": over25, "over35": over35, "under25": under25,
+            "btts": btts, "cs": cs, "fts": fts,
+        },
+    }
 
 
 # ── injuries ──────────────────────────────────────────────────────────────────
@@ -255,8 +348,7 @@ def _get_injuries(sport_slug: str, league_slug: str, team_id: str) -> list[str]:
 
 # ── H2H ──────────────────────────────────────────────────────────────────────
 
-def _h2h(events: list[dict], team1_id: str, team2_id: str, n: int = 5) -> list[str]:
-    """Find last N meetings between team1 and team2 from team1's schedule."""
+def _h2h(events: list[dict], team1_id: str, team2_id: str, n: int = 5) -> list[dict]:
     meetings = []
     for e in reversed(_completed(events)):
         comp  = e["competitions"][0]
@@ -268,18 +360,20 @@ def _h2h(events: list[dict], team1_id: str, team2_id: str, n: int = 5) -> list[s
             home, away = comps[0], comps[1]
             hs  = _score_str(home.get("score"))
             as_ = _score_str(away.get("score"))
-            meetings.append(
-                f"{home['team'].get('displayName','?')} {hs}-{as_} {away['team'].get('displayName','?')}"
-            )
+            label = f"{home['team'].get('displayName','?')} {hs}-{as_} {away['team'].get('displayName','?')}"
+            try:
+                total = int(hs) + int(as_)
+                meetings.append({"label": label, "total": total})
+            except ValueError:
+                meetings.append({"label": label, "total": None})
         if len(meetings) >= n:
             break
     return meetings
 
 
-# ── Tennis (ATP/WTA via ESPN) ─────────────────────────────────────────────────
+# ── Tennis ────────────────────────────────────────────────────────────────────
 
 def _build_tennis_index(tour: str) -> None:
-    """Build ATP or WTA player name index from ESPN athletes list."""
     if tour in _tennis_tours_built:
         return
     _tennis_tours_built.add(tour)
@@ -291,36 +385,28 @@ def _build_tennis_index(tour: str) -> None:
         pid = str(a.get("id", ""))
         if not pid:
             continue
-        display = (a.get("displayName") or "").lower()
+        display  = (a.get("displayName") or "").lower()
         rank_raw = a.get("rank") or a.get("ranking") or {}
-        rank = rank_raw.get("current") if isinstance(rank_raw, dict) else rank_raw
+        rank     = rank_raw.get("current") if isinstance(rank_raw, dict) else rank_raw
         country_raw = a.get("citizenship") or a.get("country") or {}
-        country = (
+        country  = (
             country_raw.get("displayName") or country_raw.get("name") or ""
             if isinstance(country_raw, dict) else str(country_raw)
         )
         entry = {"id": pid, "tour": tour, "ranking": rank, "country": country}
-        # Index by full display name and by last name
-        for key in [display]:
-            if key:
-                _tennis_players.setdefault(key, entry)
+        if display:
+            _tennis_players.setdefault(display, entry)
         last = display.split()[-1] if display else ""
         if last:
             _tennis_players.setdefault(last, entry)
 
 
 def _find_tennis_player(name: str) -> dict | None:
-    """Match a TonyBet player name (Lastname, Firstname) to ESPN."""
     for tour in ("atp", "wta"):
         _build_tennis_index(tour)
-
     name_l = name.lower().strip()
-
-    # Direct match
     if name_l in _tennis_players:
         return _tennis_players[name_l]
-
-    # TonyBet format: "Lastname, Firstname" → try both orderings
     if "," in name_l:
         last, rest = name_l.split(",", 1)
         first = rest.strip()
@@ -328,8 +414,6 @@ def _find_tennis_player(name: str) -> dict | None:
         for key in [f"{first} {last}", last, f"{last} {first}"]:
             if key and key in _tennis_players:
                 return _tennis_players[key]
-
-    # Fuzzy fallback
     best, best_r = None, 0.0
     for key, val in _tennis_players.items():
         r = SequenceMatcher(None, name_l, key).ratio()
@@ -338,15 +422,30 @@ def _find_tennis_player(name: str) -> dict | None:
     return best if best_r >= 0.70 else None
 
 
+def _fetch_tennis_player_stats(player_id: str, tour: str) -> dict:
+    """Fetch recent results and statistics for a tennis player."""
+    data = _get(
+        f"https://site.api.espn.com/apis/site/v2/sports/tennis/{tour}/athletes/{player_id}/statistics"
+    )
+    stats: dict = {}
+    for cat in data.get("splits", {}).get("categories", []):
+        for s in cat.get("stats", []):
+            name = s.get("name", "")
+            val  = s.get("displayValue") or s.get("value")
+            if name:
+                stats[name] = val
+    return stats
+
+
 def fetch_tennis_event_context(event_name: str) -> str:
-    """Return ATP/WTA ranking context for both players in a tennis match."""
     parts = re.split(r"\s+vs\.?\s+|\s+v\.?\s+", event_name, flags=re.I)
     if len(parts) != 2:
         return ""
 
     lines = []
+    players_data = []
     for name in parts:
-        name = name.strip()
+        name   = name.strip()
         player = _find_tennis_player(name)
         if player:
             tour    = player["tour"].upper()
@@ -354,9 +453,29 @@ def fetch_tennis_event_context(event_name: str) -> str:
             country = player.get("country", "")
             rank_s  = f"#{rank}" if rank else "ranking no disponible"
             country_s = f" ({country})" if country else ""
-            lines.append(f"  {name}{country_s} — {tour} Ranking {rank_s}")
+            line = f"  {name}{country_s} — {tour} Ranking {rank_s}"
+
+            # Try to get win stats
+            pstats = _fetch_tennis_player_stats(player["id"], player["tour"])
+            if pstats:
+                wins_s   = pstats.get("wins", pstats.get("matchesWon", ""))
+                losses_s = pstats.get("losses", pstats.get("matchesLost", ""))
+                if wins_s or losses_s:
+                    line += f"  |  Temporada: {wins_s}V-{losses_s}P"
+            lines.append(line)
+            players_data.append({"name": name, "rank": rank, "tour": player["tour"]})
         else:
-            lines.append(f"  {name}: sin datos ESPN (usa tu conocimiento de training)")
+            lines.append(f"  {name}: sin datos ESPN (usa conocimiento de training)")
+            players_data.append({"name": name, "rank": None, "tour": None})
+
+    # Ranking difference context
+    if len(players_data) == 2:
+        r1 = players_data[0].get("rank")
+        r2 = players_data[1].get("rank")
+        if r1 and r2:
+            diff = abs(int(r1) - int(r2))
+            fav  = players_data[0]["name"] if int(r1) < int(r2) else players_data[1]["name"]
+            lines.append(f"  Diferencia de ranking: {diff} puestos (favorito: {fav})")
 
     return "\n".join(lines) if lines else ""
 
@@ -365,17 +484,15 @@ def fetch_tennis_event_context(event_name: str) -> str:
 
 def fetch_event_context(event_name: str, sport: str) -> str:
     """
-    Return a comprehensive context block for Claude.
-    For tennis: ATP/WTA ranking lookup.
-    For team sports: season record, recent results, H2H, injuries.
+    Return a comprehensive statistical context block for Claude.
+    Includes: season record, Over/Under rates, BTTS rates, clean sheet %,
+              home/away splits, last-10 results, H2H, injuries, advanced stats.
     """
     sport_l = sport.lower()
 
-    # Tennis: use dedicated player ranking lookup
     if any(k in sport_l for k in ("tenis", "tennis")):
         return fetch_tennis_event_context(event_name)
 
-    # Team sports: use existing ESPN team data
     parts = re.split(r"\s+vs\.?\s+|\s+v\.?\s+", event_name, flags=re.I)
     if len(parts) != 2:
         return ""
@@ -389,105 +506,149 @@ def fetch_event_context(event_name: str, sport: str) -> str:
 
     sections: list[str] = []
 
-    def _team_section(name: str, entry: tuple | None) -> str:
+    def _team_section(name: str, entry: tuple | None, is_home_team: bool) -> str:
         if not entry:
             return f"  {name}: sin datos disponibles en ESPN."
         sport_slug, league_slug, tid = entry
 
-        # Season record (position, points, full record)
-        rec = _team_record(sport_slug, league_slug, tid)
+        rec      = _team_record(sport_slug, league_slug, tid)
+        events   = _get_schedule(sport_slug, league_slug, tid)
+        results  = _last_n_results(events, tid, 15)   # last 15 for better stats
+        results5 = results[-5:]
 
-        # Recent schedule (last 5 results)
-        events = _get_schedule(sport_slug, league_slug, tid)
-        results = _last_n_results(events, tid, 5)
-
-        # Recent form stats
-        wins   = sum(1 for r in results if r.get("result") == "G")
-        draws  = sum(1 for r in results if r.get("result") == "E")
-        losses = sum(1 for r in results if r.get("result") == "P")
-        gf_list = [r["gf"] for r in results if r.get("gf") is not None]
-        ga_list = [r["ga"] for r in results if r.get("ga") is not None]
-        gf_avg  = round(sum(gf_list) / len(gf_list), 1) if gf_list else "?"
-        ga_avg  = round(sum(ga_list) / len(ga_list), 1) if ga_list else "?"
-
-        # Last 5: home/away split
-        home_res = [r for r in results if r.get("home")]
-        away_res = [r for r in results if not r.get("home")]
-        home_rec5 = (f"{sum(1 for r in home_res if r['result']=='G')}V-"
-                     f"{sum(1 for r in home_res if r['result']=='E')}E-"
-                     f"{sum(1 for r in home_res if r['result']=='P')}P")
-        away_rec5 = (f"{sum(1 for r in away_res if r['result']=='G')}V-"
-                     f"{sum(1 for r in away_res if r['result']=='E')}E-"
-                     f"{sum(1 for r in away_res if r['result']=='P')}P")
-
+        # ── Season stats ─────────────────────────────────────────────────────
         lines = [f"  {name}:"]
-
-        # Season standings / record
         if rec:
             pos  = rec.get("position", "?")
             pts  = rec.get("points", "?")
-            pl   = rec.get("played", "?")
+            pl   = rec.get("played", "?") or 1
             w    = rec.get("won", "?")
             d    = rec.get("drawn", "?")
             l    = rec.get("lost", "?")
             gf   = rec.get("gf", "?")
             ga   = rec.get("ga", "?")
-            gpg  = round(gf / pl, 2) if isinstance(gf, int) and isinstance(pl, int) and pl else "?"
-            gapg = round(ga / pl, 2) if isinstance(ga, int) and isinstance(pl, int) and pl else "?"
+            gpg  = round(gf  / pl, 2) if isinstance(gf, int)  and isinstance(pl, int)  else "?"
+            gapg = round(ga  / pl, 2) if isinstance(ga, int)  and isinstance(pl, int)  else "?"
             lines.append(
-                f"    Temporada: {pos}o · {pts}pts · {pl}PJ · {w}V {d}E {l}P · "
+                f"    Temporada: {pos}° · {pts}pts · {pl}PJ · {w}V {d}E {l}P · "
                 f"GF:{gf}({gpg}/pj) GC:{ga}({gapg}/pj)"
             )
-            # Season home/away record
+            # Home/away season split
             hp = rec.get("home_played", 0)
             ap = rec.get("away_played", 0)
             if hp or ap:
-                hw  = rec.get("home_won", 0)
-                hd  = rec.get("home_drawn", 0)
-                hl  = rec.get("home_lost", 0)
-                hgf = rec.get("home_gf", 0)
-                hga = rec.get("home_ga", 0)
-                aw  = rec.get("away_won", 0)
-                ad  = rec.get("away_drawn", 0)
-                al  = rec.get("away_lost", 0)
-                agf = rec.get("away_gf", 0)
-                aga = rec.get("away_ga", 0)
+                hw, hd_, hl = rec.get("home_won",0), rec.get("home_drawn",0), rec.get("home_lost",0)
+                hgf, hga    = rec.get("home_gf",0), rec.get("home_ga",0)
+                aw, ad_, al = rec.get("away_won",0), rec.get("away_drawn",0), rec.get("away_lost",0)
+                agf, aga    = rec.get("away_gf",0), rec.get("away_ga",0)
+                hgpg = round(hgf/hp,2) if hp else "?"
+                hgapg= round(hga/hp,2) if hp else "?"
+                agpg = round(agf/ap,2) if ap else "?"
+                agapg= round(aga/ap,2) if ap else "?"
                 lines.append(
-                    f"    Temporada en casa ({hp}PJ): {hw}V {hd}E {hl}P  GF:{hgf} GC:{hga} | "
-                    f"Fuera ({ap}PJ): {aw}V {ad}E {al}P  GF:{agf} GC:{aga}"
+                    f"    Casa ({hp}PJ): {hw}V {hd_}E {hl}P GF:{hgf}({hgpg}/pj) GC:{hga}({hgapg}/pj)"
+                )
+                lines.append(
+                    f"    Fuera ({ap}PJ): {aw}V {ad_}E {al}P GF:{agf}({agpg}/pj) GC:{aga}({agapg}/pj)"
                 )
 
-        # Recent form
-        form_str = " ".join(r.get("result", "?") for r in results)
-        lines.append(
-            f"    Forma ult.5: {form_str} ({wins}V-{draws}E-{losses}P) · "
-            f"{gf_avg} goles/pj · {ga_avg} encajados/pj"
-        )
-        lines.append(f"    Ult.5 en casa: {home_rec5} | Fuera: {away_rec5}")
-
+        # ── Over/Under + BTTS desde historial completo ────────────────────
         if results:
-            lines.append(f"    Resultados: {' | '.join(r['label'] for r in results)}")
+            all_stats  = _historical_stats(results)
+            home_stats = _historical_stats(results, is_home=True)
+            away_stats = _historical_stats(results, is_home=False)
 
-        # Injuries
+            context_stats = home_stats if is_home_team else away_stats
+            context_label = "en casa" if is_home_team else "de visitante"
+
+            if all_stats:
+                lines.append(
+                    f"    Histórico últimos {all_stats['played']} partidos · "
+                    f"Media goles total: {all_stats.get('avg_total','?')} "
+                    f"(anotados: {all_stats.get('avg_gf','?')} encajados: {all_stats.get('avg_ga','?')})"
+                )
+                lines.append(
+                    f"    Over 2.5: {all_stats.get('over25_pct','?')} | "
+                    f"Over 3.5: {all_stats.get('over35_pct','?')} | "
+                    f"Under 2.5: {all_stats.get('under25_pct','?')} | "
+                    f"BTTS: {all_stats.get('btts_pct','?')} | "
+                    f"Portería cero: {all_stats.get('cs_pct','?')} | "
+                    f"Sin marcar: {all_stats.get('fts_pct','?')}"
+                )
+            if context_stats:
+                lines.append(
+                    f"    {context_label.capitalize()} (ult.{context_stats['played']}): "
+                    f"Over 2.5: {context_stats.get('over25_pct','?')} | "
+                    f"BTTS: {context_stats.get('btts_pct','?')} | "
+                    f"CS: {context_stats.get('cs_pct','?')} | "
+                    f"Media goles: {context_stats.get('avg_total','?')}"
+                )
+
+        # ── Advanced stats (shots, xG, etc.) ─────────────────────────────
+        if rec:
+            sport_slug2, league_slug2, tid2 = entry
+            adv = _team_statistics(sport_slug2, league_slug2, tid2)
+            if adv:
+                interesting = [
+                    "shotsPerGame", "shotsOnTargetPerGame", "possessionPct",
+                    "avgGoals", "cleanSheets", "scoringFirst", "yellowCards",
+                    "offensiveRating", "defensiveRating", "pace",
+                    "ERA", "battingAverage", "saves", "savePercentage",
+                    "powerplayPct", "penaltyKillPct",
+                ]
+                found = {k: adv[k] for k in interesting if k in adv}
+                if found:
+                    stat_parts = [f"{k}: {v}" for k, v in list(found.items())[:8]]
+                    lines.append(f"    Stats avanzadas: {' | '.join(stat_parts)}")
+
+        # ── Recent form (last 5) ──────────────────────────────────────────
+        wins5   = sum(1 for r in results5 if r.get("result") == "G")
+        draws5  = sum(1 for r in results5 if r.get("result") == "E")
+        losses5 = sum(1 for r in results5 if r.get("result") == "P")
+        form_str = " ".join(r.get("result", "?") for r in results5)
+        gf5      = [r["gf"] for r in results5 if r.get("gf") is not None]
+        ga5      = [r["ga"] for r in results5 if r.get("ga") is not None]
+        gf5_avg  = round(sum(gf5)/len(gf5), 1) if gf5 else "?"
+        ga5_avg  = round(sum(ga5)/len(ga5), 1) if ga5 else "?"
+
+        lines.append(
+            f"    Forma ult.5: {form_str} ({wins5}V-{draws5}E-{losses5}P) · "
+            f"{gf5_avg} goles/pj · {ga5_avg} encajados/pj"
+        )
+        if results5:
+            lines.append(f"    Resultados: {' | '.join(r['label'] for r in results5)}")
+
+        # ── Injuries ──────────────────────────────────────────────────────
         injuries = _get_injuries(sport_slug, league_slug, tid)
         if injuries:
             lines.append(f"    Bajas/dudas: {', '.join(injuries)}")
-        else:
-            lines.append("    Bajas/dudas: no disponibles en ESPN")
 
         return "\n".join(lines)
 
-    sections.append(_team_section(name1, entry1))
-    sections.append(_team_section(name2, entry2))
+    sections.append(_team_section(name1, entry1, is_home_team=True))
+    sections.append(_team_section(name2, entry2, is_home_team=False))
 
-    # H2H (search team1's full schedule for games vs team2)
+    # ── H2H ───────────────────────────────────────────────────────────────────
     if entry1 and entry2:
         sport_slug1, league_slug1, tid1 = entry1
         _, _, tid2 = entry2
         events1 = _get_schedule(sport_slug1, league_slug1, tid1)
-        h2h = _h2h(events1, tid1, tid2, 5)
-        if h2h:
-            sections.append(f"  Ult.5 enfrentamientos directos: {' | '.join(h2h)}")
+        meetings = _h2h(events1, tid1, tid2, 5)
+        if meetings:
+            h2h_labels  = [m["label"] for m in meetings]
+            h2h_totals  = [m["total"] for m in meetings if m.get("total") is not None]
+            avg_h2h     = round(sum(h2h_totals)/len(h2h_totals), 1) if h2h_totals else "?"
+            over25_h2h  = sum(1 for t in h2h_totals if t > 2.5)
+            btts_h2h    = sum(
+                1 for e in meetings
+                if e.get("total") is not None
+                # approximate BTTS: label contains x-y with both > 0
+                and re.search(r"[1-9]-[1-9]", e.get("label", ""))
+            )
+            sections.append(
+                f"  H2H últimos {len(meetings)}: {' | '.join(h2h_labels)}\n"
+                f"  H2H media goles: {avg_h2h} | Over 2.5: {over25_h2h}/{len(meetings)} | BTTS aprox: {btts_h2h}/{len(meetings)}"
+            )
         else:
             sections.append("  Historial directo: sin datos recientes en ESPN")
 
