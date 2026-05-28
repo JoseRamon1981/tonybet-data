@@ -1,9 +1,12 @@
 name: Tonybet Advisor
 
+# Horario en hora española (CEST en verano = UTC+2):
+#   ▸ 09:00 España → 07:00 UTC
+#   ▸ 18:00 España → 16:00 UTC
 on:
   schedule:
-    - cron: '0 7 * * *'   # 09:00 España verano (CEST UTC+2) / 08:00 España invierno (CET UTC+1)
-    - cron: '0 16 * * *'  # 18:00 España verano (CEST UTC+2) / 17:00 España invierno (CET UTC+1)
+    - cron: '0 7 * * *'    # 09:00 hora España (verano) / 08:00 (invierno)
+    - cron: '0 16 * * *'   # 18:00 hora España (verano) / 17:00 (invierno)
   workflow_dispatch:
     inputs:
       mode:
@@ -16,15 +19,15 @@ on:
           - preview
           - demo
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Silencia advertencia Node.js 20 deprecado
+
 jobs:
   advisor:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
       contents: write
-
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout tonybet-data
