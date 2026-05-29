@@ -467,18 +467,25 @@ async def run(mode: str = "advisor"):
         print("  Soluciones:")
         print("  1. Configura ODDS_API_KEY (registro gratuito en https://the-odds-api.com/)")
         print("  2. Verifica las credenciales de Tonybet en TONYBET_USERNAME / TONYBET_PASSWORD")
-        # Publicar estado vacío para que el dashboard muestre "sin datos"
-        empty = {
-            "updated_at": _dt.now(_TZ_ES).strftime("%Y-%m-%d %H:%M"),
-            "total": 0,
-            "events": [],
-            "error": "No se pudieron obtener eventos",
-        }
+        now_es = _dt.now(_TZ_ES).strftime("%Y-%m-%d %H:%M")
+        # Actualizar ambos JSONs para que el dashboard muestre la hora actual
         (_DATA_REPO / "events_latest.json").write_text(
-            _json.dumps(empty, ensure_ascii=False, indent=2), encoding="utf-8"
+            _json.dumps({
+                "updated_at": now_es,
+                "total": 0,
+                "events": [],
+                "error": "No se pudieron obtener eventos",
+            }, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        (_DATA_REPO / "recommendations_latest.json").write_text(
+            _json.dumps({
+                "updated_at": now_es,
+                "bets": [],
+                "error": "Sin eventos disponibles — verifica ODDS_API_KEY",
+            }, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         try:
-            _git_push("events_latest.json", message="advisor: sin eventos")
+            _git_push("events_latest.json", "recommendations_latest.json", message="advisor: sin eventos")
         except Exception:
             pass
         sys.exit(0)
