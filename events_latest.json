@@ -1,29 +1,7 @@
 {
-  "updated_at": "2026-06-02 23:20",
-  "total": 224,
+  "updated_at": "2026-06-03 07:01",
+  "total": 215,
   "events": [
-    {
-      "nombre": "Jakub Mensik vs Joao Fonseca",
-      "deporte": "Tenis",
-      "competicion": "Roland Garros ATP",
-      "hora": "2026-06-02T18:30:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Jakub Mensik",
-              "cuota": 1.03
-            },
-            {
-              "nombre": "Joao Fonseca",
-              "cuota": 19.7
-            }
-          ]
-        }
-      ]
-    },
     {
       "nombre": "Felix Auger-Aliassime vs Flavio Cobolli",
       "deporte": "Tenis",
@@ -36,11 +14,11 @@
           "selecciones": [
             {
               "nombre": "Felix Auger-Aliassime",
-              "cuota": 2.0
+              "cuota": 1.95
             },
             {
               "nombre": "Flavio Cobolli",
-              "cuota": 1.91
+              "cuota": 1.95
             }
           ]
         },
@@ -71,11 +49,11 @@
           "selecciones": [
             {
               "nombre": "Matteo Arnaldi",
-              "cuota": 2.63
+              "cuota": 2.64
             },
             {
               "nombre": "Matteo Berrettini",
-              "cuota": 1.56
+              "cuota": 1.55
             }
           ]
         },
@@ -95,6 +73,41 @@
       ]
     },
     {
+      "nombre": "Jakub Mensik vs Alexander Zverev",
+      "deporte": "Tenis",
+      "competicion": "Roland Garros ATP",
+      "hora": "2026-06-05T12:30:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Alexander Zverev",
+              "cuota": 1.23
+            },
+            {
+              "nombre": "Jakub Mensik",
+              "cuota": 4.65
+            }
+          ]
+        },
+        {
+          "mercado": "Total juegos",
+          "selecciones": [
+            {
+              "nombre": "Over 38.0",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Under 38.0",
+              "cuota": 1.93
+            }
+          ]
+        }
+      ]
+    },
+    {
       "nombre": "Anna Kalinskaya vs Maja Chwalinska",
       "deporte": "Tenis",
       "competicion": "Roland Garros WTA",
@@ -106,11 +119,11 @@
           "selecciones": [
             {
               "nombre": "Anna Kalinskaya",
-              "cuota": 1.93
+              "cuota": 1.7
             },
             {
               "nombre": "Maja Chwalinska",
-              "cuota": 1.98
+              "cuota": 2.29
             }
           ]
         },
@@ -123,7 +136,7 @@
             },
             {
               "nombre": "Under 21.5",
-              "cuota": 1.96
+              "cuota": 1.95
             }
           ]
         }
@@ -141,11 +154,11 @@
           "selecciones": [
             {
               "nombre": "Aryna Sabalenka",
-              "cuota": 1.15
+              "cuota": 1.14
             },
             {
               "nombre": "Diana Shnaider",
-              "cuota": 6.43
+              "cuota": 6.76
             }
           ]
         },
@@ -154,11 +167,11 @@
           "selecciones": [
             {
               "nombre": "Over 19.5",
-              "cuota": 1.91
+              "cuota": 1.95
             },
             {
               "nombre": "Under 19.5",
-              "cuota": 1.98
+              "cuota": 1.93
             }
           ]
         }
@@ -211,11 +224,11 @@
           "selecciones": [
             {
               "nombre": "New York Knicks",
-              "cuota": 2.66
+              "cuota": 2.67
             },
             {
               "nombre": "San Antonio Spurs",
-              "cuota": 1.53
+              "cuota": 1.52
             }
           ]
         },
@@ -224,11 +237,11 @@
           "selecciones": [
             {
               "nombre": "New York Knicks +4.5",
-              "cuota": 1.98
+              "cuota": 1.99
             },
             {
               "nombre": "San Antonio Spurs -4.5",
-              "cuota": 1.9
+              "cuota": 1.89
             }
           ]
         },
@@ -251,7 +264,7 @@
       "nombre": "Carolina Hurricanes vs Vegas Golden Knights",
       "deporte": "Hockey hielo",
       "competicion": "NHL",
-      "hora": "2026-06-03T00:10:00Z",
+      "hora": "2026-06-05T00:00:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -259,11 +272,11 @@
           "selecciones": [
             {
               "nombre": "Carolina Hurricanes",
-              "cuota": 1.67
+              "cuota": 1.65
             },
             {
               "nombre": "Vegas Golden Knights",
-              "cuota": 2.35
+              "cuota": 2.37
             }
           ]
         },
@@ -272,11 +285,11 @@
           "selecciones": [
             {
               "nombre": "Carolina Hurricanes -1.5",
-              "cuota": 2.72
+              "cuota": 2.66
             },
             {
               "nombre": "Vegas Golden Knights +1.5",
-              "cuota": 1.51
+              "cuota": 1.52
             }
           ]
         },
@@ -284,12 +297,108 @@
           "mercado": "Total goles",
           "selecciones": [
             {
-              "nombre": "Over 5.5",
-              "cuota": 1.85
+              "nombre": "Over 6.0",
+              "cuota": 1.96
             },
             {
-              "nombre": "Under 5.5",
-              "cuota": 2.04
+              "nombre": "Under 6.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Arizona Diamondbacks vs Los Angeles Dodgers",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-03T01:40:29Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Arizona Diamondbacks",
+              "cuota": 7.94
+            },
+            {
+              "nombre": "Los Angeles Dodgers",
+              "cuota": 1.08
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Arizona Diamondbacks +1.5",
+              "cuota": 1.32
+            },
+            {
+              "nombre": "Los Angeles Dodgers -1.5",
+              "cuota": 3.34
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 11.5",
+              "cuota": 2.2
+            },
+            {
+              "nombre": "Under 11.5",
+              "cuota": 1.66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Washington Nationals vs Miami Marlins",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-03T17:06:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Miami Marlins",
+              "cuota": 1.94
+            },
+            {
+              "nombre": "Washington Nationals",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Miami Marlins -1.5",
+              "cuota": 2.55
+            },
+            {
+              "nombre": "Washington Nationals +1.5",
+              "cuota": 1.56
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 8.5",
+              "cuota": 2.01
+            },
+            {
+              "nombre": "Under 8.5",
+              "cuota": 1.86
             }
           ]
         }
@@ -299,7 +408,7 @@
       "nombre": "Tampa Bay Rays vs Detroit Tigers",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-06-02T22:40:00Z",
+      "hora": "2026-06-03T17:11:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -307,11 +416,11 @@
           "selecciones": [
             {
               "nombre": "Detroit Tigers",
-              "cuota": 2.28
+              "cuota": 2.3
             },
             {
               "nombre": "Tampa Bay Rays",
-              "cuota": 1.72
+              "cuota": 1.69
             }
           ]
         },
@@ -320,11 +429,11 @@
           "selecciones": [
             {
               "nombre": "Detroit Tigers +1.5",
-              "cuota": 1.63
+              "cuota": 1.61
             },
             {
               "nombre": "Tampa Bay Rays -1.5",
-              "cuota": 2.43
+              "cuota": 2.46
             }
           ]
         },
@@ -333,11 +442,107 @@
           "selecciones": [
             {
               "nombre": "Over 8.0",
-              "cuota": 1.93
+              "cuota": 1.99
             },
             {
               "nombre": "Under 8.0",
-              "cuota": 1.96
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Minnesota Twins vs Chicago White Sox",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-03T17:41:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Chicago White Sox",
+              "cuota": 2.31
+            },
+            {
+              "nombre": "Minnesota Twins",
+              "cuota": 1.69
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Chicago White Sox +1.5",
+              "cuota": 1.62
+            },
+            {
+              "nombre": "Minnesota Twins -1.5",
+              "cuota": 2.41
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 9.0",
+              "cuota": 2.04
+            },
+            {
+              "nombre": "Under 9.0",
+              "cuota": 1.84
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Seattle Mariners vs New York Mets",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-03T19:41:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "New York Mets",
+              "cuota": 2.26
+            },
+            {
+              "nombre": "Seattle Mariners",
+              "cuota": 1.71
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "New York Mets +1.5",
+              "cuota": 1.56
+            },
+            {
+              "nombre": "Seattle Mariners -1.5",
+              "cuota": 2.56
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 7.0",
+              "cuota": 1.84
+            },
+            {
+              "nombre": "Under 7.0",
+              "cuota": 2.04
             }
           ]
         }
@@ -347,7 +552,7 @@
       "nombre": "Philadelphia Phillies vs San Diego Padres",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-06-02T22:40:00Z",
+      "hora": "2026-06-03T22:41:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -355,11 +560,11 @@
           "selecciones": [
             {
               "nombre": "Philadelphia Phillies",
-              "cuota": 1.7
+              "cuota": 1.49
             },
             {
               "nombre": "San Diego Padres",
-              "cuota": 2.31
+              "cuota": 2.82
             }
           ]
         },
@@ -368,10 +573,154 @@
           "selecciones": [
             {
               "nombre": "Philadelphia Phillies -1.5",
-              "cuota": 2.44
+              "cuota": 2.06
             },
             {
               "nombre": "San Diego Padres +1.5",
+              "cuota": 1.84
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 7.5",
+              "cuota": 1.9
+            },
+            {
+              "nombre": "Under 7.5",
+              "cuota": 1.97
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Boston Red Sox vs Baltimore Orioles",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-03T22:46:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Baltimore Orioles",
+              "cuota": 2.29
+            },
+            {
+              "nombre": "Boston Red Sox",
+              "cuota": 1.7
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Baltimore Orioles +1.5",
+              "cuota": 1.62
+            },
+            {
+              "nombre": "Boston Red Sox -1.5",
+              "cuota": 2.42
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 9.0",
+              "cuota": 1.94
+            },
+            {
+              "nombre": "Under 9.0",
+              "cuota": 1.93
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "New York Yankees vs Cleveland Guardians",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-03T23:06:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Cleveland Guardians",
+              "cuota": 2.38
+            },
+            {
+              "nombre": "New York Yankees",
+              "cuota": 1.65
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Cleveland Guardians +1.5",
+              "cuota": 1.62
+            },
+            {
+              "nombre": "New York Yankees -1.5",
+              "cuota": 2.42
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 7.5",
+              "cuota": 2.05
+            },
+            {
+              "nombre": "Under 7.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Cincinnati Reds vs Kansas City Royals",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-03T23:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Cincinnati Reds",
+              "cuota": 1.68
+            },
+            {
+              "nombre": "Kansas City Royals",
+              "cuota": 2.33
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Cincinnati Reds -1.5",
+              "cuota": 2.43
+            },
+            {
+              "nombre": "Kansas City Royals +1.5",
               "cuota": 1.62
             }
           ]
@@ -381,7 +730,7 @@
           "selecciones": [
             {
               "nombre": "Over 8.0",
-              "cuota": 1.89
+              "cuota": 1.87
             },
             {
               "nombre": "Under 8.0",
@@ -392,202 +741,10 @@
       ]
     },
     {
-      "nombre": "Boston Red Sox vs Baltimore Orioles",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-02T22:45:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Baltimore Orioles",
-              "cuota": 2.21
-            },
-            {
-              "nombre": "Boston Red Sox",
-              "cuota": 1.76
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Baltimore Orioles +1.5",
-              "cuota": 1.58
-            },
-            {
-              "nombre": "Boston Red Sox -1.5",
-              "cuota": 2.54
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.5",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Under 8.5",
-              "cuota": 1.99
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Washington Nationals vs Miami Marlins",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-02T22:45:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Miami Marlins",
-              "cuota": 2.03
-            },
-            {
-              "nombre": "Washington Nationals",
-              "cuota": 1.9
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Miami Marlins +1.5",
-              "cuota": 1.5
-            },
-            {
-              "nombre": "Washington Nationals -1.5",
-              "cuota": 2.77
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 9.0",
-              "cuota": 1.98
-            },
-            {
-              "nombre": "Under 9.0",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "New York Yankees vs Cleveland Guardians",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-02T23:05:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Cleveland Guardians",
-              "cuota": 2.84
-            },
-            {
-              "nombre": "New York Yankees",
-              "cuota": 1.49
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Cleveland Guardians +1.5",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "New York Yankees -1.5",
-              "cuota": 2.02
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 7.5",
-              "cuota": 2.04
-            },
-            {
-              "nombre": "Under 7.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Cincinnati Reds vs Kansas City Royals",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-02T23:10:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Cincinnati Reds",
-              "cuota": 1.83
-            },
-            {
-              "nombre": "Kansas City Royals",
-              "cuota": 2.1
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Cincinnati Reds -1.5",
-              "cuota": 2.67
-            },
-            {
-              "nombre": "Kansas City Royals +1.5",
-              "cuota": 1.53
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 8.5",
-              "cuota": 2.04
-            }
-          ]
-        }
-      ]
-    },
-    {
       "nombre": "Atlanta Braves vs Toronto Blue Jays",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-06-02T23:15:00Z",
+      "hora": "2026-06-03T23:16:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -595,11 +752,11 @@
           "selecciones": [
             {
               "nombre": "Atlanta Braves",
-              "cuota": 1.88
+              "cuota": 1.69
             },
             {
               "nombre": "Toronto Blue Jays",
-              "cuota": 2.04
+              "cuota": 2.3
             }
           ]
         },
@@ -608,59 +765,11 @@
           "selecciones": [
             {
               "nombre": "Atlanta Braves -1.5",
-              "cuota": 2.84
+              "cuota": 2.43
             },
             {
               "nombre": "Toronto Blue Jays +1.5",
-              "cuota": 1.48
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 7.5",
-              "cuota": 1.97
-            },
-            {
-              "nombre": "Under 7.5",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Minnesota Twins vs Chicago White Sox",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-02T23:40:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Chicago White Sox",
-              "cuota": 1.86
-            },
-            {
-              "nombre": "Minnesota Twins",
-              "cuota": 2.08
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Chicago White Sox -1.5",
-              "cuota": 2.4
-            },
-            {
-              "nombre": "Minnesota Twins +1.5",
-              "cuota": 1.65
+              "cuota": 1.61
             }
           ]
         },
@@ -669,11 +778,11 @@
           "selecciones": [
             {
               "nombre": "Over 8.0",
-              "cuota": 1.93
+              "cuota": 1.88
             },
             {
               "nombre": "Under 8.0",
-              "cuota": 1.95
+              "cuota": 2.0
             }
           ]
         }
@@ -683,45 +792,19 @@
       "nombre": "Milwaukee Brewers vs San Francisco Giants",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-06-02T23:40:00Z",
-      "bookmaker": "Pinnacle",
+      "hora": "2026-06-03T23:40:00Z",
+      "bookmaker": "Marathon Bet",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers",
-              "cuota": 1.39
+              "cuota": 1.64
             },
             {
               "nombre": "San Francisco Giants",
-              "cuota": 3.28
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Milwaukee Brewers -1.5",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "San Francisco Giants +1.5",
-              "cuota": 2.04
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 7.0",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "Under 7.0",
-              "cuota": 2.01
+              "cuota": 2.26
             }
           ]
         }
@@ -731,7 +814,7 @@
       "nombre": "St. Louis Cardinals vs Texas Rangers",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-06-02T23:45:00Z",
+      "hora": "2026-06-03T23:46:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -739,11 +822,11 @@
           "selecciones": [
             {
               "nombre": "St. Louis Cardinals",
-              "cuota": 1.98
+              "cuota": 1.91
             },
             {
               "nombre": "Texas Rangers",
-              "cuota": 1.94
+              "cuota": 1.99
             }
           ]
         },
@@ -751,12 +834,12 @@
           "mercado": "Hándicap",
           "selecciones": [
             {
-              "nombre": "St. Louis Cardinals +1.5",
-              "cuota": 1.54
+              "nombre": "St. Louis Cardinals -1.5",
+              "cuota": 2.84
             },
             {
-              "nombre": "Texas Rangers -1.5",
-              "cuota": 2.64
+              "nombre": "Texas Rangers +1.5",
+              "cuota": 1.47
             }
           ]
         },
@@ -764,12 +847,12 @@
           "mercado": "Total carreras",
           "selecciones": [
             {
-              "nombre": "Over 7.0",
-              "cuota": 1.98
+              "nombre": "Over 8.0",
+              "cuota": 1.88
             },
             {
-              "nombre": "Under 7.0",
-              "cuota": 1.91
+              "nombre": "Under 8.0",
+              "cuota": 1.98
             }
           ]
         }
@@ -779,7 +862,7 @@
       "nombre": "Chicago Cubs vs Athletics",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-06-03T00:05:00Z",
+      "hora": "2026-06-04T00:06:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -800,11 +883,11 @@
           "selecciones": [
             {
               "nombre": "Athletics +1.5",
-              "cuota": 1.51
+              "cuota": 1.53
             },
             {
               "nombre": "Chicago Cubs -1.5",
-              "cuota": 2.75
+              "cuota": 2.63
             }
           ]
         },
@@ -812,12 +895,12 @@
           "mercado": "Total carreras",
           "selecciones": [
             {
-              "nombre": "Over 7.0",
-              "cuota": 1.82
+              "nombre": "Over 9.0",
+              "cuota": 2.04
             },
             {
-              "nombre": "Under 7.0",
-              "cuota": 2.09
+              "nombre": "Under 9.0",
+              "cuota": 1.84
             }
           ]
         }
@@ -827,7 +910,7 @@
       "nombre": "Houston Astros vs Pittsburgh Pirates",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-06-03T00:10:00Z",
+      "hora": "2026-06-04T00:11:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -835,11 +918,11 @@
           "selecciones": [
             {
               "nombre": "Houston Astros",
-              "cuota": 1.92
+              "cuota": 2.33
             },
             {
               "nombre": "Pittsburgh Pirates",
-              "cuota": 2.01
+              "cuota": 1.68
             }
           ]
         },
@@ -847,12 +930,108 @@
           "mercado": "Hándicap",
           "selecciones": [
             {
-              "nombre": "Houston Astros -1.5",
-              "cuota": 2.81
+              "nombre": "Houston Astros +1.5",
+              "cuota": 1.76
             },
             {
-              "nombre": "Pittsburgh Pirates +1.5",
-              "cuota": 1.49
+              "nombre": "Pittsburgh Pirates -1.5",
+              "cuota": 2.16
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 7.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 7.5",
+              "cuota": 1.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Los Angeles Angels vs Colorado Rockies",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-04T01:39:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Colorado Rockies",
+              "cuota": 2.39
+            },
+            {
+              "nombre": "Los Angeles Angels",
+              "cuota": 1.65
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Colorado Rockies +1.5",
+              "cuota": 1.66
+            },
+            {
+              "nombre": "Los Angeles Angels -1.5",
+              "cuota": 2.34
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 8.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Under 8.5",
+              "cuota": 1.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Arizona Diamondbacks vs Los Angeles Dodgers",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-06-04T01:41:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Arizona Diamondbacks",
+              "cuota": 2.61
+            },
+            {
+              "nombre": "Los Angeles Dodgers",
+              "cuota": 1.56
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Arizona Diamondbacks +1.5",
+              "cuota": 1.98
+            },
+            {
+              "nombre": "Los Angeles Dodgers -1.5",
+              "cuota": 1.91
             }
           ]
         },
@@ -865,494 +1044,7 @@
             },
             {
               "nombre": "Under 9.0",
-              "cuota": 1.93
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Los Angeles Angels vs Colorado Rockies",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T01:38:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Colorado Rockies",
-              "cuota": 2.44
-            },
-            {
-              "nombre": "Los Angeles Angels",
-              "cuota": 1.64
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Colorado Rockies +1.5",
-              "cuota": 1.68
-            },
-            {
-              "nombre": "Los Angeles Angels -1.5",
-              "cuota": 2.32
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 8.5",
-              "cuota": 2.04
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Arizona Diamondbacks vs Los Angeles Dodgers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T01:40:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Arizona Diamondbacks",
-              "cuota": 2.06
-            },
-            {
-              "nombre": "Los Angeles Dodgers",
-              "cuota": 1.87
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Arizona Diamondbacks +1.5",
-              "cuota": 1.65
-            },
-            {
-              "nombre": "Los Angeles Dodgers -1.5",
-              "cuota": 2.38
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 9.0",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Under 9.0",
-              "cuota": 1.95
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Seattle Mariners vs New York Mets",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T01:40:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "New York Mets",
-              "cuota": 2.3
-            },
-            {
-              "nombre": "Seattle Mariners",
-              "cuota": 1.7
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "New York Mets +1.5",
-              "cuota": 1.59
-            },
-            {
-              "nombre": "Seattle Mariners -1.5",
-              "cuota": 2.51
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 7.5",
-              "cuota": 2.02
-            },
-            {
-              "nombre": "Under 7.5",
-              "cuota": 1.87
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Washington Nationals vs Miami Marlins",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T17:06:00Z",
-      "bookmaker": "Betway",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Miami Marlins",
               "cuota": 1.91
-            },
-            {
-              "nombre": "Washington Nationals",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Tampa Bay Rays vs Detroit Tigers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T17:11:00Z",
-      "bookmaker": "Betway",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Detroit Tigers",
-              "cuota": 2.25
-            },
-            {
-              "nombre": "Tampa Bay Rays",
-              "cuota": 1.67
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Minnesota Twins vs Chicago White Sox",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T17:41:00Z",
-      "bookmaker": "Betway",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Chicago White Sox",
-              "cuota": 2.3
-            },
-            {
-              "nombre": "Minnesota Twins",
-              "cuota": 1.62
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Seattle Mariners vs New York Mets",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T19:41:00Z",
-      "bookmaker": "Betway",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "New York Mets",
-              "cuota": 2.25
-            },
-            {
-              "nombre": "Seattle Mariners",
-              "cuota": 1.67
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Philadelphia Phillies vs San Diego Padres",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T22:41:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Philadelphia Phillies",
-              "cuota": 1.5
-            },
-            {
-              "nombre": "San Diego Padres",
-              "cuota": 2.6
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Boston Red Sox vs Baltimore Orioles",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T22:46:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Baltimore Orioles",
-              "cuota": 2.15
-            },
-            {
-              "nombre": "Boston Red Sox",
-              "cuota": 1.67
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "New York Yankees vs Cleveland Guardians",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T23:06:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Cleveland Guardians",
-              "cuota": 2.25
-            },
-            {
-              "nombre": "New York Yankees",
-              "cuota": 1.62
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Cincinnati Reds vs Kansas City Royals",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T23:10:00Z",
-      "bookmaker": "GTbets",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Cincinnati Reds",
-              "cuota": 1.74
-            },
-            {
-              "nombre": "Kansas City Royals",
-              "cuota": 2.25
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.5",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "Under 8.5",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Atlanta Braves vs Toronto Blue Jays",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T23:16:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Atlanta Braves",
-              "cuota": 1.67
-            },
-            {
-              "nombre": "Toronto Blue Jays",
-              "cuota": 2.15
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Milwaukee Brewers vs San Francisco Giants",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T23:40:00Z",
-      "bookmaker": "Unibet (FR)",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Milwaukee Brewers",
-              "cuota": 1.55
-            },
-            {
-              "nombre": "San Francisco Giants",
-              "cuota": 2.2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "St. Louis Cardinals vs Texas Rangers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-03T23:46:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "St. Louis Cardinals",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Texas Rangers",
-              "cuota": 1.9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Chicago Cubs vs Athletics",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-04T00:06:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Athletics",
-              "cuota": 2.0
-            },
-            {
-              "nombre": "Chicago Cubs",
-              "cuota": 1.8
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Houston Astros vs Pittsburgh Pirates",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-04T00:11:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Houston Astros",
-              "cuota": 2.38
-            },
-            {
-              "nombre": "Pittsburgh Pirates",
-              "cuota": 1.57
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Los Angeles Angels vs Colorado Rockies",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-04T01:39:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Colorado Rockies",
-              "cuota": 2.3
-            },
-            {
-              "nombre": "Los Angeles Angels",
-              "cuota": 1.6
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Arizona Diamondbacks vs Los Angeles Dodgers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-06-04T01:41:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Arizona Diamondbacks",
-              "cuota": 2.62
-            },
-            {
-              "nombre": "Los Angeles Dodgers",
-              "cuota": 1.47
             }
           ]
         }
@@ -3817,11 +3509,11 @@
           "selecciones": [
             {
               "nombre": "Brendan Allen",
-              "cuota": 1.46
+              "cuota": 1.45
             },
             {
               "nombre": "Edmen Shahbazyan",
-              "cuota": 2.84
+              "cuota": 2.86
             }
           ]
         }
@@ -3883,11 +3575,11 @@
           "selecciones": [
             {
               "nombre": "Fares Ziam",
-              "cuota": 1.31
+              "cuota": 1.3
             },
             {
               "nombre": "Tom Nolan",
-              "cuota": 3.65
+              "cuota": 3.67
             }
           ]
         }
@@ -3905,11 +3597,11 @@
           "selecciones": [
             {
               "nombre": "Iwo Baraniewski",
-              "cuota": 1.27
+              "cuota": 1.26
             },
             {
               "nombre": "Junior Tafa",
-              "cuota": 4.02
+              "cuota": 4.08
             }
           ]
         }
@@ -3971,11 +3663,11 @@
           "selecciones": [
             {
               "nombre": "John Yannis",
-              "cuota": 5.06
+              "cuota": 5.15
             },
             {
               "nombre": "Marcus McGhee",
-              "cuota": 1.19
+              "cuota": 1.18
             }
           ]
         }
@@ -4521,11 +4213,11 @@
           "selecciones": [
             {
               "nombre": "Khalil Rountree",
-              "cuota": 2.9
+              "cuota": 3.6
             },
             {
               "nombre": "Magomed Ankalaev",
-              "cuota": 1.44
+              "cuota": 1.32
             }
           ]
         }
@@ -4885,7 +4577,7 @@
           "selecciones": [
             {
               "nombre": "John Riel Casimero",
-              "cuota": 3.24
+              "cuota": 3.22
             },
             {
               "nombre": "Luis Nery",
@@ -6191,11 +5883,11 @@
           "selecciones": [
             {
               "nombre": "Manly Warringah Sea Eagles",
-              "cuota": 1.56
+              "cuota": 1.53
             },
             {
               "nombre": "South Sydney Rabbitohs",
-              "cuota": 2.45
+              "cuota": 2.5
             }
           ]
         },
@@ -6204,11 +5896,11 @@
           "selecciones": [
             {
               "nombre": "Manly Warringah Sea Eagles -5.5",
-              "cuota": 1.93
+              "cuota": 1.97
             },
             {
               "nombre": "South Sydney Rabbitohs +5.5",
-              "cuota": 1.89
+              "cuota": 1.85
             }
           ]
         }
@@ -6296,11 +5988,11 @@
           "selecciones": [
             {
               "nombre": "Dolphins",
-              "cuota": 1.59
+              "cuota": 1.51
             },
             {
               "nombre": "North Queensland Cowboys",
-              "cuota": 2.37
+              "cuota": 2.57
             }
           ]
         },
@@ -6309,11 +6001,11 @@
           "selecciones": [
             {
               "nombre": "Dolphins -4.5",
-              "cuota": 1.95
+              "cuota": 1.81
             },
             {
               "nombre": "North Queensland Cowboys +4.5",
-              "cuota": 1.86
+              "cuota": 2.02
             }
           ]
         }
@@ -6401,11 +6093,11 @@
           "selecciones": [
             {
               "nombre": "Cronulla Sutherland Sharks",
-              "cuota": 1.28
+              "cuota": 1.32
             },
             {
               "nombre": "St George Illawarra Dragons",
-              "cuota": 3.6
+              "cuota": 3.36
             }
           ]
         },
@@ -6414,11 +6106,11 @@
           "selecciones": [
             {
               "nombre": "Cronulla Sutherland Sharks -12.5",
-              "cuota": 1.96
+              "cuota": 2.14
             },
             {
               "nombre": "St George Illawarra Dragons +12.5",
-              "cuota": 1.86
+              "cuota": 1.72
             }
           ]
         }
@@ -6454,6 +6146,136 @@
             {
               "nombre": "Parramatta Eels +3.5",
               "cuota": 2.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "South Sydney Rabbitohs vs Brisbane Broncos",
+      "deporte": "Rugby League",
+      "competicion": "NRL",
+      "hora": "2026-06-11T09:50:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "1X2",
+          "selecciones": [
+            {
+              "nombre": "Brisbane Broncos",
+              "cuota": 2.3
+            },
+            {
+              "nombre": "South Sydney Rabbitohs",
+              "cuota": 1.63
+            },
+            {
+              "nombre": "Draw",
+              "cuota": 27.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Dolphins vs Sydney Roosters",
+      "deporte": "Rugby League",
+      "competicion": "NRL",
+      "hora": "2026-06-12T10:00:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "1X2",
+          "selecciones": [
+            {
+              "nombre": "Dolphins",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Sydney Roosters",
+              "cuota": 2.03
+            },
+            {
+              "nombre": "Draw",
+              "cuota": 27.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "New Zealand Warriors vs Cronulla Sutherland Sharks",
+      "deporte": "Rugby League",
+      "competicion": "NRL",
+      "hora": "2026-06-13T07:35:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "1X2",
+          "selecciones": [
+            {
+              "nombre": "Cronulla Sutherland Sharks",
+              "cuota": 2.91
+            },
+            {
+              "nombre": "New Zealand Warriors",
+              "cuota": 1.42
+            },
+            {
+              "nombre": "Draw",
+              "cuota": 25.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Parramatta Eels vs Canberra Raiders",
+      "deporte": "Rugby League",
+      "competicion": "NRL",
+      "hora": "2026-06-13T09:35:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "1X2",
+          "selecciones": [
+            {
+              "nombre": "Canberra Raiders",
+              "cuota": 1.59
+            },
+            {
+              "nombre": "Parramatta Eels",
+              "cuota": 2.38
+            },
+            {
+              "nombre": "Draw",
+              "cuota": 28.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Wests Tigers vs Gold Coast Titans",
+      "deporte": "Rugby League",
+      "competicion": "NRL",
+      "hora": "2026-06-14T06:05:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "1X2",
+          "selecciones": [
+            {
+              "nombre": "Gold Coast Titans",
+              "cuota": 3.12
+            },
+            {
+              "nombre": "Wests Tigers",
+              "cuota": 1.36
+            },
+            {
+              "nombre": "Draw",
+              "cuota": 32.0
             }
           ]
         }
