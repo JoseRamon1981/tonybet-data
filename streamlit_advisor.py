@@ -9,6 +9,8 @@ from zoneinfo import ZoneInfo
 
 _TZ_ES = ZoneInfo("Europe/Madrid")
 
+import anthropic
+import pandas as pd
 import requests
 import streamlit as st
 
@@ -409,7 +411,6 @@ with tab3:
                     st.error("Introduce tu clave de Anthropic arriba para usar el chat.")
                 else:
                     try:
-                        import anthropic
                         client      = anthropic.Anthropic(api_key=final_key)
                         events_json = json.dumps(events_raw, ensure_ascii=False)
                         prompt = (
@@ -487,7 +488,6 @@ with tab4:
                 by_sport_profit[sp] = by_sport_profit.get(sp, 0) + r.get("profit", 0)
 
             if len(by_sport_profit) > 1:
-                import pandas as pd
                 st.markdown("**P&L por deporte**")
                 df_sport = pd.DataFrame(
                     {"Deporte": list(by_sport_profit.keys()), "P&L (€)": list(by_sport_profit.values())}
@@ -500,7 +500,6 @@ with tab4:
                 d = r.get("date", "")
                 by_day[d] = by_day.get(d, 0) + r.get("profit", 0)
             if by_day:
-                import pandas as pd
                 st.markdown("**P&L diario**")
                 df = pd.DataFrame(
                     {"Fecha": list(by_day.keys()), "P&L (€)": list(by_day.values())}

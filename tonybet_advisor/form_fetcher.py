@@ -57,7 +57,7 @@ _LEAGUES: dict[str, list[tuple[str, str]]] = {
     "Hockey hielo": [
         ("hockey", "nhl"),
     ],
-    "Beisbol": [("baseball", "mlb")],
+    "Béisbol": [("baseball", "mlb")],
     "Futbol americano": [("football", "nfl"), ("football", "college-football")],
     "Rugby": [("rugby", "premiership"), ("rugby", "superrugby")],
 }

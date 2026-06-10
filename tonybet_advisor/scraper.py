@@ -316,21 +316,24 @@ class TonybetScraper:
                 await page.get_by_placeholder(re.compile(r"email|user|usuario|login", re.I)).first.fill(config.tonybet_username, timeout=8_000)
                 await page.get_by_placeholder(re.compile(r"password|contraseña|pass", re.I)).first.fill(config.tonybet_password, timeout=8_000)
             except Exception:
-                # Fallback: fill by input type via JavaScript
-                await page.evaluate(f"""() => {{
-                    const inputs = document.querySelectorAll('input');
-                    for (const inp of inputs) {{
-                        const t = inp.type.toLowerCase();
-                        if (t === 'email' || t === 'text') {{
-                            inp.value = '{config.tonybet_username}';
-                            inp.dispatchEvent(new Event('input', {{bubbles:true}}));
-                        }}
-                        if (t === 'password') {{
-                            inp.value = '{config.tonybet_password}';
-                            inp.dispatchEvent(new Event('input', {{bubbles:true}}));
-                        }}
-                    }}
-                }}""")
+                # Fallback: fill by input type via JavaScript (credentials passed as args to avoid injection)
+                await page.evaluate(
+                    """([user, pwd]) => {
+                        const inputs = document.querySelectorAll('input');
+                        for (const inp of inputs) {
+                            const t = inp.type.toLowerCase();
+                            if (t === 'email' || t === 'text') {
+                                inp.value = user;
+                                inp.dispatchEvent(new Event('input', {bubbles:true}));
+                            }
+                            if (t === 'password') {
+                                inp.value = pwd;
+                                inp.dispatchEvent(new Event('input', {bubbles:true}));
+                            }
+                        }
+                    }""",
+                    [config.tonybet_username, config.tonybet_password],
+                )
                 await page.wait_for_timeout(500)
 
             # Submit
@@ -369,7 +372,7 @@ class TonybetScraper:
                 await page.wait_for_timeout(600)
 
             dom_data = await page.evaluate("""() => {
-                const oddsRe = /^\\d{1,2}\\.\\d{2}$/;
+                const oddsRe = /^\\d{1,4}\\.\\d{1,3}$/;
                 const results = [];
 
                 // Common TonyBet / generic betting site selectors

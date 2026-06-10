@@ -45,8 +45,8 @@ class BetExecutor:
         selection_area = page.get_by_text(re.compile(re.escape(analysis.selection[:15]), re.I))
 
         if await selection_area.count() > 0:
-            # Click the odds button near this selection
-            odds_btn = page.get_by_text(re.compile(re.escape(odds_str[:4])))
+            # Match full odds value to avoid confusing e.g. 2.15 with 2.19
+            odds_btn = page.get_by_text(re.compile(r"^" + re.escape(odds_str) + r"$"))
             if await odds_btn.count() > 0:
                 await odds_btn.first.click()
                 await page.wait_for_timeout(1000)
@@ -134,7 +134,7 @@ class BetExecutor:
             # Log in
             from .scraper import TonybetScraper
             scraper = TonybetScraper()
-            await scraper._login(page)
+            await scraper._try_login(page)
 
             for bet in bets:
                 print(f"\n  → {bet.event} | {bet.market} | {bet.selection} @ {bet.odds} — {bet.recommended_stake}€")

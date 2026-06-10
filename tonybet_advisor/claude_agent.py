@@ -3,6 +3,7 @@ Claude AI agent: analyses scraped Tonybet events and returns
 structured bet recommendations using tool-use.
 """
 import json
+import time
 
 import anthropic
 
@@ -287,7 +288,6 @@ class BettingAdvisor:
 
         # Agentic loop: Claude may call evaluate_bet multiple times
         while True:
-            import time
             for attempt in range(3):
                 try:
                     response = self.client.messages.create(
