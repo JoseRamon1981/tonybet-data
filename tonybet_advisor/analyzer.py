@@ -68,6 +68,7 @@ def analyse_bet(
     bankroll: float,
     kelly_fraction: float = 0.25,
     min_ev: float = 0.03,
+    min_prob: float = 0.75,
     max_stake: float = 10.0,
     starts_at: str = "",
 ) -> BetAnalysis:
@@ -100,7 +101,7 @@ def analyse_bet(
         expected_value=round(ev, 4),
         kelly_fraction=round(fractional_kelly, 4),
         recommended_stake=stake,
-        is_value_bet=ev >= min_ev and stake > 0,
+        is_value_bet=ev >= min_ev and estimated_prob >= min_prob and stake > 0,
         overround=round(over, 4),
         starts_at=starts_at,
     )

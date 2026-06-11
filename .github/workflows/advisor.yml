@@ -5,8 +5,9 @@ name: Tonybet Advisor
 #   ▸ 20:00 España → 18:00 UTC
 on:
   schedule:
-    - cron: '0 7 * * *'    # 09:00 hora España (verano) / 08:00 (invierno)
-    - cron: '0 18 * * *'   # 20:00 hora España (verano) / 19:00 (invierno)
+    - cron: '0 7 * * *'    # 09:00 hora España (verano) → modo advisor
+    - cron: '0 18 * * *'   # 20:00 hora España (verano) → modo advisor
+    - cron: '0 19 * * *'   # 21:00 hora España (verano) → modo preview (avance de mañana)
   workflow_dispatch:
     inputs:
       mode:
@@ -69,6 +70,18 @@ jobs:
           MAX_DAILY_STAKE: ${{ vars.MAX_DAILY_STAKE || '30' }}
           MAX_SINGLE_BET: ${{ vars.MAX_SINGLE_BET || '8' }}
           MIN_EV_THRESHOLD: ${{ vars.MIN_EV_THRESHOLD || '0.01' }}
+          MIN_PROB_THRESHOLD: ${{ vars.MIN_PROB_THRESHOLD || '0.75' }}
           KELLY_FRACTION: ${{ vars.KELLY_FRACTION || '0.15' }}
           HEADLESS: 'true'
-        run: python -m tonybet_advisor ${{ github.event.inputs.mode || 'advisor' }}
+          # Hora UTC del cron que disparó este run (para elegir modo automáticamente)
+          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          if [ -n "${{ github.event.inputs.mode }}" ]; then
+            MODE="${{ github.event.inputs.mode }}"
+          elif [ "$GITHUB_EVENT_SCHEDULE" = "0 19 * * *" ]; then
+            MODE="preview"
+          else
+            MODE="advisor"
+          fi
+          echo "Ejecutando modo: $MODE"
+          python -m tonybet_advisor $MODE

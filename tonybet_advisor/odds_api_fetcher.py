@@ -304,7 +304,12 @@ def _parse_event(raw: dict, sport_key: str) -> Optional[dict]:
     }
 
 
-def fetch_events(api_key: str, max_requests: int = 8) -> list[dict]:
+def fetch_events(
+    api_key: str,
+    max_requests: int = 8,
+    hours_from: int = 0,
+    hours_to: int = 48,
+) -> list[dict]:
     """
     Descarga eventos con cuotas de The Odds API para todos los deportes configurados.
 
@@ -312,7 +317,9 @@ def fetch_events(api_key: str, max_requests: int = 8) -> list[dict]:
       500 / 60 ≈ 8 requests por ejecución → max_requests=8 (por defecto).
     Tier de pago: aumenta max_requests o ponlo en 0 para sin límite.
 
-    Solo solicita eventos de las próximas 48h para reducir ruido de ligas en pausa.
+    hours_from / hours_to: ventana temporal relativa a ahora (UTC).
+      Advisor hoy:   hours_from=0,  hours_to=24
+      Preview mañana: hours_from=12, hours_to=60  (cubre todo el día de mañana)
     """
     from datetime import timezone, timedelta
     import datetime as _datetime
@@ -321,10 +328,9 @@ def fetch_events(api_key: str, max_requests: int = 8) -> list[dict]:
         print("  ⚠ ODDS_API_KEY no configurada — sin datos de The Odds API")
         return []
 
-    # Ventana temporal: ahora → +48h (evita partidos lejanos y ligas sin actividad)
     now_utc  = _datetime.datetime.now(timezone.utc)
-    from_iso = now_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
-    to_iso   = (now_utc + timedelta(hours=48)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    from_iso = (now_utc + timedelta(hours=hours_from)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    to_iso   = (now_utc + timedelta(hours=hours_to)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     print("  → Consultando deportes disponibles en The Odds API…")
     try:

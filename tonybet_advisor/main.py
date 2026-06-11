@@ -349,7 +349,8 @@ async def _run_preview(events: list[dict] | None = None):
 
     if events is None:
         from .odds_api_fetcher import fetch_events
-        events = fetch_events(config.odds_api_key, config.odds_api_max_requests)
+        # Ventana 12-60h: garantiza cubrir todo el día de mañana independientemente de la hora actual
+        events = fetch_events(config.odds_api_key, config.odds_api_max_requests, hours_from=12, hours_to=60)
 
     tomorrow_events = [
         e for e in events

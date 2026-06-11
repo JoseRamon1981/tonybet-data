@@ -231,28 +231,30 @@ class BettingAdvisor:
 
             "CUOTAS VÁLIDAS: 1.15 – 8.00\n\n"
 
-            "UMBRAL MÍNIMO por mercado (prob_estimada > implícita + este margen):\n"
-            "╔══════════════════════╦════════╦══════════════════════════════════╗\n"
-            "║ Mercado              ║ Mínimo ║ Ejemplo de valor                 ║\n"
-            "╠══════════════════════╬════════╬══════════════════════════════════╣\n"
-            "║ Fútbol Over/Under    ║  57%   ║ Over 2.5 @1.80 con goles_esp 3.0 ║\n"
-            "║ Fútbol BTTS Sí/No    ║  55%   ║ BTTS Sí @1.85 con ambos GF>1.1  ║\n"
-            "║ Fútbol 1X2           ║  62%   ║ Local @1.70 con clara ventaja    ║\n"
-            "║ Fútbol Hándicap      ║  60%   ║ -1 @2.00 con GF 2.0 vs 0.8      ║\n"
-            "║ Tenis Ganador        ║  65%   ║ Rank #10 vs #55 tierra           ║\n"
-            "║ Tenis Total juegos   ║  55%   ║ Under 21.5 con favorito claro    ║\n"
-            "║ Basket Total puntos  ║  57%   ║ Over 220 con dos equipos >110ppg ║\n"
-            "║ Basket Ganador       ║  63%   ║ Local con +12 victorias ventaja  ║\n"
-            "║ Hockey Total goles   ║  57%   ║ Over 5.5 con ambos >3.0 goles/pj ║\n"
-            "║ Hockey Ganador       ║  60%   ║ Local top vs visitante colista   ║\n"
-            "║ Béisbol Total        ║  57%   ║ Under con ERA < 3.0 ambos        ║\n"
-            "║ NFL Spread           ║  58%   ║ Favorito -3.5 en casa            ║\n"
-            "║ MMA/Boxeo Ganador    ║  65%   ║ Estilo claramente ventajoso      ║\n"
-            "║ Rugby Ganador        ║  62%   ║ Top vs colista en casa           ║\n"
-            "╚══════════════════════╩════════╩══════════════════════════════════╝\n\n"
+            "UMBRAL MÍNIMO DE PROBABILIDAD: 75% en todos los mercados.\n"
+            "Solo llames al tool si tu prob_estimada es ≥ 75% Y superior a la implícita.\n\n"
 
-            "OBJETIVO DE SESIÓN: 8-15 apuestas de valor. Con 50-60 eventos multideporte "
-            "y múltiples mercados por evento, siempre hay apuestas con valor estadístico.\n\n"
+            "╔══════════════════════╦════════╦══════════════════════════════════════╗\n"
+            "║ Mercado              ║ Mínimo ║ Ejemplo de valor                     ║\n"
+            "╠══════════════════════╬════════╬══════════════════════════════════════╣\n"
+            "║ Fútbol Over/Under    ║  75%   ║ Over 2.5 @1.35 con goles_esp 3.5+   ║\n"
+            "║ Fútbol BTTS Sí/No    ║  75%   ║ BTTS Sí @1.40 ambos GF>1.3 histór. ║\n"
+            "║ Fútbol 1X2           ║  78%   ║ Local @1.25 dominador absoluto       ║\n"
+            "║ Fútbol Hándicap      ║  75%   ║ -1 @1.60 con GF 2.5 vs 0.6          ║\n"
+            "║ Tenis Ganador        ║  78%   ║ Rank #5 vs #80 tierra batida         ║\n"
+            "║ Tenis Total juegos   ║  75%   ║ Under 19.5 con favorito >85%         ║\n"
+            "║ Basket Total puntos  ║  75%   ║ Over 225 ambos equipos >115ppg       ║\n"
+            "║ Basket Ganador       ║  78%   ║ Local top-3 vs visitante colista      ║\n"
+            "║ Hockey Total goles   ║  75%   ║ Over 6.5 ambos equipos >3.5 goles/pj ║\n"
+            "║ Hockey Ganador       ║  78%   ║ Local top-4 vs colista visitante      ║\n"
+            "║ Béisbol Total        ║  75%   ║ Under con ERA < 2.50 ambos titulares ║\n"
+            "║ NFL Spread           ║  75%   ║ Favorito -6.5 en casa, QB superior   ║\n"
+            "║ MMA/Boxeo Ganador    ║  78%   ║ Dominancia técnica muy clara         ║\n"
+            "║ Rugby Ganador        ║  78%   ║ Top-3 en casa vs colista visitante   ║\n"
+            "╚══════════════════════╩════════╩══════════════════════════════════════╝\n\n"
+
+            "CALIDAD SOBRE CANTIDAD: prefiere 3-5 apuestas de alta confianza a 15 mediocres. "
+            "Solo llama al tool cuando los datos estadísticos justifiquen CLARAMENTE ≥75%.\n\n"
 
             f"Bankroll: {self.bankroll}€\n\n"
 
@@ -272,6 +274,7 @@ class BettingAdvisor:
             bankroll=self.bankroll,
             kelly_fraction=config.kelly_fraction,
             min_ev=config.min_ev_threshold,
+            min_prob=config.min_prob_threshold,
             max_stake=config.max_single_bet,
             starts_at=tool_input.get("starts_at", ""),
         )

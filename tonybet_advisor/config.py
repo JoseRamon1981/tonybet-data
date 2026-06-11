@@ -24,12 +24,13 @@ class Config:
 
     # Value betting thresholds
     min_ev_threshold: float = float(os.getenv("MIN_EV_THRESHOLD", "0.01"))   # 1% min EV
+    min_prob_threshold: float = float(os.getenv("MIN_PROB_THRESHOLD", "0.75"))  # 75% min prob
     kelly_fraction: float = float(os.getenv("KELLY_FRACTION", "0.25"))        # Quarter-Kelly (safer)
 
     # The Odds API (fuente principal de datos — https://the-odds-api.com/)
     odds_api_key: str = field(default_factory=lambda: os.getenv("ODDS_API_KEY", ""))
-    # Máximo de requests por ejecución (tier gratuito: 500/mes → usar 15/día)
-    odds_api_max_requests: int = int(os.getenv("ODDS_API_MAX_REQUESTS", "40"))
+    # Máximo de requests por ejecución (tier gratuito: 500/mes → 8/ejecución con 2/día)
+    odds_api_max_requests: int = int(os.getenv("ODDS_API_MAX_REQUESTS", "8"))
 
     # Playwright settings (fallback si no hay ODDS_API_KEY)
     headless: bool = os.getenv("HEADLESS", "true").lower() == "true"
