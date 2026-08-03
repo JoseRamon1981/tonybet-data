@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-02 21:22",
-  "total": 165,
+  "updated_at": "2026-08-03 07:01",
+  "total": 261,
   "events": [
     {
       "nombre": "Carolina Hurricanes vs Florida Panthers",
@@ -445,694 +445,35 @@
       ]
     },
     {
-      "nombre": "Atlanta Braves vs Washington Nationals",
+      "nombre": "Philadelphia Phillies vs Washington Nationals",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-02T17:36:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Atlanta Braves",
-              "cuota": 1.2
-            },
-            {
-              "nombre": "Washington Nationals",
-              "cuota": 4.63
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Atlanta Braves -1.5",
-              "cuota": 1.96
-            },
-            {
-              "nombre": "Washington Nationals +1.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.5",
-              "cuota": 2.03
-            },
-            {
-              "nombre": "Under 8.5",
-              "cuota": 1.81
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Baltimore Orioles vs Philadelphia Phillies",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T17:36:30Z",
+      "hora": "2026-08-03T22:41:00Z",
       "bookmaker": "Betfair",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
-              "nombre": "Baltimore Orioles",
-              "cuota": 1.01
-            },
-            {
               "nombre": "Philadelphia Phillies",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Baltimore Orioles",
-              "cuota": 110.0
-            },
-            {
-              "nombre": "Philadelphia Phillies",
-              "cuota": 110.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Toronto Blue Jays vs St. Louis Cardinals",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T17:40:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "St. Louis Cardinals",
-              "cuota": 1.57
-            },
-            {
-              "nombre": "Toronto Blue Jays",
-              "cuota": 2.44
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "St. Louis Cardinals -1.0",
-              "cuota": 2.12
-            },
-            {
-              "nombre": "Toronto Blue Jays +1.0",
-              "cuota": 1.71
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 3.5",
-              "cuota": 2.08
-            },
-            {
-              "nombre": "Under 3.5",
-              "cuota": 1.76
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Cleveland Guardians vs Arizona Diamondbacks",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T17:41:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Arizona Diamondbacks",
-              "cuota": 15.62
-            },
-            {
-              "nombre": "Cleveland Guardians",
-              "cuota": 1.03
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Arizona Diamondbacks +4.5",
-              "cuota": 2.06
-            },
-            {
-              "nombre": "Cleveland Guardians -4.5",
-              "cuota": 1.78
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.0",
-              "cuota": 1.77
-            },
-            {
-              "nombre": "Under 8.0",
-              "cuota": 2.04
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Tampa Bay Rays vs Chicago White Sox",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T17:41:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Chicago White Sox",
-              "cuota": 1.13
-            },
-            {
-              "nombre": "Tampa Bay Rays",
-              "cuota": 6.29
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Chicago White Sox -3.0",
-              "cuota": 2.13
-            },
-            {
-              "nombre": "Tampa Bay Rays +3.0",
-              "cuota": 1.7
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 6.0",
-              "cuota": 1.94
-            },
-            {
-              "nombre": "Under 6.0",
-              "cuota": 1.84
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "New York Mets vs Miami Marlins",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T17:41:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Miami Marlins",
-              "cuota": 1.39
-            },
-            {
-              "nombre": "New York Mets",
-              "cuota": 3.04
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Miami Marlins -1.0",
-              "cuota": 1.68
-            },
-            {
-              "nombre": "New York Mets +1.0",
-              "cuota": 2.18
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 3.5",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "Under 3.5",
-              "cuota": 1.9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Cincinnati Reds vs Pittsburgh Pirates",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T17:41:33Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Cincinnati Reds",
-              "cuota": 1.03
-            },
-            {
-              "nombre": "Pittsburgh Pirates",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Cincinnati Reds",
-              "cuota": 1.07
-            },
-            {
-              "nombre": "Pittsburgh Pirates",
-              "cuota": 110.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Houston Astros vs Texas Rangers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T18:11:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Houston Astros",
-              "cuota": 1.34
-            },
-            {
-              "nombre": "Texas Rangers",
-              "cuota": 3.4
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Houston Astros -1.5",
-              "cuota": 2.01
-            },
-            {
-              "nombre": "Texas Rangers +1.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 6.0",
-              "cuota": 1.95
-            },
-            {
-              "nombre": "Under 6.0",
-              "cuota": 1.87
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Chicago Cubs vs New York Yankees",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T18:21:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Chicago Cubs",
-              "cuota": 4.52
-            },
-            {
-              "nombre": "New York Yankees",
-              "cuota": 1.21
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Chicago Cubs +2.5",
-              "cuota": 1.87
-            },
-            {
-              "nombre": "New York Yankees -2.5",
-              "cuota": 1.95
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 6.5",
-              "cuota": 1.82
-            },
-            {
-              "nombre": "Under 6.5",
-              "cuota": 2.01
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Colorado Rockies vs Kansas City Royals",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T19:11:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Colorado Rockies",
               "cuota": 1.69
             },
             {
-              "nombre": "Kansas City Royals",
-              "cuota": 2.19
+              "nombre": "Washington Nationals",
+              "cuota": 2.32
             }
           ]
         },
         {
-          "mercado": "Hándicap",
+          "mercado": "H2H Lay",
           "selecciones": [
             {
-              "nombre": "Colorado Rockies -1.0",
-              "cuota": 1.95
+              "nombre": "Philadelphia Phillies",
+              "cuota": 1.76
             },
             {
-              "nombre": "Kansas City Royals +1.0",
-              "cuota": 1.83
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 11.0",
-              "cuota": 1.87
-            },
-            {
-              "nombre": "Under 11.0",
-              "cuota": 1.92
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Los Angeles Angels vs Milwaukee Brewers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T19:16:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Los Angeles Angels",
-              "cuota": 2.96
-            },
-            {
-              "nombre": "Milwaukee Brewers",
-              "cuota": 1.46
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Los Angeles Angels +1.5",
-              "cuota": 2.1
-            },
-            {
-              "nombre": "Milwaukee Brewers -1.5",
-              "cuota": 1.83
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 7.0",
-              "cuota": 1.82
-            },
-            {
-              "nombre": "Under 7.0",
-              "cuota": 2.08
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Athletics vs Detroit Tigers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T20:06:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Athletics",
-              "cuota": 2.1
-            },
-            {
-              "nombre": "Detroit Tigers",
-              "cuota": 1.84
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Athletics +1.5",
-              "cuota": 1.7
-            },
-            {
-              "nombre": "Detroit Tigers -1.5",
-              "cuota": 2.29
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 10.0",
-              "cuota": 1.95
-            },
-            {
-              "nombre": "Under 10.0",
-              "cuota": 1.93
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Seattle Mariners vs Minnesota Twins",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T20:11:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Minnesota Twins",
-              "cuota": 2.26
-            },
-            {
-              "nombre": "Seattle Mariners",
-              "cuota": 1.73
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Minnesota Twins +1.5",
-              "cuota": 1.55
-            },
-            {
-              "nombre": "Seattle Mariners -1.5",
-              "cuota": 2.61
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 7.0",
-              "cuota": 1.98
-            },
-            {
-              "nombre": "Under 7.0",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "San Diego Padres vs San Francisco Giants",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T20:11:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "San Diego Padres",
-              "cuota": 1.83
-            },
-            {
-              "nombre": "San Francisco Giants",
-              "cuota": 2.11
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "San Diego Padres -1.5",
-              "cuota": 2.69
-            },
-            {
-              "nombre": "San Francisco Giants +1.5",
-              "cuota": 1.53
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.0",
-              "cuota": 1.96
-            },
-            {
-              "nombre": "Under 8.0",
-              "cuota": 1.93
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Los Angeles Dodgers vs Boston Red Sox",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-02T23:21:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Boston Red Sox",
-              "cuota": 2.58
-            },
-            {
-              "nombre": "Los Angeles Dodgers",
-              "cuota": 1.58
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Boston Red Sox +1.5",
-              "cuota": 1.74
-            },
-            {
-              "nombre": "Los Angeles Dodgers -1.5",
-              "cuota": 2.22
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.5",
-              "cuota": 1.99
-            },
-            {
-              "nombre": "Under 8.5",
-              "cuota": 1.9
+              "nombre": "Washington Nationals",
+              "cuota": 2.46
             }
           ]
         }
@@ -1143,18 +484,44 @@
       "deporte": "Béisbol",
       "competicion": "MLB",
       "hora": "2026-08-03T23:06:00Z",
-      "bookmaker": "Marathon Bet",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "New York Yankees",
-              "cuota": 1.51
+              "cuota": 1.52
             },
             {
               "nombre": "St. Louis Cardinals",
-              "cuota": 2.56
+              "cuota": 2.73
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "New York Yankees -1.5",
+              "cuota": 2.12
+            },
+            {
+              "nombre": "St. Louis Cardinals +1.5",
+              "cuota": 1.79
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 8.0",
+              "cuota": 1.99
+            },
+            {
+              "nombre": "Under 8.0",
+              "cuota": 1.88
             }
           ]
         }
@@ -1165,18 +532,44 @@
       "deporte": "Béisbol",
       "competicion": "MLB",
       "hora": "2026-08-03T23:41:00Z",
-      "bookmaker": "Marathon Bet",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers",
-              "cuota": 1.68
+              "cuota": 1.71
             },
             {
               "nombre": "Pittsburgh Pirates",
-              "cuota": 2.19
+              "cuota": 2.27
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Milwaukee Brewers -1.5",
+              "cuota": 2.45
+            },
+            {
+              "nombre": "Pittsburgh Pirates +1.5",
+              "cuota": 1.61
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 8.5",
+              "cuota": 2.01
+            },
+            {
+              "nombre": "Under 8.5",
+              "cuota": 1.86
             }
           ]
         }
@@ -1187,18 +580,66 @@
       "deporte": "Béisbol",
       "competicion": "MLB",
       "hora": "2026-08-04T00:06:00Z",
-      "bookmaker": "Paddy Power",
+      "bookmaker": "Betfair",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Chicago Cubs",
-              "cuota": 2.05
+              "cuota": 2.16
             },
             {
               "nombre": "Los Angeles Dodgers",
-              "cuota": 1.75
+              "cuota": 1.82
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Chicago Cubs",
+              "cuota": 2.24
+            },
+            {
+              "nombre": "Los Angeles Dodgers",
+              "cuota": 1.87
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Texas Rangers vs San Francisco Giants",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T00:06:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "San Francisco Giants",
+              "cuota": 2.0
+            },
+            {
+              "nombre": "Texas Rangers",
+              "cuota": 1.92
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "San Francisco Giants",
+              "cuota": 2.08
+            },
+            {
+              "nombre": "Texas Rangers",
+              "cuota": 2.0
             }
           ]
         }
@@ -1209,18 +650,44 @@
       "deporte": "Béisbol",
       "competicion": "MLB",
       "hora": "2026-08-04T00:10:00Z",
-      "bookmaker": "Marathon Bet",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Houston Astros",
-              "cuota": 1.76
+              "cuota": 1.77
             },
             {
               "nombre": "Toronto Blue Jays",
-              "cuota": 2.06
+              "cuota": 2.18
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Houston Astros -1.5",
+              "cuota": 2.54
+            },
+            {
+              "nombre": "Toronto Blue Jays +1.5",
+              "cuota": 1.57
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 9.0",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 9.0",
+              "cuota": 2.03
             }
           ]
         }
@@ -1231,18 +698,44 @@
       "deporte": "Béisbol",
       "competicion": "MLB",
       "hora": "2026-08-04T00:41:00Z",
-      "bookmaker": "Marathon Bet",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Colorado Rockies",
-              "cuota": 2.28
+              "cuota": 2.39
             },
             {
               "nombre": "Tampa Bay Rays",
-              "cuota": 1.63
+              "cuota": 1.65
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Colorado Rockies +1.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Tampa Bay Rays -1.5",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 11.5",
+              "cuota": 2.01
+            },
+            {
+              "nombre": "Under 11.5",
+              "cuota": 1.87
             }
           ]
         }
@@ -1253,7 +746,7 @@
       "deporte": "Béisbol",
       "competicion": "MLB",
       "hora": "2026-08-04T01:41:00Z",
-      "bookmaker": "Paddy Power",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
@@ -1264,7 +757,33 @@
             },
             {
               "nombre": "San Diego Padres",
-              "cuota": 1.9
+              "cuota": 2.01
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Arizona Diamondbacks +1.5",
+              "cuota": 1.54
+            },
+            {
+              "nombre": "San Diego Padres -1.5",
+              "cuota": 2.61
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 8.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 8.5",
+              "cuota": 2.05
             }
           ]
         }
@@ -1330,11 +849,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Rams",
-              "cuota": 1.51
+              "cuota": 1.53
             },
             {
               "nombre": "San Francisco 49ers",
-              "cuota": 2.7
+              "cuota": 2.63
             }
           ]
         },
@@ -1343,11 +862,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Rams -3.0",
-              "cuota": 1.76
+              "cuota": 1.81
             },
             {
               "nombre": "San Francisco 49ers +3.0",
-              "cuota": 2.17
+              "cuota": 2.1
             }
           ]
         },
@@ -1522,11 +1041,11 @@
           "selecciones": [
             {
               "nombre": "Carolina Panthers",
-              "cuota": 2.29
+              "cuota": 2.35
             },
             {
               "nombre": "Chicago Bears",
-              "cuota": 1.69
+              "cuota": 1.65
             }
           ]
         },
@@ -1535,11 +1054,11 @@
           "selecciones": [
             {
               "nombre": "Carolina Panthers +2.5",
-              "cuota": 1.98
+              "cuota": 2.04
             },
             {
               "nombre": "Chicago Bears -2.5",
-              "cuota": 1.91
+              "cuota": 1.85
             }
           ]
         },
@@ -2133,11 +1652,11 @@
           "selecciones": [
             {
               "nombre": "Baltimore Ravens -7.5",
-              "cuota": 1.87
+              "cuota": 1.88
             },
             {
               "nombre": "New Orleans Saints +7.5",
-              "cuota": 1.83
+              "cuota": 1.82
             }
           ]
         },
@@ -2579,6 +2098,3986 @@
       ]
     },
     {
+      "nombre": "TCU Horned Frogs vs North Carolina Tar Heels",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-29T16:00:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "North Carolina Tar Heels",
+              "cuota": 3.31
+            },
+            {
+              "nombre": "TCU Horned Frogs",
+              "cuota": 1.34
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "North Carolina Tar Heels +7.0",
+              "cuota": 1.97
+            },
+            {
+              "nombre": "TCU Horned Frogs -7.0",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 48.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 48.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "USC Trojans vs San Jose State Spartans",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-29T19:00:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "San Jose State Spartans +36.0",
+              "cuota": 1.96
+            },
+            {
+              "nombre": "USC Trojans -36.0",
+              "cuota": 1.89
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 59.5",
+              "cuota": 1.9
+            },
+            {
+              "nombre": "Under 59.5",
+              "cuota": 1.92
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Virginia Cavaliers vs NC State Wolfpack",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-29T19:30:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "NC State Wolfpack",
+              "cuota": 2.79
+            },
+            {
+              "nombre": "Virginia Cavaliers",
+              "cuota": 1.46
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "NC State Wolfpack +5.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Virginia Cavaliers -5.5",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 54.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "North Dakota State Bison vs Jacksonville State Gamecocks",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-29T21:30:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Jacksonville State Gamecocks",
+              "cuota": 3.46
+            },
+            {
+              "nombre": "North Dakota State Bison",
+              "cuota": 1.32
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Jacksonville State Gamecocks +7.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "North Dakota State Bison -7.5",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 48.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 48.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Eastern Michigan Eagles vs Sacramento State Hornets",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-29T22:30:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Eastern Michigan Eagles",
+              "cuota": 1.29
+            },
+            {
+              "nombre": "Sacramento State Hornets",
+              "cuota": 3.64
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Eastern Michigan Eagles -8.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Sacramento State Hornets +8.5",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 53.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 53.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Florida State Seminoles vs New Mexico State Aggies",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-29T23:00:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Florida State Seminoles -31.0",
+              "cuota": 1.92
+            },
+            {
+              "nombre": "New Mexico State Aggies +31.0",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 53.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 53.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Stanford Cardinal vs Hawaii Rainbow Warriors",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-29T23:00:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Hawaii Rainbow Warriors",
+              "cuota": 2.59
+            },
+            {
+              "nombre": "Stanford Cardinal",
+              "cuota": 1.52
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Hawaii Rainbow Warriors +4.0",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Stanford Cardinal -4.0",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 50.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 50.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "UNLV Rebels vs Memphis Tigers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-08-30T02:00:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Memphis Tigers",
+              "cuota": 2.79
+            },
+            {
+              "nombre": "UNLV Rebels",
+              "cuota": 1.46
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Memphis Tigers +5.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "UNLV Rebels -5.5",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 59.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 59.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Rutgers Scarlet Knights vs UMass Minutemen",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-03T22:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Rutgers Scarlet Knights -30.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "UMass Minutemen +30.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.5",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "Under 54.5",
+              "cuota": 1.87
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Wake Forest Demon Deacons vs Akron Zips",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-03T23:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Akron Zips +22.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Wake Forest Demon Deacons -22.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 49.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 49.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Buffalo Bulls vs Albany",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-03T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Albany",
+              "cuota": 9.0
+            },
+            {
+              "nombre": "Buffalo Bulls",
+              "cuota": 1.02
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Albany +26.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Buffalo Bulls -26.5",
+              "cuota": 1.8
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 48.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 48.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "UCF Knights vs Bethune-Cookman Wildcats",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-03T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Bethune-Cookman Wildcats +38.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "UCF Knights -38.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 57.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 57.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Delaware Blue Hens vs Merrimack Warriors",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-03T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Delaware Blue Hens",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Merrimack Warriors",
+              "cuota": 10.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Delaware Blue Hens -28.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Merrimack Warriors +28.5",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 56.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 56.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Kennesaw State Owls vs West Georgia Wolves",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-03T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Kennesaw State Owls",
+              "cuota": 1.04
+            },
+            {
+              "nombre": "West Georgia Wolves",
+              "cuota": 8.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Kennesaw State Owls -23.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "West Georgia Wolves +23.5",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 53.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 53.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Missouri Tigers vs Arkansas Pine Bluff Golden Lions",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T00:00:00Z",
+      "bookmaker": "Betsson",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Arkansas Pine Bluff Golden Lions +52.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Missouri Tigers -52.5",
+              "cuota": 1.89
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 60.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Under 60.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Georgia Tech Yellow Jackets vs Colorado Buffaloes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T00:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Colorado Buffaloes +7.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Georgia Tech Yellow Jackets -7.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 51.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Minnesota Golden Gophers vs Eastern Illinois Panthers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T00:00:00Z",
+      "bookmaker": "Nordic Bet",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Eastern Illinois Panthers +45.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Minnesota Golden Gophers -45.5",
+              "cuota": 1.89
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.0",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 51.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Utah Utes vs Idaho Vandals",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T01:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Idaho Vandals",
+              "cuota": 11.0
+            },
+            {
+              "nombre": "Utah Utes",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Idaho Vandals +34.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Utah Utes -34.5",
+              "cuota": 1.8
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 57.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 57.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Illinois Fighting Illini vs UAB Blazers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T01:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Illinois Fighting Illini -27.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "UAB Blazers +27.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 56.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 56.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Eastern Michigan Eagles vs San Jose State Spartans",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T22:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Eastern Michigan Eagles -4.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "San Jose State Spartans +4.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 53.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 53.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Georgia State Panthers vs North Carolina A&T Aggies",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Georgia State Panthers",
+              "cuota": 1.02
+            },
+            {
+              "nombre": "North Carolina A&T Aggies",
+              "cuota": 9.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Georgia State Panthers -27.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "North Carolina A&T Aggies +27.5",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 58.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 58.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Purdue Boilermakers vs Indiana State Sycamores",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-04T23:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Indiana State Sycamores",
+              "cuota": 46.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Michigan State Spartans vs Toledo Rockets",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T00:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Michigan State Spartans -12.0",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "Toledo Rockets +12.0",
+              "cuota": 1.87
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 49.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 49.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Oklahoma Sooners vs UTEP Miners",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T00:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Oklahoma Sooners -40.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "UTEP Miners +40.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 50.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 50.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "USC Trojans vs Fresno State Bulldogs",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T01:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Fresno State Bulldogs +23.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "USC Trojans -23.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 51.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Stanford Cardinal vs Miami Hurricanes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T01:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Miami Hurricanes -23.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Stanford Cardinal +23.5",
+              "cuota": 1.95
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 49.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 49.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Alabama Crimson Tide vs East Carolina Pirates",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Alabama Crimson Tide -28.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "East Carolina Pirates +28.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 54.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Bowling Green Falcons vs Tarleton State Texans",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Bowling Green Falcons",
+              "cuota": 1.75
+            },
+            {
+              "nombre": "Tarleton State Texans",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Bowling Green Falcons -1.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Tarleton State Texans +1.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "West Virginia Mountaineers vs Coastal Carolina Chanticleers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Coastal Carolina Chanticleers +21.0",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "West Virginia Mountaineers -21.0",
+              "cuota": 1.87
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 58.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 58.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Houston Cougars vs Oregon State Beavers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Houston Cougars -19.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Oregon State Beavers +19.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 51.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Indiana Hoosiers vs North Texas Mean Green",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Indiana Hoosiers -40.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "North Texas Mean Green +40.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 55.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 55.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "James Madison Dukes vs Liberty Flames",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "James Madison Dukes -6.0",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Liberty Flames +6.0",
+              "cuota": 1.95
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 51.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "UConn Huskies vs Lafayette Leopards",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Lafayette Leopards",
+              "cuota": 6.7
+            },
+            {
+              "nombre": "UConn Huskies",
+              "cuota": 1.06
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Lafayette Leopards +17.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "UConn Huskies -17.5",
+              "cuota": 1.8
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 56.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 56.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Pittsburgh Panthers vs Miami (OH) RedHawks",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Miami (OH) RedHawks +16.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Pittsburgh Panthers -16.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 50.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 50.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Nebraska Cornhuskers vs Ohio Bobcats",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Nebraska Cornhuskers -24.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Ohio Bobcats +24.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 47.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 47.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Syracuse Orange vs New Hampshire Wildcats",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "New Hampshire Wildcats",
+              "cuota": 10.0
+            },
+            {
+              "nombre": "Syracuse Orange",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "New Hampshire Wildcats +32.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Syracuse Orange -32.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 57.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 57.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Ohio State Buckeyes vs Ball State Cardinals",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Ball State Cardinals +51.0",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "Ohio State Buckeyes -51.0",
+              "cuota": 1.87
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 56.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 56.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "South Carolina Gamecocks vs Kent State Golden Flashes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T16:45:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Kent State Golden Flashes +35.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "South Carolina Gamecocks -35.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 52.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Air Force Falcons vs Duquesne Dukes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T17:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Air Force Falcons",
+              "cuota": 1.02
+            },
+            {
+              "nombre": "Duquesne Dukes",
+              "cuota": 12.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Iowa State Cyclones vs Southeast Missouri State Redhawks",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T17:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Iowa State Cyclones",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Southeast Missouri State Redhawks",
+              "cuota": 10.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Iowa State Cyclones -30.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Southeast Missouri State Redhawks +30.5",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Under 52.5",
+              "cuota": 1.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Kentucky Wildcats vs Youngstown St Penguins",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T17:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Kentucky Wildcats",
+              "cuota": 1.04
+            },
+            {
+              "nombre": "Youngstown St Penguins",
+              "cuota": 8.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Kentucky Wildcats -23.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Youngstown St Penguins +23.5",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 62.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 62.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Temple Owls vs Rhode Island Rams",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T18:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Rhode Island Rams",
+              "cuota": 3.9
+            },
+            {
+              "nombre": "Temple Owls",
+              "cuota": 1.2
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Rhode Island Rams +10.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Temple Owls -10.5",
+              "cuota": 1.8
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 52.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Appalachian State Mountaineers vs Maine Black Bears",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Appalachian State Mountaineers",
+              "cuota": 1.08
+            },
+            {
+              "nombre": "Maine Black Bears",
+              "cuota": 6.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Appalachian State Mountaineers -18.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Maine Black Bears +18.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 51.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Auburn Tigers vs Baylor Bears",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Auburn Tigers",
+              "cuota": 1.33
+            },
+            {
+              "nombre": "Baylor Bears",
+              "cuota": 3.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Oregon Ducks vs Boise State Broncos",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Boise State Broncos",
+              "cuota": 15.0
+            },
+            {
+              "nombre": "Oregon Ducks",
+              "cuota": 1.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Cincinnati Bearcats vs Boston College Eagles",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Boston College Eagles +7.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Cincinnati Bearcats -7.5",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 54.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Charlotte 49ers vs Citadel Bulldogs",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Charlotte 49ers",
+              "cuota": 1.16
+            },
+            {
+              "nombre": "Citadel Bulldogs",
+              "cuota": 4.3
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Charlotte 49ers -12.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Citadel Bulldogs +12.5",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 45.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Under 45.5",
+              "cuota": 1.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Duke Blue Devils vs Tulane Green Wave",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Duke Blue Devils -10.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Tulane Green Wave +10.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 52.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Penn State Nittany Lions vs Marshall Thundering Herd",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Marshall Thundering Herd +24.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Penn State Nittany Lions -24.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 54.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Navy Midshipmen vs Towson Tigers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Navy Midshipmen",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Towson Tigers",
+              "cuota": 10.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Navy Midshipmen -31.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Towson Tigers +31.5",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 53.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 53.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Texas Longhorns vs Texas State Bobcats",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Texas Longhorns -30.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Texas State Bobcats +30.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 60.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 60.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "UTSA Roadrunners vs UT Rio Grande Valley Vaqueros",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:30:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "UT Rio Grande Valley Vaqueros",
+              "cuota": 9.0
+            },
+            {
+              "nombre": "UTSA Roadrunners",
+              "cuota": 1.02
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "UT Rio Grande Valley Vaqueros +29.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "UTSA Roadrunners -29.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 59.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Under 59.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Tulsa Golden Hurricane vs Oklahoma State Cowboys",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T19:45:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Oklahoma State Cowboys -13.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Tulsa Golden Hurricane +13.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 60.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 60.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Iowa Hawkeyes vs Northern Illinois Huskies",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T20:15:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Iowa Hawkeyes -31.0",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Northern Illinois Huskies +31.0",
+              "cuota": 1.95
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 46.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 46.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Southern Mississippi Golden Eagles vs Alcorn State Braves",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T21:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Alcorn State Braves",
+              "cuota": 7.5
+            },
+            {
+              "nombre": "Southern Mississippi Golden Eagles",
+              "cuota": 1.05
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Alcorn State Braves +22.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Southern Mississippi Golden Eagles -22.5",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 52.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Colorado State Rams vs Wyoming Cowboys",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T22:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Colorado State Rams -4.0",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Wyoming Cowboys +4.0",
+              "cuota": 1.89
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 48.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 48.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Memphis Tigers vs Arkansas State Red Wolves",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Arkansas State Red Wolves +9.0",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "Memphis Tigers -9.0",
+              "cuota": 1.87
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 55.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 55.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Vanderbilt Commodores vs Austin Peay Governors",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Austin Peay Governors",
+              "cuota": 10.0
+            },
+            {
+              "nombre": "Vanderbilt Commodores",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Austin Peay Governors +33.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Vanderbilt Commodores -33.5",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 60.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Under 60.5",
+              "cuota": 1.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Georgia Southern Eagles vs Charleston Southern Buccaneers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Charleston Southern Buccaneers",
+              "cuota": 9.0
+            },
+            {
+              "nombre": "Georgia Southern Eagles",
+              "cuota": 1.02
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Charleston Southern Buccaneers +27.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Georgia Southern Eagles -27.5",
+              "cuota": 1.8
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Under 52.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Jacksonville State Gamecocks vs Eastern Kentucky Colonels",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Eastern Kentucky Colonels",
+              "cuota": 6.7
+            },
+            {
+              "nombre": "Jacksonville State Gamecocks",
+              "cuota": 1.06
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Eastern Kentucky Colonels +20.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Jacksonville State Gamecocks -20.5",
+              "cuota": 1.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "South Florida Bulls vs Florida International Panthers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Florida International Panthers +12.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "South Florida Bulls -12.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 54.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Rice Owls vs Houston Baptist Huskies",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Houston Baptist Huskies",
+              "cuota": 9.0
+            },
+            {
+              "nombre": "Rice Owls",
+              "cuota": 1.02
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Houston Baptist Huskies +24.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Rice Owls -24.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 47.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Under 47.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Utah State Aggies vs Idaho State Bengals",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Idaho State Bengals",
+              "cuota": 5.8
+            },
+            {
+              "nombre": "Utah State Aggies",
+              "cuota": 1.09
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Idaho State Bengals +17.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Utah State Aggies -17.5",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 61.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 61.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Michigan Wolverines vs Western Michigan Broncos",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Michigan Wolverines -26.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Western Michigan Broncos +26.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 47.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 47.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Middle Tennessee Blue Raiders vs Murray State Racers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Middle Tennessee Blue Raiders",
+              "cuota": 1.03
+            },
+            {
+              "nombre": "Murray State Racers",
+              "cuota": 8.5
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Middle Tennessee Blue Raiders -25.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Murray State Racers +25.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 60.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 60.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Texas A&M Aggies vs Missouri State Bears",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Missouri State Bears +38.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Texas A&M Aggies -38.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 52.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Troy Trojans vs Sam Houston State Bearkats",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Sam Houston State Bearkats +14.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Troy Trojans -14.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 51.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "South Alabama Jaguars vs Southeastern Louisiana Lions",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "South Alabama Jaguars",
+              "cuota": 1.18
+            },
+            {
+              "nombre": "Southeastern Louisiana Lions",
+              "cuota": 4.1
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "South Alabama Jaguars -12.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Southeastern Louisiana Lions +12.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 51.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Under 51.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "LSU Tigers vs Clemson Tigers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Clemson Tigers",
+              "cuota": 4.0
+            },
+            {
+              "nombre": "LSU Tigers",
+              "cuota": 1.25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Mississippi State Bulldogs vs UL Monroe Warhawks",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Mississippi State Bulldogs -28.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "UL Monroe Warhawks +28.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 55.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 55.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Florida Gators vs Florida Atlantic Owls",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-05T23:45:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Florida Atlantic Owls +26.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Florida Gators -26.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 58.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 58.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Louisiana Ragin Cajuns vs Lamar Cardinals",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T00:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Lamar Cardinals",
+              "cuota": 6.0
+            },
+            {
+              "nombre": "Louisiana Ragin Cajuns",
+              "cuota": 1.08
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Lamar Cardinals +17.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Louisiana Ragin Cajuns -17.5",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 49.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 49.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Northwestern Wildcats vs South Dakota State Jackrabbits",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T00:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Northwestern Wildcats",
+              "cuota": 1.14
+            },
+            {
+              "nombre": "South Dakota State Jackrabbits",
+              "cuota": 4.6
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Northwestern Wildcats -13.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "South Dakota State Jackrabbits +13.5",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 46.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Under 46.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Hawaii Rainbow Warriors vs UNLV Rebels",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T01:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Hawaii Rainbow Warriors +1.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "UNLV Rebels -1.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 58.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 58.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "New Mexico State Aggies vs Mercyhurst Lakers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T01:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Mercyhurst Lakers",
+              "cuota": 9.0
+            },
+            {
+              "nombre": "New Mexico State Aggies",
+              "cuota": 1.02
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Mercyhurst Lakers +26.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "New Mexico State Aggies -26.5",
+              "cuota": 1.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Arizona Wildcats vs Northern Arizona Lumberjacks",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T01:30:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Arizona Wildcats",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Northern Arizona Lumberjacks",
+              "cuota": 10.0
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Arizona Wildcats -29.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Northern Arizona Lumberjacks +29.5",
+              "cuota": 1.83
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 57.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 57.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "New Mexico Lobos vs Central Michigan Chippewas",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T02:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Central Michigan Chippewas +12.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "New Mexico Lobos -12.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 49.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 49.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Sacramento State Hornets vs Mississippi Valley State Delta Devils",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T02:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Mississippi Valley State Delta Devils",
+              "cuota": 10.0
+            },
+            {
+              "nombre": "Sacramento State Hornets",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Mississippi Valley State Delta Devils +36.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Sacramento State Hornets -36.5",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 55.5",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Under 55.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "California Golden Bears vs UCLA Bruins",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T02:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "California Golden Bears",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "UCLA Bruins",
+              "cuota": 1.87
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Nevada Wolf Pack vs Western Kentucky Hilltoppers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T02:30:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Nevada Wolf Pack +3.0",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "Western Kentucky Hilltoppers -3.0",
+              "cuota": 1.87
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 53.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 53.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Washington Huskies vs Washington State Cougars",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T20:00:00Z",
+      "bookmaker": "BetOnline.ag",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Washington Huskies -21.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Washington State Cougars +21.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 50.5",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 50.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Ole Miss Rebels vs Louisville Cardinals",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T23:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Louisville Cardinals",
+              "cuota": 3.0
+            },
+            {
+              "nombre": "Ole Miss Rebels",
+              "cuota": 1.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Notre Dame Fighting Irish vs Wisconsin Badgers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-06T23:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Notre Dame Fighting Irish",
+              "cuota": 1.06
+            },
+            {
+              "nombre": "Wisconsin Badgers",
+              "cuota": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Florida State Seminoles vs SMU Mustangs",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-07T23:30:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Florida State Seminoles",
+              "cuota": 2.04
+            },
+            {
+              "nombre": "SMU Mustangs",
+              "cuota": 1.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Kansas Jayhawks vs Missouri Tigers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-12T00:00:00Z",
+      "bookmaker": "MyBookie.ag",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Kansas Jayhawks",
+              "cuota": 3.2
+            },
+            {
+              "nombre": "Missouri Tigers",
+              "cuota": 1.34
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 52.0",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Texas A&M Aggies vs Arizona State Sun Devils",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-12T16:00:00Z",
+      "bookmaker": "LeoVegas (SE)",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Arizona State Sun Devils +16.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Texas A&M Aggies -16.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Michigan Wolverines vs Oklahoma Sooners",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-12T16:00:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Michigan Wolverines",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Oklahoma Sooners",
+              "cuota": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Oklahoma State Cowboys vs Oregon Ducks",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-12T16:00:00Z",
+      "bookmaker": "MyBookie.ag",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Oklahoma State Cowboys",
+              "cuota": 6.5
+            },
+            {
+              "nombre": "Oregon Ducks",
+              "cuota": 1.11
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Oklahoma State Cowboys +18.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Oregon Ducks -18.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 60.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 60.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Iowa Hawkeyes vs Iowa State Cyclones",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-12T23:30:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Iowa Hawkeyes",
+              "cuota": 1.15
+            },
+            {
+              "nombre": "Iowa State Cyclones",
+              "cuota": 5.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Texas Longhorns vs Ohio State Buckeyes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-12T23:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Ohio State Buckeyes",
+              "cuota": 2.0
+            },
+            {
+              "nombre": "Texas Longhorns",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Utah Utes vs Arkansas Razorbacks",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-13T02:15:00Z",
+      "bookmaker": "Coolbet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Arkansas Razorbacks",
+              "cuota": 3.7
+            },
+            {
+              "nombre": "Utah Utes",
+              "cuota": 1.28
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Arkansas Razorbacks +8.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Utah Utes -8.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.5",
+              "cuota": 1.89
+            },
+            {
+              "nombre": "Under 54.5",
+              "cuota": 1.92
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Alabama Crimson Tide vs Florida State Seminoles",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-19T19:30:00Z",
+      "bookmaker": "Ladbrokes",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Alabama Crimson Tide -15.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Florida State Seminoles +15.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Louisville Cardinals vs SMU Mustangs",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-19T19:30:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Louisville Cardinals",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "SMU Mustangs",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Louisville Cardinals -0.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "SMU Mustangs +0.5",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Auburn Tigers vs Florida Gators",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-19T23:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Auburn Tigers",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Florida Gators",
+              "cuota": 1.85
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Auburn Tigers -0.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Florida Gators +0.5",
+              "cuota": 1.83
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Ole Miss Rebels vs LSU Tigers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-19T23:30:00Z",
+      "bookmaker": "Paddy Power",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "LSU Tigers",
+              "cuota": 2.1
+            },
+            {
+              "nombre": "Ole Miss Rebels",
+              "cuota": 1.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Georgia Bulldogs vs Oklahoma Sooners",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-26T16:00:00Z",
+      "bookmaker": "Coolbet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Georgia Bulldogs",
+              "cuota": 1.24
+            },
+            {
+              "nombre": "Oklahoma Sooners",
+              "cuota": 4.1
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Georgia Bulldogs -10.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Oklahoma Sooners +10.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 52.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 52.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "LSU Tigers vs Texas A&M Aggies",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-26T16:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "LSU Tigers",
+              "cuota": 1.57
+            },
+            {
+              "nombre": "Texas A&M Aggies",
+              "cuota": 2.25
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "LSU Tigers -3.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Texas A&M Aggies +3.5",
+              "cuota": 1.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Tennessee Volunteers vs Texas Longhorns",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-09-26T16:00:00Z",
+      "bookmaker": "LeoVegas",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Tennessee Volunteers",
+              "cuota": 2.85
+            },
+            {
+              "nombre": "Texas Longhorns",
+              "cuota": 1.35
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Tennessee Volunteers +6.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Texas Longhorns -6.5",
+              "cuota": 1.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Clemson Tigers vs Miami Hurricanes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-03T16:00:00Z",
+      "bookmaker": "Ladbrokes",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Clemson Tigers +7.0",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "Miami Hurricanes -7.0",
+              "cuota": 1.85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "North Carolina Tar Heels vs Notre Dame Fighting Irish",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-03T16:00:00Z",
+      "bookmaker": "Coolbet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "North Carolina Tar Heels",
+              "cuota": 11.5
+            },
+            {
+              "nombre": "Notre Dame Fighting Irish",
+              "cuota": 1.04
+            }
+          ]
+        },
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "North Carolina Tar Heels +23.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Notre Dame Fighting Irish -23.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 55.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 55.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Alabama Crimson Tide vs Georgia Bulldogs",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-10T16:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Alabama Crimson Tide",
+              "cuota": 2.15
+            },
+            {
+              "nombre": "Georgia Bulldogs",
+              "cuota": 1.67
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Texas Longhorns vs Oklahoma Sooners",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-10T16:00:00Z",
+      "bookmaker": "Ladbrokes",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Oklahoma Sooners +6.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Texas Longhorns -6.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 48.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 48.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Penn State Nittany Lions vs USC Trojans",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-10T16:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Penn State Nittany Lions",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "USC Trojans",
+              "cuota": 1.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Tennessee Volunteers vs Alabama Crimson Tide",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-17T16:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Alabama Crimson Tide",
+              "cuota": 1.84
+            },
+            {
+              "nombre": "Tennessee Volunteers",
+              "cuota": 1.94
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Georgia Bulldogs vs Auburn Tigers",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-17T16:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Auburn Tigers",
+              "cuota": 6.4
+            },
+            {
+              "nombre": "Georgia Bulldogs",
+              "cuota": 1.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "BYU Cougars vs Notre Dame Fighting Irish",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-17T16:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "BYU Cougars",
+              "cuota": 4.0
+            },
+            {
+              "nombre": "Notre Dame Fighting Irish",
+              "cuota": 1.23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Indiana Hoosiers vs Ohio State Buckeyes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-10-17T16:00:00Z",
+      "bookmaker": "Ladbrokes",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Indiana Hoosiers +1.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Ohio State Buckeyes -1.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 48.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 48.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Notre Dame Fighting Irish vs Miami Hurricanes",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-11-08T00:30:00Z",
+      "bookmaker": "Ladbrokes",
+      "mercados": [
+        {
+          "mercado": "Spread",
+          "selecciones": [
+            {
+              "nombre": "Miami Hurricanes +6.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Notre Dame Fighting Irish -6.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 54.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 54.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Ohio State Buckeyes vs Michigan Wolverines",
+      "deporte": "Fútbol americano",
+      "competicion": "NCAA Fútbol Americano",
+      "hora": "2026-11-28T17:00:00Z",
+      "bookmaker": "Unibet (UK)",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Michigan Wolverines",
+              "cuota": 4.75
+            },
+            {
+              "nombre": "Ohio State Buckeyes",
+              "cuota": 1.17
+            }
+          ]
+        }
+      ]
+    },
+    {
       "nombre": "Louie Sutherland vs Jose Montanha",
       "deporte": "MMA",
       "competicion": "MMA/UFC",
@@ -2590,11 +6089,11 @@
           "selecciones": [
             {
               "nombre": "Jose Montanha",
-              "cuota": 2.36
+              "cuota": 2.4
             },
             {
               "nombre": "Louie Sutherland",
-              "cuota": 1.63
+              "cuota": 1.61
             }
           ]
         }
@@ -2612,11 +6111,11 @@
           "selecciones": [
             {
               "nombre": "Alexia Thainara",
-              "cuota": 1.41
+              "cuota": 1.45
             },
             {
               "nombre": "Amanda Lemos",
-              "cuota": 3.05
+              "cuota": 2.86
             }
           ]
         }
@@ -2634,11 +6133,11 @@
           "selecciones": [
             {
               "nombre": "Billy Goff",
-              "cuota": 3.5
+              "cuota": 3.9
             },
             {
               "nombre": "Ty Miller",
-              "cuota": 1.33
+              "cuota": 1.28
             }
           ]
         }
@@ -2656,11 +6155,11 @@
           "selecciones": [
             {
               "nombre": "Billy Quarantillo",
-              "cuota": 2.42
+              "cuota": 2.49
             },
             {
               "nombre": "Carlos Diego Ferreira",
-              "cuota": 1.6
+              "cuota": 1.57
             }
           ]
         }
@@ -2678,7 +6177,7 @@
           "selecciones": [
             {
               "nombre": "Bruno Lopes",
-              "cuota": 2.29
+              "cuota": 2.3
             },
             {
               "nombre": "Diyar Nurgozhay",
@@ -2722,11 +6221,11 @@
           "selecciones": [
             {
               "nombre": "Guilherme Pat",
-              "cuota": 2.97
+              "cuota": 3.11
             },
             {
               "nombre": "Steven Asplund",
-              "cuota": 1.42
+              "cuota": 1.39
             }
           ]
         }
@@ -2744,11 +6243,11 @@
           "selecciones": [
             {
               "nombre": "Juliana Miller",
-              "cuota": 1.4
+              "cuota": 1.37
             },
             {
               "nombre": "Ravena Oliveira",
-              "cuota": 3.09
+              "cuota": 3.23
             }
           ]
         }
@@ -2766,11 +6265,11 @@
           "selecciones": [
             {
               "nombre": "Manoel Sousa",
-              "cuota": 1.37
+              "cuota": 1.38
             },
             {
               "nombre": "Richie Miranda",
-              "cuota": 3.23
+              "cuota": 3.21
             }
           ]
         }
@@ -3380,7 +6879,7 @@
             },
             {
               "nombre": "Etinosa Oliha",
-              "cuota": 3.3
+              "cuota": 3.45
             },
             {
               "nombre": "Draw",
@@ -3393,15 +6892,15 @@
           "selecciones": [
             {
               "nombre": "Aaron Mckenna",
-              "cuota": 1.47
+              "cuota": 1.46
             },
             {
               "nombre": "Etinosa Oliha",
-              "cuota": 5.4
+              "cuota": 5.3
             },
             {
               "nombre": "Draw",
-              "cuota": 60.0
+              "cuota": 50.0
             }
           ]
         }
@@ -3419,7 +6918,7 @@
           "selecciones": [
             {
               "nombre": "Amanda Galle",
-              "cuota": 1.02
+              "cuota": 1.58
             },
             {
               "nombre": "Shurretta Metcalf",
@@ -3466,7 +6965,7 @@
             },
             {
               "nombre": "Troy Williamson",
-              "cuota": 2.08
+              "cuota": 2.38
             },
             {
               "nombre": "Draw",
@@ -3479,7 +6978,7 @@
           "selecciones": [
             {
               "nombre": "Callum Simpson",
-              "cuota": 2.0
+              "cuota": 1.8
             },
             {
               "nombre": "Troy Williamson",
@@ -3487,7 +6986,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 46.0
+              "cuota": 44.0
             }
           ]
         }
@@ -3505,11 +7004,11 @@
           "selecciones": [
             {
               "nombre": "Callum Walsh",
-              "cuota": 1.22
+              "cuota": 1.18
             },
             {
               "nombre": "Tyler Denny",
-              "cuota": 3.75
+              "cuota": 4.0
             },
             {
               "nombre": "Draw",
@@ -3522,7 +7021,7 @@
           "selecciones": [
             {
               "nombre": "Callum Walsh",
-              "cuota": 1.46
+              "cuota": 1.43
             },
             {
               "nombre": "Tyler Denny",
@@ -3530,7 +7029,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 85.0
+              "cuota": 70.0
             }
           ]
         }
@@ -3548,11 +7047,11 @@
           "selecciones": [
             {
               "nombre": "Desley Robinson",
-              "cuota": 3.5
+              "cuota": 3.75
             },
             {
               "nombre": "Tammara Thibeault",
-              "cuota": 1.01
+              "cuota": 1.28
             },
             {
               "nombre": "Draw",
@@ -3565,15 +7064,15 @@
           "selecciones": [
             {
               "nombre": "Desley Robinson",
-              "cuota": 990.0
+              "cuota": 5.8
             },
             {
               "nombre": "Tammara Thibeault",
-              "cuota": 1.47
+              "cuota": 1.45
             },
             {
               "nombre": "Draw",
-              "cuota": 70.0
+              "cuota": 65.0
             }
           ]
         }
@@ -3591,15 +7090,15 @@
           "selecciones": [
             {
               "nombre": "Cherneka Johnson",
-              "cuota": 1.89
+              "cuota": 1.91
             },
             {
               "nombre": "Dina Thorslund",
-              "cuota": 1.75
+              "cuota": 2.0
             },
             {
               "nombre": "Draw",
-              "cuota": 12.0
+              "cuota": 13.0
             }
           ]
         },
@@ -3608,11 +7107,11 @@
           "selecciones": [
             {
               "nombre": "Cherneka Johnson",
-              "cuota": 2.5
+              "cuota": 2.38
             },
             {
               "nombre": "Dina Thorslund",
-              "cuota": 2.6
+              "cuota": 2.52
             },
             {
               "nombre": "Draw",
@@ -3728,7 +7227,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 60.0
+              "cuota": 29.0
             }
           ]
         }
@@ -4077,7 +7576,7 @@
             },
             {
               "nombre": "Tyrone McKenna",
-              "cuota": 9.0
+              "cuota": 9.2
             },
             {
               "nombre": "Draw",
@@ -4163,7 +7662,7 @@
             },
             {
               "nombre": "Katie Taylor",
-              "cuota": 1.06
+              "cuota": 1.08
             },
             {
               "nombre": "Draw",
@@ -4202,15 +7701,15 @@
           "selecciones": [
             {
               "nombre": "Conor Benn",
-              "cuota": 3.9
+              "cuota": 4.0
             },
             {
               "nombre": "Ryan Garcia",
-              "cuota": 1.36
+              "cuota": 1.35
             },
             {
               "nombre": "Draw",
-              "cuota": 22.0
+              "cuota": 23.0
             }
           ]
         },
@@ -4219,7 +7718,7 @@
           "selecciones": [
             {
               "nombre": "Conor Benn",
-              "cuota": 4.2
+              "cuota": 4.3
             },
             {
               "nombre": "Ryan Garcia",
@@ -4227,7 +7726,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 46.0
+              "cuota": 40.0
             }
           ]
         }
@@ -4245,7 +7744,7 @@
           "selecciones": [
             {
               "nombre": "Canelo Álvarez",
-              "cuota": 1.31
+              "cuota": 1.37
             },
             {
               "nombre": "Christian Mbilli",
@@ -4253,7 +7752,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 1.28
+              "cuota": 15.0
             }
           ]
         },
@@ -4270,7 +7769,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 100.0
+              "cuota": 95.0
             }
           ]
         }
@@ -4955,11 +8454,11 @@
           "selecciones": [
             {
               "nombre": "Gold Coast Titans",
-              "cuota": 2.28
+              "cuota": 2.34
             },
             {
               "nombre": "North Queensland Cowboys",
-              "cuota": 1.65
+              "cuota": 1.61
             },
             {
               "nombre": "Draw",
@@ -5007,15 +8506,15 @@
           "selecciones": [
             {
               "nombre": "Canterbury Bulldogs",
-              "cuota": 3.52
+              "cuota": 3.2
             },
             {
               "nombre": "Sydney Roosters",
-              "cuota": 1.3
+              "cuota": 1.35
             },
             {
               "nombre": "Draw",
-              "cuota": 31.0
+              "cuota": 30.0
             }
           ]
         }
@@ -5033,15 +8532,15 @@
           "selecciones": [
             {
               "nombre": "Manly Warringah Sea Eagles",
-              "cuota": 1.94
+              "cuota": 1.61
             },
             {
               "nombre": "Melbourne Storm",
-              "cuota": 1.88
+              "cuota": 2.34
             },
             {
               "nombre": "Draw",
-              "cuota": 27.0
+              "cuota": 26.0
             }
           ]
         }
@@ -5059,15 +8558,15 @@
           "selecciones": [
             {
               "nombre": "Brisbane Broncos",
-              "cuota": 2.85
+              "cuota": 2.76
             },
             {
               "nombre": "Dolphins",
-              "cuota": 1.43
+              "cuota": 1.45
             },
             {
               "nombre": "Draw",
-              "cuota": 28.0
+              "cuota": 29.0
             }
           ]
         }
@@ -5085,15 +8584,15 @@
           "selecciones": [
             {
               "nombre": "Parramatta Eels",
-              "cuota": 2.85
+              "cuota": 2.79
             },
             {
               "nombre": "South Sydney Rabbitohs",
-              "cuota": 1.43
+              "cuota": 1.44
             },
             {
               "nombre": "Draw",
-              "cuota": 28.0
+              "cuota": 30.0
             }
           ]
         }
@@ -5111,11 +8610,11 @@
           "selecciones": [
             {
               "nombre": "Canberra Raiders",
-              "cuota": 1.53
+              "cuota": 1.64
             },
             {
               "nombre": "Newcastle Knights",
-              "cuota": 2.51
+              "cuota": 2.27
             },
             {
               "nombre": "Draw",
