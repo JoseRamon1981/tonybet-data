@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 07:01",
+  "updated_at": "2026-08-03 12:30",
   "total": 261,
   "events": [
     {
@@ -40,11 +40,11 @@
           "selecciones": [
             {
               "nombre": "Montréal Canadiens",
-              "cuota": 2.5
+              "cuota": 2.51
             },
             {
               "nombre": "Toronto Maple Leafs",
-              "cuota": 2.45
+              "cuota": 2.44
             },
             {
               "nombre": "Draw",
@@ -460,7 +460,7 @@
             },
             {
               "nombre": "Washington Nationals",
-              "cuota": 2.32
+              "cuota": 2.36
             }
           ]
         },
@@ -469,7 +469,7 @@
           "selecciones": [
             {
               "nombre": "Philadelphia Phillies",
-              "cuota": 1.76
+              "cuota": 1.73
             },
             {
               "nombre": "Washington Nationals",
@@ -491,11 +491,11 @@
           "selecciones": [
             {
               "nombre": "New York Yankees",
-              "cuota": 1.52
+              "cuota": 1.51
             },
             {
               "nombre": "St. Louis Cardinals",
-              "cuota": 2.73
+              "cuota": 2.76
             }
           ]
         },
@@ -504,11 +504,11 @@
           "selecciones": [
             {
               "nombre": "New York Yankees -1.5",
-              "cuota": 2.12
+              "cuota": 2.09
             },
             {
               "nombre": "St. Louis Cardinals +1.5",
-              "cuota": 1.79
+              "cuota": 1.81
             }
           ]
         },
@@ -517,11 +517,11 @@
           "selecciones": [
             {
               "nombre": "Over 8.0",
-              "cuota": 1.99
+              "cuota": 2.01
             },
             {
               "nombre": "Under 8.0",
-              "cuota": 1.88
+              "cuota": 1.86
             }
           ]
         }
@@ -539,11 +539,11 @@
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers",
-              "cuota": 1.71
+              "cuota": 1.7
             },
             {
               "nombre": "Pittsburgh Pirates",
-              "cuota": 2.27
+              "cuota": 2.29
             }
           ]
         },
@@ -552,7 +552,7 @@
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers -1.5",
-              "cuota": 2.45
+              "cuota": 2.44
             },
             {
               "nombre": "Pittsburgh Pirates +1.5",
@@ -564,12 +564,12 @@
           "mercado": "Total carreras",
           "selecciones": [
             {
-              "nombre": "Over 8.5",
-              "cuota": 2.01
+              "nombre": "Over 8.0",
+              "cuota": 1.86
             },
             {
-              "nombre": "Under 8.5",
-              "cuota": 1.86
+              "nombre": "Under 8.0",
+              "cuota": 2.01
             }
           ]
         }
@@ -587,11 +587,11 @@
           "selecciones": [
             {
               "nombre": "Chicago Cubs",
-              "cuota": 2.16
+              "cuota": 2.14
             },
             {
               "nombre": "Los Angeles Dodgers",
-              "cuota": 1.82
+              "cuota": 1.84
             }
           ]
         },
@@ -600,7 +600,7 @@
           "selecciones": [
             {
               "nombre": "Chicago Cubs",
-              "cuota": 2.24
+              "cuota": 2.18
             },
             {
               "nombre": "Los Angeles Dodgers",
@@ -626,7 +626,7 @@
             },
             {
               "nombre": "Texas Rangers",
-              "cuota": 1.92
+              "cuota": 1.97
             }
           ]
         },
@@ -635,7 +635,7 @@
           "selecciones": [
             {
               "nombre": "San Francisco Giants",
-              "cuota": 2.08
+              "cuota": 2.04
             },
             {
               "nombre": "Texas Rangers",
@@ -657,11 +657,11 @@
           "selecciones": [
             {
               "nombre": "Houston Astros",
-              "cuota": 1.77
+              "cuota": 1.76
             },
             {
               "nombre": "Toronto Blue Jays",
-              "cuota": 2.18
+              "cuota": 2.19
             }
           ]
         },
@@ -670,7 +670,7 @@
           "selecciones": [
             {
               "nombre": "Houston Astros -1.5",
-              "cuota": 2.54
+              "cuota": 2.53
             },
             {
               "nombre": "Toronto Blue Jays +1.5",
@@ -687,7 +687,7 @@
             },
             {
               "nombre": "Under 9.0",
-              "cuota": 2.03
+              "cuota": 2.02
             }
           ]
         }
@@ -705,11 +705,11 @@
           "selecciones": [
             {
               "nombre": "Colorado Rockies",
-              "cuota": 2.39
+              "cuota": 2.41
             },
             {
               "nombre": "Tampa Bay Rays",
-              "cuota": 1.65
+              "cuota": 1.64
             }
           ]
         },
@@ -722,7 +722,7 @@
             },
             {
               "nombre": "Tampa Bay Rays -1.5",
-              "cuota": 1.96
+              "cuota": 1.95
             }
           ]
         },
@@ -731,11 +731,11 @@
           "selecciones": [
             {
               "nombre": "Over 11.5",
-              "cuota": 2.01
+              "cuota": 1.99
             },
             {
               "nombre": "Under 11.5",
-              "cuota": 1.87
+              "cuota": 1.88
             }
           ]
         }
@@ -757,7 +757,7 @@
             },
             {
               "nombre": "San Diego Padres",
-              "cuota": 2.01
+              "cuota": 2.0
             }
           ]
         },
@@ -779,11 +779,11 @@
           "selecciones": [
             {
               "nombre": "Over 8.5",
-              "cuota": 1.83
+              "cuota": 1.92
             },
             {
               "nombre": "Under 8.5",
-              "cuota": 2.05
+              "cuota": 1.95
             }
           ]
         }
@@ -1687,11 +1687,11 @@
           "selecciones": [
             {
               "nombre": "Philadelphia Eagles",
-              "cuota": 1.43
+              "cuota": 1.42
             },
             {
               "nombre": "Tennessee Titans",
-              "cuota": 2.62
+              "cuota": 2.67
             }
           ]
         },
@@ -2157,11 +2157,11 @@
           "selecciones": [
             {
               "nombre": "San Jose State Spartans +36.0",
-              "cuota": 1.96
+              "cuota": 1.98
             },
             {
               "nombre": "USC Trojans -36.0",
-              "cuota": 1.89
+              "cuota": 1.88
             }
           ]
         },
@@ -2170,11 +2170,11 @@
           "selecciones": [
             {
               "nombre": "Over 59.5",
-              "cuota": 1.9
+              "cuota": 1.89
             },
             {
               "nombre": "Under 59.5",
-              "cuota": 1.92
+              "cuota": 1.93
             }
           ]
         }
@@ -2624,7 +2624,7 @@
             },
             {
               "nombre": "Merrimack Warriors",
-              "cuota": 10.0
+              "cuota": 9.5
             }
           ]
         },
@@ -2685,7 +2685,7 @@
             },
             {
               "nombre": "West Georgia Wolves +23.5",
-              "cuota": 1.88
+              "cuota": 1.9
             }
           ]
         },
@@ -2943,7 +2943,7 @@
             },
             {
               "nombre": "North Carolina A&T Aggies",
-              "cuota": 9.0
+              "cuota": 9.5
             }
           ]
         },
@@ -2956,7 +2956,7 @@
             },
             {
               "nombre": "North Carolina A&T Aggies +27.5",
-              "cuota": 1.88
+              "cuota": 1.9
             }
           ]
         },
@@ -3184,7 +3184,7 @@
             },
             {
               "nombre": "Tarleton State Texans",
-              "cuota": 1.93
+              "cuota": 1.9
             }
           ]
         },
@@ -3355,7 +3355,7 @@
           "selecciones": [
             {
               "nombre": "Lafayette Leopards",
-              "cuota": 6.7
+              "cuota": 6.5
             },
             {
               "nombre": "UConn Huskies",
@@ -3473,7 +3473,7 @@
           "selecciones": [
             {
               "nombre": "New Hampshire Wildcats",
-              "cuota": 10.0
+              "cuota": 10.5
             },
             {
               "nombre": "Syracuse Orange",
@@ -3678,7 +3678,7 @@
             },
             {
               "nombre": "Youngstown St Penguins +23.5",
-              "cuota": 1.88
+              "cuota": 1.9
             }
           ]
         },
@@ -3709,7 +3709,7 @@
           "selecciones": [
             {
               "nombre": "Rhode Island Rams",
-              "cuota": 3.9
+              "cuota": 3.95
             },
             {
               "nombre": "Temple Owls",
@@ -3761,7 +3761,7 @@
             },
             {
               "nombre": "Maine Black Bears",
-              "cuota": 6.0
+              "cuota": 6.1
             }
           ]
         },
@@ -3888,7 +3888,7 @@
             },
             {
               "nombre": "Citadel Bulldogs",
-              "cuota": 4.3
+              "cuota": 4.25
             }
           ]
         },
@@ -4006,7 +4006,7 @@
             },
             {
               "nombre": "Towson Tigers",
-              "cuota": 10.0
+              "cuota": 10.5
             }
           ]
         },
@@ -4203,7 +4203,7 @@
           "selecciones": [
             {
               "nombre": "Alcorn State Braves",
-              "cuota": 7.5
+              "cuota": 7.6
             },
             {
               "nombre": "Southern Mississippi Golden Eagles",
@@ -4321,7 +4321,7 @@
           "selecciones": [
             {
               "nombre": "Austin Peay Governors",
-              "cuota": 10.0
+              "cuota": 10.5
             },
             {
               "nombre": "Vanderbilt Commodores",
@@ -4369,7 +4369,7 @@
           "selecciones": [
             {
               "nombre": "Charleston Southern Buccaneers",
-              "cuota": 9.0
+              "cuota": 9.5
             },
             {
               "nombre": "Georgia Southern Eagles",
@@ -4417,7 +4417,7 @@
           "selecciones": [
             {
               "nombre": "Eastern Kentucky Colonels",
-              "cuota": 6.7
+              "cuota": 6.8
             },
             {
               "nombre": "Jacksonville State Gamecocks",
@@ -4430,7 +4430,7 @@
           "selecciones": [
             {
               "nombre": "Eastern Kentucky Colonels +20.5",
-              "cuota": 1.88
+              "cuota": 1.9
             },
             {
               "nombre": "Jacksonville State Gamecocks -20.5",
@@ -4500,7 +4500,7 @@
           "selecciones": [
             {
               "nombre": "Houston Baptist Huskies +24.5",
-              "cuota": 1.85
+              "cuota": 1.83
             },
             {
               "nombre": "Rice Owls -24.5",
@@ -4535,7 +4535,7 @@
           "selecciones": [
             {
               "nombre": "Idaho State Bengals",
-              "cuota": 5.8
+              "cuota": 5.7
             },
             {
               "nombre": "Utah State Aggies",
@@ -4740,7 +4740,7 @@
             },
             {
               "nombre": "Southeastern Louisiana Lions",
-              "cuota": 4.1
+              "cuota": 4.2
             }
           ]
         },
@@ -4876,7 +4876,7 @@
           "selecciones": [
             {
               "nombre": "Lamar Cardinals",
-              "cuota": 6.0
+              "cuota": 5.9
             },
             {
               "nombre": "Louisiana Ragin Cajuns",
@@ -4928,7 +4928,7 @@
             },
             {
               "nombre": "South Dakota State Jackrabbits",
-              "cuota": 4.6
+              "cuota": 4.55
             }
           ]
         },
@@ -6111,11 +6111,11 @@
           "selecciones": [
             {
               "nombre": "Alexia Thainara",
-              "cuota": 1.45
+              "cuota": 1.44
             },
             {
               "nombre": "Amanda Lemos",
-              "cuota": 2.86
+              "cuota": 2.89
             }
           ]
         }
@@ -6199,7 +6199,7 @@
           "selecciones": [
             {
               "nombre": "Darren Elkins",
-              "cuota": 5.88
+              "cuota": 5.95
             },
             {
               "nombre": "Yadier DelValle",
@@ -6879,7 +6879,7 @@
             },
             {
               "nombre": "Etinosa Oliha",
-              "cuota": 3.45
+              "cuota": 3.5
             },
             {
               "nombre": "Draw",
@@ -6892,11 +6892,11 @@
           "selecciones": [
             {
               "nombre": "Aaron Mckenna",
-              "cuota": 1.46
+              "cuota": 1.44
             },
             {
               "nombre": "Etinosa Oliha",
-              "cuota": 5.3
+              "cuota": 5.2
             },
             {
               "nombre": "Draw",
@@ -7107,11 +7107,11 @@
           "selecciones": [
             {
               "nombre": "Cherneka Johnson",
-              "cuota": 2.38
+              "cuota": 2.26
             },
             {
               "nombre": "Dina Thorslund",
-              "cuota": 2.52
+              "cuota": 2.38
             },
             {
               "nombre": "Draw",
@@ -7335,11 +7335,11 @@
             },
             {
               "nombre": "Mikaela Mayer",
-              "cuota": 1.35
+              "cuota": 1.48
             },
             {
               "nombre": "Draw",
-              "cuota": 1.33
+              "cuota": 1.46
             }
           ]
         },
@@ -7705,11 +7705,11 @@
             },
             {
               "nombre": "Ryan Garcia",
-              "cuota": 1.35
+              "cuota": 1.36
             },
             {
               "nombre": "Draw",
-              "cuota": 23.0
+              "cuota": 24.0
             }
           ]
         },
@@ -7718,7 +7718,7 @@
           "selecciones": [
             {
               "nombre": "Conor Benn",
-              "cuota": 4.3
+              "cuota": 4.2
             },
             {
               "nombre": "Ryan Garcia",
@@ -7787,7 +7787,7 @@
           "selecciones": [
             {
               "nombre": "Anthony Joshua",
-              "cuota": 2.84
+              "cuota": 2.86
             },
             {
               "nombre": "Tyson Fury",
@@ -7795,7 +7795,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 26.0
+              "cuota": 27.0
             }
           ]
         },
@@ -7808,11 +7808,11 @@
             },
             {
               "nombre": "Tyson Fury",
-              "cuota": 1.62
+              "cuota": 1.61
             },
             {
               "nombre": "Draw",
-              "cuota": 65.0
+              "cuota": 60.0
             }
           ]
         }
@@ -8454,15 +8454,15 @@
           "selecciones": [
             {
               "nombre": "Gold Coast Titans",
-              "cuota": 2.34
+              "cuota": 2.4
             },
             {
               "nombre": "North Queensland Cowboys",
-              "cuota": 1.61
+              "cuota": 1.59
             },
             {
               "nombre": "Draw",
-              "cuota": 25.0
+              "cuota": 26.0
             }
           ]
         }
@@ -8536,7 +8536,7 @@
             },
             {
               "nombre": "Melbourne Storm",
-              "cuota": 2.34
+              "cuota": 2.35
             },
             {
               "nombre": "Draw",
@@ -8558,15 +8558,15 @@
           "selecciones": [
             {
               "nombre": "Brisbane Broncos",
-              "cuota": 2.76
+              "cuota": 2.88
             },
             {
               "nombre": "Dolphins",
-              "cuota": 1.45
+              "cuota": 1.42
             },
             {
               "nombre": "Draw",
-              "cuota": 29.0
+              "cuota": 30.0
             }
           ]
         }
