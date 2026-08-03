@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-03 17:01",
-  "total": 264,
+  "updated_at": "2026-08-03 21:48",
+  "total": 271,
   "events": [
     {
       "nombre": "Carolina Hurricanes vs Florida Panthers",
@@ -522,11 +522,11 @@
           "selecciones": [
             {
               "nombre": "Philadelphia Phillies",
-              "cuota": 1.62
+              "cuota": 1.67
             },
             {
               "nombre": "Washington Nationals",
-              "cuota": 2.45
+              "cuota": 2.37
             }
           ]
         },
@@ -535,11 +535,11 @@
           "selecciones": [
             {
               "nombre": "Philadelphia Phillies -1.5",
-              "cuota": 2.27
+              "cuota": 2.35
             },
             {
               "nombre": "Washington Nationals +1.5",
-              "cuota": 1.7
+              "cuota": 1.67
             }
           ]
         },
@@ -548,11 +548,11 @@
           "selecciones": [
             {
               "nombre": "Over 9.0",
-              "cuota": 1.84
+              "cuota": 1.88
             },
             {
               "nombre": "Under 9.0",
-              "cuota": 2.04
+              "cuota": 2.01
             }
           ]
         }
@@ -574,7 +574,7 @@
             },
             {
               "nombre": "St. Louis Cardinals",
-              "cuota": 2.91
+              "cuota": 2.89
             }
           ]
         },
@@ -583,7 +583,7 @@
           "selecciones": [
             {
               "nombre": "New York Yankees -1.5",
-              "cuota": 2.01
+              "cuota": 2.0
             },
             {
               "nombre": "St. Louis Cardinals +1.5",
@@ -596,11 +596,11 @@
           "selecciones": [
             {
               "nombre": "Over 8.0",
-              "cuota": 2.02
+              "cuota": 2.01
             },
             {
               "nombre": "Under 8.0",
-              "cuota": 1.87
+              "cuota": 1.88
             }
           ]
         }
@@ -618,11 +618,11 @@
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers",
-              "cuota": 1.71
+              "cuota": 1.7
             },
             {
               "nombre": "Pittsburgh Pirates",
-              "cuota": 2.29
+              "cuota": 2.31
             }
           ]
         },
@@ -631,11 +631,11 @@
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers -1.5",
-              "cuota": 2.45
+              "cuota": 2.43
             },
             {
               "nombre": "Pittsburgh Pirates +1.5",
-              "cuota": 1.62
+              "cuota": 1.63
             }
           ]
         },
@@ -643,12 +643,12 @@
           "mercado": "Total carreras",
           "selecciones": [
             {
-              "nombre": "Over 8.0",
-              "cuota": 1.9
+              "nombre": "Over 8.5",
+              "cuota": 2.0
             },
             {
-              "nombre": "Under 8.0",
-              "cuota": 1.99
+              "nombre": "Under 8.5",
+              "cuota": 1.89
             }
           ]
         }
@@ -666,11 +666,11 @@
           "selecciones": [
             {
               "nombre": "Chicago Cubs",
-              "cuota": 2.12
+              "cuota": 2.09
             },
             {
               "nombre": "Los Angeles Dodgers",
-              "cuota": 1.83
+              "cuota": 1.85
             }
           ]
         },
@@ -679,11 +679,11 @@
           "selecciones": [
             {
               "nombre": "Chicago Cubs +1.5",
-              "cuota": 1.65
+              "cuota": 1.64
             },
             {
               "nombre": "Los Angeles Dodgers -1.5",
-              "cuota": 2.38
+              "cuota": 2.4
             }
           ]
         },
@@ -692,11 +692,11 @@
           "selecciones": [
             {
               "nombre": "Over 8.0",
-              "cuota": 1.95
+              "cuota": 1.93
             },
             {
               "nombre": "Under 8.0",
-              "cuota": 1.93
+              "cuota": 1.95
             }
           ]
         }
@@ -714,11 +714,11 @@
           "selecciones": [
             {
               "nombre": "San Francisco Giants",
-              "cuota": 2.08
+              "cuota": 2.1
             },
             {
               "nombre": "Texas Rangers",
-              "cuota": 1.85
+              "cuota": 1.84
             }
           ]
         },
@@ -727,11 +727,11 @@
           "selecciones": [
             {
               "nombre": "San Francisco Giants +1.5",
-              "cuota": 1.49
+              "cuota": 1.5
             },
             {
               "nombre": "Texas Rangers -1.5",
-              "cuota": 2.81
+              "cuota": 2.79
             }
           ]
         },
@@ -740,11 +740,11 @@
           "selecciones": [
             {
               "nombre": "Over 8.0",
-              "cuota": 1.88
+              "cuota": 1.94
             },
             {
               "nombre": "Under 8.0",
-              "cuota": 2.01
+              "cuota": 1.94
             }
           ]
         }
@@ -762,11 +762,11 @@
           "selecciones": [
             {
               "nombre": "Houston Astros",
-              "cuota": 1.8
+              "cuota": 1.79
             },
             {
               "nombre": "Toronto Blue Jays",
-              "cuota": 2.15
+              "cuota": 2.16
             }
           ]
         },
@@ -775,11 +775,11 @@
           "selecciones": [
             {
               "nombre": "Houston Astros -1.5",
-              "cuota": 2.58
+              "cuota": 2.56
             },
             {
               "nombre": "Toronto Blue Jays +1.5",
-              "cuota": 1.56
+              "cuota": 1.57
             }
           ]
         },
@@ -810,11 +810,11 @@
           "selecciones": [
             {
               "nombre": "Colorado Rockies",
-              "cuota": 2.49
+              "cuota": 2.56
             },
             {
               "nombre": "Tampa Bay Rays",
-              "cuota": 1.62
+              "cuota": 1.59
             }
           ]
         },
@@ -823,11 +823,11 @@
           "selecciones": [
             {
               "nombre": "Colorado Rockies +1.5",
-              "cuota": 2.0
+              "cuota": 2.04
             },
             {
               "nombre": "Tampa Bay Rays -1.5",
-              "cuota": 1.9
+              "cuota": 1.87
             }
           ]
         },
@@ -836,11 +836,11 @@
           "selecciones": [
             {
               "nombre": "Over 11.5",
-              "cuota": 1.99
+              "cuota": 2.02
             },
             {
               "nombre": "Under 11.5",
-              "cuota": 1.9
+              "cuota": 1.87
             }
           ]
         }
@@ -858,11 +858,11 @@
           "selecciones": [
             {
               "nombre": "Arizona Diamondbacks",
-              "cuota": 1.87
+              "cuota": 1.88
             },
             {
               "nombre": "San Diego Padres",
-              "cuota": 2.06
+              "cuota": 2.04
             }
           ]
         },
@@ -871,11 +871,11 @@
           "selecciones": [
             {
               "nombre": "Arizona Diamondbacks -1.5",
-              "cuota": 2.81
+              "cuota": 2.83
             },
             {
               "nombre": "San Diego Padres +1.5",
-              "cuota": 1.49
+              "cuota": 1.48
             }
           ]
         },
@@ -884,11 +884,165 @@
           "selecciones": [
             {
               "nombre": "Over 9.0",
-              "cuota": 1.95
+              "cuota": 2.01
             },
             {
               "nombre": "Under 9.0",
-              "cuota": 1.93
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Cincinnati Reds vs Athletics",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T22:40:00Z",
+      "bookmaker": "William Hill",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Athletics",
+              "cuota": 2.1
+            },
+            {
+              "nombre": "Cincinnati Reds",
+              "cuota": 1.73
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Cleveland Guardians vs New York Mets",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T22:40:00Z",
+      "bookmaker": "William Hill",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Cleveland Guardians",
+              "cuota": 1.73
+            },
+            {
+              "nombre": "New York Mets",
+              "cuota": 2.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Philadelphia Phillies vs Washington Nationals",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T22:40:00Z",
+      "bookmaker": "William Hill",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Philadelphia Phillies",
+              "cuota": 1.44
+            },
+            {
+              "nombre": "Washington Nationals",
+              "cuota": 2.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Milwaukee Brewers vs Pittsburgh Pirates",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T23:40:00Z",
+      "bookmaker": "William Hill",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Milwaukee Brewers",
+              "cuota": 1.57
+            },
+            {
+              "nombre": "Pittsburgh Pirates",
+              "cuota": 2.38
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Kansas City Royals vs Minnesota Twins",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T23:41:00Z",
+      "bookmaker": "William Hill",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Kansas City Royals",
+              "cuota": 2.2
+            },
+            {
+              "nombre": "Minnesota Twins",
+              "cuota": 1.67
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Chicago Cubs vs Los Angeles Dodgers",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-05T00:06:00Z",
+      "bookmaker": "William Hill",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Chicago Cubs",
+              "cuota": 2.6
+            },
+            {
+              "nombre": "Los Angeles Dodgers",
+              "cuota": 1.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Houston Astros vs Toronto Blue Jays",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-05T00:11:00Z",
+      "bookmaker": "William Hill",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Houston Astros",
+              "cuota": 1.73
+            },
+            {
+              "nombre": "Toronto Blue Jays",
+              "cuota": 2.1
             }
           ]
         }
@@ -1757,11 +1911,11 @@
           "selecciones": [
             {
               "nombre": "Baltimore Ravens -7.5",
-              "cuota": 1.88
+              "cuota": 1.87
             },
             {
               "nombre": "New Orleans Saints +7.5",
-              "cuota": 1.82
+              "cuota": 1.83
             }
           ]
         },
@@ -1792,11 +1946,11 @@
           "selecciones": [
             {
               "nombre": "Philadelphia Eagles",
-              "cuota": 1.42
+              "cuota": 1.43
             },
             {
               "nombre": "Tennessee Titans",
-              "cuota": 2.67
+              "cuota": 2.62
             }
           ]
         },
@@ -3056,12 +3210,12 @@
           "mercado": "Spread",
           "selecciones": [
             {
-              "nombre": "Georgia State Panthers -28.5",
-              "cuota": 1.83
+              "nombre": "Georgia State Panthers -30.5",
+              "cuota": 1.85
             },
             {
-              "nombre": "North Carolina A&T Aggies +28.5",
-              "cuota": 1.85
+              "nombre": "North Carolina A&T Aggies +30.5",
+              "cuota": 1.83
             }
           ]
         },
@@ -3069,11 +3223,11 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 59.5",
+              "nombre": "Over 63.5",
               "cuota": 1.88
             },
             {
-              "nombre": "Under 59.5",
+              "nombre": "Under 63.5",
               "cuota": 1.8
             }
           ]
@@ -3092,7 +3246,7 @@
           "selecciones": [
             {
               "nombre": "Indiana State Sycamores",
-              "cuota": 46.0
+              "cuota": 41.0
             }
           ]
         }
@@ -6259,7 +6413,7 @@
             },
             {
               "nombre": "Amanda Lemos",
-              "cuota": 2.89
+              "cuota": 2.92
             }
           ]
         }
@@ -6321,7 +6475,7 @@
           "selecciones": [
             {
               "nombre": "Bruno Lopes",
-              "cuota": 2.29
+              "cuota": 2.3
             },
             {
               "nombre": "Diyar Nurgozhay",
@@ -6365,11 +6519,11 @@
           "selecciones": [
             {
               "nombre": "Guilherme Pat",
-              "cuota": 3.11
+              "cuota": 3.28
             },
             {
               "nombre": "Steven Asplund",
-              "cuota": 1.39
+              "cuota": 1.36
             }
           ]
         }
@@ -6431,11 +6585,11 @@
           "selecciones": [
             {
               "nombre": "Mateusz Gamrot",
-              "cuota": 2.23
+              "cuota": 2.22
             },
             {
               "nombre": "Quillan Salkilld",
-              "cuota": 1.69
+              "cuota": 1.7
             }
           ]
         }
@@ -7019,11 +7173,11 @@
           "selecciones": [
             {
               "nombre": "Aaron Mckenna",
-              "cuota": 1.27
+              "cuota": 1.3
             },
             {
               "nombre": "Etinosa Oliha",
-              "cuota": 3.5
+              "cuota": 3.6
             },
             {
               "nombre": "Draw",
@@ -7040,7 +7194,7 @@
             },
             {
               "nombre": "Etinosa Oliha",
-              "cuota": 5.2
+              "cuota": 5.3
             },
             {
               "nombre": "Draw",
@@ -7105,7 +7259,7 @@
           "selecciones": [
             {
               "nombre": "Callum Simpson",
-              "cuota": 1.66
+              "cuota": 1.67
             },
             {
               "nombre": "Troy Williamson",
@@ -7126,7 +7280,7 @@
             },
             {
               "nombre": "Troy Williamson",
-              "cuota": 2.9
+              "cuota": 2.86
             },
             {
               "nombre": "Draw",
@@ -7212,7 +7366,7 @@
             },
             {
               "nombre": "Tammara Thibeault",
-              "cuota": 1.45
+              "cuota": 1.44
             },
             {
               "nombre": "Draw",
@@ -7234,11 +7388,11 @@
           "selecciones": [
             {
               "nombre": "Cherneka Johnson",
-              "cuota": 1.91
+              "cuota": 2.12
             },
             {
               "nombre": "Dina Thorslund",
-              "cuota": 2.0
+              "cuota": 1.96
             },
             {
               "nombre": "Draw",
@@ -7251,15 +7405,15 @@
           "selecciones": [
             {
               "nombre": "Cherneka Johnson",
-              "cuota": 2.26
+              "cuota": 2.42
             },
             {
               "nombre": "Dina Thorslund",
-              "cuota": 2.38
+              "cuota": 2.08
             },
             {
               "nombre": "Draw",
-              "cuota": 34.0
+              "cuota": 32.0
             }
           ]
         }
@@ -7346,11 +7500,11 @@
           "selecciones": [
             {
               "nombre": "Rolando Romero",
-              "cuota": 1.03
+              "cuota": 1.01
             },
             {
               "nombre": "Teofimo Lopéz",
-              "cuota": 1.03
+              "cuota": 1.01
             },
             {
               "nombre": "Draw",
@@ -7371,7 +7525,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 29.0
+              "cuota": 65.0
             }
           ]
         }
@@ -7810,7 +7964,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 1.11
+              "cuota": 3.6
             }
           ]
         },
@@ -7956,7 +8110,7 @@
             },
             {
               "nombre": "Draw",
-              "cuota": 60.0
+              "cuota": 55.0
             }
           ]
         }
