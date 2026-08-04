@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 21:48",
+  "updated_at": "2026-08-04 07:01",
   "total": 271,
   "events": [
     {
@@ -511,22 +511,57 @@
       ]
     },
     {
-      "nombre": "Philadelphia Phillies vs Washington Nationals",
+      "nombre": "Baltimore Orioles vs Los Angeles Angels",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-03T22:41:00Z",
+      "hora": "2026-08-04T22:36:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Baltimore Orioles",
+              "cuota": 1.73
+            },
+            {
+              "nombre": "Los Angeles Angels",
+              "cuota": 2.3
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Baltimore Orioles",
+              "cuota": 1.77
+            },
+            {
+              "nombre": "Los Angeles Angels",
+              "cuota": 2.44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Cincinnati Reds vs Athletics",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T22:40:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
-              "nombre": "Philadelphia Phillies",
-              "cuota": 1.67
+              "nombre": "Athletics",
+              "cuota": 2.18
             },
             {
-              "nombre": "Washington Nationals",
-              "cuota": 2.37
+              "nombre": "Cincinnati Reds",
+              "cuota": 1.77
             }
           ]
         },
@@ -534,12 +569,12 @@
           "mercado": "Hándicap",
           "selecciones": [
             {
-              "nombre": "Philadelphia Phillies -1.5",
-              "cuota": 2.35
+              "nombre": "Athletics +1.5",
+              "cuota": 1.58
             },
             {
-              "nombre": "Washington Nationals +1.5",
-              "cuota": 1.67
+              "nombre": "Cincinnati Reds -1.5",
+              "cuota": 2.52
             }
           ]
         },
@@ -548,11 +583,107 @@
           "selecciones": [
             {
               "nombre": "Over 9.0",
-              "cuota": 1.88
+              "cuota": 1.87
             },
             {
               "nombre": "Under 9.0",
-              "cuota": 2.01
+              "cuota": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Cleveland Guardians vs New York Mets",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T22:40:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Cleveland Guardians",
+              "cuota": 1.69
+            },
+            {
+              "nombre": "New York Mets",
+              "cuota": 2.3
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Cleveland Guardians -1.5",
+              "cuota": 2.52
+            },
+            {
+              "nombre": "New York Mets +1.5",
+              "cuota": 1.57
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 7.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 7.5",
+              "cuota": 1.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Philadelphia Phillies vs Washington Nationals",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T22:40:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Philadelphia Phillies",
+              "cuota": 1.4
+            },
+            {
+              "nombre": "Washington Nationals",
+              "cuota": 3.17
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Philadelphia Phillies -1.5",
+              "cuota": 1.86
+            },
+            {
+              "nombre": "Washington Nationals +1.5",
+              "cuota": 2.03
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 9.0",
+              "cuota": 2.04
+            },
+            {
+              "nombre": "Under 9.0",
+              "cuota": 1.84
             }
           ]
         }
@@ -562,45 +693,102 @@
       "nombre": "New York Yankees vs St. Louis Cardinals",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-03T23:06:00Z",
-      "bookmaker": "Pinnacle",
+      "hora": "2026-08-04T23:06:00Z",
+      "bookmaker": "Betfair",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "New York Yankees",
-              "cuota": 1.48
+              "cuota": 1.59
             },
             {
               "nombre": "St. Louis Cardinals",
-              "cuota": 2.89
+              "cuota": 1.01
             }
           ]
         },
         {
-          "mercado": "Hándicap",
+          "mercado": "H2H Lay",
           "selecciones": [
             {
-              "nombre": "New York Yankees -1.5",
-              "cuota": 2.0
+              "nombre": "New York Yankees",
+              "cuota": 110.0
             },
             {
-              "nombre": "St. Louis Cardinals +1.5",
-              "cuota": 1.9
+              "nombre": "St. Louis Cardinals",
+              "cuota": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Boston Red Sox vs Chicago White Sox",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T23:11:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Boston Red Sox",
+              "cuota": 1.81
+            },
+            {
+              "nombre": "Chicago White Sox",
+              "cuota": 2.08
             }
           ]
         },
         {
-          "mercado": "Total carreras",
+          "mercado": "H2H Lay",
           "selecciones": [
             {
-              "nombre": "Over 8.0",
-              "cuota": 2.01
+              "nombre": "Boston Red Sox",
+              "cuota": 1.91
             },
             {
-              "nombre": "Under 8.0",
-              "cuota": 1.88
+              "nombre": "Chicago White Sox",
+              "cuota": 2.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Atlanta Braves vs Miami Marlins",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T23:16:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Atlanta Braves",
+              "cuota": 1.71
+            },
+            {
+              "nombre": "Miami Marlins",
+              "cuota": 2.26
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Atlanta Braves",
+              "cuota": 1.79
+            },
+            {
+              "nombre": "Miami Marlins",
+              "cuota": 2.42
             }
           ]
         }
@@ -610,7 +798,7 @@
       "nombre": "Milwaukee Brewers vs Pittsburgh Pirates",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-03T23:41:00Z",
+      "hora": "2026-08-04T23:40:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -618,11 +806,11 @@
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers",
-              "cuota": 1.7
+              "cuota": 1.66
             },
             {
               "nombre": "Pittsburgh Pirates",
-              "cuota": 2.31
+              "cuota": 2.37
             }
           ]
         },
@@ -631,7 +819,7 @@
           "selecciones": [
             {
               "nombre": "Milwaukee Brewers -1.5",
-              "cuota": 2.43
+              "cuota": 2.4
             },
             {
               "nombre": "Pittsburgh Pirates +1.5",
@@ -643,12 +831,60 @@
           "mercado": "Total carreras",
           "selecciones": [
             {
-              "nombre": "Over 8.5",
-              "cuota": 2.0
+              "nombre": "Over 7.5",
+              "cuota": 1.91
             },
             {
-              "nombre": "Under 8.5",
-              "cuota": 1.89
+              "nombre": "Under 7.5",
+              "cuota": 1.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Kansas City Royals vs Minnesota Twins",
+      "deporte": "Béisbol",
+      "competicion": "MLB",
+      "hora": "2026-08-04T23:41:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Kansas City Royals",
+              "cuota": 2.28
+            },
+            {
+              "nombre": "Minnesota Twins",
+              "cuota": 1.7
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap",
+          "selecciones": [
+            {
+              "nombre": "Kansas City Royals +1.5",
+              "cuota": 1.79
+            },
+            {
+              "nombre": "Minnesota Twins -1.5",
+              "cuota": 2.12
+            }
+          ]
+        },
+        {
+          "mercado": "Total carreras",
+          "selecciones": [
+            {
+              "nombre": "Over 9.0",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 9.0",
+              "cuota": 2.01
             }
           ]
         }
@@ -658,7 +894,7 @@
       "nombre": "Chicago Cubs vs Los Angeles Dodgers",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-04T00:06:00Z",
+      "hora": "2026-08-05T00:06:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -666,37 +902,11 @@
           "selecciones": [
             {
               "nombre": "Chicago Cubs",
-              "cuota": 2.09
+              "cuota": 2.7
             },
             {
               "nombre": "Los Angeles Dodgers",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Chicago Cubs +1.5",
-              "cuota": 1.64
-            },
-            {
-              "nombre": "Los Angeles Dodgers -1.5",
-              "cuota": 2.4
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.0",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Under 8.0",
-              "cuota": 1.95
+              "cuota": 1.52
             }
           ]
         }
@@ -706,45 +916,19 @@
       "nombre": "Texas Rangers vs San Francisco Giants",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-04T00:06:00Z",
-      "bookmaker": "Pinnacle",
+      "hora": "2026-08-05T00:06:00Z",
+      "bookmaker": "Marathon Bet",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "San Francisco Giants",
-              "cuota": 2.1
+              "cuota": 2.56
             },
             {
               "nombre": "Texas Rangers",
-              "cuota": 1.84
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "San Francisco Giants +1.5",
-              "cuota": 1.5
-            },
-            {
-              "nombre": "Texas Rangers -1.5",
-              "cuota": 2.79
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 8.0",
-              "cuota": 1.94
-            },
-            {
-              "nombre": "Under 8.0",
-              "cuota": 1.94
+              "cuota": 1.51
             }
           ]
         }
@@ -754,7 +938,7 @@
       "nombre": "Houston Astros vs Toronto Blue Jays",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-04T00:10:00Z",
+      "hora": "2026-08-05T00:10:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -766,7 +950,7 @@
             },
             {
               "nombre": "Toronto Blue Jays",
-              "cuota": 2.16
+              "cuota": 2.14
             }
           ]
         },
@@ -775,11 +959,11 @@
           "selecciones": [
             {
               "nombre": "Houston Astros -1.5",
-              "cuota": 2.56
+              "cuota": 2.62
             },
             {
               "nombre": "Toronto Blue Jays +1.5",
-              "cuota": 1.57
+              "cuota": 1.54
             }
           ]
         },
@@ -787,12 +971,12 @@
           "mercado": "Total carreras",
           "selecciones": [
             {
-              "nombre": "Over 9.0",
-              "cuota": 1.86
+              "nombre": "Over 8.5",
+              "cuota": 1.98
             },
             {
-              "nombre": "Under 9.0",
-              "cuota": 2.03
+              "nombre": "Under 8.5",
+              "cuota": 1.89
             }
           ]
         }
@@ -802,7 +986,7 @@
       "nombre": "Colorado Rockies vs Tampa Bay Rays",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-04T00:41:00Z",
+      "hora": "2026-08-05T00:41:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
@@ -810,11 +994,11 @@
           "selecciones": [
             {
               "nombre": "Colorado Rockies",
-              "cuota": 2.56
+              "cuota": 2.3
             },
             {
               "nombre": "Tampa Bay Rays",
-              "cuota": 1.59
+              "cuota": 1.69
             }
           ]
         },
@@ -823,11 +1007,11 @@
           "selecciones": [
             {
               "nombre": "Colorado Rockies +1.5",
-              "cuota": 2.04
+              "cuota": 1.85
             },
             {
               "nombre": "Tampa Bay Rays -1.5",
-              "cuota": 1.87
+              "cuota": 2.05
             }
           ]
         },
@@ -835,12 +1019,12 @@
           "mercado": "Total carreras",
           "selecciones": [
             {
-              "nombre": "Over 11.5",
-              "cuota": 2.02
+              "nombre": "Over 11.0",
+              "cuota": 1.88
             },
             {
-              "nombre": "Under 11.5",
-              "cuota": 1.87
+              "nombre": "Under 11.0",
+              "cuota": 1.99
             }
           ]
         }
@@ -850,199 +1034,41 @@
       "nombre": "Arizona Diamondbacks vs San Diego Padres",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-04T01:41:00Z",
-      "bookmaker": "Pinnacle",
+      "hora": "2026-08-05T01:41:00Z",
+      "bookmaker": "Marathon Bet",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Arizona Diamondbacks",
-              "cuota": 1.88
+              "cuota": 1.76
             },
             {
               "nombre": "San Diego Padres",
-              "cuota": 2.04
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Arizona Diamondbacks -1.5",
-              "cuota": 2.83
-            },
-            {
-              "nombre": "San Diego Padres +1.5",
-              "cuota": 1.48
-            }
-          ]
-        },
-        {
-          "mercado": "Total carreras",
-          "selecciones": [
-            {
-              "nombre": "Over 9.0",
-              "cuota": 2.01
-            },
-            {
-              "nombre": "Under 9.0",
-              "cuota": 1.88
+              "cuota": 2.06
             }
           ]
         }
       ]
     },
     {
-      "nombre": "Cincinnati Reds vs Athletics",
+      "nombre": "Seattle Mariners vs Detroit Tigers",
       "deporte": "Béisbol",
       "competicion": "MLB",
-      "hora": "2026-08-04T22:40:00Z",
-      "bookmaker": "William Hill",
+      "hora": "2026-08-05T01:41:00Z",
+      "bookmaker": "Betfair",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
-              "nombre": "Athletics",
-              "cuota": 2.1
+              "nombre": "Detroit Tigers",
+              "cuota": 1.01
             },
             {
-              "nombre": "Cincinnati Reds",
-              "cuota": 1.73
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Cleveland Guardians vs New York Mets",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-04T22:40:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Cleveland Guardians",
-              "cuota": 1.73
-            },
-            {
-              "nombre": "New York Mets",
-              "cuota": 2.1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Philadelphia Phillies vs Washington Nationals",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-04T22:40:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Philadelphia Phillies",
-              "cuota": 1.44
-            },
-            {
-              "nombre": "Washington Nationals",
-              "cuota": 2.75
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Milwaukee Brewers vs Pittsburgh Pirates",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-04T23:40:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Milwaukee Brewers",
-              "cuota": 1.57
-            },
-            {
-              "nombre": "Pittsburgh Pirates",
-              "cuota": 2.38
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Kansas City Royals vs Minnesota Twins",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-04T23:41:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Kansas City Royals",
-              "cuota": 2.2
-            },
-            {
-              "nombre": "Minnesota Twins",
-              "cuota": 1.67
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Chicago Cubs vs Los Angeles Dodgers",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-05T00:06:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Chicago Cubs",
-              "cuota": 2.6
-            },
-            {
-              "nombre": "Los Angeles Dodgers",
-              "cuota": 1.5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Houston Astros vs Toronto Blue Jays",
-      "deporte": "Béisbol",
-      "competicion": "MLB",
-      "hora": "2026-08-05T00:11:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Houston Astros",
-              "cuota": 1.73
-            },
-            {
-              "nombre": "Toronto Blue Jays",
-              "cuota": 2.1
+              "nombre": "Seattle Mariners",
+              "cuota": 1.01
             }
           ]
         }
@@ -1911,11 +1937,11 @@
           "selecciones": [
             {
               "nombre": "Baltimore Ravens -7.5",
-              "cuota": 1.87
+              "cuota": 1.88
             },
             {
               "nombre": "New Orleans Saints +7.5",
-              "cuota": 1.83
+              "cuota": 1.82
             }
           ]
         },
@@ -2944,7 +2970,7 @@
             },
             {
               "nombre": "West Georgia Wolves +23.5",
-              "cuota": 1.9
+              "cuota": 1.88
             }
           ]
         },
@@ -3202,7 +3228,7 @@
             },
             {
               "nombre": "North Carolina A&T Aggies",
-              "cuota": 9.5
+              "cuota": 8.5
             }
           ]
         },
@@ -3210,12 +3236,12 @@
           "mercado": "Spread",
           "selecciones": [
             {
-              "nombre": "Georgia State Panthers -30.5",
-              "cuota": 1.85
+              "nombre": "Georgia State Panthers -28.5",
+              "cuota": 1.9
             },
             {
-              "nombre": "North Carolina A&T Aggies +30.5",
-              "cuota": 1.83
+              "nombre": "North Carolina A&T Aggies +28.5",
+              "cuota": 1.8
             }
           ]
         },
@@ -3224,11 +3250,11 @@
           "selecciones": [
             {
               "nombre": "Over 63.5",
-              "cuota": 1.88
+              "cuota": 1.83
             },
             {
               "nombre": "Under 63.5",
-              "cuota": 1.8
+              "cuota": 1.85
             }
           ]
         }
@@ -4749,11 +4775,11 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 54.5",
+              "nombre": "Over 55.0",
               "cuota": 1.91
             },
             {
-              "nombre": "Under 54.5",
+              "nombre": "Under 55.0",
               "cuota": 1.91
             }
           ]
@@ -5025,7 +5051,7 @@
             },
             {
               "nombre": "Southeastern Louisiana Lions",
-              "cuota": 4.2
+              "cuota": 4.15
             }
           ]
         },
@@ -5033,12 +5059,12 @@
           "mercado": "Spread",
           "selecciones": [
             {
-              "nombre": "South Alabama Jaguars -12.5",
-              "cuota": 1.85
+              "nombre": "South Alabama Jaguars -11.5",
+              "cuota": 1.83
             },
             {
-              "nombre": "Southeastern Louisiana Lions +12.5",
-              "cuota": 1.83
+              "nombre": "Southeastern Louisiana Lions +11.5",
+              "cuota": 1.85
             }
           ]
         },
@@ -6387,11 +6413,11 @@
           "selecciones": [
             {
               "nombre": "Jose Montanha",
-              "cuota": 2.4
+              "cuota": 2.27
             },
             {
               "nombre": "Louie Sutherland",
-              "cuota": 1.61
+              "cuota": 1.67
             }
           ]
         }
@@ -6409,11 +6435,11 @@
           "selecciones": [
             {
               "nombre": "Alexia Thainara",
-              "cuota": 1.44
+              "cuota": 1.4
             },
             {
               "nombre": "Amanda Lemos",
-              "cuota": 2.92
+              "cuota": 3.09
             }
           ]
         }
@@ -6431,7 +6457,7 @@
           "selecciones": [
             {
               "nombre": "Billy Goff",
-              "cuota": 3.9
+              "cuota": 3.93
             },
             {
               "nombre": "Ty Miller",
@@ -6475,11 +6501,11 @@
           "selecciones": [
             {
               "nombre": "Bruno Lopes",
-              "cuota": 2.3
+              "cuota": 2.35
             },
             {
               "nombre": "Diyar Nurgozhay",
-              "cuota": 1.66
+              "cuota": 1.63
             }
           ]
         }
@@ -6497,11 +6523,11 @@
           "selecciones": [
             {
               "nombre": "Darren Elkins",
-              "cuota": 5.95
+              "cuota": 6.69
             },
             {
               "nombre": "Yadier DelValle",
-              "cuota": 1.15
+              "cuota": 1.12
             }
           ]
         }
@@ -6567,7 +6593,7 @@
             },
             {
               "nombre": "Richie Miranda",
-              "cuota": 3.21
+              "cuota": 3.19
             }
           ]
         }
@@ -7088,22 +7114,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-08T11:00:00Z",
-      "bookmaker": "Betway",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "David Nyika",
-              "cuota": 1.25
+              "cuota": 1.26
             },
             {
               "nombre": "Floyd Masson",
-              "cuota": 3.6
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 21.0
+              "cuota": 4.01
             }
           ]
         }
@@ -7114,22 +7136,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-08T16:30:00Z",
-      "bookmaker": "Betway",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Connor Coyle",
-              "cuota": 1.1
+              "cuota": 1.18
             },
             {
               "nombre": "Mark Beuke",
-              "cuota": 6.0
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 19.0
+              "cuota": 5.2
             }
           ]
         }
@@ -7140,10 +7158,10 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-08T19:00:00Z",
-      "bookmaker": "Betway",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Gradus Kraus",
@@ -7151,11 +7169,7 @@
             },
             {
               "nombre": "Sean Hemphill",
-              "cuota": 6.5
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 17.0
+              "cuota": 7.58
             }
           ]
         }
@@ -7166,39 +7180,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-08T20:00:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Aaron Mckenna",
-              "cuota": 1.3
+              "cuota": 1.24
             },
             {
               "nombre": "Etinosa Oliha",
-              "cuota": 3.6
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 22.0
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Aaron Mckenna",
-              "cuota": 1.44
-            },
-            {
-              "nombre": "Etinosa Oliha",
-              "cuota": 5.3
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 50.0
+              "cuota": 4.22
             }
           ]
         }
@@ -7209,39 +7202,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-08T21:00:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Amanda Galle",
-              "cuota": 1.6
+              "cuota": 1.61
             },
             {
               "nombre": "Shurretta Metcalf",
-              "cuota": 1.02
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Amanda Galle",
-              "cuota": 990.0
-            },
-            {
-              "nombre": "Shurretta Metcalf",
-              "cuota": 990.0
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 55.0
+              "cuota": 2.38
             }
           ]
         }
@@ -7252,39 +7224,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-08T21:00:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Callum Simpson",
-              "cuota": 1.67
+              "cuota": 1.69
             },
             {
               "nombre": "Troy Williamson",
-              "cuota": 2.5
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 15.0
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Callum Simpson",
-              "cuota": 1.73
-            },
-            {
-              "nombre": "Troy Williamson",
-              "cuota": 2.86
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 44.0
+              "cuota": 2.21
             }
           ]
         }
@@ -7295,39 +7246,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-08T21:00:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Callum Walsh",
-              "cuota": 1.18
+              "cuota": 1.12
             },
             {
               "nombre": "Tyler Denny",
-              "cuota": 4.0
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 15.0
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Callum Walsh",
-              "cuota": 1.43
-            },
-            {
-              "nombre": "Tyler Denny",
-              "cuota": 7.8
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 70.0
+              "cuota": 6.7
             }
           ]
         }
@@ -7338,39 +7268,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-09T00:00:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Desley Robinson",
-              "cuota": 3.75
+              "cuota": 3.8
             },
             {
               "nombre": "Tammara Thibeault",
               "cuota": 1.28
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 22.0
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Desley Robinson",
-              "cuota": 5.8
-            },
-            {
-              "nombre": "Tammara Thibeault",
-              "cuota": 1.44
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 65.0
             }
           ]
         }
@@ -7381,39 +7290,18 @@
       "deporte": "Boxeo",
       "competicion": "Boxeo",
       "hora": "2026-08-09T03:00:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
-          "mercado": "1X2",
+          "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Cherneka Johnson",
-              "cuota": 2.12
+              "cuota": 1.9
             },
             {
               "nombre": "Dina Thorslund",
-              "cuota": 1.96
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 13.0
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Cherneka Johnson",
-              "cuota": 2.42
-            },
-            {
-              "nombre": "Dina Thorslund",
-              "cuota": 2.08
-            },
-            {
-              "nombre": "Draw",
-              "cuota": 32.0
+              "cuota": 1.93
             }
           ]
         }
@@ -7999,11 +7887,11 @@
           "selecciones": [
             {
               "nombre": "Conor Benn",
-              "cuota": 4.0
+              "cuota": 3.95
             },
             {
               "nombre": "Ryan Garcia",
-              "cuota": 1.36
+              "cuota": 1.38
             },
             {
               "nombre": "Draw",
@@ -8016,15 +7904,15 @@
           "selecciones": [
             {
               "nombre": "Conor Benn",
-              "cuota": 4.2
+              "cuota": 4.1
             },
             {
               "nombre": "Ryan Garcia",
-              "cuota": 1.38
+              "cuota": 1.39
             },
             {
               "nombre": "Draw",
-              "cuota": 40.0
+              "cuota": 38.0
             }
           ]
         }
@@ -8752,11 +8640,11 @@
           "selecciones": [
             {
               "nombre": "Gold Coast Titans",
-              "cuota": 2.4
+              "cuota": 2.42
             },
             {
               "nombre": "North Queensland Cowboys",
-              "cuota": 1.59
+              "cuota": 1.58
             },
             {
               "nombre": "Draw",
@@ -8856,15 +8744,15 @@
           "selecciones": [
             {
               "nombre": "Brisbane Broncos",
-              "cuota": 2.88
+              "cuota": 2.82
             },
             {
               "nombre": "Dolphins",
-              "cuota": 1.42
+              "cuota": 1.43
             },
             {
               "nombre": "Draw",
-              "cuota": 30.0
+              "cuota": 31.0
             }
           ]
         }
@@ -8908,11 +8796,11 @@
           "selecciones": [
             {
               "nombre": "Canberra Raiders",
-              "cuota": 1.64
+              "cuota": 1.66
             },
             {
               "nombre": "Newcastle Knights",
-              "cuota": 2.26
+              "cuota": 2.23
             },
             {
               "nombre": "Draw",
