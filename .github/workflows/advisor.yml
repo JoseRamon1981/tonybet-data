@@ -1,12 +1,10 @@
 name: Tonybet Advisor
 
 # Horario en hora española (CEST en verano = UTC+2):
-#   ▸ 09:00 España → 07:00 UTC
-#   ▸ 20:00 España → 18:00 UTC
+#   ▸ 09:00 España → 07:00 UTC (única ejecución diaria — ver nota de cuota abajo)
 on:
   schedule:
     - cron: '0 7 * * *'    # 09:00 hora España (verano) / 08:00 (invierno)
-    - cron: '0 18 * * *'   # 20:00 hora España (verano) / 19:00 (invierno)
   workflow_dispatch:
     inputs:
       mode:
@@ -54,10 +52,11 @@ jobs:
       - name: Ejecutar advisor
         env:
           # ── Fuente de datos principal ──────────────────────────────
-          # Registro gratuito en https://the-odds-api.com/
-          # Tier gratuito: 500 req/mes (suficiente para 2 ejecuciones/día)
+          # Registro gratuito en https://the-odds-api.com/ — tier gratuito: 500 req/mes
+          # 1 ejecución/día × ~16 requests (1 /sports + 15 ligas/deportes) ≈ 480/mes, dentro del límite.
+          # Si tienes plan de pago, sube ODDS_API_MAX_REQUESTS como Repository Variable en GitHub.
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          ODDS_API_MAX_REQUESTS: ${{ vars.ODDS_API_MAX_REQUESTS || '40' }}
+          ODDS_API_MAX_REQUESTS: ${{ vars.ODDS_API_MAX_REQUESTS || '16' }}
           # ── Tonybet (credenciales para scraper fallback) ───────────
           TONYBET_USERNAME: ${{ secrets.TONYBET_USERNAME }}
           TONYBET_PASSWORD: ${{ secrets.TONYBET_PASSWORD }}
