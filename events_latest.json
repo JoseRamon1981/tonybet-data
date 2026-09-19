@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18 17:01",
+  "updated_at": "2026-09-19 07:01",
   "total": 39,
   "events": [
     {
@@ -36,11 +36,11 @@
           "selecciones": [
             {
               "nombre": "New York Knicks",
-              "cuota": 1.46
+              "cuota": 1.48
             },
             {
               "nombre": "Philadelphia 76ers",
-              "cuota": 2.78
+              "cuota": 2.71
             }
           ]
         }
