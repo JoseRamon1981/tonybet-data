@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21 07:01",
+  "updated_at": "2026-09-21 15:24",
   "total": 49,
   "events": [
     {
@@ -1662,11 +1662,11 @@
           "selecciones": [
             {
               "nombre": "Anadolu Efes",
-              "cuota": 2.71
+              "cuota": 2.62
             },
             {
               "nombre": "FC Barcelona Bàsquet",
-              "cuota": 1.48
+              "cuota": 1.51
             }
           ]
         }
@@ -1684,11 +1684,11 @@
           "selecciones": [
             {
               "nombre": "Olympiacos",
-              "cuota": 1.33
+              "cuota": 1.34
             },
             {
               "nombre": "Saski Baskonia",
-              "cuota": 3.42
+              "cuota": 3.35
             }
           ]
         }
