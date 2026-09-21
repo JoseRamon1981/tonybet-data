@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21 15:24",
+  "updated_at": "2026-09-21 17:01",
   "total": 49,
   "events": [
     {
@@ -1706,11 +1706,11 @@
           "selecciones": [
             {
               "nombre": "ASVEL Lyon Villeurbanne",
-              "cuota": 2.01
+              "cuota": 2.07
             },
             {
               "nombre": "Maccabi Tel Aviv",
-              "cuota": 1.83
+              "cuota": 1.78
             }
           ]
         }
@@ -1728,11 +1728,11 @@
           "selecciones": [
             {
               "nombre": "Beşiktaş J.K.",
-              "cuota": 1.73
+              "cuota": 1.78
             },
             {
               "nombre": "Valencia Basket",
-              "cuota": 2.15
+              "cuota": 2.07
             }
           ]
         }
