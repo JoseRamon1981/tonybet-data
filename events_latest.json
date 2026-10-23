@@ -1,6 +1,1321 @@
 {
-  "updated_at": "2026-10-22 17:02",
-  "total": 0,
-  "events": [],
-  "error": "No se pudieron obtener eventos"
+  "updated_at": "2026-10-23 07:01",
+  "total": 32,
+  "events": [
+    {
+      "nombre": "Milwaukee Bucks vs Chicago Bulls",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-23T20:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Chicago Bulls",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Milwaukee Bucks",
+              "cuota": 1.99
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Chicago Bulls +1.0",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Milwaukee Bucks -1.0",
+              "cuota": 2.02
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 238.5",
+              "cuota": 2.0
+            },
+            {
+              "nombre": "Under 238.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Charlotte Hornets vs Atlanta Hawks",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-23T23:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Atlanta Hawks",
+              "cuota": 1.68
+            },
+            {
+              "nombre": "Charlotte Hornets",
+              "cuota": 2.27
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Atlanta Hawks -3.0",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Charlotte Hornets +3.0",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 225.5",
+              "cuota": 1.9
+            },
+            {
+              "nombre": "Under 225.5",
+              "cuota": 1.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Boston Celtics vs New York Knicks",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-23T23:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Boston Celtics",
+              "cuota": 1.78
+            },
+            {
+              "nombre": "New York Knicks",
+              "cuota": 2.12
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Boston Celtics -2.0",
+              "cuota": 1.95
+            },
+            {
+              "nombre": "New York Knicks +2.0",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 224.5",
+              "cuota": 1.98
+            },
+            {
+              "nombre": "Under 224.5",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Indiana Pacers vs Dallas Mavericks",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-23T23:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Dallas Mavericks",
+              "cuota": 2.84
+            },
+            {
+              "nombre": "Indiana Pacers",
+              "cuota": 1.46
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Dallas Mavericks +6.0",
+              "cuota": 1.92
+            },
+            {
+              "nombre": "Indiana Pacers -6.0",
+              "cuota": 1.97
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 237.0",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Under 237.0",
+              "cuota": 1.94
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Orlando Magic vs Minnesota Timberwolves",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-23T23:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Minnesota Timberwolves",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Orlando Magic",
+              "cuota": 2.05
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Minnesota Timberwolves -1.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Orlando Magic +1.5",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 235.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Under 235.5",
+              "cuota": 1.93
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Washington Wizards vs Toronto Raptors",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-23T23:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Toronto Raptors",
+              "cuota": 1.39
+            },
+            {
+              "nombre": "Washington Wizards",
+              "cuota": 3.12
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Toronto Raptors -6.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Washington Wizards +6.5",
+              "cuota": 1.97
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 236.0",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Under 236.0",
+              "cuota": 1.96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Miami Heat vs Detroit Pistons",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-24T00:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Detroit Pistons",
+              "cuota": 1.96
+            },
+            {
+              "nombre": "Miami Heat",
+              "cuota": 1.93
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Detroit Pistons -1.0",
+              "cuota": 2.01
+            },
+            {
+              "nombre": "Miami Heat +1.0",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 238.0",
+              "cuota": 1.98
+            },
+            {
+              "nombre": "Under 238.0",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "San Antonio Spurs vs Houston Rockets",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-24T01:40:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Houston Rockets",
+              "cuota": 2.74
+            },
+            {
+              "nombre": "San Antonio Spurs",
+              "cuota": 1.49
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Houston Rockets +5.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "San Antonio Spurs -5.5",
+              "cuota": 1.95
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 227.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Under 227.5",
+              "cuota": 1.93
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Utah Jazz vs New Orleans Pelicans",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-24T01:40:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "New Orleans Pelicans",
+              "cuota": 2.18
+            },
+            {
+              "nombre": "Utah Jazz",
+              "cuota": 1.74
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "New Orleans Pelicans +2.5",
+              "cuota": 1.92
+            },
+            {
+              "nombre": "Utah Jazz -2.5",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 238.5",
+              "cuota": 1.96
+            },
+            {
+              "nombre": "Under 238.5",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Golden State Warriors vs Memphis Grizzlies",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-24T02:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Golden State Warriors",
+              "cuota": 1.7
+            },
+            {
+              "nombre": "Memphis Grizzlies",
+              "cuota": 2.24
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Golden State Warriors -3.5",
+              "cuota": 2.02
+            },
+            {
+              "nombre": "Memphis Grizzlies +3.5",
+              "cuota": 1.87
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 234.0",
+              "cuota": 1.87
+            },
+            {
+              "nombre": "Under 234.0",
+              "cuota": 2.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Los Angeles Lakers vs Los Angeles Clippers",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-24T02:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Los Angeles Clippers",
+              "cuota": 3.97
+            },
+            {
+              "nombre": "Los Angeles Lakers",
+              "cuota": 1.26
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Los Angeles Clippers +9.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Los Angeles Lakers -9.5",
+              "cuota": 1.97
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 228.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Under 228.5",
+              "cuota": 1.94
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Sacramento Kings vs Portland Trail Blazers",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-10-24T02:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Portland Trail Blazers",
+              "cuota": 1.31
+            },
+            {
+              "nombre": "Sacramento Kings",
+              "cuota": 3.6
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Portland Trail Blazers -7.5",
+              "cuota": 1.91
+            },
+            {
+              "nombre": "Sacramento Kings +7.5",
+              "cuota": 1.98
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 233.0",
+              "cuota": 1.99
+            },
+            {
+              "nombre": "Under 233.0",
+              "cuota": 1.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "New York Knicks vs San Antonio Spurs",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-12-25T17:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "New York Knicks",
+              "cuota": 1.71
+            },
+            {
+              "nombre": "San Antonio Spurs",
+              "cuota": 1.71
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "New York Knicks",
+              "cuota": 2.34
+            },
+            {
+              "nombre": "San Antonio Spurs",
+              "cuota": 2.34
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Boston Celtics vs Miami Heat",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-12-25T19:30:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Boston Celtics",
+              "cuota": 1.36
+            },
+            {
+              "nombre": "Miami Heat",
+              "cuota": 2.26
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Boston Celtics",
+              "cuota": 1.84
+            },
+            {
+              "nombre": "Miami Heat",
+              "cuota": 3.45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Los Angeles Lakers vs Philadelphia 76ers",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-12-25T22:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Los Angeles Lakers",
+              "cuota": 1.67
+            },
+            {
+              "nombre": "Philadelphia 76ers",
+              "cuota": 1.75
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Los Angeles Lakers",
+              "cuota": 2.28
+            },
+            {
+              "nombre": "Philadelphia 76ers",
+              "cuota": 2.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Minnesota Timberwolves vs Oklahoma City Thunder",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-12-26T01:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Minnesota Timberwolves",
+              "cuota": 2.1
+            },
+            {
+              "nombre": "Oklahoma City Thunder",
+              "cuota": 1.52
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Minnesota Timberwolves",
+              "cuota": 2.94
+            },
+            {
+              "nombre": "Oklahoma City Thunder",
+              "cuota": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Golden State Warriors vs Denver Nuggets",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-12-26T03:30:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Denver Nuggets",
+              "cuota": 1.6
+            },
+            {
+              "nombre": "Golden State Warriors",
+              "cuota": 1.84
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Denver Nuggets",
+              "cuota": 2.18
+            },
+            {
+              "nombre": "Golden State Warriors",
+              "cuota": 2.54
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Žalgiris vs ASVEL Lyon Villeurbanne",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-23T17:00:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne",
+              "cuota": 5.28
+            },
+            {
+              "nombre": "Žalgiris",
+              "cuota": 1.18
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne +10.0",
+              "cuota": 1.96
+            },
+            {
+              "nombre": "Žalgiris -10.0",
+              "cuota": 1.89
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 173.0",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Under 173.0",
+              "cuota": 1.93
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Olympiacos vs Fenerbahce SK",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-23T18:15:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Fenerbahce SK",
+              "cuota": 2.16
+            },
+            {
+              "nombre": "Olympiacos",
+              "cuota": 1.74
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Fenerbahce SK +2.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Olympiacos -2.5",
+              "cuota": 1.97
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 170.0",
+              "cuota": 2.02
+            },
+            {
+              "nombre": "Under 170.0",
+              "cuota": 1.84
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Paris Basketball vs Valencia Basket",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-23T18:45:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Paris Basketball",
+              "cuota": 2.79
+            },
+            {
+              "nombre": "Valencia Basket",
+              "cuota": 1.47
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Paris Basketball +5.0",
+              "cuota": 1.94
+            },
+            {
+              "nombre": "Valencia Basket -5.0",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 189.0",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 189.0",
+              "cuota": 2.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Dubai Basketball vs Paris Basketball",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-27T16:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Dubai Basketball",
+              "cuota": 1.14
+            },
+            {
+              "nombre": "Paris Basketball",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Dubai Basketball",
+              "cuota": 300.0
+            },
+            {
+              "nombre": "Paris Basketball",
+              "cuota": 300.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "FC Bayern München vs FC Barcelona Bàsquet",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-27T19:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "FC Barcelona Bàsquet",
+              "cuota": 1.76
+            },
+            {
+              "nombre": "FC Bayern München",
+              "cuota": 1.02
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "FC Barcelona Bàsquet",
+              "cuota": 300.0
+            },
+            {
+              "nombre": "FC Bayern München",
+              "cuota": 2.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "KK Crvena zvezda vs Maccabi Tel Aviv",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-27T19:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "KK Crvena zvezda",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Maccabi Tel Aviv",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "KK Crvena zvezda",
+              "cuota": 300.0
+            },
+            {
+              "nombre": "Maccabi Tel Aviv",
+              "cuota": 300.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Panathinaikos vs Pallacanestro Olimpia Milano",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-27T19:15:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Pallacanestro Olimpia Milano",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Panathinaikos",
+              "cuota": 1.08
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Pallacanestro Olimpia Milano",
+              "cuota": 300.0
+            },
+            {
+              "nombre": "Panathinaikos",
+              "cuota": 1.14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Saski Baskonia vs Real Madrid",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-27T20:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Real Madrid",
+              "cuota": 1.22
+            },
+            {
+              "nombre": "Saski Baskonia",
+              "cuota": 4.1
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Real Madrid",
+              "cuota": 1.32
+            },
+            {
+              "nombre": "Saski Baskonia",
+              "cuota": 300.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Beşiktaş J.K. vs Olympiacos",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-28T17:30:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Beşiktaş J.K.",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Olympiacos",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Beşiktaş J.K.",
+              "cuota": 110.0
+            },
+            {
+              "nombre": "Olympiacos",
+              "cuota": 110.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Hapoel Tel Aviv vs Anadolu Efes",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-28T18:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Anadolu Efes",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Hapoel Tel Aviv",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Anadolu Efes",
+              "cuota": 110.0
+            },
+            {
+              "nombre": "Hapoel Tel Aviv",
+              "cuota": 110.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "ASVEL Lyon Villeurbanne vs KK Partizan NIS",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-28T19:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "KK Partizan NIS",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne",
+              "cuota": 110.0
+            },
+            {
+              "nombre": "KK Partizan NIS",
+              "cuota": 110.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Virtus Segafredo Bologna vs Žalgiris",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-28T19:30:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Virtus Segafredo Bologna",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Žalgiris",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Virtus Segafredo Bologna",
+              "cuota": 110.0
+            },
+            {
+              "nombre": "Žalgiris",
+              "cuota": 110.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "KK Crvena zvezda vs FC Bayern München",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-29T19:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "FC Bayern München",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "KK Crvena zvezda",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "FC Bayern München",
+              "cuota": 110.0
+            },
+            {
+              "nombre": "KK Crvena zvezda",
+              "cuota": 110.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Maccabi Tel Aviv vs Paris Basketball",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-29T19:05:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Maccabi Tel Aviv",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Paris Basketball",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "Maccabi Tel Aviv",
+              "cuota": 110.0
+            },
+            {
+              "nombre": "Paris Basketball",
+              "cuota": 110.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "ASVEL Lyon Villeurbanne vs Saski Baskonia",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-10-30T19:00:00Z",
+      "bookmaker": "Betfair",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne",
+              "cuota": 1.01
+            },
+            {
+              "nombre": "Saski Baskonia",
+              "cuota": 1.01
+            }
+          ]
+        },
+        {
+          "mercado": "H2H Lay",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne",
+              "cuota": 110.0
+            },
+            {
+              "nombre": "Saski Baskonia",
+              "cuota": 110.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
