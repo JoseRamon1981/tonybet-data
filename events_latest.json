@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06 15:45",
+  "updated_at": "2026-11-06 17:01",
   "total": 13,
   "events": [
     {
@@ -14,11 +14,11 @@
           "selecciones": [
             {
               "nombre": "Atlanta Hawks",
-              "cuota": 1.37
+              "cuota": 1.34
             },
             {
               "nombre": "Washington Wizards",
-              "cuota": 3.29
+              "cuota": 3.44
             }
           ]
         },
@@ -27,11 +27,11 @@
           "selecciones": [
             {
               "nombre": "Atlanta Hawks -7.5",
-              "cuota": 1.94
+              "cuota": 1.87
             },
             {
               "nombre": "Washington Wizards +7.5",
-              "cuota": 1.94
+              "cuota": 2.02
             }
           ]
         },
@@ -40,11 +40,11 @@
           "selecciones": [
             {
               "nombre": "Over 228.5",
-              "cuota": 1.93
+              "cuota": 1.89
             },
             {
               "nombre": "Under 228.5",
-              "cuota": 1.93
+              "cuota": 1.98
             }
           ]
         }
@@ -66,7 +66,7 @@
             },
             {
               "nombre": "Charlotte Hornets",
-              "cuota": 3.68
+              "cuota": 3.69
             }
           ]
         },
@@ -75,11 +75,11 @@
           "selecciones": [
             {
               "nombre": "Boston Celtics -8.5",
-              "cuota": 1.94
+              "cuota": 1.93
             },
             {
               "nombre": "Charlotte Hornets +8.5",
-              "cuota": 1.96
+              "cuota": 1.97
             }
           ]
         },
@@ -88,11 +88,11 @@
           "selecciones": [
             {
               "nombre": "Over 208.0",
-              "cuota": 1.94
+              "cuota": 1.93
             },
             {
               "nombre": "Under 208.0",
-              "cuota": 1.94
+              "cuota": 1.96
             }
           ]
         }
@@ -110,11 +110,11 @@
           "selecciones": [
             {
               "nombre": "Cleveland Cavaliers",
-              "cuota": 2.27
+              "cuota": 2.3
             },
             {
               "nombre": "Philadelphia 76ers",
-              "cuota": 1.71
+              "cuota": 1.7
             }
           ]
         },
@@ -123,11 +123,11 @@
           "selecciones": [
             {
               "nombre": "Cleveland Cavaliers +2.5",
-              "cuota": 1.93
+              "cuota": 1.94
             },
             {
               "nombre": "Philadelphia 76ers -2.5",
-              "cuota": 1.98
+              "cuota": 1.96
             }
           ]
         },
@@ -135,12 +135,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 229.5",
-              "cuota": 1.88
+              "nombre": "Over 230.5",
+              "cuota": 1.95
             },
             {
-              "nombre": "Under 229.5",
-              "cuota": 2.01
+              "nombre": "Under 230.5",
+              "cuota": 1.93
             }
           ]
         }
@@ -158,11 +158,11 @@
           "selecciones": [
             {
               "nombre": "Dallas Mavericks",
-              "cuota": 1.37
+              "cuota": 1.39
             },
             {
               "nombre": "Utah Jazz",
-              "cuota": 3.32
+              "cuota": 3.24
             }
           ]
         },
@@ -171,11 +171,11 @@
           "selecciones": [
             {
               "nombre": "Dallas Mavericks -7.5",
-              "cuota": 1.93
+              "cuota": 1.98
             },
             {
               "nombre": "Utah Jazz +7.5",
-              "cuota": 1.97
+              "cuota": 1.93
             }
           ]
         },
@@ -183,12 +183,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 227.5",
+              "nombre": "Over 226.5",
               "cuota": 1.93
             },
             {
-              "nombre": "Under 227.5",
-              "cuota": 1.95
+              "nombre": "Under 226.5",
+              "cuota": 1.96
             }
           ]
         }
@@ -206,11 +206,11 @@
           "selecciones": [
             {
               "nombre": "Memphis Grizzlies",
-              "cuota": 2.41
+              "cuota": 2.43
             },
             {
               "nombre": "Oklahoma City Thunder",
-              "cuota": 1.64
+              "cuota": 1.62
             }
           ]
         },
@@ -219,11 +219,11 @@
           "selecciones": [
             {
               "nombre": "Memphis Grizzlies +4.0",
-              "cuota": 1.95
+              "cuota": 1.97
             },
             {
               "nombre": "Oklahoma City Thunder -4.0",
-              "cuota": 1.95
+              "cuota": 1.93
             }
           ]
         },
@@ -231,12 +231,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 224.5",
-              "cuota": 1.93
+              "nombre": "Over 223.5",
+              "cuota": 1.97
             },
             {
-              "nombre": "Under 224.5",
-              "cuota": 1.95
+              "nombre": "Under 223.5",
+              "cuota": 1.92
             }
           ]
         }
@@ -319,7 +319,7 @@
             },
             {
               "nombre": "New Orleans Pelicans +4.5",
-              "cuota": 1.88
+              "cuota": 1.89
             }
           ]
         },
@@ -350,11 +350,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Lakers",
-              "cuota": 1.68
+              "cuota": 1.66
             },
             {
               "nombre": "Portland Trail Blazers",
-              "cuota": 2.33
+              "cuota": 2.36
             }
           ]
         },
@@ -363,11 +363,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Lakers -3.0",
-              "cuota": 1.93
+              "cuota": 1.92
             },
             {
               "nombre": "Portland Trail Blazers +3.0",
-              "cuota": 1.97
+              "cuota": 1.99
             }
           ]
         },
@@ -375,12 +375,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 232.0",
-              "cuota": 1.93
+              "nombre": "Over 231.0",
+              "cuota": 1.9
             },
             {
-              "nombre": "Under 232.0",
-              "cuota": 1.95
+              "nombre": "Under 231.0",
+              "cuota": 1.98
             }
           ]
         }
@@ -398,11 +398,11 @@
           "selecciones": [
             {
               "nombre": "Sacramento Kings",
-              "cuota": 7.85
+              "cuota": 8.72
             },
             {
               "nombre": "San Antonio Spurs",
-              "cuota": 1.11
+              "cuota": 1.09
             }
           ]
         },
@@ -410,12 +410,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Sacramento Kings +15.5",
-              "cuota": 1.95
+              "nombre": "Sacramento Kings +16.5",
+              "cuota": 1.97
             },
             {
-              "nombre": "San Antonio Spurs -15.5",
-              "cuota": 1.95
+              "nombre": "San Antonio Spurs -16.5",
+              "cuota": 1.93
             }
           ]
         },
@@ -424,11 +424,11 @@
           "selecciones": [
             {
               "nombre": "Over 229.5",
-              "cuota": 2.0
+              "cuota": 1.98
             },
             {
               "nombre": "Under 229.5",
-              "cuota": 1.89
+              "cuota": 1.91
             }
           ]
         }
