@@ -1,120 +1,24 @@
 {
-  "updated_at": "2026-11-06 07:01",
-  "total": 17,
+  "updated_at": "2026-11-06 15:45",
+  "total": 13,
   "events": [
     {
       "nombre": "Atlanta Hawks vs Washington Wizards",
       "deporte": "Baloncesto",
       "competicion": "NBA",
       "hora": "2026-11-07T00:10:00Z",
-      "bookmaker": "Marathon Bet",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Atlanta Hawks",
-              "cuota": 1.38
-            },
-            {
-              "nombre": "Washington Wizards",
-              "cuota": 3.12
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Atlanta Hawks -6.5",
-              "cuota": 1.89
-            },
-            {
-              "nombre": "Washington Wizards +6.5",
-              "cuota": 1.91
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 230.5",
-              "cuota": 1.95
-            },
-            {
-              "nombre": "Under 230.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Charlotte Hornets vs Boston Celtics",
-      "deporte": "Baloncesto",
-      "competicion": "NBA",
-      "hora": "2026-11-07T00:10:00Z",
-      "bookmaker": "Marathon Bet",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Boston Celtics",
-              "cuota": 1.29
-            },
-            {
-              "nombre": "Charlotte Hornets",
-              "cuota": 3.72
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Boston Celtics -8.5",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Charlotte Hornets +8.5",
-              "cuota": 1.9
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 209.5",
-              "cuota": 1.87
-            },
-            {
-              "nombre": "Under 209.5",
-              "cuota": 1.93
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Cleveland Cavaliers vs Philadelphia 76ers",
-      "deporte": "Baloncesto",
-      "competicion": "NBA",
-      "hora": "2026-11-07T00:40:00Z",
       "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
-              "nombre": "Cleveland Cavaliers",
-              "cuota": 2.22
+              "nombre": "Atlanta Hawks",
+              "cuota": 1.37
             },
             {
-              "nombre": "Philadelphia 76ers",
-              "cuota": 1.73
+              "nombre": "Washington Wizards",
+              "cuota": 3.29
             }
           ]
         },
@@ -122,11 +26,11 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Cleveland Cavaliers +2.5",
+              "nombre": "Atlanta Hawks -7.5",
               "cuota": 1.94
             },
             {
-              "nombre": "Philadelphia 76ers -2.5",
+              "nombre": "Washington Wizards +7.5",
               "cuota": 1.94
             }
           ]
@@ -147,6 +51,102 @@
       ]
     },
     {
+      "nombre": "Charlotte Hornets vs Boston Celtics",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-11-07T00:10:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Boston Celtics",
+              "cuota": 1.32
+            },
+            {
+              "nombre": "Charlotte Hornets",
+              "cuota": 3.68
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Boston Celtics -8.5",
+              "cuota": 1.94
+            },
+            {
+              "nombre": "Charlotte Hornets +8.5",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 208.0",
+              "cuota": 1.94
+            },
+            {
+              "nombre": "Under 208.0",
+              "cuota": 1.94
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Cleveland Cavaliers vs Philadelphia 76ers",
+      "deporte": "Baloncesto",
+      "competicion": "NBA",
+      "hora": "2026-11-07T00:40:00Z",
+      "bookmaker": "Pinnacle",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Cleveland Cavaliers",
+              "cuota": 2.27
+            },
+            {
+              "nombre": "Philadelphia 76ers",
+              "cuota": 1.71
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Cleveland Cavaliers +2.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Philadelphia 76ers -2.5",
+              "cuota": 1.98
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 229.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Under 229.5",
+              "cuota": 2.01
+            }
+          ]
+        }
+      ]
+    },
+    {
       "nombre": "Dallas Mavericks vs Utah Jazz",
       "deporte": "Baloncesto",
       "competicion": "NBA",
@@ -158,11 +158,11 @@
           "selecciones": [
             {
               "nombre": "Dallas Mavericks",
-              "cuota": 1.33
+              "cuota": 1.37
             },
             {
               "nombre": "Utah Jazz",
-              "cuota": 3.49
+              "cuota": 3.32
             }
           ]
         },
@@ -171,11 +171,11 @@
           "selecciones": [
             {
               "nombre": "Dallas Mavericks -7.5",
-              "cuota": 1.95
+              "cuota": 1.93
             },
             {
               "nombre": "Utah Jazz +7.5",
-              "cuota": 1.93
+              "cuota": 1.97
             }
           ]
         },
@@ -183,12 +183,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 226.5",
+              "nombre": "Over 227.5",
               "cuota": 1.93
             },
             {
-              "nombre": "Under 226.5",
-              "cuota": 1.93
+              "nombre": "Under 227.5",
+              "cuota": 1.95
             }
           ]
         }
@@ -206,11 +206,11 @@
           "selecciones": [
             {
               "nombre": "Memphis Grizzlies",
-              "cuota": 2.35
+              "cuota": 2.41
             },
             {
               "nombre": "Oklahoma City Thunder",
-              "cuota": 1.65
+              "cuota": 1.64
             }
           ]
         },
@@ -218,12 +218,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Memphis Grizzlies +3.0",
-              "cuota": 1.97
+              "nombre": "Memphis Grizzlies +4.0",
+              "cuota": 1.95
             },
             {
-              "nombre": "Oklahoma City Thunder -3.0",
-              "cuota": 1.91
+              "nombre": "Oklahoma City Thunder -4.0",
+              "cuota": 1.95
             }
           ]
         },
@@ -231,12 +231,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 226.0",
+              "nombre": "Over 224.5",
               "cuota": 1.93
             },
             {
-              "nombre": "Under 226.0",
-              "cuota": 1.94
+              "nombre": "Under 224.5",
+              "cuota": 1.95
             }
           ]
         }
@@ -254,11 +254,11 @@
           "selecciones": [
             {
               "nombre": "Milwaukee Bucks",
-              "cuota": 3.26
+              "cuota": 3.04
             },
             {
               "nombre": "Toronto Raptors",
-              "cuota": 1.37
+              "cuota": 1.42
             }
           ]
         },
@@ -266,12 +266,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Milwaukee Bucks +7.0",
-              "cuota": 1.93
+              "nombre": "Milwaukee Bucks +6.5",
+              "cuota": 1.97
             },
             {
-              "nombre": "Toronto Raptors -7.0",
-              "cuota": 1.96
+              "nombre": "Toronto Raptors -6.5",
+              "cuota": 1.92
             }
           ]
         },
@@ -279,12 +279,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 231.0",
-              "cuota": 1.92
+              "nombre": "Over 229.5",
+              "cuota": 1.9
             },
             {
-              "nombre": "Under 231.0",
-              "cuota": 1.95
+              "nombre": "Under 229.5",
+              "cuota": 1.97
             }
           ]
         }
@@ -302,11 +302,11 @@
           "selecciones": [
             {
               "nombre": "Minnesota Timberwolves",
-              "cuota": 1.55
+              "cuota": 1.62
             },
             {
               "nombre": "New Orleans Pelicans",
-              "cuota": 2.58
+              "cuota": 2.45
             }
           ]
         },
@@ -315,11 +315,11 @@
           "selecciones": [
             {
               "nombre": "Minnesota Timberwolves -4.5",
-              "cuota": 1.94
+              "cuota": 2.02
             },
             {
               "nombre": "New Orleans Pelicans +4.5",
-              "cuota": 1.94
+              "cuota": 1.88
             }
           ]
         },
@@ -328,11 +328,11 @@
           "selecciones": [
             {
               "nombre": "Over 230.0",
-              "cuota": 1.95
+              "cuota": 1.89
             },
             {
               "nombre": "Under 230.0",
-              "cuota": 1.92
+              "cuota": 2.0
             }
           ]
         }
@@ -350,11 +350,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Lakers",
-              "cuota": 1.7
+              "cuota": 1.68
             },
             {
               "nombre": "Portland Trail Blazers",
-              "cuota": 2.26
+              "cuota": 2.33
             }
           ]
         },
@@ -362,12 +362,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Los Angeles Lakers -2.5",
-              "cuota": 1.91
+              "nombre": "Los Angeles Lakers -3.0",
+              "cuota": 1.93
             },
             {
-              "nombre": "Portland Trail Blazers +2.5",
-              "cuota": 1.98
+              "nombre": "Portland Trail Blazers +3.0",
+              "cuota": 1.97
             }
           ]
         },
@@ -375,12 +375,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 231.5",
-              "cuota": 1.88
+              "nombre": "Over 232.0",
+              "cuota": 1.93
             },
             {
-              "nombre": "Under 231.5",
-              "cuota": 1.98
+              "nombre": "Under 232.0",
+              "cuota": 1.95
             }
           ]
         }
@@ -398,11 +398,11 @@
           "selecciones": [
             {
               "nombre": "Sacramento Kings",
-              "cuota": 8.99
+              "cuota": 7.85
             },
             {
               "nombre": "San Antonio Spurs",
-              "cuota": 1.08
+              "cuota": 1.11
             }
           ]
         },
@@ -410,12 +410,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Sacramento Kings +15.0",
-              "cuota": 1.97
+              "nombre": "Sacramento Kings +15.5",
+              "cuota": 1.95
             },
             {
-              "nombre": "San Antonio Spurs -15.0",
-              "cuota": 1.92
+              "nombre": "San Antonio Spurs -15.5",
+              "cuota": 1.95
             }
           ]
         },
@@ -424,7 +424,7 @@
           "selecciones": [
             {
               "nombre": "Over 229.5",
-              "cuota": 1.97
+              "cuota": 2.0
             },
             {
               "nombre": "Under 229.5",
@@ -569,198 +569,6 @@
             {
               "nombre": "Golden State Warriors",
               "cuota": 2.54
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Beşiktaş J.K. vs Žalgiris",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-06T17:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Beşiktaş J.K.",
-              "cuota": 2.03
-            },
-            {
-              "nombre": "Žalgiris",
-              "cuota": 1.83
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Beşiktaş J.K. +1.5",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Žalgiris -1.5",
-              "cuota": 1.92
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 173.5",
-              "cuota": 1.87
-            },
-            {
-              "nombre": "Under 173.5",
-              "cuota": 1.98
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Olympiacos vs KK Crvena zvezda",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-06T19:15:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "KK Crvena zvezda",
-              "cuota": 3.08
-            },
-            {
-              "nombre": "Olympiacos",
-              "cuota": 1.4
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "KK Crvena zvezda +6.0",
-              "cuota": 1.98
-            },
-            {
-              "nombre": "Olympiacos -6.0",
-              "cuota": 1.88
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 167.5",
-              "cuota": 1.94
-            },
-            {
-              "nombre": "Under 167.5",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Virtus Segafredo Bologna vs Dubai Basketball",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-06T19:30:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Dubai Basketball",
-              "cuota": 1.58
-            },
-            {
-              "nombre": "Virtus Segafredo Bologna",
-              "cuota": 2.45
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Dubai Basketball -4.5",
-              "cuota": 2.04
-            },
-            {
-              "nombre": "Virtus Segafredo Bologna +4.5",
-              "cuota": 1.82
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 176.5",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "Under 176.5",
-              "cuota": 1.93
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "KK Partizan NIS vs Maccabi Tel Aviv",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-06T19:45:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "KK Partizan NIS",
-              "cuota": 1.43
-            },
-            {
-              "nombre": "Maccabi Tel Aviv",
-              "cuota": 2.94
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "KK Partizan NIS -6.0",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Maccabi Tel Aviv +6.0",
-              "cuota": 1.92
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 171.5",
-              "cuota": 1.83
-            },
-            {
-              "nombre": "Under 171.5",
-              "cuota": 2.04
             }
           ]
         }
