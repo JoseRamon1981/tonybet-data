@@ -1,29 +1,7 @@
 {
-  "updated_at": "2026-11-07 07:01",
-  "total": 12,
+  "updated_at": "2026-11-07 14:37",
+  "total": 11,
   "events": [
-    {
-      "nombre": "Los Angeles Lakers vs Portland Trail Blazers",
-      "deporte": "Baloncesto",
-      "competicion": "NBA",
-      "hora": "2026-11-07T03:14:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Los Angeles Lakers -10.0",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "Portland Trail Blazers +10.0",
-              "cuota": 1.86
-            }
-          ]
-        }
-      ]
-    },
     {
       "nombre": "Indiana Pacers vs Denver Nuggets",
       "deporte": "Baloncesto",
@@ -36,11 +14,11 @@
           "selecciones": [
             {
               "nombre": "Denver Nuggets",
-              "cuota": 1.35
+              "cuota": 1.34
             },
             {
               "nombre": "Indiana Pacers",
-              "cuota": 3.45
+              "cuota": 3.52
             }
           ]
         },
@@ -49,11 +27,11 @@
           "selecciones": [
             {
               "nombre": "Denver Nuggets -7.0",
-              "cuota": 1.94
+              "cuota": 1.9
             },
             {
               "nombre": "Indiana Pacers +7.0",
-              "cuota": 1.96
+              "cuota": 2.01
             }
           ]
         },
@@ -62,11 +40,11 @@
           "selecciones": [
             {
               "nombre": "Over 229.0",
-              "cuota": 1.99
+              "cuota": 1.88
             },
             {
               "nombre": "Under 229.0",
-              "cuota": 1.89
+              "cuota": 2.01
             }
           ]
         }
@@ -84,11 +62,11 @@
           "selecciones": [
             {
               "nombre": "Atlanta Hawks",
-              "cuota": 1.37
+              "cuota": 1.38
             },
             {
               "nombre": "Brooklyn Nets",
-              "cuota": 3.35
+              "cuota": 3.3
             }
           ]
         },
@@ -97,11 +75,11 @@
           "selecciones": [
             {
               "nombre": "Atlanta Hawks -6.5",
-              "cuota": 1.92
+              "cuota": 1.93
             },
             {
               "nombre": "Brooklyn Nets +6.5",
-              "cuota": 1.99
+              "cuota": 1.97
             }
           ]
         },
@@ -109,12 +87,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 225.5",
-              "cuota": 1.94
+              "nombre": "Over 227.0",
+              "cuota": 1.92
             },
             {
-              "nombre": "Under 225.5",
-              "cuota": 1.94
+              "nombre": "Under 227.0",
+              "cuota": 1.97
             }
           ]
         }
@@ -132,11 +110,11 @@
           "selecciones": [
             {
               "nombre": "Cleveland Cavaliers",
-              "cuota": 2.68
+              "cuota": 2.8
             },
             {
               "nombre": "New York Knicks",
-              "cuota": 1.53
+              "cuota": 1.49
             }
           ]
         },
@@ -145,11 +123,11 @@
           "selecciones": [
             {
               "nombre": "Cleveland Cavaliers +5.0",
-              "cuota": 1.93
+              "cuota": 2.0
             },
             {
               "nombre": "New York Knicks -5.0",
-              "cuota": 1.98
+              "cuota": 1.91
             }
           ]
         },
@@ -157,12 +135,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 225.0",
-              "cuota": 2.02
+              "nombre": "Over 223.0",
+              "cuota": 1.96
             },
             {
-              "nombre": "Under 225.0",
-              "cuota": 1.87
+              "nombre": "Under 223.0",
+              "cuota": 1.93
             }
           ]
         }
@@ -173,31 +151,44 @@
       "deporte": "Baloncesto",
       "competicion": "NBA",
       "hora": "2026-11-08T01:10:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Oklahoma City Thunder",
-              "cuota": 1.22
+              "cuota": 1.19
             },
             {
               "nombre": "Washington Wizards",
-              "cuota": 4.8
+              "cuota": 5.3
             }
           ]
         },
         {
-          "mercado": "H2H Lay",
+          "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Oklahoma City Thunder",
-              "cuota": 1.26
+              "nombre": "Oklahoma City Thunder -11.5",
+              "cuota": 1.95
             },
             {
-              "nombre": "Washington Wizards",
-              "cuota": 5.8
+              "nombre": "Washington Wizards +11.5",
+              "cuota": 1.95
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 222.0",
+              "cuota": 1.96
+            },
+            {
+              "nombre": "Under 222.0",
+              "cuota": 1.93
             }
           ]
         }
@@ -215,11 +206,11 @@
           "selecciones": [
             {
               "nombre": "Golden State Warriors",
-              "cuota": 1.39
+              "cuota": 1.4
             },
             {
               "nombre": "Orlando Magic",
-              "cuota": 3.22
+              "cuota": 3.18
             }
           ]
         },
@@ -228,11 +219,11 @@
           "selecciones": [
             {
               "nombre": "Golden State Warriors -6.5",
-              "cuota": 1.94
+              "cuota": 1.93
             },
             {
               "nombre": "Orlando Magic +6.5",
-              "cuota": 1.96
+              "cuota": 1.97
             }
           ]
         },
@@ -240,12 +231,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 222.5",
-              "cuota": 2.03
+              "nombre": "Over 223.0",
+              "cuota": 1.97
             },
             {
-              "nombre": "Under 222.5",
-              "cuota": 1.87
+              "nombre": "Under 223.0",
+              "cuota": 1.92
             }
           ]
         }
@@ -263,11 +254,11 @@
           "selecciones": [
             {
               "nombre": "Houston Rockets",
-              "cuota": 1.33
+              "cuota": 1.36
             },
             {
               "nombre": "Phoenix Suns",
-              "cuota": 3.61
+              "cuota": 3.38
             }
           ]
         },
@@ -276,11 +267,11 @@
           "selecciones": [
             {
               "nombre": "Houston Rockets -7.0",
-              "cuota": 1.88
+              "cuota": 1.93
             },
             {
               "nombre": "Phoenix Suns +7.0",
-              "cuota": 2.02
+              "cuota": 1.97
             }
           ]
         },
@@ -288,12 +279,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 221.5",
-              "cuota": 1.9
+              "nombre": "Over 223.5",
+              "cuota": 1.88
             },
             {
-              "nombre": "Under 221.5",
-              "cuota": 1.99
+              "nombre": "Under 223.5",
+              "cuota": 2.01
             }
           ]
         }
@@ -304,18 +295,18 @@
       "deporte": "Baloncesto",
       "competicion": "NBA",
       "hora": "2026-11-08T03:00:00Z",
-      "bookmaker": "Marathon Bet",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Portland Trail Blazers",
-              "cuota": 2.28
+              "cuota": 2.82
             },
             {
               "nombre": "San Antonio Spurs",
-              "cuota": 1.65
+              "cuota": 1.49
             }
           ]
         },
@@ -323,12 +314,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Portland Trail Blazers +3.5",
-              "cuota": 1.83
+              "nombre": "Portland Trail Blazers +5.0",
+              "cuota": 1.99
             },
             {
-              "nombre": "San Antonio Spurs -3.5",
-              "cuota": 1.98
+              "nombre": "San Antonio Spurs -5.0",
+              "cuota": 1.91
             }
           ]
         },
@@ -336,12 +327,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 227.5",
-              "cuota": 1.86
+              "nombre": "Over 226.5",
+              "cuota": 1.91
             },
             {
-              "nombre": "Under 227.5",
-              "cuota": 1.94
+              "nombre": "Under 226.5",
+              "cuota": 1.98
             }
           ]
         }
