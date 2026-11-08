@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08 07:01",
-  "total": 16,
+  "updated_at": "2026-11-08 14:56",
+  "total": 21,
   "events": [
     {
       "nombre": "Chicago Bulls vs Philadelphia 76ers",
@@ -14,11 +14,11 @@
           "selecciones": [
             {
               "nombre": "Chicago Bulls",
-              "cuota": 4.3
+              "cuota": 4.01
             },
             {
               "nombre": "Philadelphia 76ers",
-              "cuota": 1.25
+              "cuota": 1.28
             }
           ]
         },
@@ -26,12 +26,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Chicago Bulls +9.5",
-              "cuota": 1.94
+              "nombre": "Chicago Bulls +8.5",
+              "cuota": 1.96
             },
             {
-              "nombre": "Philadelphia 76ers -9.5",
-              "cuota": 1.96
+              "nombre": "Philadelphia 76ers -8.5",
+              "cuota": 1.94
             }
           ]
         },
@@ -40,11 +40,11 @@
           "selecciones": [
             {
               "nombre": "Over 238.0",
-              "cuota": 1.88
+              "cuota": 1.96
             },
             {
               "nombre": "Under 238.0",
-              "cuota": 2.01
+              "cuota": 1.93
             }
           ]
         }
@@ -62,11 +62,11 @@
           "selecciones": [
             {
               "nombre": "Detroit Pistons",
-              "cuota": 1.56
+              "cuota": 1.57
             },
             {
               "nombre": "Los Angeles Lakers",
-              "cuota": 2.6
+              "cuota": 2.52
             }
           ]
         },
@@ -75,7 +75,7 @@
           "selecciones": [
             {
               "nombre": "Detroit Pistons -4.5",
-              "cuota": 1.96
+              "cuota": 1.94
             },
             {
               "nombre": "Los Angeles Lakers +4.5",
@@ -87,12 +87,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 222.0",
-              "cuota": 1.97
+              "nombre": "Over 221.5",
+              "cuota": 2.0
             },
             {
-              "nombre": "Under 222.0",
-              "cuota": 1.92
+              "nombre": "Under 221.5",
+              "cuota": 1.87
             }
           ]
         }
@@ -114,7 +114,7 @@
             },
             {
               "nombre": "Utah Jazz",
-              "cuota": 5.64
+              "cuota": 5.36
             }
           ]
         },
@@ -123,11 +123,11 @@
           "selecciones": [
             {
               "nombre": "Minnesota Timberwolves -11.5",
-              "cuota": 1.93
+              "cuota": 1.99
             },
             {
               "nombre": "Utah Jazz +11.5",
-              "cuota": 1.97
+              "cuota": 1.9
             }
           ]
         },
@@ -140,7 +140,7 @@
             },
             {
               "nombre": "Under 224.0",
-              "cuota": 1.96
+              "cuota": 1.93
             }
           ]
         }
@@ -158,11 +158,11 @@
           "selecciones": [
             {
               "nombre": "Brooklyn Nets",
-              "cuota": 4.32
+              "cuota": 3.7
             },
             {
               "nombre": "Dallas Mavericks",
-              "cuota": 1.25
+              "cuota": 1.32
             }
           ]
         },
@@ -170,12 +170,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Brooklyn Nets +9.0",
-              "cuota": 2.01
+              "nombre": "Brooklyn Nets +7.5",
+              "cuota": 1.96
             },
             {
-              "nombre": "Dallas Mavericks -9.0",
-              "cuota": 1.9
+              "nombre": "Dallas Mavericks -7.5",
+              "cuota": 1.94
             }
           ]
         },
@@ -183,12 +183,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 219.0",
-              "cuota": 1.87
+              "nombre": "Over 221.5",
+              "cuota": 1.93
             },
             {
-              "nombre": "Under 219.0",
-              "cuota": 2.02
+              "nombre": "Under 221.5",
+              "cuota": 1.95
             }
           ]
         }
@@ -206,11 +206,11 @@
           "selecciones": [
             {
               "nombre": "Boston Celtics",
-              "cuota": 1.13
+              "cuota": 1.14
             },
             {
               "nombre": "Milwaukee Bucks",
-              "cuota": 6.72
+              "cuota": 6.36
             }
           ]
         },
@@ -231,11 +231,11 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 223.5",
+              "nombre": "Over 221.0",
               "cuota": 1.98
             },
             {
-              "nombre": "Under 223.5",
+              "nombre": "Under 221.0",
               "cuota": 1.9
             }
           ]
@@ -254,11 +254,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Clippers",
-              "cuota": 2.05
+              "cuota": 2.07
             },
             {
               "nombre": "New Orleans Pelicans",
-              "cuota": 1.86
+              "cuota": 1.85
             }
           ]
         },
@@ -267,11 +267,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Clippers +1.5",
-              "cuota": 1.95
+              "cuota": 1.98
             },
             {
               "nombre": "New Orleans Pelicans -1.5",
-              "cuota": 1.95
+              "cuota": 1.93
             }
           ]
         },
@@ -279,12 +279,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 229.5",
-              "cuota": 2.01
+              "nombre": "Over 226.5",
+              "cuota": 1.93
             },
             {
-              "nombre": "Under 229.5",
-              "cuota": 1.88
+              "nombre": "Under 226.5",
+              "cuota": 1.95
             }
           ]
         }
@@ -302,11 +302,11 @@
           "selecciones": [
             {
               "nombre": "Miami Heat",
-              "cuota": 1.28
+              "cuota": 1.25
             },
             {
               "nombre": "Sacramento Kings",
-              "cuota": 4.0
+              "cuota": 4.3
             }
           ]
         },
@@ -314,12 +314,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Miami Heat -8.5",
-              "cuota": 1.93
+              "nombre": "Miami Heat -9.5",
+              "cuota": 1.92
             },
             {
-              "nombre": "Sacramento Kings +8.5",
-              "cuota": 1.98
+              "nombre": "Sacramento Kings +9.5",
+              "cuota": 1.99
             }
           ]
         },
@@ -328,11 +328,11 @@
           "selecciones": [
             {
               "nombre": "Over 238.0",
-              "cuota": 1.96
+              "cuota": 1.93
             },
             {
               "nombre": "Under 238.0",
-              "cuota": 1.93
+              "cuota": 1.95
             }
           ]
         }
@@ -420,11 +420,11 @@
           "selecciones": [
             {
               "nombre": "Los Angeles Lakers",
-              "cuota": 1.67
+              "cuota": 1.71
             },
             {
               "nombre": "Philadelphia 76ers",
-              "cuota": 1.75
+              "cuota": 1.78
             }
           ]
         },
@@ -494,7 +494,7 @@
             },
             {
               "nombre": "Paris Basketball",
-              "cuota": 1.02
+              "cuota": 1.31
             }
           ]
         },
@@ -503,11 +503,11 @@
           "selecciones": [
             {
               "nombre": "Fenerbahce SK",
-              "cuota": 300.0
+              "cuota": 4.4
             },
             {
               "nombre": "Paris Basketball",
-              "cuota": 300.0
+              "cuota": 21.0
             }
           ]
         }
@@ -525,11 +525,11 @@
           "selecciones": [
             {
               "nombre": "KK Partizan NIS",
-              "cuota": 1.01
+              "cuota": 1.05
             },
             {
               "nombre": "Saski Baskonia",
-              "cuota": 1.01
+              "cuota": 1.31
             }
           ]
         },
@@ -538,11 +538,11 @@
           "selecciones": [
             {
               "nombre": "KK Partizan NIS",
-              "cuota": 300.0
+              "cuota": 1.35
             },
             {
               "nombre": "Saski Baskonia",
-              "cuota": 300.0
+              "cuota": 21.0
             }
           ]
         }
@@ -560,11 +560,11 @@
           "selecciones": [
             {
               "nombre": "Hapoel Tel Aviv",
-              "cuota": 1.01
+              "cuota": 1.1
             },
             {
               "nombre": "Maccabi Tel Aviv",
-              "cuota": 1.01
+              "cuota": 1.31
             }
           ]
         },
@@ -573,11 +573,11 @@
           "selecciones": [
             {
               "nombre": "Hapoel Tel Aviv",
-              "cuota": 300.0
+              "cuota": 4.4
             },
             {
               "nombre": "Maccabi Tel Aviv",
-              "cuota": 300.0
+              "cuota": 11.0
             }
           ]
         }
@@ -595,11 +595,11 @@
           "selecciones": [
             {
               "nombre": "Dubai Basketball",
-              "cuota": 1.01
+              "cuota": 1.31
             },
             {
               "nombre": "Olympiacos",
-              "cuota": 1.01
+              "cuota": 1.1
             }
           ]
         },
@@ -608,11 +608,107 @@
           "selecciones": [
             {
               "nombre": "Dubai Basketball",
-              "cuota": 300.0
+              "cuota": 11.0
             },
             {
               "nombre": "Olympiacos",
-              "cuota": 300.0
+              "cuota": 1.52
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Valencia Basket vs FC Bayern München",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-11-12T19:30:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "FC Bayern München",
+              "cuota": 3.8
+            },
+            {
+              "nombre": "Valencia Basket",
+              "cuota": 1.28
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "FC Bayern München +8.5",
+              "cuota": 1.89
+            },
+            {
+              "nombre": "Valencia Basket -8.5",
+              "cuota": 1.91
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 182.5",
+              "cuota": 1.85
+            },
+            {
+              "nombre": "Under 182.5",
+              "cuota": 1.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Pallacanestro Olimpia Milano vs Žalgiris",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-11-12T19:30:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Pallacanestro Olimpia Milano",
+              "cuota": 2.21
+            },
+            {
+              "nombre": "Žalgiris",
+              "cuota": 1.69
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Pallacanestro Olimpia Milano +2.5",
+              "cuota": 1.9
+            },
+            {
+              "nombre": "Žalgiris -2.5",
+              "cuota": 1.9
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 170.5",
+              "cuota": 1.9
+            },
+            {
+              "nombre": "Under 170.5",
+              "cuota": 1.9
             }
           ]
         }
@@ -630,11 +726,11 @@
           "selecciones": [
             {
               "nombre": "KK Crvena zvezda",
-              "cuota": 1.01
+              "cuota": 1.31
             },
             {
               "nombre": "Real Madrid",
-              "cuota": 1.01
+              "cuota": 1.05
             }
           ]
         },
@@ -643,11 +739,155 @@
           "selecciones": [
             {
               "nombre": "KK Crvena zvezda",
-              "cuota": 300.0
+              "cuota": 21.0
             },
             {
               "nombre": "Real Madrid",
-              "cuota": 300.0
+              "cuota": 1.42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Anadolu Efes vs Virtus Segafredo Bologna",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-11-13T17:30:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "Anadolu Efes",
+              "cuota": 1.55
+            },
+            {
+              "nombre": "Virtus Segafredo Bologna",
+              "cuota": 2.51
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "Anadolu Efes -3.5",
+              "cuota": 1.84
+            },
+            {
+              "nombre": "Virtus Segafredo Bologna +3.5",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 171.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Under 171.5",
+              "cuota": 1.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Panathinaikos vs FC Barcelona Bàsquet",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-11-13T19:15:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "FC Barcelona Bàsquet",
+              "cuota": 4.45
+            },
+            {
+              "nombre": "Panathinaikos",
+              "cuota": 1.22
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "FC Barcelona Bàsquet +10.5",
+              "cuota": 1.83
+            },
+            {
+              "nombre": "Panathinaikos -10.5",
+              "cuota": 1.98
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 168.5",
+              "cuota": 1.88
+            },
+            {
+              "nombre": "Under 168.5",
+              "cuota": 1.92
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "ASVEL Lyon Villeurbanne vs Beşiktaş J.K.",
+      "deporte": "Baloncesto",
+      "competicion": "Euroliga",
+      "hora": "2026-11-13T19:30:00Z",
+      "bookmaker": "Marathon Bet",
+      "mercados": [
+        {
+          "mercado": "Ganador",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne",
+              "cuota": 1.8
+            },
+            {
+              "nombre": "Beşiktaş J.K.",
+              "cuota": 2.05
+            }
+          ]
+        },
+        {
+          "mercado": "Hándicap puntos",
+          "selecciones": [
+            {
+              "nombre": "ASVEL Lyon Villeurbanne -1.5",
+              "cuota": 1.9
+            },
+            {
+              "nombre": "Beşiktaş J.K. +1.5",
+              "cuota": 1.9
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 176.5",
+              "cuota": 1.86
+            },
+            {
+              "nombre": "Under 176.5",
+              "cuota": 1.94
             }
           ]
         }
