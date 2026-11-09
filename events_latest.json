@@ -1,37 +1,50 @@
 {
-  "updated_at": "2026-11-09 07:01",
-  "total": 64,
+  "updated_at": "2026-11-09 17:01",
+  "total": 13,
   "events": [
     {
       "nombre": "Atlanta Hawks vs Los Angeles Lakers",
       "deporte": "Baloncesto",
       "competicion": "NBA",
       "hora": "2026-11-10T00:10:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Atlanta Hawks",
-              "cuota": 2.22
+              "cuota": 1.85
             },
             {
               "nombre": "Los Angeles Lakers",
-              "cuota": 1.74
+              "cuota": 2.05
             }
           ]
         },
         {
-          "mercado": "H2H Lay",
+          "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Atlanta Hawks",
-              "cuota": 2.36
+              "nombre": "Atlanta Hawks -1.5",
+              "cuota": 1.92
             },
             {
-              "nombre": "Los Angeles Lakers",
-              "cuota": 1.82
+              "nombre": "Los Angeles Lakers +1.5",
+              "cuota": 1.96
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 235.5",
+              "cuota": 1.89
+            },
+            {
+              "nombre": "Under 235.5",
+              "cuota": 1.98
             }
           ]
         }
@@ -49,11 +62,11 @@
           "selecciones": [
             {
               "nombre": "Charlotte Hornets",
-              "cuota": 3.84
+              "cuota": 3.8
             },
             {
               "nombre": "Cleveland Cavaliers",
-              "cuota": 1.29
+              "cuota": 1.3
             }
           ]
         },
@@ -62,11 +75,11 @@
           "selecciones": [
             {
               "nombre": "Charlotte Hornets +8.5",
-              "cuota": 1.94
+              "cuota": 1.92
             },
             {
               "nombre": "Cleveland Cavaliers -8.5",
-              "cuota": 1.94
+              "cuota": 1.99
             }
           ]
         },
@@ -74,12 +87,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 216.5",
-              "cuota": 1.99
+              "nombre": "Over 214.5",
+              "cuota": 1.91
             },
             {
-              "nombre": "Under 216.5",
-              "cuota": 1.88
+              "nombre": "Under 214.5",
+              "cuota": 1.96
             }
           ]
         }
@@ -97,11 +110,11 @@
           "selecciones": [
             {
               "nombre": "Detroit Pistons",
-              "cuota": 1.2
+              "cuota": 1.19
             },
             {
               "nombre": "Washington Wizards",
-              "cuota": 4.92
+              "cuota": 5.01
             }
           ]
         },
@@ -110,11 +123,11 @@
           "selecciones": [
             {
               "nombre": "Detroit Pistons -10.5",
-              "cuota": 1.96
+              "cuota": 1.93
             },
             {
               "nombre": "Washington Wizards +10.5",
-              "cuota": 1.93
+              "cuota": 1.96
             }
           ]
         },
@@ -122,12 +135,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 218.5",
-              "cuota": 1.94
+              "nombre": "Over 218.0",
+              "cuota": 1.95
             },
             {
-              "nombre": "Under 218.5",
-              "cuota": 1.93
+              "nombre": "Under 218.0",
+              "cuota": 1.92
             }
           ]
         }
@@ -145,11 +158,11 @@
           "selecciones": [
             {
               "nombre": "Memphis Grizzlies",
-              "cuota": 2.38
+              "cuota": 2.25
             },
             {
               "nombre": "Toronto Raptors",
-              "cuota": 1.64
+              "cuota": 1.7
             }
           ]
         },
@@ -158,11 +171,11 @@
           "selecciones": [
             {
               "nombre": "Memphis Grizzlies +3.0",
-              "cuota": 2.01
+              "cuota": 1.93
             },
             {
               "nombre": "Toronto Raptors -3.0",
-              "cuota": 1.88
+              "cuota": 1.95
             }
           ]
         },
@@ -170,12 +183,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 230.5",
-              "cuota": 1.95
+              "nombre": "Over 229.0",
+              "cuota": 1.9
             },
             {
-              "nombre": "Under 230.5",
-              "cuota": 1.92
+              "nombre": "Under 229.0",
+              "cuota": 1.96
             }
           ]
         }
@@ -186,31 +199,44 @@
       "deporte": "Baloncesto",
       "competicion": "NBA",
       "hora": "2026-11-10T01:10:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Dallas Mavericks",
-              "cuota": 1.58
+              "cuota": 1.63
             },
             {
               "nombre": "Indiana Pacers",
-              "cuota": 2.52
+              "cuota": 2.39
             }
           ]
         },
         {
-          "mercado": "H2H Lay",
+          "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Dallas Mavericks",
-              "cuota": 1.65
+              "nombre": "Dallas Mavericks -3.5",
+              "cuota": 1.94
             },
             {
-              "nombre": "Indiana Pacers",
-              "cuota": 2.74
+              "nombre": "Indiana Pacers +3.5",
+              "cuota": 1.94
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 226.0",
+              "cuota": 2.02
+            },
+            {
+              "nombre": "Under 226.0",
+              "cuota": 1.86
             }
           ]
         }
@@ -228,11 +254,11 @@
           "selecciones": [
             {
               "nombre": "Denver Nuggets",
-              "cuota": 3.91
+              "cuota": 3.65
             },
             {
               "nombre": "Houston Rockets",
-              "cuota": 1.28
+              "cuota": 1.31
             }
           ]
         },
@@ -240,12 +266,12 @@
           "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Denver Nuggets +8.5",
-              "cuota": 2.01
+              "nombre": "Denver Nuggets +9.0",
+              "cuota": 1.9
             },
             {
-              "nombre": "Houston Rockets -8.5",
-              "cuota": 1.88
+              "nombre": "Houston Rockets -9.0",
+              "cuota": 1.99
             }
           ]
         },
@@ -253,12 +279,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 217.5",
-              "cuota": 1.93
+              "nombre": "Over 220.0",
+              "cuota": 1.97
             },
             {
-              "nombre": "Under 217.5",
-              "cuota": 1.93
+              "nombre": "Under 220.0",
+              "cuota": 1.9
             }
           ]
         }
@@ -276,7 +302,7 @@
           "selecciones": [
             {
               "nombre": "Phoenix Suns",
-              "cuota": 3.97
+              "cuota": 4.01
             },
             {
               "nombre": "San Antonio Spurs",
@@ -289,11 +315,11 @@
           "selecciones": [
             {
               "nombre": "Phoenix Suns +8.5",
-              "cuota": 1.95
+              "cuota": 1.94
             },
             {
               "nombre": "San Antonio Spurs -8.5",
-              "cuota": 1.93
+              "cuota": 1.94
             }
           ]
         },
@@ -301,12 +327,12 @@
           "mercado": "Total puntos",
           "selecciones": [
             {
-              "nombre": "Over 228.5",
-              "cuota": 1.93
+              "nombre": "Over 227.0",
+              "cuota": 1.92
             },
             {
-              "nombre": "Under 228.5",
-              "cuota": 1.93
+              "nombre": "Under 227.0",
+              "cuota": 1.95
             }
           ]
         }
@@ -317,31 +343,44 @@
       "deporte": "Baloncesto",
       "competicion": "NBA",
       "hora": "2026-11-10T03:10:00Z",
-      "bookmaker": "Betfair",
+      "bookmaker": "Pinnacle",
       "mercados": [
         {
           "mercado": "Ganador",
           "selecciones": [
             {
               "nombre": "Golden State Warriors",
-              "cuota": 1.28
+              "cuota": 1.27
             },
             {
               "nombre": "New Orleans Pelicans",
-              "cuota": 4.3
+              "cuota": 4.04
             }
           ]
         },
         {
-          "mercado": "H2H Lay",
+          "mercado": "Hándicap puntos",
           "selecciones": [
             {
-              "nombre": "Golden State Warriors",
-              "cuota": 1.31
+              "nombre": "Golden State Warriors -9.5",
+              "cuota": 2.01
             },
             {
-              "nombre": "New Orleans Pelicans",
-              "cuota": 4.8
+              "nombre": "New Orleans Pelicans +9.5",
+              "cuota": 1.88
+            }
+          ]
+        },
+        {
+          "mercado": "Total puntos",
+          "selecciones": [
+            {
+              "nombre": "Over 232.5",
+              "cuota": 1.93
+            },
+            {
+              "nombre": "Under 232.5",
+              "cuota": 1.94
             }
           ]
         }
@@ -359,11 +398,11 @@
           "selecciones": [
             {
               "nombre": "Boston Celtics",
-              "cuota": 1.92
+              "cuota": 1.75
             },
             {
               "nombre": "Philadelphia 76ers",
-              "cuota": 1.85
+              "cuota": 1.71
             }
           ]
         },
@@ -372,11 +411,11 @@
           "selecciones": [
             {
               "nombre": "Boston Celtics",
-              "cuota": 2.18
+              "cuota": 2.4
             },
             {
               "nombre": "Philadelphia 76ers",
-              "cuota": 2.1
+              "cuota": 2.32
             }
           ]
         }
@@ -517,1926 +556,6 @@
             {
               "nombre": "Golden State Warriors",
               "cuota": 2.54
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Paris Basketball vs Fenerbahce SK",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-11T19:45:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Fenerbahce SK",
-              "cuota": 1.33
-            },
-            {
-              "nombre": "Paris Basketball",
-              "cuota": 1.31
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Fenerbahce SK",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Paris Basketball",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "KK Partizan NIS vs Saski Baskonia",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-11T19:45:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "KK Partizan NIS",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "Saski Baskonia",
-              "cuota": 3.85
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "KK Partizan NIS",
-              "cuota": 1.35
-            },
-            {
-              "nombre": "Saski Baskonia",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Maccabi Tel Aviv vs Hapoel Tel Aviv",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-12T19:05:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Hapoel Tel Aviv",
-              "cuota": 1.52
-            },
-            {
-              "nombre": "Maccabi Tel Aviv",
-              "cuota": 1.31
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Hapoel Tel Aviv",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Maccabi Tel Aviv",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Olympiacos vs Dubai Basketball",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-12T19:15:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Dubai Basketball",
-              "cuota": 1.31
-            },
-            {
-              "nombre": "Olympiacos",
-              "cuota": 1.51
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Dubai Basketball",
-              "cuota": 2.96
-            },
-            {
-              "nombre": "Olympiacos",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Valencia Basket vs FC Bayern München",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-12T19:30:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "FC Bayern München",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "Valencia Basket",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "FC Bayern München",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Valencia Basket",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Pallacanestro Olimpia Milano vs Žalgiris",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-12T19:30:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Pallacanestro Olimpia Milano",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "Žalgiris",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Pallacanestro Olimpia Milano",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Žalgiris",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Real Madrid vs KK Crvena zvezda",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-12T20:00:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "KK Crvena zvezda",
-              "cuota": 3.35
-            },
-            {
-              "nombre": "Real Madrid",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "KK Crvena zvezda",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Real Madrid",
-              "cuota": 1.42
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Anadolu Efes vs Virtus Segafredo Bologna",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-13T17:30:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Anadolu Efes",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "Virtus Segafredo Bologna",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "Anadolu Efes",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Virtus Segafredo Bologna",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Panathinaikos vs FC Barcelona Bàsquet",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-13T19:15:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "FC Barcelona Bàsquet",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "Panathinaikos",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "FC Barcelona Bàsquet",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Panathinaikos",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "ASVEL Lyon Villeurbanne vs Beşiktaş J.K.",
-      "deporte": "Baloncesto",
-      "competicion": "Euroliga",
-      "hora": "2026-11-13T19:30:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "ASVEL Lyon Villeurbanne",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "Beşiktaş J.K.",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "H2H Lay",
-          "selecciones": [
-            {
-              "nombre": "ASVEL Lyon Villeurbanne",
-              "cuota": 300.0
-            },
-            {
-              "nombre": "Beşiktaş J.K.",
-              "cuota": 300.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "USC Trojans vs Wichita St Shockers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-09T04:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "USC Trojans",
-              "cuota": 1.34
-            },
-            {
-              "nombre": "Wichita St Shockers",
-              "cuota": 3.44
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "USC Trojans -5.0",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Wichita St Shockers +5.0",
-              "cuota": 1.95
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 172.0",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Under 172.0",
-              "cuota": 1.92
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Ohio State Buckeyes vs Marshall Thundering Herd",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-09T23:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Marshall Thundering Herd +26.0",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "Ohio State Buckeyes -26.0",
-              "cuota": 1.93
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 162.5",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "Under 162.5",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Pennsylvania Quakers vs Howard Bison",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-09T23:30:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Howard Bison",
-              "cuota": 2.75
-            },
-            {
-              "nombre": "Pennsylvania Quakers",
-              "cuota": 1.4
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Howard Bison +6.5",
-              "cuota": 1.73
-            },
-            {
-              "nombre": "Pennsylvania Quakers -6.5",
-              "cuota": 2.0
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 158.5",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "Under 158.5",
-              "cuota": 1.8
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Indiana Hoosiers vs Syracuse Orange",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-09T23:30:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Indiana Hoosiers",
-              "cuota": 1.44
-            },
-            {
-              "nombre": "Syracuse Orange",
-              "cuota": 2.9
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Indiana Hoosiers -5.5",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Syracuse Orange +5.5",
-              "cuota": 1.92
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 147.5",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Under 147.5",
-              "cuota": 1.92
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Bowling Green Falcons vs Cleveland St Vikings",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Bowling Green Falcons",
-              "cuota": 1.11
-            },
-            {
-              "nombre": "Cleveland St Vikings",
-              "cuota": 7.37
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Bowling Green Falcons -13.0",
-              "cuota": 1.99
-            },
-            {
-              "nombre": "Cleveland St Vikings +13.0",
-              "cuota": 1.86
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 157.5",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "Under 157.5",
-              "cuota": 1.9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Chicago St Cougars vs South Carolina St Bulldogs",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Chicago St Cougars",
-              "cuota": 1.4
-            },
-            {
-              "nombre": "South Carolina St Bulldogs",
-              "cuota": 2.75
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Chicago St Cougars -5.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "South Carolina St Bulldogs +5.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 148.5",
-              "cuota": 1.8
-            },
-            {
-              "nombre": "Under 148.5",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Cincinnati Bearcats vs Minnesota Golden Gophers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Cincinnati Bearcats",
-              "cuota": 1.33
-            },
-            {
-              "nombre": "Minnesota Golden Gophers",
-              "cuota": 3.51
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Cincinnati Bearcats -7.0",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Minnesota Golden Gophers +7.0",
-              "cuota": 1.93
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 143.5",
-              "cuota": 1.84
-            },
-            {
-              "nombre": "Under 143.5",
-              "cuota": 1.98
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Clemson Tigers vs North Dakota Fighting Hawks",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Clemson Tigers -21.0",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "North Dakota Fighting Hawks +21.0",
-              "cuota": 2.0
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 153.5",
-              "cuota": 1.94
-            },
-            {
-              "nombre": "Under 153.5",
-              "cuota": 1.87
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Coastal Carolina Chanticleers vs South Carolina Upstate Spartans",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Coastal Carolina Chanticleers",
-              "cuota": 1.17
-            },
-            {
-              "nombre": "South Carolina Upstate Spartans",
-              "cuota": 4.5
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Coastal Carolina Chanticleers -10.5",
-              "cuota": 2.0
-            },
-            {
-              "nombre": "South Carolina Upstate Spartans +10.5",
-              "cuota": 1.73
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 148.5",
-              "cuota": 1.8
-            },
-            {
-              "nombre": "Under 148.5",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Columbia Lions vs Stonehill Skyhawks",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Columbia Lions",
-              "cuota": 1.12
-            },
-            {
-              "nombre": "Stonehill Skyhawks",
-              "cuota": 5.5
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Columbia Lions -10.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Stonehill Skyhawks +10.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 145.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 145.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Notre Dame Fighting Irish vs Eastern Illinois Panthers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Eastern Illinois Panthers +28.0",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Notre Dame Fighting Irish -28.0",
-              "cuota": 1.93
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 142.0",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "Under 142.0",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Georgia Bulldogs vs Florida Gulf Coast Eagles",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Florida Gulf Coast Eagles",
-              "cuota": 21.0
-            },
-            {
-              "nombre": "Georgia Bulldogs",
-              "cuota": 1.01
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Florida Gulf Coast Eagles +23.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Georgia Bulldogs -23.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 161.5",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "Under 161.5",
-              "cuota": 1.8
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Texas Longhorns vs Grambling St Tigers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Grambling St Tigers",
-              "cuota": 50.0
-            },
-            {
-              "nombre": "Texas Longhorns",
-              "cuota": 1.01
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Jacksonville Dolphins vs UMKC Kangaroos",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Jacksonville Dolphins",
-              "cuota": 1.4
-            },
-            {
-              "nombre": "UMKC Kangaroos",
-              "cuota": 2.75
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Jacksonville Dolphins -5.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "UMKC Kangaroos +5.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 147.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 147.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Towson Tigers vs LIU Sharks",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "William Hill",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "LIU Sharks",
-              "cuota": 2.75
-            },
-            {
-              "nombre": "Towson Tigers",
-              "cuota": 1.4
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "LIU Sharks +5.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Towson Tigers -5.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 141.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 141.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Miami Hurricanes vs North Florida Ospreys",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Miami Hurricanes",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "North Florida Ospreys",
-              "cuota": 50.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Tennessee Volunteers vs Radford Highlanders",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Radford Highlanders",
-              "cuota": 50.0
-            },
-            {
-              "nombre": "Tennessee Volunteers",
-              "cuota": 1.01
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "UConn Huskies vs Wagner Seahawks",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Betfair",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "UConn Huskies",
-              "cuota": 1.01
-            },
-            {
-              "nombre": "Wagner Seahawks",
-              "cuota": 50.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "UIC Flames vs UNC Greensboro Spartans",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "UIC Flames -20.0",
-              "cuota": 1.96
-            },
-            {
-              "nombre": "UNC Greensboro Spartans +20.0",
-              "cuota": 1.89
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 150.0",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "Under 150.0",
-              "cuota": 1.9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Alabama Crimson Tide vs Oakland Golden Grizzlies",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:30:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Alabama Crimson Tide -33.0",
-              "cuota": 1.94
-            },
-            {
-              "nombre": "Oakland Golden Grizzlies +33.0",
-              "cuota": 1.91
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 171.5",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Under 171.5",
-              "cuota": 1.92
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "UAB Blazers vs Florida A&M Rattlers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:30:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Florida A&M Rattlers",
-              "cuota": 9.0
-            },
-            {
-              "nombre": "UAB Blazers",
-              "cuota": 1.05
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Mississippi St Bulldogs vs Jackson St Tigers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T00:30:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Jackson St Tigers",
-              "cuota": 21.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Northwestern Wildcats vs Boston Univ. Terriers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T01:00:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Boston Univ. Terriers",
-              "cuota": 11.0
-            },
-            {
-              "nombre": "Northwestern Wildcats",
-              "cuota": 1.04
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "LSU Tigers vs Louisiana Tech Bulldogs",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T01:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Louisiana Tech Bulldogs +31.0",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "LSU Tigers -31.0",
-              "cuota": 1.97
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 152.0",
-              "cuota": 1.93
-            },
-            {
-              "nombre": "Under 152.0",
-              "cuota": 1.88
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Missouri Tigers vs SIU-Edwardsville Cougars",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T01:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Missouri Tigers -29.5",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "SIU-Edwardsville Cougars +29.5",
-              "cuota": 1.93
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 149.0",
-              "cuota": 1.86
-            },
-            {
-              "nombre": "Under 149.0",
-              "cuota": 1.96
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Oklahoma Sooners vs North Alabama Lions",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T01:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "North Alabama Lions +28.0",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "Oklahoma Sooners -28.0",
-              "cuota": 1.97
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 147.5",
-              "cuota": 1.87
-            },
-            {
-              "nombre": "Under 147.5",
-              "cuota": 1.95
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Texas A&M Aggies vs UL Monroe Warhawks",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T01:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Texas A&M Aggies -37.0",
-              "cuota": 1.97
-            },
-            {
-              "nombre": "UL Monroe Warhawks +37.0",
-              "cuota": 1.88
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 168.5",
-              "cuota": 1.97
-            },
-            {
-              "nombre": "Under 168.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Purdue Boilermakers vs Illinois St Redbirds",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T01:30:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Illinois St Redbirds",
-              "cuota": 11.07
-            },
-            {
-              "nombre": "Purdue Boilermakers",
-              "cuota": 1.05
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Illinois St Redbirds +16.0",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Purdue Boilermakers -16.0",
-              "cuota": 1.95
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 144.5",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Under 144.5",
-              "cuota": 1.92
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "DePaul Blue Demons vs Alabama A&M Bulldogs",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T02:00:00Z",
-      "bookmaker": "BetOnline.ag",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Alabama A&M Bulldogs +23.0",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "DePaul Blue Demons -23.0",
-              "cuota": 1.91
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 141.0",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "Under 141.0",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Auburn Tigers vs Appalachian St Mountaineers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T02:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Appalachian St Mountaineers +23.5",
-              "cuota": 1.97
-            },
-            {
-              "nombre": "Auburn Tigers -23.5",
-              "cuota": 1.88
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 146.0",
-              "cuota": 1.9
-            },
-            {
-              "nombre": "Under 146.0",
-              "cuota": 1.92
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Seton Hall Pirates vs Charlotte 49ers",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T02:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Charlotte 49ers",
-              "cuota": 2.86
-            },
-            {
-              "nombre": "Seton Hall Pirates",
-              "cuota": 1.45
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Charlotte 49ers +5.0",
-              "cuota": 1.94
-            },
-            {
-              "nombre": "Seton Hall Pirates -5.0",
-              "cuota": 1.91
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 131.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 131.5",
-              "cuota": 1.97
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Oregon St Beavers vs Eastern Washington Eagles",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T02:30:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Eastern Washington Eagles +16.5",
-              "cuota": 2.0
-            },
-            {
-              "nombre": "Oregon St Beavers -16.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 161.5",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "Under 161.5",
-              "cuota": 1.9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Washington Huskies vs Miss Valley St Delta Devils",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T03:00:00Z",
-      "bookmaker": "Paddy Power",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Miss Valley St Delta Devils",
-              "cuota": 151.0
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Stanford Cardinal vs Rice Owls",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T03:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Rice Owls +17.0",
-              "cuota": 1.96
-            },
-            {
-              "nombre": "Stanford Cardinal -17.0",
-              "cuota": 1.89
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 146.0",
-              "cuota": 1.91
-            },
-            {
-              "nombre": "Under 146.0",
-              "cuota": 1.91
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Hawai'i Rainbow Warriors vs Portland Pilots",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-10T04:59:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Hawai'i Rainbow Warriors",
-              "cuota": 1.33
-            },
-            {
-              "nombre": "Portland Pilots",
-              "cuota": 3.4
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Hawai'i Rainbow Warriors -6.5",
-              "cuota": 1.84
-            },
-            {
-              "nombre": "Portland Pilots +6.5",
-              "cuota": 2.0
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 158.0",
-              "cuota": 1.88
-            },
-            {
-              "nombre": "Under 158.0",
-              "cuota": 1.92
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Duke Blue Devils vs Michigan St Spartans",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-11T00:00:00Z",
-      "bookmaker": "888sport",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Duke Blue Devils",
-              "cuota": 1.36
-            },
-            {
-              "nombre": "Michigan St Spartans",
-              "cuota": 3.0
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Duke Blue Devils -6.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Michigan St Spartans +6.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 148.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 148.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Texas Tech Red Raiders vs Illinois Fighting Illini",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-11T01:00:00Z",
-      "bookmaker": "888sport",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Illinois Fighting Illini",
-              "cuota": 1.73
-            },
-            {
-              "nombre": "Texas Tech Red Raiders",
-              "cuota": 2.0
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Illinois Fighting Illini -1.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Texas Tech Red Raiders +1.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Kentucky Wildcats vs Kansas Jayhawks",
-      "deporte": "Baloncesto",
-      "competicion": "NCAA Baloncesto",
-      "hora": "2026-11-11T02:30:00Z",
-      "bookmaker": "888sport",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Kansas Jayhawks",
-              "cuota": 1.36
-            },
-            {
-              "nombre": "Kentucky Wildcats",
-              "cuota": 3.0
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap puntos",
-          "selecciones": [
-            {
-              "nombre": "Kansas Jayhawks -5.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Kentucky Wildcats +5.5",
-              "cuota": 1.85
-            }
-          ]
-        },
-        {
-          "mercado": "Total puntos",
-          "selecciones": [
-            {
-              "nombre": "Over 155.5",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 155.5",
-              "cuota": 1.85
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Edmonton Oilers vs New York Rangers",
-      "deporte": "Hockey hielo",
-      "competicion": "NHL",
-      "hora": "2026-11-10T01:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Edmonton Oilers",
-              "cuota": 1.63
-            },
-            {
-              "nombre": "New York Rangers",
-              "cuota": 2.39
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Edmonton Oilers -1.5",
-              "cuota": 2.59
-            },
-            {
-              "nombre": "New York Rangers +1.5",
-              "cuota": 1.54
-            }
-          ]
-        },
-        {
-          "mercado": "Total goles",
-          "selecciones": [
-            {
-              "nombre": "Over 6.5",
-              "cuota": 1.92
-            },
-            {
-              "nombre": "Under 6.5",
-              "cuota": 1.95
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "Vancouver Canucks vs Philadelphia Flyers",
-      "deporte": "Hockey hielo",
-      "competicion": "NHL",
-      "hora": "2026-11-10T02:30:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "Philadelphia Flyers",
-              "cuota": 1.76
-            },
-            {
-              "nombre": "Vancouver Canucks",
-              "cuota": 2.16
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "Philadelphia Flyers -1.5",
-              "cuota": 2.89
-            },
-            {
-              "nombre": "Vancouver Canucks +1.5",
-              "cuota": 1.45
-            }
-          ]
-        },
-        {
-          "mercado": "Total goles",
-          "selecciones": [
-            {
-              "nombre": "Over 6.0",
-              "cuota": 1.87
-            },
-            {
-              "nombre": "Under 6.0",
-              "cuota": 2.01
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nombre": "San Jose Sharks vs New York Islanders",
-      "deporte": "Hockey hielo",
-      "competicion": "NHL",
-      "hora": "2026-11-10T03:00:00Z",
-      "bookmaker": "Pinnacle",
-      "mercados": [
-        {
-          "mercado": "Ganador",
-          "selecciones": [
-            {
-              "nombre": "New York Islanders",
-              "cuota": 1.76
-            },
-            {
-              "nombre": "San Jose Sharks",
-              "cuota": 2.17
-            }
-          ]
-        },
-        {
-          "mercado": "Hándicap",
-          "selecciones": [
-            {
-              "nombre": "New York Islanders -1.5",
-              "cuota": 2.9
-            },
-            {
-              "nombre": "San Jose Sharks +1.5",
-              "cuota": 1.44
-            }
-          ]
-        },
-        {
-          "mercado": "Total goles",
-          "selecciones": [
-            {
-              "nombre": "Over 6.0",
-              "cuota": 1.85
-            },
-            {
-              "nombre": "Under 6.0",
-              "cuota": 2.03
             }
           ]
         }
